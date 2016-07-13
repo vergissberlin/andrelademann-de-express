@@ -12,7 +12,7 @@ router.get('/article', function (req, res, next) {
     if (err) return next(err);
 
     res.render('article', {
-      title: 'Generator-Express MVC > Articles',
+      title: 'Articles',
       articles: articles
     });
 

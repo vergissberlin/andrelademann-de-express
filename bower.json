@@ -5,5 +5,8 @@
     "**/.*",
     "node_modules",
     "components"
-  ]
+  ],
+  "dependencies": {
+    "font-awesome": "font-awsome#^4.6.3"
+  }
 }
