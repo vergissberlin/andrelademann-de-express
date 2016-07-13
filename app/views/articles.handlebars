@@ -1,12 +1,16 @@
 <h2>{{title}}</h2>
 
 {{> pagination}}
-{{#each articles}}
+
+{{#each (limit articles 3)}}
     <div class="jumbotron">
         <div class="row marketing">
             <div class="col-lg-6">
                 <h2><a href="{{url}}">{{title}}</a></h2>
-                <p>{{text}}</p>
+                <p>{{crop text}}</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="http://lorempixel.com/900/400/sports/2" class="img-fluid">
             </div>
         </div>
     </div>
@@ -15,7 +19,7 @@
 
 <div class="card-deck-wrapper">
     <div class="card-deck">
-      {{#each  (limit articles 3)}}
+      {{#each (limit articles 3)}}
           <div class="card">
               <img class="card-img-top img-fluid" src="https://c3.staticflickr.com/2/1711/26558282962_0b2edbdd1f_h.jpg"
                    alt="{{title}}" title="{{title}}">
