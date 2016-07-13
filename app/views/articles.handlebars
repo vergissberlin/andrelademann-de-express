@@ -1,0 +1,52 @@
+<h2>{{title}}</h2>
+
+<div class="jumbotron">
+  {{#each articles}}
+      <div class="row marketing">
+          <div class="col-lg-6">
+              <h4><a href="{{url}}">{{title}}</a></h4>
+              <p>{{text}}</p>
+              <img src="https://c7.staticflickr.com/2/1566/26552662222_93b6e0cce0_s.jpg" alt="André Lademann"
+                   class="img-circle">
+          </div>
+      </div>
+  {{/each}}
+</div>
+
+
+<div class="row">
+  {{#each articles}}
+      <div class="col-sm-6">
+          <div class="card card-block">
+              <h3 class="card-title">Special title treatment</h3>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+      </div>
+  {{/each}}
+</div>
+<div class="row">
+  {{#each articles}}
+      <div class="card card-block">
+          <h4 class="card-title">{{title}}</h4>
+          <p class="card-text">{{text}}</p>
+          <a href="{{url}}" class="card-link">Card link</a>
+      </div>
+  {{/each}}
+</div>
+
+<div class="media">
+    <div class="media-left media-bottom">
+        <a href="#">
+            <img src="https://c7.staticflickr.com/2/1566/26552662222_93b6e0cce0_s.jpg" alt="André Lademann">
+        </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading">Bottom aligned media</h4>
+        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras
+            purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
+            fringilla. Donec lacinia congue felis in faucibus.</p>
+        <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et
+            magnis dis parturient montes, nascetur ridiculus mus.</p>
+    </div>
+</div>

@@ -7,12 +7,12 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
-router.get('/article', function (req, res, next) {
+router.get('/articles', function (req, res, next) {
   Article.find(function (err, articles) {
     if (err) return next(err);
 
-    res.render('article', {
-      title: 'Generator-Express MVC > Articles',
+    res.render('articles', {
+      title: 'Articles',
       articles: articles
     });
 

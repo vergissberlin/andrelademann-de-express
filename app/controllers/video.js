@@ -7,8 +7,8 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
-router.get('/', function (req, res) {
-    res.render('index', {
-      title: 'Landing page'
-    });
+router.get('/video', function (req, res) {
+  res.render('video', {
+    title: 'Video'
+  });
 });
