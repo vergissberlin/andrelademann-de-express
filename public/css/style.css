@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic);
-
 * {
   font-family: 'Open Sans Condensed', sans-serif;
   z-index: 10;
@@ -18,4 +17,10 @@ footer {
   padding-top: 5px;
   border-top: 1px #ddd solid;
   color: #bbb;
+}
+
+.media {
+  padding: 20px 30px;
+  background-color: aliceblue;
+  border-top: 1px #eee solid;
 }
