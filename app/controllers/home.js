@@ -7,12 +7,8 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
-router.get('/', function (req, res, next) {
-  Article.find(function (err, articles) {
-    if (err) return next(err);
+router.get('/', function (req, res) {
     res.render('index', {
-      title: 'Generator-Express MVC',
-      articles: articles
+      title: 'Generator-Express MVC'
     });
-  });
 });

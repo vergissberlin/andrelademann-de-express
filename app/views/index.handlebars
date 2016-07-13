@@ -1,11 +1,2 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
-
-<h1>Articles</h1>
-
-<div id="articles">
-  {{#each articles}}
-      <p><a href="{{url}}">{{title}}</a></p>
-      <p>{{text}}</p>
-  {{/each}}
-</div>
+{{> welcome tagName="p" }}
