@@ -1,5 +1,6 @@
 <h2>{{title}}</h2>
 
+{{> pagination}}
 {{#each articles}}
     <div class="jumbotron">
         <div class="row marketing">
@@ -11,9 +12,10 @@
     </div>
 {{/each}}
 
+
 <div class="card-deck-wrapper">
     <div class="card-deck">
-      {{#each articles}}
+      {{#each  (limit articles 3)}}
           <div class="card">
               <img class="card-img-top img-fluid" src="https://c3.staticflickr.com/2/1711/26558282962_0b2edbdd1f_h.jpg"
                    alt="{{title}}" title="{{title}}">

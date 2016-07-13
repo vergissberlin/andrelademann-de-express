@@ -9,7 +9,10 @@ var compress = require('compression');
 var methodOverride = require('method-override');
 var exphbs = require('express-handlebars');
 
-var helper = require('../app/views/helper/trim');
+// Helper
+require('../app/views/helper/limit');
+require('../app/views/helper/trim');
+require('../app/views/helper/pagination');
 
 module.exports = function (app, config) {
   var env = process.env.NODE_ENV || 'development';

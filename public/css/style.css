@@ -1,26 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic);
 * {
   font-family: 'Open Sans Condensed', sans-serif;
-  z-index: 10;
-}
+  z-index: 10; }
 
 header {
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 main {
-  margin-top: 20px;
-}
+  margin-top: 20px; }
 
 footer {
   margin-top: 30px;
   padding-top: 5px;
   border-top: 1px #ddd solid;
-  color: #bbb;
-}
+  color: #bbb; }
 
 .media {
   padding: 20px 30px;
   background-color: aliceblue;
-  border-top: 1px #eee solid;
-}
+  border-top: 1px #eee solid; }

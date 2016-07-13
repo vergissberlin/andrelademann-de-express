@@ -1,21 +1,25 @@
 var express = require('express'),
-  router = express.Router(),
-  mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+    router = express.Router(),
+    mongoose = require('mongoose'),
+    Article = mongoose.model('Article');
 
 module.exports = function (app) {
-  app.use('/', router);
+    app.use('/', router);
 };
 
 
 router.get('/articles', function (req, res, next) {
-  Article.find(function (err, articles) {
-    if (err) return next(err);
+    Article.find(function (err, articles) {
+        if (err) return next(err);
 
-    res.render('articles', {
-      title: 'Articles',
-      articles: articles
+        res.render('articles', {
+            title: 'Articles',
+            articles: articles,
+            pagination: {
+                page: 1,
+                pageCount: 10
+            }
+        });
+
     });
-
-  });
 });
