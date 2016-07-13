@@ -7,6 +7,7 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
+
 router.get('/articles', function (req, res, next) {
   Article.find(function (err, articles) {
     if (err) return next(err);
