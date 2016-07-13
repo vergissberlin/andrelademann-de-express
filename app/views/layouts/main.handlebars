@@ -5,22 +5,31 @@
     <meta name="viewport" content="width=device-width">
     <title>{{title }}</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   {{#if ENV_DEVELOPMENT}}
       <script src="//localhost:35729/livereload.js"></script>
   {{/if}}
 </head>
 <body>
+<div class="container">
 
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/article">Article</a></li>
-    </ul>
-</nav>
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/article">Article</a></li>
+        </ul>
+    </nav>
 
-<main>
-  {{{body}}}
-</main>
+
+    <main>
+      {{{body}}}
+    </main>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>
