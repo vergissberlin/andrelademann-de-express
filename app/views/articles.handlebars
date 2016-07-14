@@ -2,7 +2,7 @@
 
 {{> pagination}}
 
-{{#each (limit articles 6)}}
+{{#each (limit articles 60)}}
     <div class="jumbotron">
         <div class="row marketing">
             <div class="col-lg-6">
@@ -40,7 +40,6 @@
                 <p class="lead">
                     <button type="submit" class="btn btn-primary btn-md pull-xs-right" role="button">Send</button>
                 </p>
-
             </form>
         </div>
     </div>
@@ -65,4 +64,5 @@
       {{/each}}
     </div>
 </div>
+
 {{> wysiwyg}}
