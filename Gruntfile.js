@@ -12,11 +12,41 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
     develop: {
       server: {
         file: 'app.js'
       }
     },
+
+    manifest: {
+      generate: {
+        options: {
+          basePath: 'public',
+          cache: [
+            '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css',
+            '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',
+            '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js'
+          ],
+          network: ['http://*', 'https://*'],
+          fallback: ['/ /offline.html'],
+          preferOnline: true,
+          verbose: false,
+          timestamp: true,
+          settings: {
+            preferOnline: true
+          }
+        },
+        src: [
+          'index.html',
+          'css/*.css',
+          'img/**/*.png',
+          'js/*.min.js'
+        ],
+        dest: 'public/manifest.appcache'
+      }
+    },
+
     sass: {
       dist: {
         files: {
@@ -76,6 +106,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'sass',
+    'manifest',
     'develop',
     'watch'
   ]);
