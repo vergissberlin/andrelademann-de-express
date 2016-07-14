@@ -2,7 +2,7 @@
 
 {{> pagination}}
 
-{{#each (limit articles 3)}}
+{{#each (limit articles 6)}}
     <div class="jumbotron">
         <div class="row marketing">
             <div class="col-lg-6">
@@ -15,6 +15,36 @@
         </div>
     </div>
 {{/each}}
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="display-3">New Article</h1>
+            <p class="lead">Add a new article.</p>
+            <hr class="m-y-2">
+
+            <form action='/articles/add' method='post'>
+                <fieldset class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Your title (required)"
+                           required="required">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="url">URL</label>
+                    <input type="url" class="form-control" id="url" name="url" placeholder="http://yoururl.org">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="text">Text</label>
+                    <textarea class="form-control wysiwygTiny" name="text" id="text" rows="5"></textarea>
+                </fieldset>
+                <p class="lead">
+                    <button type="submit" class="btn btn-primary btn-md pull-xs-right" role="button">Send</button>
+                </p>
+
+            </form>
+        </div>
+    </div>
+</div>
 
 
 <div class="card-deck-wrapper">
@@ -35,3 +65,4 @@
       {{/each}}
     </div>
 </div>
+{{> wysiwyg}}

@@ -14,3 +14,17 @@ ArticleSchema.virtual('date')
   });
 
 mongoose.model('Article', ArticleSchema);
+
+/*
+ var Article = mongoose.model('Article', ArticleSchema);
+
+ Article.find(function (err, posts) {
+ if( posts.length) return;
+
+ new Article({
+ title: 'Initial',
+ url:'http://example.com',
+ text: 'Lorem ipsum sit amet'
+ }).save();
+ });
+ */
