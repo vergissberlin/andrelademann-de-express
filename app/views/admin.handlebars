@@ -1,0 +1,39 @@
+<h2>{{title}}</h2>
+<section>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium autem expedita maiores minima
+        neque
+        odit omnis optio possimus quam quia, repellendus reprehenderit saepe sed suscipit, ullam, ut veniam voluptatem?
+        Atque commodi consectetur dolore eaque et eveniet, ex excepturi exercitationem facilis fugit inventore minus nam
+        quam
+        quidem quos similique tempora tempore temporibus. Debitis dolores excepturi, natus praesentium repellendus sed
+        temporibus.</p>
+    <p>A accusantium architecto aut, consectetur deleniti eligendi itaque iure laudantium nemo officia
+        quo sint? Aliquid architecto, commodi culpa dignissimos eaque eligendi hic maxime nam nobis officiis,
+        reprehenderit
+        temporibus ut, voluptatibus.
+        Accusamus alias aliquam aliquid architecto commodi, corporis, delectus earum eos
+        inventore laborum molestias nostrum numquam quae quas quos sed sequi sit sunt velit voluptatibus. Ad amet et
+        nostrum
+        quibusdam sit!</p>
+</section>
+
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>
+    tinymce.init({
+        selector: 'p',
+        inline: true,
+        toolbar: 'undo redo',
+        menubar: false
+    });
+
+    tinymce.init({
+        selector: 'section',
+        inline: true,
+        plugins: [
+            'advlist autolink lists link image charmap print preview anchor',
+            'searchreplace visualblocks code fullscreen',
+            'insertdatetime media table contextmenu paste'
+        ],
+        toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
+    });
+</script>
