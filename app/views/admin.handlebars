@@ -16,24 +16,28 @@
         nostrum
         quibusdam sit!</p>
 </section>
-
+<iframe id="form_target" name="form_target" style="display:none"></iframe>
+<form id="my_form" action="/upload/" target="form_target" method="post" enctype="multipart/form-data"
+      style="width:0px;height:0;overflow:hidden">
+    <input name="image" type="file" onchange="$('#my_form').submit();this.value='';">
+</form>
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css">
 <script>
-    tinymce.init({
-        selector: 'p',
-        inline: true,
-        toolbar: 'undo redo',
-        menubar: false
-    });
-
     tinymce.init({
         selector: 'section',
         inline: true,
         plugins: [
             'advlist autolink lists link image charmap print preview anchor',
             'searchreplace visualblocks code fullscreen',
-            'insertdatetime media table contextmenu paste'
+            'insertdatetime media table contextmenu paste image imagetools codesample'
         ],
-        toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
+        toolbar: 'styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist  blockquote | code  codesample | link image table',
+        menubar: false,
+        file_picker_types: 'file image media',
+        file_browser_callback: function (field_name, url, type, win) {
+            if (type == 'image') $('#my_form input').click();
+        }
     });
 </script>
