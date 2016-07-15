@@ -9,26 +9,28 @@ module.exports = function (app) {
 
 
 router.get('/articles', function (req, res, next) {
-  Article.find(function (err, articles) {
-    if (err) return next(err);
+  Article.find()
+    .limit(10)
+    .sort({updated: -1})
+    .exec(function (err, articles) {
+      if (err) return next(err);
+      res.render('articles', {
+        title: 'Articles',
+        articles: articles,
+        pagination: {
+          page: 1,
+          pageCount: 10
+        }
+      });
 
-    res.render('articles', {
-      title: 'Articles',
-      articles: articles,
-      pagination: {
-        page: 1,
-        pageCount: 10
-      }
     });
-
-  });
 });
 
 router.post('/articles/add', function (req, res) {
 
-  console.log(req.body);
   new Article({
     title: req.body.title,
+    state: req.body.state,
     image: req.body.image,
     teaser: req.body.teaser,
     text: req.body.text

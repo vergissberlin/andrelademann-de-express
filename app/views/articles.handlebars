@@ -6,8 +6,8 @@
     <div class="jumbotron">
         <div class="row marketing">
             <div class="col-lg-6">
-                <h2><a href="{{url}}">{{title}}</a></h2>
-                <p>{{crop text}}</p>
+                <h2><a href="{{_id}}">{{title}}</a></h2>
+                <p>{{teaser}}</p>
             </div>
             <div class="col-lg-6">
                 <img src="//c1.staticflickr.com/2/1524/26726054816_427856b51a_n.jpg" class="img-fluid">
@@ -23,11 +23,25 @@
             <p class="lead">Add a new article.</p>
             <hr class="m-y-2">
 
-            <form action='/articles/add' method='post' encType="multipart/form-data">
+            <form action="/articles/add" method="post">
                 <fieldset class="form-group">
                     <label for="title">Title</label>
                     <input type="text" class="form-control" id="title" name="title" placeholder="Your title (required)"
                            required="required">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="state">State</label><br>
+
+                    <label class="c-input c-radio">
+                        <input name="state" type="radio" value="draft" checked="checked">
+                        <span class="c-indicator"></span>
+                        draft
+                    </label>
+                    <label class="c-input c-radio">
+                        <input name="state" type="radio" value="published">
+                        <span class="c-indicator"></span>
+                        published
+                    </label>
                 </fieldset>
                 <fieldset class="form-group">
                   {{> form/image label="Image" id="image"}}
@@ -56,10 +70,10 @@
                    alt="{{title}}" title="{{title}}">
               <div class="card-block">
                   <h4 class="card-title">{{title}}</h4>
-                  <p class="card-text">{{{crop text}}}</p>
-                  <a href="{{url}}" class="card-link">Card link</a>
+                  <p class="card-text">{{{crop teaser}}}</p>
+                  <a href="article/read/{{_id}}" class="card-link">Card link</a>
                   <p class="card-text">
-                      <small class="text-muted">Last updated 3 mins ago</small>
+                      <small class="text-muted">{{published}}</small>
                   </p>
               </div>
           </div>

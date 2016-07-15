@@ -10,7 +10,7 @@ var ArticleSchema = new Schema({
   title: {
     type: String,
     index: true,
-    required: [true, 'Title is required']
+    required: true
   },
   image: String,
   teaser: String,
