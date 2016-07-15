@@ -17,6 +17,7 @@ router.get('/articles', function (req, res, next) {
       res.render('articles', {
         title: 'Articles',
         articles: articles,
+        slug: getSlug('Schöner Titel läßt grüßen!? Bel été !'),
         pagination: {
           page: 1,
           pageCount: 10
@@ -26,9 +27,9 @@ router.get('/articles', function (req, res, next) {
     });
 });
 
-router.get('/article/:id', function (req, res, next) {
-  console.log(req.params.id);
-  Article.findOne({'_id': req.params.id})
+router.get('/article/:slug', function (req, res, next) {
+
+  Article.findOne({'slug': req.params.slug})
     .exec(function (err, article) {
       if (err) return next(err);
       res.render('article', {

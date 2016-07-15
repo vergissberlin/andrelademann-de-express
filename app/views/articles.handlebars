@@ -6,7 +6,7 @@
     <div class="jumbotron">
         <div class="row marketing">
             <div class="col-lg-6">
-                <h2><a href="article/{{_id}}">{{title}}</a></h2>
+                <h2><a href="article/{{slug title}}">{{title}}</a></h2>
                 <p>{{teaser}}</p>
             </div>
             <div class="col-lg-6">
@@ -69,7 +69,7 @@
               <img class="card-img-top img-fluid" src="https://c3.staticflickr.com/2/1711/26558282962_0b2edbdd1f_h.jpg"
                    alt="{{title}}" title="{{title}}">
               <div class="card-block">
-                  <h4 class="card-title">{{title}}</h4>
+                  <p class="h4 card-title" title="{{title}}">{{crop title limit="20"}}</p>
                   <p class="card-text">{{{crop teaser}}}</p>
                   <a href="article/{{_id}}" class="card-link">Card link</a>
                   <p class="card-text">

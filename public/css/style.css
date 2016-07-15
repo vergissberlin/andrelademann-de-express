@@ -32,3 +32,30 @@ pre[class*="language-"] * {
   padding: 20px 30px;
   background-color: aliceblue;
   border-top: 1px #eee solid; }
+
+.text-ellipsis {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  border: darkgreen solid 1px;
+}
+
+.text-ellipsis > * {
+  display: table-cell;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  margin: 0;
+  border: red solid 1px;
+  table-border-color-dark: blue;
+  table-layout: auto;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

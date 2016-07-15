@@ -12,6 +12,11 @@ var ArticleSchema = new Schema({
     index: true,
     required: true
   },
+  slug: {
+    type: String,
+    index: true,
+    required: true
+  },
   image: String,
   teaser: String,
   text: String,

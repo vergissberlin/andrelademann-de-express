@@ -8,14 +8,17 @@ var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
 var exphbs = require('express-handlebars');
+var getSlug = require('speakingurl');
 var Handlebars = require('handlebars');
 var HandlebarsIntl = require('handlebars-intl');
 
+slug = getSlug("Schöner Titel läßt grüßen!? Bel été !");
+console.log(slug); // Output: schoener-titel-laesst-gruessen-bel-ete
+
+
 // Helper
 HandlebarsIntl.registerWith(Handlebars);
-require('../app/views/helper/limit');
-require('../app/views/helper/trim');
-require('../app/views/helper/pagination');
+require('../app/views/helper');
 
 module.exports = function (app, config) {
   var env = process.env.NODE_ENV || 'development';
@@ -30,7 +33,7 @@ module.exports = function (app, config) {
   app.set('views', config.root + '/app/views');
   app.set('view engine', 'handlebars');
 
-  // app.use(favicon(config.root + '/public/img/favicon.ico'));
+  // app.use(favicon(config.root + '/public/img/favicon/favicon.ico'));
   app.use(logger('dev'));
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({
@@ -51,7 +54,6 @@ module.exports = function (app, config) {
     err.status = 404;
     next(err);
   });
-
   if (app.get('env') === 'development') {
     app.use(function (err, req, res) {
       res.status(err.status || 500);

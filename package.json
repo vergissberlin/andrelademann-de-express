@@ -19,7 +19,8 @@
     "mongoose": "^4.1.2",
     "mongoose-query-paginate": "^1.0.1",
     "morgan": "^1.6.1",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "speakingurl": "^9.0.0"
   },
   "devDependencies": {
     "grunt": "^1.0.1",
