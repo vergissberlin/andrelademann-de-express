@@ -32,6 +32,7 @@ router.get('/article/:id', function (req, res, next) {
     .exec(function (err, article) {
       if (err) return next(err);
       res.render('article', {
+        title: 'Articles',
         article: article
       });
 
