@@ -8,13 +8,8 @@ var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
 var exphbs = require('express-handlebars');
-var getSlug = require('speakingurl');
 var Handlebars = require('handlebars');
 var HandlebarsIntl = require('handlebars-intl');
-
-slug = getSlug("Schöner Titel läßt grüßen!? Bel été !");
-console.log(slug); // Output: schoener-titel-laesst-gruessen-bel-ete
-
 
 // Helper
 HandlebarsIntl.registerWith(Handlebars);

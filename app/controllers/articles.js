@@ -1,55 +1,53 @@
 var express = require('express'),
-  router = express.Router(),
-  mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+	router = express.Router(),
+	mongoose = require('mongoose'),
+	Article = mongoose.model('Article');
 
 module.exports = function (app) {
-  app.use('/', router);
+	app.use('/', router);
 };
 
 
 router.get('/articles', function (req, res, next) {
-  Article.find()
-    .limit(10)
-    .sort({updated: -1})
-    .exec(function (err, articles) {
-      if (err) return next(err);
-      res.render('articles', {
-        title: 'Articles',
-        articles: articles,
-        slug: getSlug('Schöner Titel läßt grüßen!? Bel été !'),
-        pagination: {
-          page: 1,
-          pageCount: 10
-        }
-      });
+	Article.find()
+		.limit(10)
+		.sort({updated: -1})
+		.exec(function (err, articles) {
+			if (err) return next(err);
+			res.render('articles', {
+				title: 'Articles',
+				articles: articles,
+				pagination: {
+					page: 1,
+					pageCount: 10
+				}
+			});
 
-    });
+		});
 });
 
 router.get('/article/:slug', function (req, res, next) {
-
-  Article.findOne({'slug': req.params.slug})
-    .exec(function (err, article) {
-      if (err) return next(err);
-      res.render('article', {
-        title: 'Articles',
-        article: article
-      });
-
-    });
+	Article.findOne({'slug': req.params.slug})
+		.exec(function (err, article) {
+			if (err) return next(err);
+			res.render('article', {
+				title: 'Articles',
+				article: article
+			});
+		});
 });
 
 
 router.post('/articles/add', function (req, res) {
+	var getSlug = require('speakingurl');
+	new Article({
+		title: req.body.title,
+		slug: getSlug(req.body.title),
+		state: req.body.state,
+		image: req.body.image,
+		teaser: req.body.teaser,
+		text: req.body.text
+	}).save();
 
-  new Article({
-    title: req.body.title,
-    state: req.body.state,
-    image: req.body.image,
-    teaser: req.body.teaser,
-    text: req.body.text
-  }).save();
-
-  res.redirect('/articles');
+	res.redirect('/articles');
 });

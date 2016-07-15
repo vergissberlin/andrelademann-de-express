@@ -3,40 +3,46 @@
  * =============
  */
 var mongoose = require('mongoose'),
-  Schema = mongoose.Schema;
+	Schema = mongoose.Schema;
 
 var ArticleSchema = new Schema({
-  state: String,
-  title: {
-    type: String,
-    index: true,
-    required: true
-  },
-  slug: {
-    type: String,
-    index: true,
-    required: true
-  },
-  image: String,
-  teaser: String,
-  text: String,
-  comments: [],
-  published: {
-    type: Date,
-    default: Date.now
-  },
-  updated: {
-    type: Date,
-    default: Date.now
-  }
+	state: String,
+	title: {
+		type: String,
+		index: true,
+		required: true
+	},
+	slug: {
+		type: String,
+		index: true,
+		unique: true,
+		required: true
+	},
+	image: String,
+	teaser: String,
+	text: String,
+	comments: [],
+	published: {
+		type: Date,
+		default: Date.now
+	},
+	updated: {
+		type: Date,
+		default: Date.now
+	}
 });
 
 ArticleSchema.virtual('date')
-  .get(function () {
-    return this._id.getTimestamp();
-  });
+	.get(function () {
+		return this._id.getTimestamp();
+	});
 
 mongoose.model('Article', ArticleSchema);
+
+ArticleSchema.pre('save', function (next) {
+	this.update({}, {$set: {updated: new Date()}});
+	next();
+});
 
 /*
  var Article = mongoose.model('Article', ArticleSchema);
