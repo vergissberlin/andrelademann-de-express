@@ -6,7 +6,7 @@
     <div class="jumbotron">
         <div class="row marketing">
             <div class="col-lg-6">
-                <h2><a href="{{_id}}">{{title}}</a></h2>
+                <h2><a href="article/{{_id}}">{{title}}</a></h2>
                 <p>{{teaser}}</p>
             </div>
             <div class="col-lg-6">
@@ -71,9 +71,9 @@
               <div class="card-block">
                   <h4 class="card-title">{{title}}</h4>
                   <p class="card-text">{{{crop teaser}}}</p>
-                  <a href="article/read/{{_id}}" class="card-link">Card link</a>
+                  <a href="article/{{_id}}" class="card-link">Card link</a>
                   <p class="card-text">
-                      <small class="text-muted">{{published}}</small>
+                      <small class="text-muted">{{formatRelative published}}</small>
                   </p>
               </div>
           </div>

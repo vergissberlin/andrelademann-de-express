@@ -26,6 +26,19 @@ router.get('/articles', function (req, res, next) {
     });
 });
 
+router.get('/article/:id', function (req, res, next) {
+  console.log(req.params.id);
+  Article.findOne({'_id': req.params.id})
+    .exec(function (err, article) {
+      if (err) return next(err);
+      res.render('article', {
+        article: article
+      });
+
+    });
+});
+
+
 router.post('/articles/add', function (req, res) {
 
   new Article({

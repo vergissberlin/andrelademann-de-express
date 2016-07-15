@@ -8,8 +8,11 @@ var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
 var exphbs = require('express-handlebars');
+var Handlebars = require('handlebars');
+var HandlebarsIntl = require('handlebars-intl');
 
 // Helper
+HandlebarsIntl.registerWith(Handlebars);
 require('../app/views/helper/limit');
 require('../app/views/helper/trim');
 require('../app/views/helper/pagination');
