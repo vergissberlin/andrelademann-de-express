@@ -42,7 +42,7 @@ router.post('/articles/add', function (req, res) {
 	var getSlug = require('speakingurl');
 	new Article({
 		title: req.body.title,
-		slug: getSlug(req.body.title),
+		slug: getSlug(req.body.title, {lang: 'de', truncate: 80}),
 		state: req.body.state,
 		image: req.body.image,
 		teaser: req.body.teaser,
