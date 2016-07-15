@@ -29,7 +29,8 @@ router.post('/articles/add', function (req, res) {
   console.log(req.body);
   new Article({
     title: req.body.title,
-    url: req.body.url,
+    image: req.body.image,
+    teaser: req.body.teaser,
     text: req.body.text
   }).save();
 

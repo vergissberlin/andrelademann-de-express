@@ -23,15 +23,18 @@
             <p class="lead">Add a new article.</p>
             <hr class="m-y-2">
 
-            <form action='/articles/add' method='post'>
+            <form action='/articles/add' method='post' encType="multipart/form-data">
                 <fieldset class="form-group">
                     <label for="title">Title</label>
                     <input type="text" class="form-control" id="title" name="title" placeholder="Your title (required)"
                            required="required">
                 </fieldset>
                 <fieldset class="form-group">
-                    <label for="url">URL</label>
-                    <input type="url" class="form-control" id="url" name="url" placeholder="http://yoururl.org">
+                  {{> form/image label="Image" id="image"}}
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="teaser">Teaser</label>
+                    <textarea class="form-control" name="teaser" id="teaser" rows="3"></textarea>
                 </fieldset>
                 <fieldset class="form-group">
                     <label for="text">Text</label>
@@ -44,7 +47,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="card-deck-wrapper">
     <div class="card-deck">
