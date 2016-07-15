@@ -1,8 +1,8 @@
 var Handlebars = require('handlebars'),
-  getSlug = require('speakingurl');
+	getSlug = require('speakingurl');
 
 Handlebars.registerHelper('slug', function (context, options) {
 
 
-  return new Handlebars.SafeString(getSlug(context))
+	return new Handlebars.SafeString(getSlug(context))
 });

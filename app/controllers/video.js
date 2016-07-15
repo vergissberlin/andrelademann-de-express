@@ -1,14 +1,14 @@
 var express = require('express'),
-  router = express.Router(),
-  mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+	router = express.Router(),
+	mongoose = require('mongoose'),
+	Article = mongoose.model('Article');
 
 module.exports = function (app) {
-  app.use('/', router);
+	app.use('/', router);
 };
 
 router.get('/video', function (req, res) {
-  res.render('video', {
-    title: 'Video'
-  });
+	res.render('video', {
+		title: 'Video'
+	});
 });
