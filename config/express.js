@@ -1,15 +1,16 @@
-var express = require('express');
-var glob = require('glob');
-
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var compress = require('compression');
-var methodOverride = require('method-override');
-var exphbs = require('express-handlebars');
-var Handlebars = require('handlebars');
-var HandlebarsIntl = require('handlebars-intl');
+var express = require('express'),
+	glob = require('glob'),
+	favicon = require('serve-favicon'),
+	flash = require('connect-flash'),
+	logger = require('morgan'),
+	cookieParser = require('cookie-parser'),
+	bodyParser = require('body-parser'),
+	compress = require('compression'),
+	methodOverride = require('method-override'),
+	exphbs = require('express-handlebars'),
+	Handlebars = require('handlebars'),
+	HandlebarsIntl = require('handlebars-intl'),
+	passport = require('passport');
 
 // Helper
 HandlebarsIntl.registerWith(Handlebars);
@@ -25,15 +26,19 @@ module.exports = function (app, config) {
 		defaultLayout: 'main',
 		partialsDir: [config.root + '/app/views/partials/']
 	}));
+
 	app.set('views', config.root + '/app/views');
 	app.set('view engine', 'handlebars');
 
-	// app.use(favicon(config.root + '/public/img/favicon/favicon.ico'));
+	//app.use(favicon(config.root + '/public/img/favicon/favicon.ico'));
 	app.use(logger('dev'));
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({
 		extended: true
 	}));
+	//app.use(express.session({secret: 'keyboard cat'}));
+	//app.use(passport.initialize());
+	//app.use(passport.session());
 	app.use(cookieParser());
 	app.use(compress());
 	app.use(express.static(config.root + '/public'));
@@ -49,6 +54,7 @@ module.exports = function (app, config) {
 		err.status = 404;
 		next(err);
 	});
+
 	if (app.get('env') === 'development') {
 		app.use(function (err, req, res) {
 			res.status(err.status || 500);
@@ -68,5 +74,4 @@ module.exports = function (app, config) {
 			title: 'error'
 		});
 	});
-
 };
