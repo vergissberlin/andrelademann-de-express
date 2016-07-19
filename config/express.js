@@ -12,6 +12,42 @@ var express = require('express'),
 	HandlebarsIntl = require('handlebars-intl'),
 	passport = require('passport');
 
+var Strategy = require('passport-local').Strategy;
+
+// Configure the local strategy for use by Passport.
+//
+// The local strategy require a `verify` function which receives the credentials
+// (`username` and `password`) submitted by the user.  The function must verify
+// that the password is correct and then invoke `cb` with a user object, which
+// will be set at `req.user` in route handlers after authentication.
+passport.use(new Strategy(
+	function (username, password, cb) {
+		console.log(username, email, password)
+	}));
+
+
+// Configure Passport authenticated session persistence.
+//
+// In order to restore authentication state across HTTP requests, Passport needs
+// to serialize users into and deserialize users out of the session.  The
+// typical implementation of this is as simple as supplying the user ID when
+// serializing, and querying the user record by ID from the database when
+// deserializing.
+passport.serializeUser(function (user, cb) {
+	cb(null, user.id);
+});
+
+passport.deserializeUser(function (id, cb) {
+	db.users.findById(id, function (err, user) {
+		if (err) {
+			return cb(err);
+		}
+		cb(null, user);
+	});
+});
+
+
+
 // Helper
 HandlebarsIntl.registerWith(Handlebars);
 require('../app/views/helper');
@@ -32,14 +68,19 @@ module.exports = function (app, config) {
 
 	//app.use(favicon(config.root + '/public/img/favicon/favicon.ico'));
 	app.use(logger('dev'));
+	app.use(cookieParser());
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({
 		extended: true
 	}));
-	//app.use(express.session({secret: 'keyboard cat'}));
-	//app.use(passport.initialize());
-	//app.use(passport.session());
-	app.use(cookieParser());
+	app.use(require('express-session')({secret: 'keyboard cat', resave: false, saveUninitialized: false}));
+
+	// Initialize Passport and restore authentication state, if any, from the
+	// session.
+	app.use(flash());
+	app.use(passport.initialize());
+	app.use(passport.session());
+
 	app.use(compress());
 	app.use(express.static(config.root + '/public'));
 	app.use(methodOverride());

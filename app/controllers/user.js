@@ -9,8 +9,10 @@ module.exports = function (app) {
 
 router.get('/user', function (req, res) {
 	res.render('user', {
-		title: 'User'
-	});
+		title: 'User',
+		message: 'Test flash'
+	})
+	;
 });
 
 router.get('/user/login', function (req, res) {
@@ -21,8 +23,22 @@ router.get('/user/login', function (req, res) {
 
 router.post('/user/login',
 	passport.authenticate('local', {
-		successRedirect: '/',
+		successRedirect: '/user',
 		failureRedirect: '/user/login',
 		failureFlash: true
-	})
-);
+	}),
+	function (req, res) {
+		res.redirect('/');
+	});
+
+router.get('/user/logout',
+	function (req, res) {
+		req.logout();
+		res.redirect('/');
+	});
+
+router.get('/user/profile',
+	require('connect-ensure-login').ensureLoggedIn(),
+	function (req, res) {
+		res.render('profile', {user: req.user});
+	});
