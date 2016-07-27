@@ -6,32 +6,32 @@ var config = {
 	home: {
 		root: rootPath,
 		app: {
-			name: 'mongamvchandlebars'
+			name: 'andrelademannde'
 		},
 		port: process.env.PORT || 3030,
-		db: 'mongodb://localhost:27017/mongamvchandlebars-home'
+		db: 'mongodb://localhost:27017/andrelademannde-home'
 	},
 	development: {
 		root: rootPath,
 		app: {
-			name: 'mongamvchandlebars'
+			name: 'andrelademannde'
 		},
 		port: process.env.PORT || 3232,
-		db: 'mongodb://192.168.99.100:32774/mongamvchandlebars-development'
+		db: 'mongodb://192.168.99.100:32774/andrelademannde-development'
 	},
 	test: {
 		root: rootPath,
 		app: {
-			name: 'mongamvchandlebars'
+			name: 'andrelademannde'
 		},
 		port: process.env.PORT || 3000,
-		db: 'mongodb://localhost/mongamvchandlebars-test'
+		db: 'mongodb://localhost/andrelademannde-test'
 	},
 
 	production: {
 		root: rootPath,
 		app: {
-			name: 'mongamvchandlebars'
+			name: 'andrelademannde'
 		},
 		port: process.env.PORT || 3000,
 		db: process.env.MONGODB_URI
