@@ -1,18 +1,27 @@
 var express = require('express'),
 	router = express.Router(),
 	passport = require('passport'),
-	LocalStrategy = require('passport-local').Strategy;
+	LocalStrategy = require('passport-local').Strategy,
+	user = {
+		_id: 45,
+		username: 'dirk',
+		nickname: 'molle',
+		password: '1234'
+	};
 
 module.exports = function (app) {
 	app.use('/', router);
 };
 
 router.get('/user', function (req, res) {
+	req.session.sessionFlash = {
+		type: 'info',
+		message: 'Please login.'
+	};
+
 	res.render('user', {
-		title: 'User',
-		message: 'Test flash'
-	})
-	;
+		title: 'User'
+	});
 });
 
 router.get('/user/login', function (req, res) {

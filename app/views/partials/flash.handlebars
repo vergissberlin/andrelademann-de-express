@@ -1,0 +1,18 @@
+{{#if expressFlash}}
+    <div class="alert alert-info" role="alert">
+        <p><strong class="text-uppercase">{{expressFlash.type}}</strong> {{ expressFlash }}</p>
+    </div>
+{{/if}}
+
+
+{{#if sessionFlash.message}}
+    <div class="alert alert-{{ sessionFlash.type }}">
+        <strong class="text-uppercase">{{ sessionFlash.type }}</strong> {{ sessionFlash.message }}
+    </div>
+{{/if}}
+
+{{#if flash}}
+    <div class="alert alert-{{flash.type}}" role="alert">
+        <strong class="text-uppercase">{{flash.type}}</strong> {{flash.message}}
+    </div>
+{{/if}}

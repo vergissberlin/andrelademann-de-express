@@ -1,17 +1,16 @@
 {{> header}}
 
+{{> flash}}
+
 {{#if user}}
-    <div class="alert alert-success" role="alert">
-        <p><strong>Welcome!</strong> {{user.username}}</p>
-    </div>
+    <h2>Welcome {{user.username}}!</h2>
     <p>
         ID: {{ user._id }}<br/>
         Username: {{ user.username }}<br/>
-        Name: {{ user.displayName }}<br/>
+        Nickname: {{ user.nickname }}<br/>
+        Password: {{ user.password }}<br/>
     </p>
     <a href="/user//logout">Log out</a>
 {{else}}
     <a href="/user/login" class="btn btn-primary">User login</a>
 {{/if}}
-
-

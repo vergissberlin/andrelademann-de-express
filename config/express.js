@@ -1,55 +1,25 @@
-var express = require('express'),
+var
+	express = require('express'),
+	//flash = require('express-flash'),
+	flash = require('connect-flash'),
+	session = require('express-session'),
+	expressHandlebars = require('express-handlebars'),
+	handlebars = require('handlebars'),
+	handlebarsIntl = require('handlebars-intl'),
 	glob = require('glob'),
 	favicon = require('serve-favicon'),
-	flash = require('connect-flash'),
 	logger = require('morgan'),
 	cookieParser = require('cookie-parser'),
 	bodyParser = require('body-parser'),
 	compress = require('compression'),
 	methodOverride = require('method-override'),
-	exphbs = require('express-handlebars'),
-	Handlebars = require('handlebars'),
-	HandlebarsIntl = require('handlebars-intl'),
-	passport = require('passport');
+	passport = require('passport'),
+	sessionStore = new session.MemoryStore;
 
-var Strategy = require('passport-local').Strategy;
-
-// Configure the local strategy for use by Passport.
-//
-// The local strategy require a `verify` function which receives the credentials
-// (`username` and `password`) submitted by the user.  The function must verify
-// that the password is correct and then invoke `cb` with a user object, which
-// will be set at `req.user` in route handlers after authentication.
-passport.use(new Strategy(
-	function (username, password, cb) {
-		console.log(username, email, password)
-	}));
-
-
-// Configure Passport authenticated session persistence.
-//
-// In order to restore authentication state across HTTP requests, Passport needs
-// to serialize users into and deserialize users out of the session.  The
-// typical implementation of this is as simple as supplying the user ID when
-// serializing, and querying the user record by ID from the database when
-// deserializing.
-passport.serializeUser(function (user, cb) {
-	cb(null, user.id);
-});
-
-passport.deserializeUser(function (id, cb) {
-	db.users.findById(id, function (err, user) {
-		if (err) {
-			return cb(err);
-		}
-		cb(null, user);
-	});
-});
-
-
+var secret = process.env.NODE_SECRET || '1234';
 
 // Helper
-HandlebarsIntl.registerWith(Handlebars);
+handlebarsIntl.registerWith(handlebars);
 require('../app/views/helper');
 
 module.exports = function (app, config) {
@@ -57,39 +27,66 @@ module.exports = function (app, config) {
 	app.locals.ENV = env;
 	app.locals.ENV_DEVELOPMENT = env == 'development';
 
-	app.engine('handlebars', exphbs({
+	// Rendering
+	app.engine('handlebars', expressHandlebars({
 		layoutsDir: config.root + '/app/views/layouts/',
 		defaultLayout: 'main',
 		partialsDir: [config.root + '/app/views/partials/']
 	}));
 
+	// Views
 	app.set('views', config.root + '/app/views');
 	app.set('view engine', 'handlebars');
 
-	//app.use(favicon(config.root + '/public/img/favicon/favicon.ico'));
+	app.use(favicon(config.root + '/public/img/favicon/favicon.ico'));
 	app.use(logger('dev'));
-	app.use(cookieParser());
+
+	// Parser
+	app.use(cookieParser(secret));
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({
 		extended: true
 	}));
-	app.use(require('express-session')({secret: 'keyboard cat', resave: false, saveUninitialized: false}));
 
-	// Initialize Passport and restore authentication state, if any, from the
-	// session.
-	app.use(flash());
+	// Session handling
+	app.use(session({
+		cookie: {maxAge: 60000},
+		store: sessionStore,
+		saveUninitialized: true,
+		resave: 'true',
+		secret: secret
+	}));
+
+
+	// Passport
 	app.use(passport.initialize());
 	app.use(passport.session());
 
+	// Compression and caching
 	app.use(compress());
 	app.use(express.static(config.root + '/public'));
 	app.use(methodOverride());
 
+	// Flash messages
+	app.use(flash());
+	//	app.use(connectFlash());
+
+	/// Custom flash middleware
+	app.use(function (req, res, next) {
+		// if there's a flash message in the session request,
+		// make it available in the response, then delete it
+		res.locals.sessionFlash = req.session.sessionFlash;
+		delete req.session.sessionFlash;
+		next();
+	});
+
+	// Controllers
 	var controllers = glob.sync(config.root + '/app/controllers/*.js');
 	controllers.forEach(function (controller) {
 		require(controller)(app);
 	});
 
+	// Exception handling
 	app.use(function (req, res, next) {
 		var err = new Error('Not Found');
 		err.status = 404;
