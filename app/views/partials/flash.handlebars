@@ -4,13 +4,6 @@
     </div>
 {{/if}}
 
-
-{{#if sessionFlash.message}}
-    <div class="alert alert-{{ sessionFlash.type }}">
-        <strong class="text-uppercase">{{ sessionFlash.type }}</strong> {{ sessionFlash.message }}
-    </div>
-{{/if}}
-
 {{#if flash}}
     <div class="alert alert-{{flash.type}}" role="alert">
         <strong class="text-uppercase">{{flash.type}}</strong> {{flash.message}}

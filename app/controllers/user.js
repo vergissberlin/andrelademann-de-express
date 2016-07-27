@@ -14,10 +14,12 @@ module.exports = function (app) {
 };
 
 router.get('/user', function (req, res) {
-	req.session.sessionFlash = {
+	req.session.flash = {
 		type: 'info',
 		message: 'Please login.'
 	};
+
+	console.log(req.session);
 
 	res.render('user', {
 		title: 'User'

@@ -1,6 +1,5 @@
 var
 	express = require('express'),
-	//flash = require('express-flash'),
 	flash = require('connect-flash'),
 	session = require('express-session'),
 	expressHandlebars = require('express-handlebars'),
@@ -41,12 +40,14 @@ module.exports = function (app, config) {
 	app.use(favicon(config.root + '/public/img/favicon/favicon.ico'));
 	app.use(logger('dev'));
 
+
 	// Parser
 	app.use(cookieParser(secret));
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({
 		extended: true
 	}));
+
 
 	// Session handling
 	app.use(session({
@@ -62,23 +63,24 @@ module.exports = function (app, config) {
 	app.use(passport.initialize());
 	app.use(passport.session());
 
+
 	// Compression and caching
 	app.use(compress());
 	app.use(express.static(config.root + '/public'));
 	app.use(methodOverride());
 
+
 	// Flash messages
 	app.use(flash());
-	//	app.use(connectFlash());
-
 	/// Custom flash middleware
 	app.use(function (req, res, next) {
 		// if there's a flash message in the session request,
 		// make it available in the response, then delete it
-		res.locals.sessionFlash = req.session.sessionFlash;
-		delete req.session.sessionFlash;
+		res.locals.flash = req.session.flash;
+		delete req.session.flash;
 		next();
 	});
+
 
 	// Controllers
 	var controllers = glob.sync(config.root + '/app/controllers/*.js');
@@ -86,14 +88,20 @@ module.exports = function (app, config) {
 		require(controller)(app);
 	});
 
+
 	// Exception handling
 	app.use(function (req, res, next) {
 		var err = new Error('Not Found');
 		err.status = 404;
-		next(err);
+		res.render('error', {
+			message: err.message,
+			error: err,
+			env: app.get('env'),
+			title: 'Page not found.'
+		});
 	});
 
-	if (app.get('env') === 'development') {
+	if (app.get('env') === 'development' || app.get('env') === 'home') {
 		app.use(function (err, req, res) {
 			res.status(err.status || 500);
 			res.render('error', {
