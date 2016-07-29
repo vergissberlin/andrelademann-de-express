@@ -1,70 +1,58 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700,300italic);
 *:not(pre) {
-	font-family: 'Open Sans Condensed', sans-serif;
-	z-index: 10;
-}
+  font-family: 'Open Sans Condensed', sans-serif;
+  z-index: 10; }
 
 header {
-	margin-top: 20px;
-}
+  margin-top: 20px; }
 
 main {
-	margin-top: 20px;
-}
+  margin-top: 20px; }
 
 footer {
-	margin-top: 30px;
-	padding-top: 5px;
-	border-top: 1px #ddd solid;
-	color: #bbb;
-}
+  margin-top: 30px;
+  padding-top: 5px;
+  border-top: 1px #ddd solid;
+  color: #bbb; }
 
 p, i, em {
-	font-weight: 300;
-}
+  font-weight: 300; }
 
 h1, h2, h3, b, strong {
-	font-weight: 700;
-}
+  font-weight: 700; }
 
 i, em {
-	font-style: italic;
-}
+  font-style: italic; }
 
 code[class*="language-"] *,
 pre[class*="language-"] * {
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-}
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
 
 .media-author {
-	padding: 20px 30px;
-	background-color: aliceblue;
-	border-top: 1px #eee solid;
-}
+  padding: 20px 30px;
+  background-color: aliceblue;
+  border-top: 1px #eee solid; }
 
 .text-ellipsis {
-	display: table;
-	table-layout: fixed;
-	width: 100%;
-	white-space: nowrap;
-	padding: 0;
-	margin: 0;
-	border: darkgreen solid 1px;
-}
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  border: darkgreen solid 1px; }
 
 .text-ellipsis > * {
-	display: table-cell;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	padding: 0;
-	margin: 0;
-	border: red solid 1px;
-	table-border-color-dark: blue;
-	table-layout: auto;
-}
+  display: table-cell;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  margin: 0;
+  border: red solid 1px;
+  table-border-color-dark: blue;
+  table-layout: auto; }
 
 .text-overflow {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
