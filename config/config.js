@@ -34,7 +34,7 @@ var config = {
 			name: 'mongamvchandlebars'
 		},
 		port: process.env.PORT || 3000,
-		db: 'mongodb://wonder:test@ds039058.mlab.com:39058/heroku_4qxt9dld'
+		db: process.env.MONGODB_URI
 	}
 };
 
