@@ -13,6 +13,17 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		coveralls: {
+			options: {
+				force: false
+			},
+
+			development: {
+				src: 'app/**/*.js',
+				options: {}
+			}
+		},
+
 		develop: {
 			server: {
 				file: 'app.js'
