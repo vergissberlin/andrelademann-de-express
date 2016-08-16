@@ -3,6 +3,5 @@ var Handlebars = require('handlebars'),
 
 Handlebars.registerHelper('slug', function (context, options) {
 
-
-	return new Handlebars.SafeString(getSlug(context))
+	return new Handlebars.SafeString(getSlug(context));
 });

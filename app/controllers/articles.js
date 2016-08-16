@@ -13,7 +13,9 @@ router.get('/articles', function (req, res, next) {
 		.limit(10)
 		.sort({updated: -1})
 		.exec(function (err, articles) {
-			if (err) return next(err);
+			if (err) {
+				return next(err);
+			}
 			res.render('articles', {
 				title: 'Articles',
 				articles: articles,
@@ -29,7 +31,9 @@ router.get('/articles', function (req, res, next) {
 router.get('/article/:slug', function (req, res, next) {
 	Article.findOne({'slug': req.params.slug})
 		.exec(function (err, article) {
-			if (err) return next(err);
+			if (err) {
+				return next(err);
+			}
 			res.render('article', {
 				title: 'Articles',
 				article: article

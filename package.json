@@ -1,37 +1,48 @@
 {
-	"name": "mongamvchandlebars",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node app.js"
-	},
-	"dependencies": {
-		"body-parser": "^1.13.3",
-		"compression": "^1.5.2",
-		"cookie-parser": "^1.3.3",
-		"express": "^4.13.3",
-		"express-fileupload": "0.0.5",
-		"express-handlebars": "^3.0.0",
-		"glob": "^6.0.4",
-		"handlebars-intl": "^1.1.2",
-		"handlebars-paginate": "^0.1.0",
-		"method-override": "^2.3.0",
-		"mongoose": "^4.1.2",
-		"mongoose-query-paginate": "^1.0.1",
-		"morgan": "^1.6.1",
-		"serve-favicon": "^2.3.0",
-		"speakingurl": "^9.0.0"
-	},
-	"devDependencies": {
-		"grunt": "^1.0.1",
-		"grunt-contrib-watch": "^1.0.0",
-		"grunt-coveralls": "^1.0.1",
-		"grunt-develop": "^0.4.0",
-		"grunt-manifest": "^0.4.4",
-		"grunt-sass": "^1.0.0",
-		"load-grunt-tasks": "^3.2.0",
-		"mongoose-mock": "^0.4.0",
-		"request": "^2.60.0",
-		"time-grunt": "^1.3.0"
-	}
+  "name": "mongamvchandlebars",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "compression": "^1.5.2",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.13.3",
+    "express-fileupload": "0.0.5",
+    "express-handlebars": "^3.0.0",
+    "glob": "^6.0.4",
+    "handlebars-intl": "^1.1.2",
+    "handlebars-paginate": "^0.1.0",
+    "method-override": "^2.3.0",
+    "mongoose": "^4.1.2",
+    "mongoose-query-paginate": "^1.0.1",
+    "morgan": "^1.6.1",
+    "serve-favicon": "^2.3.0",
+    "speakingurl": "^9.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jasmine": "^1.0.3",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-coveralls": "^1.0.1",
+    "grunt-develop": "^0.4.0",
+    "grunt-manifest": "^0.4.4",
+    "grunt-sass": "^1.0.0",
+    "jshint-stylish": "^2.2.1",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-requirejs": "^1.0.0",
+    "load-grunt-tasks": "^3.2.0",
+    "mongoose-mock": "^0.4.0",
+    "request": "^2.60.0",
+    "requirejs": "^2.2.0",
+    "time-grunt": "^1.3.0"
+  }
 }
