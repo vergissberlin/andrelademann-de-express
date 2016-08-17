@@ -8,7 +8,7 @@ module.exports = function (app) {
 
 router.get('/weather', function (req, res) {
 
-	weather.find({search: 'Cape town', degreeType: 'C', lang: 'de-DE'}, function (err, result) {
+	weather.find({search: 'Cape town', degreeType: 'C', lang: 'en-GB'}, function (err, result) {
 		if (err) {
 			console.log(err);
 		}
@@ -18,4 +18,3 @@ router.get('/weather', function (req, res) {
 		});
 	});
 });
-

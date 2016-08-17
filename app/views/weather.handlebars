@@ -1,15 +1,14 @@
 {{> header}}
-
 <div class="row">
     <div class="col-md-12">
         <h2>{{{weather.0.location.name}}}</h2>
+        <p class="h3">{{{weather.0.current.temperature}}} °C, {{{weather.0.current.skytext}}}</p>
 			{{#each weather.0.forecast}}
           <div class="row row-teaser teaser-charts teaser-charts-weather">
               <div class="col-sm-2 col-default-3 condition-icon">
-                  <div class="svg">
-                      <img src="http://blob.weather.microsoft.com/static/weather4/de/law/{{skycodeday}}.gif"
-                           alt="{{skytextday}}">
-                  </div>
+                  <img src="http://blob.weather.microsoft.com/static/weather4/de/law/{{skycodeday}}.gif"
+                       alt="{{skytextday}}"
+                       class="img-responsive">
               </div>
               <div class="col-sm-10 col-default-9">
                   <div class="row">
@@ -22,6 +21,11 @@
                       <div class="col-sm-7 col-xs-6">
                           <p class="h3">{{day}}, {{date}}</p>
                           <p class="headline-xs"></p>
+												{{#if precip}}
+                            <em>Possibility of precipitation {{precip}}%</em>
+												{{else}}
+                            <em>No chance of rain.</em>
+												{{/if}}
                       </div>
                   </div>
               </div>
