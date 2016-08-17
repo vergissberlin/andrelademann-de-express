@@ -1,0 +1,32 @@
+{{> header}}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>{{{weather.0.location.name}}}</h2>
+			{{#each weather.0.forecast}}
+          <div class="row row-teaser teaser-charts teaser-charts-weather">
+              <div class="col-sm-2 col-default-3 condition-icon">
+                  <div class="svg">
+                      <img src="http://blob.weather.microsoft.com/static/weather4/de/law/{{skycodeday}}.gif"
+                           alt="{{skytextday}}">
+                  </div>
+              </div>
+              <div class="col-sm-10 col-default-9">
+                  <div class="row">
+                      <div class="col-sm-5 col-xs-6 temperature-condition">
+                          <p class="h3">{{low}}
+                              <small>up to</small> {{high}}°C
+                          </p>
+                          <p class="headline-xs">{{skytextday}}</p>
+                      </div>
+                      <div class="col-sm-7 col-xs-6">
+                          <p class="h3">{{day}}, {{date}}</p>
+                          <p class="headline-xs"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+			{{/each}}
+    </div>
+</div>
+

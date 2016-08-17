@@ -4,10 +4,6 @@
 	z-index: 10;
 }
 
-html {
-	overflow-y: auto;
-}
-
 header {
 	margin-top: 20px;
 }
