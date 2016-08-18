@@ -87,6 +87,14 @@ module.exports = function (grunt) {
 
 		responsive_images: {
 			prod: {
+				options: {
+					sizes: [
+						{name: 'small', width: 320},
+						{name: 'medium', width: 640},
+						{name: 'large', width: 1024},
+						{name: 'xlarge', width: 1200}
+					]
+				},
 				files: [{
 					expand: true,
 					src: ['**.{jpg,gif,png}'],
@@ -177,7 +185,6 @@ module.exports = function (grunt) {
 	grunt.registerTask('dev', [
 		'sass',
 		'manifest',
-		'jshint',
 		'develop:server',
 		'watch'
 	]);
