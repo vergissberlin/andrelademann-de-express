@@ -27,6 +27,11 @@ module.exports = function (grunt) {
 		develop: {
 			server: {
 				file: 'app.js'
+			},
+			debug: {
+				file: 'app.js',
+				nodeArgs: ['--debug-brk'],
+				env: {NODE_ENV: 'development'}
 			}
 		},
 
@@ -80,6 +85,17 @@ module.exports = function (grunt) {
 			}
 		},
 
+		responsive_images: {
+			prod: {
+				files: [{
+					expand: true,
+					src: ['**.{jpg,gif,png}'],
+					cwd: 'private/img/',
+					custom_dest: 'public/img/content/{%= width %}/'
+				}]
+			}
+		},
+
 		sass: {
 			dist: {
 				files: {
@@ -92,6 +108,16 @@ module.exports = function (grunt) {
 			options: {
 				nospawn: true,
 				livereload: reloadPort
+			},
+			images: {
+				files: [
+					'private/img/**/*'
+				],
+				tasks: [
+					'responsive_images',
+					'develop:server',
+					'delayed-livereload'
+				]
 			},
 			js: {
 				files: [
@@ -148,8 +174,30 @@ module.exports = function (grunt) {
 		'watch'
 	]);
 
+	grunt.registerTask('dev', [
+		'sass',
+		'manifest',
+		'jshint',
+		'develop:server',
+		'watch'
+	]);
+
+	grunt.registerTask('debug', [
+		'sass',
+		'manifest',
+		'jshint',
+		'develop:debug',
+		'watch'
+	]);
+
 	grunt.registerTask('test', [
 		'jshint',
 		'jasmine'
+	]);
+
+	grunt.registerTask('prod', [
+		'sass',
+		'manifest',
+		'responsive_images'
 	]);
 };

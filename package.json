@@ -1,5 +1,5 @@
 {
-	"name": "mongamvchandlebars",
+	"name": "andrelademannde",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -7,6 +7,7 @@
 		"test": "grunt test"
 	},
 	"dependencies": {
+		"basicauth-middleware": "^1.1.0",
 		"body-parser": "^1.13.3",
 		"compression": "^1.5.2",
 		"connect-flash": "^0.1.1",
@@ -22,7 +23,7 @@
 		"method-override": "^2.3.0",
 		"mongoose": "^4.1.2",
 		"mongoose-query-paginate": "^1.0.1",
-		"morgan": "^1.6.1",
+		"morgan": "^1.7.0",
 		"passport": "^0.3.2",
 		"passport-local": "^1.0.0",
 		"serve-favicon": "^2.3.0",
@@ -37,6 +38,7 @@
 		"grunt-coveralls": "^1.0.1",
 		"grunt-develop": "^0.4.0",
 		"grunt-manifest": "^0.4.4",
+		"grunt-responsive-images": "^0.1.9",
 		"grunt-sass": "^1.0.0",
 		"jshint-stylish": "^2.2.1",
 		"karma": "^1.2.0",

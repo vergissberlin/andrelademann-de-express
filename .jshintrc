@@ -1,5 +1,5 @@
 {
-	"curly"   : true,
+	"curly"   : false,
 	"eqeqeq"  : true,
 	"immed"   : true,
 	"latedef" : true,
@@ -11,6 +11,7 @@
 	"eqnull"  : true,
 	"node"    : true,
 	"es5"     : true,
+	"quotmark": "single",
 	"globals" : {
 		"it"         : false,
 		"xit"        : false,
@@ -20,5 +21,11 @@
 		"afterEach"  : false,
 		"expect"     : false,
 		"spyOn"      : false
+		"console": true,
+		"exports": true,
+		"module": true,
+		"process": true,
+		"require": true,
+		"setTimeout": true
 	}
 }
