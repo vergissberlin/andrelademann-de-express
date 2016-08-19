@@ -19,6 +19,9 @@ var
 
 var secret = process.env.NODE_SECRET || '1234';
 
+// Register additional header
+handlebarsIntl.registerWith(handlebars);
+
 // Passport
 var passport = require('passport');
 var expressSession = require('express-session');
