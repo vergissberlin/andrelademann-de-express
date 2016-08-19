@@ -13,24 +13,42 @@ var
 	compress = require('compression'),
 	methodOverride = require('method-override'),
 	passport = require('passport'),
-	sessionStore = new session.MemoryStore;
+	sessionStore = new session.MemoryStore,
+	helpers = require('../app/views/helper'),
+	basicauth = require('basicauth-middleware');
 
 var secret = process.env.NODE_SECRET || '1234';
 
-// Helper
-handlebarsIntl.registerWith(handlebars);
-require('../app/views/helper');
+// Passport
+var passport = require('passport');
+var expressSession = require('express-session');
 
 module.exports = function (app, config) {
+
+	// Environment
 	var env = process.env.NODE_ENV || 'development';
 	app.locals.ENV = env;
 	app.locals.ENV_DEVELOPMENT = env == 'development';
 
+	// Passport
+	app.use(expressSession({
+		secret: 'keyboard cat',
+		resave: false,
+		saveUninitialized: false,
+		cookie: {secure: false}
+	}));
+	app.use(passport.initialize());
+	app.use(cookieParser());
+	app.use(passport.session({
+		cookie: {maxAge: 60000}
+	}));
+
 	// Rendering
 	app.engine('handlebars', expressHandlebars({
 		layoutsDir: config.root + '/app/views/layouts/',
+		partialsDir: [config.root + '/app/views/partials/'],
 		defaultLayout: 'main',
-		partialsDir: [config.root + '/app/views/partials/']
+		helpers: helpers
 	}));
 
 	// Views
@@ -40,34 +58,19 @@ module.exports = function (app, config) {
 	app.use(favicon(config.root + '/public/img/favicon/favicon.ico'));
 	app.use(logger('dev'));
 
-
 	// Parser
-	app.use(cookieParser(secret));
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({
 		extended: true
 	}));
 
-
-	// Session handling
-	app.use(session({
-		cookie: {maxAge: 60000},
-		store: sessionStore,
-		saveUninitialized: true,
-		resave: 'true',
-		secret: secret
-	}));
-
-
-	// Passport
-	app.use(passport.initialize());
-	app.use(passport.session());
-
-
 	// Compression and caching
 	app.use(compress());
 	app.use(express.static(config.root + '/public'));
-	app.use(methodOverride());
+	app.use(express.static('img'));
+	app.use(express.static('css'));
+	app.use(express.static('fnt'));
+	app.use(express.static('js'));
 
 
 	// Flash messages
@@ -78,12 +81,21 @@ module.exports = function (app, config) {
 		// make it available in the response, then delete it
 		res.locals.flash = req.session.flash;
 		delete req.session.flash;
+		res.locals.messages = req.flash();
+		if (req.user) {
+			res.locals.profile = req.user;
+		}
 		next();
 	});
 
+	// Basic auth
+	app.use(basicauth('ala', process.env.BASE_SECRET || 'base', 'Please enter the credentials!'));
+
+	// Override
+	app.use(methodOverride());
 
 	// Controllers
-	var controllers = glob.sync(config.root + '/app/controllers/*.js');
+	var controllers = glob.sync(config.root + '/app/controllers/**/*.js');
 	controllers.forEach(function (controller) {
 		require(controller)(app);
 	});

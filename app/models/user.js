@@ -2,36 +2,42 @@
  * User Model
  * =============
  */
-var mongoose = require('mongoose'),
-	Schema = mongoose.Schema;
+module.exports = {
+	user: [
 
-var UserSchema = new Schema({
-	username: String,
-	displayName: String,
-	emails: [{value: String}],
-	password: String
-});
-
-UserSchema.virtual('date')
-	.get(function () {
-		return this._id.getTimestamp();
-	});
-
-mongoose.model('User', UserSchema);
-
-UserSchema.pre('save', function (next) {
-	this.update({}, {$set: {updated: new Date()}});
-	next();
-});
-
-exports.findByUsername = function (username, cb) {
-	process.nextTick(function () {
-		for (var i = 0, len = records.length; i < len; i++) {
-			var record = records[i];
-			if (record.username === username) {
-				return cb(null, record);
-			}
+		{
+			_id: 0,
+			username: 'vergissberlin',
+			firstname: 'André',
+			lastname: 'Lademann',
+			password: process.env.AUTH_SECRET || 'iPhone',
+			gender: 'Herr',
+			email: 'vergissberlin@googlemail.com'
 		}
-		return cb(null, null);
-	});
+	],
+
+	findOneByName: function (username, callback) {
+		var user,
+			error = null;
+		user = this.user.filter(function (user) {
+			return user.username == username
+		});
+
+		if (user.length === 0) {
+			error = username;
+		}
+		return callback(user[0], error);
+	},
+
+	findOneById: function (id, callback) {
+		var user,
+			error = null;
+		user = this.user.filter(function (user) {
+			return user._id == id
+		});
+		if (user.length === 0) {
+			error = id;
+		}
+		return callback(user[0], error);
+	}
 };

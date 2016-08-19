@@ -1,55 +1,71 @@
 var express = require('express'),
-	router = express.Router(),
 	passport = require('passport'),
-	LocalStrategy = require('passport-local').Strategy,
-	user = {
-		_id: 45,
-		username: 'dirk',
-		nickname: 'molle',
-		password: '1234'
-	};
+	passportUtil = require('../../util/passport'),
+	user = require('../models/user'),
+	router = express.Router();
 
 module.exports = function (app) {
 	app.use('/', router);
 };
 
-router.get('/user', function (req, res) {
+
+// Login
+router.get('/user/login', function (req, res) {
 	req.session.flash = {
 		type: 'info',
 		message: 'Please login.'
 	};
 
-	console.log(req.session);
-
-	res.render('user', {
-		title: 'User'
+	res.render('user-login', {
+		brand: 'primary',
+		title: 'User',
+		category: 'User Login'
 	});
 });
 
-router.get('/user/login', function (req, res) {
-	res.render('userLogin', {
-		title: 'User login'
-	});
-});
-
-router.post('/user/login',
-	passport.authenticate('local', {
-		successRedirect: '/user',
+router.post('/user/login', passport.authenticate('local',
+	{
+		successReturnToOrRedirect: '/user/profile',
+		successFlash: 'Welcome. Login successful.',
 		failureRedirect: '/user/login',
-		failureFlash: true
-	}),
-	function (req, res) {
-		res.redirect('/');
-	});
+		failureFlash: 'Check your credentials!'
+	})
+);
 
-router.get('/user/logout',
-	function (req, res) {
-		req.logout();
-		res.redirect('/');
-	});
 
-router.get('/user/profile',
-	require('connect-ensure-login').ensureLoggedIn(),
-	function (req, res) {
-		res.render('profile', {user: req.user});
+// Registration
+router.get('/user/signup', function (req, res) {
+	res.render('user-register', {
+		brand: 'primary',
+		title: 'Benutzer',
+		category: 'Benutzer Registrierung',
+		message: req.flash('message')
 	});
+});
+
+router.post('/user/signup', passport.authenticate('signup', {
+	brand: 'primary',
+	title: 'User',
+	category: 'User Login',
+	successRedirect: '/user/profile',
+	failureRedirect: '/user/signup',
+	failureFlash: 'Check your credentials.'
+}));
+
+
+// Logout
+router.get('/user/logout', function (req, res) {
+	req.logout();
+	res.redirect('/');
+});
+
+
+// Profile
+router.get('/user/profile', passportUtil.ensureAuthenicated, function (req, res) {
+	res.render('user-profile', {
+		brand: 'primary',
+		title: 'Benutzer',
+		category: 'Benutzer Profil',
+		profile: req.user
+	});
+});
