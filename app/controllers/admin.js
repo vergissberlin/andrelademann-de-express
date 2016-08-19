@@ -1,6 +1,6 @@
-var express = require('express'),
-	passportUtil = require('../../util/passport'),
-	router = express.Router();
+var express      = require('express'),
+		passportUtil = require('../../util/passport'),
+		router       = express.Router();
 
 module.exports = function (app) {
 	app.use('/', router);

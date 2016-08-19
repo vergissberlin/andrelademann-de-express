@@ -19,7 +19,7 @@ module.exports = function (grunt) {
 			},
 
 			development: {
-				src: 'app/views/helper/**/*.js',
+				src:     'app/views/helper/**/*.js',
 				options: {}
 			}
 		},
@@ -28,16 +28,16 @@ module.exports = function (grunt) {
 			server: {
 				file: 'app.js'
 			},
-			debug: {
-				file: 'app.js',
+			debug:  {
+				file:     'app.js',
 				nodeArgs: ['--debug-brk'],
-				env: {NODE_ENV: 'development'}
+				env:      {NODE_ENV: 'development'}
 			}
 		},
 
 		jasmine: {
 			pivotal: {
-				src: 'app/views/helper/**/*.js',
+				src:     'app/views/helper/**/*.js',
 				options: {
 					specs: 'test/spec/*Spec.js'
 				}
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
 		},
 
 		jshint: {
-			all: [
+			all:     [
 				'Gruntfile.js',
 				'app/**/*.js',
 				'test/**/*.js'
@@ -59,29 +59,29 @@ module.exports = function (grunt) {
 		manifest: {
 			generate: {
 				options: {
-					basePath: 'public',
-					cache: [
+					basePath:     'public',
+					cache:        [
 						'//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css',
 						'//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',
 						'//cdnjs.cloudflare.com/ajax/libs/tether/1.3.3/js/tether.min.js',
 						'//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js'
 					],
-					network: ['http://*', 'https://*'],
-					fallback: ['/ /offline.html'],
+					network:      ['http://*', 'https://*'],
+					fallback:     ['/ /offline.html'],
 					preferOnline: true,
-					verbose: false,
-					timestamp: true,
-					settings: {
+					verbose:      false,
+					timestamp:    true,
+					settings:     {
 						preferOnline: true
 					}
 				},
-				src: [
+				src:     [
 					'index.html',
 					'css/*.css',
 					'img/**/*.png',
 					'js/*.min.js'
 				],
-				dest: 'public/manifest.appcache'
+				dest:    'public/manifest.appcache'
 			}
 		},
 
@@ -95,12 +95,14 @@ module.exports = function (grunt) {
 						{name: 'xlarge', width: 1200}
 					]
 				},
-				files: [{
-					expand: true,
-					src: ['**.{jpg,gif,png}'],
-					cwd: 'private/img/',
-					custom_dest: 'public/img/content/{%= width %}/'
-				}]
+				files:   [
+					{
+						expand:      true,
+						src:         ['**.{jpg,gif,png}'],
+						cwd:         'private/img/',
+						custom_dest: 'public/img/content/{%= width %}/'
+					}
+				]
 			}
 		},
 
@@ -114,10 +116,10 @@ module.exports = function (grunt) {
 
 		watch: {
 			options: {
-				nospawn: true,
+				nospawn:    true,
 				livereload: reloadPort
 			},
-			images: {
+			images:  {
 				files: [
 					'private/img/**/*'
 				],
@@ -127,7 +129,7 @@ module.exports = function (grunt) {
 					'delayed-livereload'
 				]
 			},
-			js: {
+			js:      {
 				files: [
 					'app.js',
 					'app/**/*.js',
@@ -135,17 +137,17 @@ module.exports = function (grunt) {
 				],
 				tasks: ['jshint', 'develop', 'delayed-livereload']
 			},
-			css: {
-				files: [
+			css:     {
+				files:   [
 					'public/css/*.scss'
 				],
-				tasks: ['sass'],
+				tasks:   ['sass'],
 				options: {
 					livereload: reloadPort
 				}
 			},
-			views: {
-				files: [
+			views:   {
+				files:   [
 					'app/views/*.handlebars',
 					'app/views/**/*.handlebars'
 				],

@@ -3,31 +3,31 @@
  * =============
  */
 var mongoose = require('mongoose'),
-	Schema = mongoose.Schema;
+		Schema   = mongoose.Schema;
 
 var ArticleSchema = new Schema({
-	state: String,
-	title: {
-		type: String,
-		index: true,
+	state:     String,
+	title:     {
+		type:     String,
+		index:    true,
 		required: true
 	},
-	slug: {
-		type: String,
-		index: true,
-		unique: true,
+	slug:      {
+		type:     String,
+		index:    true,
+		unique:   true,
 		required: true
 	},
-	image: String,
-	teaser: String,
-	text: String,
-	comments: [],
+	image:     String,
+	teaser:    String,
+	text:      String,
+	comments:  [],
 	published: {
-		type: Date,
+		type:    Date,
 		default: Date.now
 	},
-	updated: {
-		type: Date,
+	updated:   {
+		type:    Date,
 		default: Date.now
 	}
 });

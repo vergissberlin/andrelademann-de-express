@@ -1,40 +1,40 @@
-var path = require('path'),
-	rootPath = path.normalize(__dirname + '/..'),
-	env = process.env.NODE_ENV || 'development';
+var path     = require('path'),
+		rootPath = path.normalize(__dirname + '/..'),
+		env      = process.env.NODE_ENV || 'development';
 
 var config = {
-	home: {
+	home:        {
 		root: rootPath,
-		app: {
+		app:  {
 			name: 'andrelademannde'
 		},
 		port: process.env.PORT || 3030,
-		db: 'mongodb://localhost:27017/andrelademannde-home'
+		db:   'mongodb://localhost:27017/andrelademannde-home'
 	},
 	development: {
 		root: rootPath,
-		app: {
+		app:  {
 			name: 'andrelademannde'
 		},
 		port: process.env.PORT || 3232,
-		db: 'mongodb://192.168.99.100:32774/andrelademannde-development'
+		db:   'mongodb://192.168.99.100:32774/andrelademannde-development'
 	},
-	test: {
+	test:        {
 		root: rootPath,
-		app: {
+		app:  {
 			name: 'andrelademannde'
 		},
 		port: process.env.PORT || 3000,
-		db: 'mongodb://localhost/andrelademannde-test'
+		db:   'mongodb://localhost/andrelademannde-test'
 	},
 
 	production: {
 		root: rootPath,
-		app: {
+		app:  {
 			name: 'andrelademannde'
 		},
 		port: process.env.PORT || 3000,
-		db: process.env.MONGODB_URI
+		db:   process.env.MONGODB_URI
 	}
 };
 

@@ -1,6 +1,6 @@
 var weather = require('weather-js'),
-	express = require('express'),
-	router = express.Router();
+		express = require('express'),
+		router  = express.Router();
 
 module.exports = function (app) {
 	app.use('/', router);
@@ -13,7 +13,7 @@ router.get('/weather', function (req, res) {
 			console.log(err);
 		}
 		res.render('weather', {
-			title: 'Weather',
+			title:   'Weather',
 			weather: result
 		});
 	});

@@ -1,8 +1,8 @@
-var express = require('express'),
-	passport = require('passport'),
-	passportUtil = require('../../util/passport'),
-	user = require('../models/user'),
-	router = express.Router();
+var express      = require('express'),
+		passport     = require('passport'),
+		passportUtil = require('../../util/passport'),
+		user         = require('../models/user'),
+		router       = express.Router();
 
 module.exports = function (app) {
 	app.use('/', router);
@@ -12,13 +12,13 @@ module.exports = function (app) {
 // Login
 router.get('/user/login', function (req, res) {
 	req.session.flash = {
-		type: 'info',
+		type:    'info',
 		message: 'Please login.'
 	};
 
 	res.render('user-login', {
-		brand: 'primary',
-		title: 'User',
+		brand:    'primary',
+		title:    'User',
 		category: 'User Login'
 	});
 });
@@ -26,9 +26,9 @@ router.get('/user/login', function (req, res) {
 router.post('/user/login', passport.authenticate('local',
 	{
 		successReturnToOrRedirect: '/user/profile',
-		successFlash: 'Welcome. Login successful.',
-		failureRedirect: '/user/login',
-		failureFlash: 'Check your credentials!'
+		successFlash:              'Welcome. Login successful.',
+		failureRedirect:           '/user/login',
+		failureFlash:              'Check your credentials!'
 	})
 );
 
@@ -36,20 +36,20 @@ router.post('/user/login', passport.authenticate('local',
 // Registration
 router.get('/user/signup', function (req, res) {
 	res.render('user-register', {
-		brand: 'primary',
-		title: 'Benutzer',
+		brand:    'primary',
+		title:    'Benutzer',
 		category: 'Benutzer Registrierung',
-		message: req.flash('message')
+		message:  req.flash('message')
 	});
 });
 
 router.post('/user/signup', passport.authenticate('signup', {
-	brand: 'primary',
-	title: 'User',
-	category: 'User Login',
+	brand:           'primary',
+	title:           'User',
+	category:        'User Login',
 	successRedirect: '/user/profile',
 	failureRedirect: '/user/signup',
-	failureFlash: 'Check your credentials.'
+	failureFlash:    'Check your credentials.'
 }));
 
 
@@ -63,9 +63,9 @@ router.get('/user/logout', function (req, res) {
 // Profile
 router.get('/user/profile', passportUtil.ensureAuthenicated, function (req, res) {
 	res.render('user-profile', {
-		brand: 'primary',
-		title: 'Benutzer',
+		brand:    'primary',
+		title:    'Benutzer',
 		category: 'Benutzer Profil',
-		profile: req.user
+		profile:  req.user
 	});
 });

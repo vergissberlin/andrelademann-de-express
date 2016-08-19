@@ -8,7 +8,7 @@
 // Karma configuration
 // Generated on Tue Aug 16 2016 22:35:18 GMT+0200 (CEST)
 
-module.exports = function(config) {
+module.exports = function (config) {
 	config.set({
 
 		// base path that will be used to resolve all patterns (eg. files, exclude)
@@ -29,14 +29,12 @@ module.exports = function(config) {
 
 
 		// list of files to exclude
-		exclude: [
-		],
+		exclude: [],
 
 
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-		preprocessors: {
-		},
+		preprocessors: {},
 
 
 		// test results reporter to use
@@ -54,7 +52,8 @@ module.exports = function(config) {
 
 
 		// level of logging
-		// possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+		// possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO ||
+		// config.LOG_DEBUG
 		logLevel: config.LOG_INFO,
 
 

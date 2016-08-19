@@ -1,7 +1,7 @@
-var express = require('express'),
-	router = express.Router(),
-	mongoose = require('mongoose'),
-	Article = mongoose.model('Article');
+var express  = require('express'),
+		router   = express.Router(),
+		mongoose = require('mongoose'),
+		Article  = mongoose.model('Article');
 
 module.exports = function (app) {
 	app.use('/', router);
@@ -17,10 +17,10 @@ router.get('/articles', function (req, res, next) {
 				return next(err);
 			}
 			res.render('articles', {
-				title: 'Articles',
-				articles: articles,
+				title:      'Articles',
+				articles:   articles,
 				pagination: {
-					page: 1,
+					page:      1,
 					pageCount: 10
 				}
 			});
@@ -35,7 +35,7 @@ router.get('/article/:slug', function (req, res, next) {
 				return next(err);
 			}
 			res.render('article', {
-				title: 'Articles',
+				title:   'Articles',
 				article: article
 			});
 		});
@@ -45,12 +45,12 @@ router.get('/article/:slug', function (req, res, next) {
 router.post('/articles/add', function (req, res) {
 	var getSlug = require('speakingurl');
 	new Article({
-		title: req.body.title,
-		slug: getSlug(req.body.title, {lang: 'de', truncate: 80}),
-		state: req.body.state,
-		image: req.body.image,
+		title:  req.body.title,
+		slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
+		state:  req.body.state,
+		image:  req.body.image,
 		teaser: req.body.teaser,
-		text: req.body.text
+		text:   req.body.text
 	}).save();
 
 	res.redirect('/articles');

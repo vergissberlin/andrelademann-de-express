@@ -1,21 +1,21 @@
 var
-	express = require('express'),
-	flash = require('connect-flash'),
-	session = require('express-session'),
+	basicauth         = require('basicauth-middleware'),
+	bodyParser        = require('body-parser'),
+	compress          = require('compression'),
+	cookieParser      = require('cookie-parser'),
+	express           = require('express'),
 	expressHandlebars = require('express-handlebars'),
-	handlebars = require('handlebars'),
-	handlebarsIntl = require('handlebars-intl'),
-	glob = require('glob'),
-	favicon = require('serve-favicon'),
-	logger = require('morgan'),
-	cookieParser = require('cookie-parser'),
-	bodyParser = require('body-parser'),
-	compress = require('compression'),
-	methodOverride = require('method-override'),
-	passport = require('passport'),
-	sessionStore = new session.MemoryStore,
-	helpers = require('../app/views/helper'),
-	basicauth = require('basicauth-middleware');
+	favicon           = require('serve-favicon'),
+	flash             = require('connect-flash'),
+	glob              = require('glob'),
+	handlebars        = require('handlebars'),
+	handlebarsIntl    = require('handlebars-intl'),
+	helpers           = require('../app/views/helper'),
+	logger            = require('morgan'),
+	methodOverride    = require('method-override'),
+	passport          = require('passport'),
+	session           = require('express-session'),
+	sessionStore      = new session.MemoryStore;
 
 var secret = process.env.NODE_SECRET || '1234';
 
@@ -35,10 +35,10 @@ module.exports = function (app, config) {
 
 	// Passport
 	app.use(expressSession({
-		secret: 'keyboard cat',
-		resave: false,
+		secret:            'keyboard cat',
+		resave:            false,
 		saveUninitialized: false,
-		cookie: {secure: false}
+		cookie:            {secure: false}
 	}));
 	app.use(passport.initialize());
 	app.use(cookieParser());
@@ -48,10 +48,10 @@ module.exports = function (app, config) {
 
 	// Rendering
 	app.engine('handlebars', expressHandlebars({
-		layoutsDir: config.root + '/app/views/layouts/',
-		partialsDir: [config.root + '/app/views/partials/'],
+		layoutsDir:    config.root + '/app/views/layouts/',
+		partialsDir:   [config.root + '/app/views/partials/'],
 		defaultLayout: 'main',
-		helpers: helpers
+		helpers:       helpers
 	}));
 
 	// Views
@@ -110,9 +110,9 @@ module.exports = function (app, config) {
 		err.status = 404;
 		res.render('error', {
 			message: err.message,
-			error: err,
-			env: app.get('env'),
-			title: 'Page not found.'
+			error:   err,
+			env:     app.get('env'),
+			title:   'Page not found.'
 		});
 	});
 
@@ -121,8 +121,8 @@ module.exports = function (app, config) {
 			res.status(err.status || 500);
 			res.render('error', {
 				message: err.message,
-				error: err,
-				title: 'error'
+				error:   err,
+				title:   'error'
 			});
 		});
 	}
@@ -131,8 +131,8 @@ module.exports = function (app, config) {
 		res.status(err.status || 500);
 		res.render('error', {
 			message: err.message,
-			error: {},
-			title: 'error'
+			error:   {},
+			title:   'error'
 		});
 	});
 };

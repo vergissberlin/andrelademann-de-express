@@ -1,11 +1,11 @@
-var passport = require('passport'),
-	LocalPassport = require('passport-local'),
-	User = require('../app/models/user');
+var passport      = require('passport'),
+		LocalPassport = require('passport-local'),
+		User          = require('../app/models/user');
 
 module.exports = function () {
 	passport.use(new LocalPassport({
-		usernameField: 'username',
-		passwordField: 'password',
+		usernameField:     'username',
+		passwordField:     'password',
 		passReqToCallback: false
 	}, function (username, password, done) {
 		User.findOneByName(username, function (user, error) {
