@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{title }}</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
-          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css">
 	{{#if ENV_DEVELOPMENT}}
       <script src="//localhost:35729/livereload.js"></script>
 	{{/if}}
@@ -33,20 +31,22 @@
 </head>
 <body>
 
-
 <div class="container">
     <header class="header clearfix">
         <nav class="navbar navbar-light nav-pills bg-faded">
             <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse"
-                    data-target="#exCollapsingNavbar">
+                    data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="true">
                 &#9776;
             </button>
-            <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
-            	{{#if profile}}
-								{{profile.gender}}&nbsp;{{profile.lastname}}
-							{{else}}
-								<a class="navbar-brand" href="/">André Lademann</a>
-							{{/if}}
+
+            <div class="navbar-toggleable-xs collapse in" id="navbar-header" aria-expanded="true">
+                <a class="navbar-brand" href="/">
+									{{#if profile}}
+										{{profile.gender}}&nbsp;{{profile.firstname}}&nbsp;{{profile.lastname}}
+									{{else}}
+                      André Lademann
+									{{/if}}
+                </a>
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="/articles">Articles</a>
@@ -60,16 +60,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/admin">Admin</a>
                     </li>
-                    {{#if profile}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/user/logout">Logout</a>
-                    </li>
-										{{else}}
-                    <li class="nav-item">
-                        <a class="nav-link" href="/user/login">Login</a>
-                    </li>
-										{{/if}}
                 </ul>
+                <div class="form-inline pull-xs-right">
+									{{#if profile}}
+                      <a class="btn btn-outline-success" href="/user/logout">Logout</a>
+									{{else}}
+                      <a class="btn btn-outline-success" href="/user/login">Login</a>
+									{{/if}}
+                </div>
+
             </div>
         </nav>
     </header>
