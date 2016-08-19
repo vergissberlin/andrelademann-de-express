@@ -20,7 +20,7 @@ module.exports = {
 		var user,
 			error = null;
 		user = this.user.filter(function (user) {
-			return user.username == username
+			return user.username === username;
 		});
 
 		if (user.length === 0) {
@@ -33,7 +33,7 @@ module.exports = {
 		var user,
 			error = null;
 		user = this.user.filter(function (user) {
-			return user._id == id
+			return user._id === id;
 		});
 		if (user.length === 0) {
 			error = id;
