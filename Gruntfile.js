@@ -13,6 +13,21 @@ module.exports = function (grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
+		csslint: {
+			options: {
+				csslintrc:  '.csslintrc',
+				formatters: [
+					{id: 'junit-xml', dest: 'test/report/csslint_junit.xml'}
+				]
+			},
+			strict:  {
+				options: {
+					import: 2
+				},
+				src:     ['public/css/**/*.css']
+			}
+		},
+
 		coveralls: {
 			options: {
 				force: false
@@ -141,7 +156,7 @@ module.exports = function (grunt) {
 				files:   [
 					'public/css/*.scss'
 				],
-				tasks:   ['sass'],
+				tasks:   ['sass', 'csslint'],
 				options: {
 					livereload: reloadPort
 				}
@@ -201,6 +216,7 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('test', [
 		'jshint',
+		'csslint',
 		'jasmine'
 	]);
 
