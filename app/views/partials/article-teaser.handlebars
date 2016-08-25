@@ -1,0 +1,20 @@
+
+<div class="card-deck-wrapper">
+    <div class="card-deck">
+			{{#each (limit articles 3)}}
+          <div class="card">
+              <img class="card-img-top img-fluid"
+                   src="https://c3.staticflickr.com/2/1711/26558282962_0b2edbdd1f_h.jpg"
+                   alt="{{title}}" title="{{title}}">
+              <div class="card-block">
+                  <p class="h4 card-title" title="{{title}}">{{crop title limit="20"}}</p>
+                  <p class="card-text">{{{crop teaser}}}</p>
+                  <a href="articles/{{slug}}" class="card-link">Card link</a>
+                  <p class="card-text">
+                      <small class="text-muted">{{formatRelative published}}</small>
+                  </p>
+              </div>
+          </div>
+			{{/each}}
+    </div>
+</div>

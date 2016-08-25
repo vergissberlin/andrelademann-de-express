@@ -11,12 +11,13 @@ module.exports = function (app) {
 router.get('/articles', function (req, res, next) {
 	Article.find()
 		.limit(10)
+		.where('state').equals('published')
 		.sort({updated: -1})
 		.exec(function (err, articles) {
 			if (err) {
 				return next(err);
 			}
-			res.render('articles', {
+			res.render('article-list', {
 				title:      'Articles',
 				articles:   articles,
 				pagination: {
@@ -28,13 +29,13 @@ router.get('/articles', function (req, res, next) {
 		});
 });
 
-router.get('/article/:slug', function (req, res, next) {
+router.get('/articles/:slug', function (req, res, next) {
 	Article.findOne({'slug': req.params.slug})
 		.exec(function (err, article) {
 			if (err) {
 				return next(err);
 			}
-			res.render('article', {
+			res.render('article-detail', {
 				title:   'Articles',
 				article: article
 			});

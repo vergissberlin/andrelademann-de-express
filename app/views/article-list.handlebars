@@ -1,0 +1,22 @@
+{{> header}}
+
+{{#if profile}}
+	{{> wysiwyg-article}}
+	{{> wysiwyg}}
+{{else}}
+	{{> article-teaser}}
+{{/if}}
+
+{{#each (limit articles 60)}}
+    <div class="jumbotron{{#compare state "draft"}} alert alert-info{{/compare}}">
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h2><a href="/articles/{{slug title}}/">{{title}}</a></h2>
+                <p>{{teaser}}</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="//c1.staticflickr.com/2/1524/26726054816_427856b51a_n.jpg" class="img-fluid">
+            </div>
+        </div>
+    </div>
+{{/each}}
