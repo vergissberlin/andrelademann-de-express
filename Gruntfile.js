@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 			},
 
 			development: {
-				src:     'app/views/helper/**/*.js',
+				src: 'app/views/helper/**/*.js',
 				options: {}
 			}
 		},
@@ -54,13 +54,14 @@ module.exports = function (grunt) {
 			pivotal: {
 				src:     'app/views/helper/**/*.js',
 				options: {
-					specs: 'test/spec/*Spec.js'
+					specs: 'test/spec/*Spec.js',
+					template: require('grunt-template-jasmine-nml')
 				}
 			}
 		},
 
 		jshint: {
-			all:     [
+			all: [
 				'Gruntfile.js',
 				'app/**/*.js',
 				'test/**/*.js'
