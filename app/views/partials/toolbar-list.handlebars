@@ -1,14 +1,21 @@
 <nav class="navbar bg-faded" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;margin-bottom: -30px;">
     <ul class="nav navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="/{{slug}}/status">Published</a>
+            <a class="nav-link{{#compare "status" "published"}} active{{/compare}}"
+               href="/{{section}}/status/published">
+                Published
+            </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/{{slug}}/status/draft">Draft</a>
+            <a class="nav-link{{#compare "status" "draft"}} active{{/compare}}"
+               href="/{{section}}/status/draft">
+                Draft
+            </a>
         </li>
         <li class="nav-item pull-xs-right">
             <div class="form-inline pull-xs-right">
-                <a class="btn btn-outline-primary" href="/user/logout">Add new {{title}}</a>
+                <a class="btn btn-outline-primary" href="/{{section}}/add">Add
+                    new {{title}}</a>
             </div>
 				</li>
     </ul>

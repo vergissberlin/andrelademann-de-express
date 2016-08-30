@@ -1,0 +1,39 @@
+<form action="/articles/edit/{{article._id}}" method="post">
+    <nav class="navbar bg-faded">
+        <ul class="nav navbar-nav">
+            <li class="nav-item pull-xs-right">
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-outline-primary active">
+                        <input type="radio" name="state" id="draft" value="draft"
+                               autocomplete="off" checked>Draft
+                    </label>
+                    <label class="btn btn-outline-danger">
+                        <input type="radio" name="state" id="deleted"
+                               value="deleted" autocomplete="off">Deleted
+                    </label>
+                    <label class="btn btn-outline-success">
+                        <input type="radio" name="state" id="published"
+                               value="published" autocomplete="off">Published
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <article>
+        <section>
+            <header>
+                <h1 id="title" class="wysiwygPlain">{{{article.title}}}</h1>
+                <p id="teaser" class="lead wysiwygPlain">{{{article.teaser}}}</p>
+            </header>
+            <div class="wysiwyg" id="text">{{{article.text}}}</div>
+        </section>
+    </article>
+
+    <div class="form-group">
+        <button type="submit"
+                class="btn btn-primary btn-md"
+                role="button">Send
+        </button>
+    </div>
+</form>

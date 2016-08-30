@@ -1,16 +1,23 @@
 {{> header}}
-<article>
-    <section>
-        <header>
-            <h1>{{{article.title}}}</h1>
-            <p class="lead">{{{article.teaser}}}</p>
-        </header>
-        <p>{{{article.text}}}</p>
-    </section>
-</article>
 
-{{>prism}}
+{{#if profile}}
+	{{> wysiwyg-article-short}}
+	{{> wysiwyg}}
+{{else}}
+    <article>
+        <section>
+            <header>
+                <h1>{{{article.title}}}</h1>
+                <p class="lead">{{{article.teaser}}}</p>
+            </header>
+            <p>{{{article.text}}}</p>
+        </section>
+    </article>
 
-{{>author}}
+		{{>prism}}
 
-{{>disqus}}
+		{{>author}}
+
+		{{>disqus}}
+{{/if}}
+

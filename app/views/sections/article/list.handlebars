@@ -1,14 +1,12 @@
 {{> header}}
 {{#if profile}}
-	{{> toolbar-list sluga="articles"}}
-	{{> wysiwyg-article}}
-	{{> wysiwyg}}
+	{{> toolbar-list section="articles"}}
 {{else}}
 	{{> article-teaser}}
 {{/if}}
 
 {{#each (limit articles 60)}}
-    <div class="jumbotron{{#compare state "draft"}} alert alert-info{{/compare}}">
+    <div class="jumbotron{{#compare state "draft"}}{{/compare}}">
 			{{#if profile}}
 				{{> toolbar-edit slug="articles"}}
 			{{/if}}

@@ -42,4 +42,5 @@ pre {
   margin-top: 2em; }
 
 .wysiwygPlain {
-  border: 1px dashed #ddd; }
+	outline: 1px dashed #ddd;
+}
