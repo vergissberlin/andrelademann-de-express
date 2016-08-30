@@ -16,7 +16,7 @@ router.get('/user/login', function (req, res) {
 		message: 'Please login.'
 	};
 
-	res.render('user-login', {
+	res.render('sections/user/login', {
 		brand:    'primary',
 		title:    'User',
 		category: 'User Login'
@@ -35,7 +35,7 @@ router.post('/user/login', passport.authenticate('local',
 
 // Registration
 router.get('/user/signup', function (req, res) {
-	res.render('user-register', {
+	res.render('sections/user/register', {
 		brand:    'primary',
 		title:    'Benutzer',
 		category: 'Benutzer Registrierung',
@@ -62,7 +62,7 @@ router.get('/user/logout', function (req, res) {
 
 // Profile
 router.get('/user/profile', passportUtil.ensureAuthenicated, function (req, res) {
-	res.render('user-profile', {
+	res.render('sections/user/profile', {
 		brand:    'primary',
 		title:    'Benutzer',
 		category: 'Benutzer Profil',

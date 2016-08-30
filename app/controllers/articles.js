@@ -17,7 +17,7 @@ router.get('/articles', function (req, res, next) {
 			if (err) {
 				return next(err);
 			}
-			res.render('article-list', {
+			res.render('sections/article/list', {
 				title:      'Articles',
 				articles:   articles,
 				pagination: {
@@ -35,7 +35,7 @@ router.get('/articles/:slug', function (req, res, next) {
 			if (err) {
 				return next(err);
 			}
-			res.render('article-detail', {
+			res.render('sections/article/detail', {
 				title:   'Articles',
 				article: article
 			});

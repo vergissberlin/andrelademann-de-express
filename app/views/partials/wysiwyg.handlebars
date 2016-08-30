@@ -1,10 +1,13 @@
 <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/prism.min.js"></script>
 <script type="text/javascript" src="/js/plugins/tinymce.prism.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css">
 <script>
+
     tinymce.init({
-        selector: '{{{selector}}}',
+        selector: '.wysiwyg',
         inline: true,
         plugins: [
             'advlist autolink lists link image charmap print preview anchor',
@@ -13,11 +16,61 @@
         ],
         toolbar: 'styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist  blockquote | code  codesample | link image table',
         menubar: false,
+        style_formats: [
+            {
+                title: 'Headers',
+                items: [
+                    {title: 'h1', block: 'h1'},
+                    {title: 'h2', block: 'h2'},
+                    {title: 'h3', block: 'h3'},
+                    {title: 'h4', block: 'h4'},
+                    {title: 'h5', block: 'h5'},
+                    {title: 'h6', block: 'h6'}
+                ]
+            },
+            {
+                title: 'Blocks',
+                items: [
+                    {title: 'p', block: 'p'},
+                    {title: 'div', block: 'div'},
+                    {title: 'pre', block: 'pre'}
+                ]
+            },
+
+            {
+                title: 'Containers',
+                items: [
+                    {
+                        title: 'section',
+                        block: 'section',
+                        wrapper: true,
+                        merge_siblings: false
+                    },
+                    {
+                        title: 'article',
+                        block: 'article',
+                        wrapper: true,
+                        merge_siblings: false
+                    },
+                    {title: 'blockquote', block: 'blockquote', wrapper: true},
+                    {title: 'hgroup', block: 'hgroup', wrapper: true},
+                    {title: 'aside', block: 'aside', wrapper: true},
+                    {title: 'figure', block: 'figure', wrapper: true}
+                ]
+            }
+        ],
+        visualblocks_default_state: true,
+        end_container_on_empty_block: true,
+        content_css: [
+            '//v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css',
+            '/css/style.css'
+        ],
         file_picker_types: 'file image media',
         file_browser_callback: function (field_name, url, type, win) {
-            if (type == 'image') $('#my_form input').click();
+            if (type == 'image') $('form input').click();
         }
     });
+
     tinymce.init({
         selector: '.wysiwygTiny',
         plugins: [
@@ -28,4 +81,12 @@
         toolbar: 'styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist  blockquote | code  codesample | link image',
         menubar: false
     });
+
+    tinymce.init({
+        selector: '.wysiwygPlain',
+        inline: true,
+        toolbar: 'undo redo',
+        menubar: false
+    });
+
 </script>
