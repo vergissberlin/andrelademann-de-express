@@ -43,6 +43,20 @@ router.get('/articles/:slug', function (req, res, next) {
 });
 
 
+router.get('/articles/edit/:slug', function (req, res, next) {
+	Article.findOne({'slug': req.params.slug})
+		.exec(function (err, article) {
+			if (err) {
+				return next(err);
+			}
+			res.render('sections/article/detail', {
+				title: 'Articles',
+				article: article
+			});
+		});
+});
+
+
 router.post('/articles/add', function (req, res) {
 	var getSlug = require('speakingurl');
 	new Article({

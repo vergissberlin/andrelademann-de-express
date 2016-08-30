@@ -8,6 +8,7 @@
 
     tinymce.init({
         selector: '.wysiwyg',
+        entity_encoding: 'raw',
         inline: true,
         plugins: [
             'advlist autolink lists link image charmap print preview anchor',
@@ -73,6 +74,7 @@
 
     tinymce.init({
         selector: '.wysiwygTiny',
+        entity_encoding: 'raw',
         plugins: [
             'advlist autolink lists link image charmap print preview anchor',
             'visualblocks code fullscreen',
@@ -84,6 +86,7 @@
 
     tinymce.init({
         selector: '.wysiwygPlain',
+        entity_encoding: 'raw',
         inline: true,
         toolbar: 'undo redo',
         menubar: false
