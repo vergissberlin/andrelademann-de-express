@@ -1,10 +1,12 @@
 {{> header}}
 <article>
-    <header>
-        <h1>{{article.title}}</h1>
-    </header>
-    <p class="lead">{{article.teaser}}</p>
-    <p>{{{article.text}}}</p>
+    <section>
+        <header>
+            <h1>{{{article.title}}}</h1>
+            <p class="lead">{{{article.teaser}}}</p>
+        </header>
+        <p>{{{article.text}}}</p>
+    </section>
 </article>
 
 {{>prism}}
