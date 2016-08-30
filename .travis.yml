@@ -3,3 +3,7 @@ node_js:
   - 'stable'
 before_script:
   - npm install coveralls grunt-cli -g
+cache:
+  bundler: true
+  directories:
+  - node_modules
