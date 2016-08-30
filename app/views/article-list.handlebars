@@ -1,6 +1,7 @@
 {{> header}}
 
 {{#if profile}}
+	{{> toolbar-list}}
 	{{> wysiwyg-article}}
 	{{> wysiwyg}}
 {{else}}
@@ -9,6 +10,9 @@
 
 {{#each (limit articles 60)}}
     <div class="jumbotron{{#compare state "draft"}} alert alert-info{{/compare}}">
+			{{#if profile}}
+				{{> toolbar-edit}}
+			{{/if}}
         <div class="row marketing">
             <div class="col-lg-6">
                 <h2><a href="/articles/{{slug title}}/">{{title}}</a></h2>
