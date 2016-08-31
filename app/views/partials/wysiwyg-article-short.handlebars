@@ -5,15 +5,20 @@
                 <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-outline-primary active">
                         <input type="radio" name="state" id="draft" value="draft"
-                               autocomplete="off" checked>Draft
+                               autocomplete="off"{{#compare article.status "draft"}}
+                               checked{{/compare}}>Draft
                     </label>
                     <label class="btn btn-outline-danger">
                         <input type="radio" name="state" id="deleted"
-                               value="deleted" autocomplete="off">Deleted
+                               value="deleted"
+                               autocomplete="off"{{#compare article.status "deleted"}}
+                               checked{{/compare}}>Deleted
                     </label>
                     <label class="btn btn-outline-success">
                         <input type="radio" name="state" id="published"
-                               value="published" autocomplete="off">Published
+                               value="published"
+                               autocomplete="off"{{#compare article.status "published"}}
+                               checked{{/compare}}>Published
                     </label>
                 </div>
             </li>
