@@ -3,18 +3,18 @@
         <ul class="nav navbar-nav">
             <li class="nav-item pull-xs-right">
                 <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-outline-primary active">
+                    <label class="btn btn-outline-primary{{#compare article.status "draft"}} active{{/compare}}">
                         <input type="radio" name="state" id="draft" value="draft"
                                autocomplete="off"{{#compare article.status "draft"}}
                                checked{{/compare}}>Draft
                     </label>
-                    <label class="btn btn-outline-danger">
+                    <label class="btn btn-outline-danger{{#compare article.status "draft"}} active{{/compare}}">
                         <input type="radio" name="state" id="deleted"
                                value="deleted"
                                autocomplete="off"{{#compare article.status "deleted"}}
                                checked{{/compare}}>Deleted
                     </label>
-                    <label class="btn btn-outline-success">
+                    <label class="btn btn-outline-success{{#compare article.status "draft"}} active{{/compare}}">
                         <input type="radio" name="state" id="published"
                                value="published"
                                autocomplete="off"{{#compare article.status "published"}}
@@ -28,28 +28,28 @@
     <article>
         <section>
             <header>
-                <h1 id="title" class="wysiwygPlain">{{{article.title}}}</h1>
-                <p id="teaser" class="lead wysiwygPlain">{{{article.teaser}}}</p>
+                <h1 id="title" class="wysiwyg-plain">{{{article.title}}}</h1>
+                <p id="teaser" class="lead wysiwyg-plain">{{{article.teaser}}}</p>
             </header>
             <div class="wysiwyg" id="text">{{{article.text}}}</div>
         </section>
     </article>
 
     <nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
-    	<div class="container">
-        <ul class="nav navbar-nav">
-            <li class="nav-item">
-                <a href="javascript:void(0)" class="btn btn-outline-danger"
-                   onclick="$(this).removeClass('btn-outline-danger').addClass('btn-danger').attr('href', 'article/delete/{{article._id}}');">Delete</a>
-            </li>
-            <li class="nav-item">
-                <button type="submit"
-                        class="btn btn-primary pull-xs-right"
-                        role="button">Send
-                </button>
-            </li>
-        </ul>
-      </div>
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a href="javascript:void(0)" class="btn btn-outline-danger"
+                       onclick="$(this).removeClass('btn-outline-danger').addClass('btn-danger').attr('href', 'article/delete/{{article._id}}');">Delete</a>
+                </li>
+                <li class="nav-item">
+                    <button type="submit"
+                            class="btn btn-primary pull-xs-right"
+                            role="button">Send
+                    </button>
+                </li>
+            </ul>
+        </div>
     </nav>
 
 </form>
