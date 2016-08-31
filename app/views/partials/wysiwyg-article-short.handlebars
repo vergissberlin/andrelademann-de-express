@@ -6,19 +6,22 @@
                     <label class="btn btn-outline-primary{{#compare article.status "draft"}} active{{/compare}}">
                         <input type="radio" name="state" id="draft" value="draft"
                                autocomplete="off"{{#compare article.status "draft"}}
-                               checked{{/compare}}>Draft
+                               checked{{/compare}}>
+                        Draft
                     </label>
-                    <label class="btn btn-outline-danger{{#compare article.status "draft"}} active{{/compare}}">
+                    <label class="btn btn-outline-danger{{#compare article.status "deleted"}} active{{/compare}}">
                         <input type="radio" name="state" id="deleted"
                                value="deleted"
                                autocomplete="off"{{#compare article.status "deleted"}}
-                               checked{{/compare}}>Deleted
+                               checked{{/compare}}>
+                        Deleted
                     </label>
-                    <label class="btn btn-outline-success{{#compare article.status "draft"}} active{{/compare}}">
+                    <label class="btn btn-outline-success{{#compare article.status "published"}} active{{/compare}}">
                         <input type="radio" name="state" id="published"
                                value="published"
                                autocomplete="off"{{#compare article.status "published"}}
-                               checked{{/compare}}>Published
+                               checked{{/compare}}>
+                        Published
                     </label>
                 </div>
             </li>
