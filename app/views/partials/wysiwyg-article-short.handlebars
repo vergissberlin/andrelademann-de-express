@@ -3,23 +3,23 @@
         <ul class="nav navbar-nav">
             <li class="nav-item pull-xs-right">
                 <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-outline-primary{{#compare article.status "draft"}} active{{/compare}}">
+                    <label class="btn btn-outline-primary{{#compare article.state "draft"}} active{{/compare}}">
                         <input type="radio" name="state" id="draft" value="draft"
-                               autocomplete="off"{{#compare article.status "draft"}}
+                               autocomplete="off"{{#compare article.state "draft"}}
                                checked{{/compare}}>
                         Draft
                     </label>
-                    <label class="btn btn-outline-danger{{#compare article.status "deleted"}} active{{/compare}}">
+                    <label class="btn btn-outline-danger{{#compare article.state "deleted"}} active{{/compare}}">
                         <input type="radio" name="state" id="deleted"
                                value="deleted"
-                               autocomplete="off"{{#compare article.status "deleted"}}
+                               autocomplete="off"{{#compare article.state "deleted"}}
                                checked{{/compare}}>
                         Deleted
                     </label>
-                    <label class="btn btn-outline-success{{#compare article.status "published"}} active{{/compare}}">
+                    <label class="btn btn-outline-success{{#compare article.state "published"}} active{{/compare}}">
                         <input type="radio" name="state" id="published"
                                value="published"
-                               autocomplete="off"{{#compare article.status "published"}}
+                               autocomplete="off"{{#compare article.state "published"}}
                                checked{{/compare}}>
                         Published
                     </label>
