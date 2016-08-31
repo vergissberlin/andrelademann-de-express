@@ -29,11 +29,11 @@ router.get('/articles', function (req, res, next) {
 		});
 });
 
-router.get('/articles/status/:status', function (req, res, next) {
-	var status = req.params.status;
+router.get('/articles/state/:state', function (req, res, next) {
+	var state = req.params.state;
 	Article.find()
 		.limit(10)
-		.where('state').equals(status)
+		.where('state').equals(state)
 		.sort({updated: -1})
 		.exec(function (err, articles) {
 			if (err) {
@@ -41,9 +41,9 @@ router.get('/articles/status/:status', function (req, res, next) {
 			}
 			res.render('sections/article/list', {
 				title: 'Articles',
-				subtitle: status.charAt(0).toUpperCase() + status.slice(1) + ' articles',
+				subtitle: state.charAt(0).toUpperCase() + state.slice(1) + ' articles',
 				articles: articles,
-				status: status,
+				state: state,
 				pagination: {
 					page: 1,
 					pageCount: 10
@@ -92,7 +92,7 @@ router.post('/articles/edit/:id', function (req, res, next) {
 		}, function (err, article) {
 			if (err) throw err;
 			console.log(article);
-			res.redirect('/articles');
+			res.redirect('/articles/state/' + req.body.state);
 		});
 });
 

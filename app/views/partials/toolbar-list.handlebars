@@ -1,21 +1,21 @@
 <nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
   <div class="container">
 		<ul class="nav navbar-nav">
-        <li class="nav-item{{#compare status "published"}} active{{/compare}}">
+        <li class="nav-item{{#compare state "published"}} active{{/compare}}">
 		        <a class="nav-link"
-		           href="/{{section}}/status/published">
+               href="/{{section}}/state/published">
                 Published <span class="tag tag-pill tag-default">23</span>
 		        </a>
 		    </li>
-        <li class="nav-item{{#compare status "draft"}} active{{/compare}}">
+        <li class="nav-item{{#compare state "draft"}} active{{/compare}}">
 		        <a class="nav-link"
-		           href="/{{section}}/status/draft">
+               href="/{{section}}/state/draft">
                 Draft <span class="tag tag-pill tag-default">10</span>
 		        </a>
 		    </li>
-        <li class="nav-item{{#compare status "deleted"}} active{{/compare}}">
+        <li class="nav-item{{#compare state "deleted"}} active{{/compare}}">
             <a class="nav-link"
-		           href="/{{section}}/status/deleted">
+               href="/{{section}}/state/deleted">
                 Deleted <span class="tag tag-pill tag-default">0</span>
 		        </a>
 		    </li>
