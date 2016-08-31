@@ -43,6 +43,7 @@ router.get('/articles/state/:state', function (req, res, next) {
 				title: 'Articles',
 				subtitle: state.charAt(0).toUpperCase() + state.slice(1) + ' articles',
 				articles: articles,
+				admin: true,
 				state: state,
 				pagination: {
 					page: 1,
@@ -58,6 +59,7 @@ router.get('/articles/state/:state', function (req, res, next) {
 router.get('/articles/add', function (req, res) {
 	res.render('sections/article/edit', {
 		title: 'Articles',
+		admin: true,
 		subtitle: 'Add articles'
 	});
 });

@@ -7,14 +7,14 @@
 {{/if}}
 
 {{#each (limit articles 60)}}
-    <div class="jumbotron{{#compare state "draft"}}{{/compare}}">
+    <div class="jumbotron">
 			{{#if profile}}
 				{{> toolbar-edit slug="articles"}}
 			{{/if}}
         <div class="row marketing">
             <div class="col-lg-6">
                 <h2><a href="/articles/{{slug title}}/">{{{title}}}</a></h2>
-                <p>{{{teaser}}}</p>
+                <p>{{{crop teaser limit=750}}}</p>
             </div>
             <div class="col-lg-6">
                 <img src="//c1.staticflickr.com/2/1524/26726054816_427856b51a_n.jpg" class="img-fluid">

@@ -1,7 +1,7 @@
 {{> header}}
 
 {{#if profile}}
-	{{> wysiwyg-article-short}}
+	{{> wysiwyg-article}}
 	{{> wysiwyg}}
 {{else}}
     <article>
@@ -11,7 +11,10 @@
                 <p class="lead">{{{article.teaser}}}</p>
             </header>
             <p>{{{article.text}}}</p>
-        </section>
+            <p class="text-muted">{{published}}</p>
+            <p class="text-muted">Latest update {{updated}}</p>
+
+				</section>
     </article>
 
 		{{>prism}}
@@ -20,4 +23,3 @@
 
 		{{>disqus}}
 {{/if}}
-
