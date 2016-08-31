@@ -30,7 +30,6 @@
 
     <div class="row">
         <div class="col-md-12">
-
             <fieldset class="form-group">
                 <legend>Article content</legend>
 
@@ -48,18 +47,14 @@
                     <label for="text">Text</label>
                     <div id="text" class="wysiwyg">{{{article.text}}}</div>
                 </div>
-
-                <div class="form-group">
-
-                    <p class="lead">
-                        <button type="submit"
-                                class="btn btn-primary btn-md pull-xs-right"
-                                role="button">Send
-                        </button>
-                    </p>
-                </div>
-
+            </fieldset>
         </div>
-
     </div>
+    <nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
+        <div class="nav navbar-nav container">
+            <button type="submit"
+                    class="btn btn-primary btn-md pull-xs-right"
+                    role="button">Send</button>
+				</div>
+    </nav>
 </form>

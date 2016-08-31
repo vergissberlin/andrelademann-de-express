@@ -1,6 +1,5 @@
-<nav class="navbar navbar-light bg-faded" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;margin-bottom: -30px;">
-  	<span class="navbar-brand">Status</span>
-    <ul class="nav navbar-nav">
+<nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
+    <ul class="nav navbar-nav container">
         <li class="nav-item{{#compare "status" "published"}} active{{/compare}}">
             <a class="nav-link"
                href="/{{section}}/status/published">
@@ -24,6 +23,6 @@
                 <a class="btn btn-outline-primary" href="/{{section}}/add">Add
                     new {{title}}</a>
             </div>
-				</li>
+        </li>
     </ul>
 </nav>

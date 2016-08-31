@@ -30,10 +30,19 @@
         </section>
     </article>
 
-    <div class="form-group">
-        <button type="submit"
-                class="btn btn-primary btn-md"
-                role="button">Send
-        </button>
-    </div>
+    <nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
+        <ul class="nav navbar-nav container">
+            <li class="nav-item">
+                <a href="javascript:void(0)" class="btn btn-lg btn-outline-danger"
+                   onclick="$(this).removeClass('btn-outline-danger').addClass('btn-danger').attr('href', 'article/delete/{{article._id}}');">Delete</a>
+            </li>
+            <li class="nav-item">
+                <button type="submit"
+                        class="btn btn-primary btn-lg pull-xs-right"
+                        role="button">Send
+                </button>
+            </li>
+        </ul>
+    </nav>
+
 </form>
