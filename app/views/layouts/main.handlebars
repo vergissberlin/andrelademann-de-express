@@ -51,18 +51,17 @@
                           André Lademann
 											{{/if}}
                     </a>
-
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/articles">Articles</a>
+                    <a class="nav-link" href="/articles/{{#if profile}}state/published/{{/if}}">Articles</a>
                 </li>
             </ul>
 
             <div class="form-inline pull-xs-right">
 							{{#if profile}}
-                  <a class="btn btn-outline-success" href="/user/logout">Logout</a>
+                  <a class="btn btn-outline-success" href="/user/logout/">Logout</a>
 							{{else}}
-                  <a class="btn btn-outline-success" href="/user/login">Login</a>
+                  <a class="btn btn-outline-success" href="/user/login/">Login</a>
 							{{/if}}
             </div>
         </nav>

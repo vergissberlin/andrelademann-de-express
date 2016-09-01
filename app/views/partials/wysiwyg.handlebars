@@ -76,6 +76,7 @@
     tinymce.init({
         selector: '.wysiwyg-tiny',
         entity_encoding: 'raw',
+        element_format: 'html',
         plugins: [
             'advlist autolink lists link image charmap print preview anchor',
             'visualblocks code fullscreen',
@@ -89,7 +90,7 @@
         selector: '.wysiwyg-plain',
         entity_encoding: 'raw',
         element_format: 'html',
-        invalid_elements: 'strong,em,p,font',
+        invalid_elements: 'strong,em,p,font,span',
         inline: true,
         toolbar: 'undo redo | code',
         menubar: false
