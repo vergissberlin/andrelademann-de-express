@@ -1,13 +1,11 @@
 {{> header}}
 
-{{#if profile}}
-	{{> toolbar-list section="articles"}}
-{{else}}
+{{#unless profile}}
 	{{> article-teaser}}
-{{/if}}
+{{/unless}}
 
 {{#each (limit articles 60)}}
-    <div class="jumbotron hidden-xs-down">
+    <div class="jumbotron{{#unless profile}} hidden-xs-down{{/unless}}">
 			{{#if profile}}
 				{{> toolbar-edit slug="articles"}}
 			{{/if}}
@@ -22,3 +20,7 @@
         </div>
     </div>
 {{/each}}
+
+{{#if profile}}
+	{{> toolbar-list section="articles"}}
+{{/if}}
