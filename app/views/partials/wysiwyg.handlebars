@@ -9,6 +9,7 @@
     tinymce.init({
         selector: '.wysiwyg',
         entity_encoding: 'raw',
+        element_format: 'html',
         inline: true,
         plugins: [
             'advlist autolink lists link image charmap print preview anchor',
@@ -73,7 +74,7 @@
     });
 
     tinymce.init({
-        selector: '.wysiwygTiny',
+        selector: '.wysiwyg-tiny',
         entity_encoding: 'raw',
         plugins: [
             'advlist autolink lists link image charmap print preview anchor',
@@ -87,8 +88,10 @@
     tinymce.init({
         selector: '.wysiwyg-plain',
         entity_encoding: 'raw',
+        element_format: 'html',
+        invalid_elements: 'strong,em,p,font',
         inline: true,
-        toolbar: 'undo redo',
+        toolbar: 'undo redo | code',
         menubar: false
     });
 
