@@ -10,6 +10,7 @@ var
 	glob              = require('glob'),
 	handlebars        = require('handlebars'),
 	handlebarsIntl    = require('handlebars-intl'),
+	helmet            = require('helmet'),
 	helpers           = require('../app/views/helper'),
 	logger            = require('morgan'),
 	methodOverride    = require('method-override'),
@@ -75,7 +76,6 @@ module.exports = function (app, config) {
 	app.use(express.static('fnt'));
 	app.use(express.static('js'));
 
-
 	// Flash messages
 	app.use(flash());
 	/// Custom flash middleware
@@ -90,6 +90,9 @@ module.exports = function (app, config) {
 		}
 		next();
 	});
+
+	// Security
+	app.use(helmet());
 
 	// Basic auth
 	app.use(basicauth('ala', process.env.BASE_SECRET || 'base', 'Please enter the credentials!'));
