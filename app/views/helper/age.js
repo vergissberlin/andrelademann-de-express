@@ -10,7 +10,7 @@ var Handlebars = require('handlebars');
 
 Handlebars.registerHelper('age', function (from, options) {
 	var now = new Date(),
-		to = options.hash.to ? new Date(options.hash.to, now.getMonth(), now.getDate()) : new Date();
+			to  = options.hash.to ? new Date(options.hash.to, now.getMonth(), now.getDate()) : new Date();
 
 	from = new Date(from, now.getMonth(), now.getDate());
 	if (!from) {

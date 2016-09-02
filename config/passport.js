@@ -11,6 +11,11 @@ var passport      = require('passport'),
 		LocalPassport = require('passport-local'),
 		User          = require('../app/models/user');
 
+/**
+ * Passport configuration
+ *
+ * @module configuration/passport
+ */
 module.exports = function () {
 	passport.use(new LocalPassport({
 		usernameField:     'username',
@@ -46,4 +51,5 @@ module.exports = function () {
 			done(error, user);
 		});
 	});
+	return undefined;
 };

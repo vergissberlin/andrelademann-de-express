@@ -6,13 +6,13 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  * @example
- * 	{{#compare "Test" "Test"}}
- * 	Default comparison of "==="
- * 	{{/compare}}
+ *  {{#compare "Test" "Test"}}
+ *  Default comparison of "==="
+ *  {{/compare}}
  *
- * 	{{#compare Database.Tables.Count ">" 5}}
- * 	There are more than 5 tables
- * 	{{/compare}}
+ *  {{#compare Database.Tables.Count ">" 5}}
+ *  There are more than 5 tables
+ *  {{/compare}}
  */
 'use strict';
 
@@ -26,19 +26,33 @@ Handlebars.registerHelper('compare', function (lvalue, operator, rvalue, options
 	}
 
 	if (options === undefined) {
-		options = rvalue;
-		rvalue = operator;
+		options  = rvalue;
+		rvalue   = operator;
 		operator = '===';
 	}
 
 	operators = {
-		'===': function (l, r) { return l === r; },
-		'!==': function (l, r) { return l !== r; },
-		'<': function (l, r) { return l < r; },
-		'>': function (l, r) { return l > r; },
-		'<=': function (l, r) { return l <= r; },
-		'>=': function (l, r) { return l >= r; },
-		'typeof': function (l, r) { return typeof l === r; }
+		'===':    function (l, r) {
+			return l === r;
+		},
+		'!==':    function (l, r) {
+			return l !== r;
+		},
+		'<':      function (l, r) {
+			return l < r;
+		},
+		'>':      function (l, r) {
+			return l > r;
+		},
+		'<=':     function (l, r) {
+			return l <= r;
+		},
+		'>=':     function (l, r) {
+			return l >= r;
+		},
+		'typeof': function (l, r) {
+			return typeof l === r;
+		}
 	};
 
 	if (!operators[operator]) {

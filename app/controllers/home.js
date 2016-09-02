@@ -37,6 +37,5 @@ router.get('/', function (req, res, next) {
 				title:    'Welcome',
 				articles: articles
 			});
-			return undefined;
 		});
 });

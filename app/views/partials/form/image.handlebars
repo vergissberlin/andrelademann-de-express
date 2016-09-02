@@ -10,10 +10,10 @@
     var ${{id}}Holder = $('#{{id}}-holder');
     $('#{{id}}').on('change', function () {
         ${{id}}Holder.empty();
-        var reader = new FileReader();
+        var reader    = new FileReader();
         reader.onload = function (e) {
             $('<img />', {
-                'src': e.target.result,
+                'src':   e.target.result,
                 'style': 'width: 200px',
                 'class': 'img-thumbnail'
             }).appendTo(${{id}}Holder);

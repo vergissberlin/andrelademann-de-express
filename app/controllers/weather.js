@@ -25,16 +25,15 @@ module.exports = function (app) {
  */
 router.get('/weather', function (req, res) {
 	weather.find({search: 'Cape town', degreeType: 'C', lang: 'en-GB'}, function (err, result) {
-		var message;
+		var flash = '';
 		if (err) {
 			console.err(err);
-			message = 'Couldn\'t get weather information jet.';
+			flash = 'Couldn\'t get weather information jet.';
 		}
 		res.render('weather', {
 			title:   'Weather',
 			weather: result,
-			message:  message
+			flash:   flash
 		});
-		return undefined;
 	});
 });
