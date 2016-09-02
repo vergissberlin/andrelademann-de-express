@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="/css/style.css">
 	{{#if profile}}
       <link rel="stylesheet" href="/css/admin.css">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+            integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	{{/if}}
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
@@ -59,9 +61,13 @@
 
             <div class="form-inline pull-xs-right">
 							{{#if profile}}
-                  <a class="btn btn-outline-success" href="/user/logout/">Logout</a>
+                  <a class="btn btn-outline-success" href="/user/logout/"><i class="fa fa-sign-out"
+                                                                             aria-hidden="true"></i> <span
+                          class="hidden-sm-down">Logout</span></a>
 							{{else}}
-                  <a class="btn btn-outline-success" href="/user/login/">Login</a>
+                  <a class="btn btn-outline-success" href="/user/login/"><i class="fa fa-sign-in"
+                                                                            aria-hidden="true"></i> <span
+                          class="hidden-sm-down">Login</span></a>
 							{{/if}}
             </div>
         </nav>
