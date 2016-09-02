@@ -1,8 +1,10 @@
 /**
- *  @project      AndreLademannDe
- *  @author       André Lademann <vergissberlin@googlemail.com>
- *  @copyright    MIT
- *  @license      https://opensource.org/licenses/MIT
+ * Articles controller
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann <vergissberlin@googlemail.com>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
  */
 var express      = require('express'),
 		router       = express.Router(),
@@ -23,7 +25,6 @@ module.exports = function (app) {
  * Article controller
  *
  * @function
- * @returns {undefined}
  */
 router.get('/articles', function (req, res, next) {
 	Article.find()
@@ -42,15 +43,14 @@ router.get('/articles', function (req, res, next) {
 					pageCount: 10
 				}
 			});
+			return undefined;
 		});
-	return undefined;
 });
 
 /**
  * Articles state action
  *
  * @function
- * @returns {undefined}
  */
 router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (req, res, next) {
 	var state = req.params.state;
@@ -73,15 +73,14 @@ router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (
 					pageCount: 10
 				}
 			});
+			return undefined;
 		});
-	return undefined;
 });
 
 /**
  * Add article action
  *
  * @function
- * @returns {undefined}
  */
 router.get('/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
 	res.render('sections/article/edit', {
@@ -95,7 +94,6 @@ router.get('/articles/add', passportUtil.ensureAuthenicated, function (req, res)
  * Add article action
  *
  * @function
- * @returns {undefined}
  */
 router.post('/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
 	var getSlug = require('speakingurl');
@@ -109,14 +107,12 @@ router.post('/articles/add', passportUtil.ensureAuthenicated, function (req, res
 	}).save();
 
 	res.redirect('/articles');
-	return undefined;
 });
 
 /**
  * Edit article
  *
  * @function
- * @returns {undefined}
  */
 router.post('/articles/edit/:id', passportUtil.ensureAuthenicated, function (req, res) {
 	var getSlug = require('speakingurl');
@@ -133,15 +129,14 @@ router.post('/articles/edit/:id', passportUtil.ensureAuthenicated, function (req
 				throw err;
 			}
 			res.redirect('/articles/state/' + req.body.state);
+			return undefined;
 		});
-	return undefined;
 });
 
 /**
  * Article detail action
  *
  * @function
- * @returns {undefined}
  */
 router.get('/articles/:slug', function (req, res, next) {
 	Article.findOne({'slug': req.params.slug})
@@ -153,6 +148,6 @@ router.get('/articles/:slug', function (req, res, next) {
 				title:   'Articles',
 				article: article
 			});
+			return undefined;
 		});
-	return undefined;
 });

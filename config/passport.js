@@ -1,3 +1,12 @@
+/**
+ * Passport configuration
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann <vergissberlin@googlemail.com>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
+ */
+'use strict';
 var passport      = require('passport'),
 		LocalPassport = require('passport-local'),
 		User          = require('../app/models/user');

@@ -1,6 +1,10 @@
-'use strict';
-
 /**
+ * Compare view helper
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann <vergissberlin@googlemail.com>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
  * @example
  * 	{{#compare "Test" "Test"}}
  * 	Default comparison of "==="
@@ -10,6 +14,8 @@
  * 	There are more than 5 tables
  * 	{{/compare}}
  */
+'use strict';
+
 var Handlebars = require('handlebars');
 Handlebars.registerHelper('compare', function (lvalue, operator, rvalue, options) {
 

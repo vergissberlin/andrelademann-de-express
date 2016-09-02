@@ -1,10 +1,12 @@
 /**
- *  @project      andrelademann.de
- *  @author       André Lademann <vergissberlin@googlemail.com>
- *  @copyright    Copyright (c) 2016 andrelademann.de
- *  @license      http://andrelademann.de/license
+ * Karma runner configuration
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann <vergissberlin@googlemail.com>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
  */
-
+'use strict';
 // Karma configuration
 // Generated on Tue Aug 16 2016 22:35:18 GMT+0200 (CEST)
 
@@ -74,4 +76,4 @@ module.exports = function (config) {
 		// how many browser should be started simultaneous
 		concurrency: Infinity
 	})
-}
+};

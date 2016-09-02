@@ -1,3 +1,12 @@
+/**
+ * Slug view helper
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann <vergissberlin@googlemail.com>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
+ */
+'use strict';
 var express  = require('express'),
 		config   = require('./config/config'),
 		glob     = require('glob'),

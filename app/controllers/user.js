@@ -1,3 +1,11 @@
+/**
+ * User controller
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann <vergissberlin@googlemail.com>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
+ */
 var express      = require('express'),
 		passport     = require('passport'),
 		passportUtil = require('../../util/passport'),

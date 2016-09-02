@@ -1,8 +1,10 @@
 /**
- *  @project      AndreLademannDe
- *  @author       André Lademann <vergissberlin@googlemail.com>
- *  @copyright    MIT
- *  @license      https://opensource.org/licenses/MIT
+ * Home controller
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann <vergissberlin@googlemail.com>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
  */
 var express  = require('express'),
 		router   = express.Router(),
@@ -22,7 +24,6 @@ module.exports = function (app) {
  * Home controller
  *
  * @function
- * @returns {undefined}
  */
 router.get('/', function (req, res, next) {
 	Article.find()
@@ -36,6 +37,6 @@ router.get('/', function (req, res, next) {
 				title:    'Welcome',
 				articles: articles
 			});
+			return undefined;
 		});
-	return undefined;
 });

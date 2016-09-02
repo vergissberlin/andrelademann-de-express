@@ -1,3 +1,12 @@
+/**
+ * Configuration
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann <vergissberlin@googlemail.com>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
+ */
+'use strict';
 var path     = require('path'),
 		rootPath = path.normalize(__dirname + '/..'),
 		env      = process.env.NODE_ENV || 'development';

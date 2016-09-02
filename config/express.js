@@ -1,5 +1,14 @@
+/**
+ * Express configuration
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann <vergissberlin@googlemail.com>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
+ */
+'use strict';
 var
-	basicauth         = require('basicauth-middleware'),
+	basicAuth = require('basicauth-middleware'),
 	bodyParser        = require('body-parser'),
 	compress          = require('compression'),
 	cookieParser      = require('cookie-parser'),
@@ -18,7 +27,7 @@ var
 	passport          = require('passport'),
 	session           = require('express-session');
 
-var secret = process.env.NODE_SECRET || '1234';
+var secret = process.env.NODE_SECRET || 'superhero';
 
 // Register additional header
 handlebarsIntl.registerWith(handlebars);
@@ -45,7 +54,10 @@ module.exports = function (app, config) {
 	app.use(passport.initialize());
 	app.use(cookieParser());
 	app.use(passport.session({
-		cookie: {maxAge: 60000}
+		cookie: {
+			maxAge: 60000,
+			secret: secret
+		}
 	}));
 
 	// Rendering
@@ -96,7 +108,7 @@ module.exports = function (app, config) {
 	app.use(helmet());
 
 	// Basic auth
-	app.use(basicauth('ala', process.env.BASE_SECRET || 'base', 'Please enter the credentials!'));
+	app.use(basicAuth('ala', process.env.BASE_SECRET || 'base', 'Please enter the credentials!'));
 
 	// Override
 	app.use(methodOverride());

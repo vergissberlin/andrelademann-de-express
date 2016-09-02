@@ -1,6 +1,10 @@
 /**
  * Article Model
- * =============
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann <vergissberlin@googlemail.com>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
  */
 var mongoose = require('mongoose'),
 		Schema   = mongoose.Schema;
@@ -43,17 +47,3 @@ ArticleSchema.pre('save', function (next) {
 	this.update({}, {$set: {updated: new Date()}});
 	next();
 });
-
-/*
- var Article = mongoose.model('Article', ArticleSchema);
-
- Article.find(function (err, posts) {
- if( posts.length) return;
-
- new Article({
- title: 'Initial',
- url:'http://example.com',
- text: 'Lorem ipsum sit amet'
- }).save();
- });
- */
