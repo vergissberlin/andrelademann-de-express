@@ -29,5 +29,5 @@ require('./config/express')(app, config);
 require('./config/passport')();
 
 app.listen(config.port, function () {
-	console.log('Express server listening on port ' + config.port);
+	console.info('Express server listening on port ' + config.port);
 });
