@@ -45,6 +45,7 @@ router.get('/articles', function (req, res, next) {
 			});
 			return undefined;
 		});
+	return undefined;
 });
 
 /**
@@ -75,6 +76,7 @@ router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (
 			});
 			return undefined;
 		});
+	return undefined;
 });
 
 /**
@@ -88,6 +90,7 @@ router.get('/articles/add', passportUtil.ensureAuthenicated, function (req, res)
 		admin:    true,
 		subtitle: 'Add articles'
 	});
+	return undefined;
 });
 
 /**
@@ -107,6 +110,7 @@ router.post('/articles/add', passportUtil.ensureAuthenicated, function (req, res
 	}).save();
 
 	res.redirect('/articles');
+	return undefined;
 });
 
 /**
@@ -131,6 +135,7 @@ router.post('/articles/edit/:id', passportUtil.ensureAuthenicated, function (req
 			res.redirect('/articles/state/' + req.body.state);
 			return undefined;
 		});
+	return undefined;
 });
 
 /**
@@ -150,4 +155,5 @@ router.get('/articles/:slug', function (req, res, next) {
 			});
 			return undefined;
 		});
+	return undefined;
 });
