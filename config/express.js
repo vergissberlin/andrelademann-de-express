@@ -5,6 +5,7 @@ var
 	cookieParser      = require('cookie-parser'),
 	express           = require('express'),
 	expressHandlebars = require('express-handlebars'),
+	expressSession    = require('express-session'),
 	favicon           = require('serve-favicon'),
 	flash             = require('connect-flash'),
 	glob              = require('glob'),
@@ -15,23 +16,23 @@ var
 	logger            = require('morgan'),
 	methodOverride    = require('method-override'),
 	passport          = require('passport'),
-	session           = require('express-session'),
-	sessionStore      = new session.MemoryStore;
+	session           = require('express-session');
 
 var secret = process.env.NODE_SECRET || '1234';
 
 // Register additional header
 handlebarsIntl.registerWith(handlebars);
 
-// Passport
-var passport = require('passport');
-var expressSession = require('express-session');
-
+/**
+ * Express configuration
+ *
+ * @module configuration/express
+ */
 module.exports = function (app, config) {
 
 	// Environment
-	var env = process.env.NODE_ENV || 'development';
-	app.locals.ENV = env;
+	var env                    = process.env.NODE_ENV || 'development';
+	app.locals.ENV             = env;
 	app.locals.ENV_DEVELOPMENT = env == 'development';
 
 	// Passport
@@ -108,8 +109,8 @@ module.exports = function (app, config) {
 
 
 	// Exception handling
-	app.use(function (req, res, next) {
-		var err = new Error('Not Found');
+	app.use(function (req, res) {
+		var err    = new Error('Not Found');
 		err.status = 404;
 		res.render('error', {
 			message: err.message,
