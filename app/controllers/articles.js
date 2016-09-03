@@ -28,9 +28,9 @@ module.exports = function (app) {
  */
 router.get('/articles', function (req, res, next) {
 	Article.find()
-		.limit(10)
+		.limit(1000)
 		.where('state').equals('published')
-		.sort({updated: -1})
+		.sort({updatedAt: -1})
 		.exec(function (err, articles) {
 			if (err) {
 				return next(err);
@@ -54,9 +54,8 @@ router.get('/articles', function (req, res, next) {
 router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (req, res, next) {
 	var state = req.params.state;
 	Article.find()
-		.limit(10)
 		.where('state').equals(state)
-		.sort({updated: -1})
+		.sort({updatedAt: -1})
 		.exec(function (err, articles) {
 			if (err) {
 				return next(err);
