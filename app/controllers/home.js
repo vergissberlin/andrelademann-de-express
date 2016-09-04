@@ -28,7 +28,7 @@ module.exports = function (app) {
 router.get('/', function (req, res, next) {
 	Article.find()
 		.limit(3)
-		.sort({updated: -1})
+		.sort({updatedAt: -1})
 		.exec(function (err, articles) {
 			if (err) {
 				return next(err);
