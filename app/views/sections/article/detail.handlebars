@@ -8,12 +8,10 @@
         <section>
             <header>
                 <h1>{{{article.title}}}</h1>
+                <p class="text-muted">Created at {{formatDate article.createdAt}}</p>
                 <p class="lead">{{{article.teaser}}}</p>
             </header>
             <p>{{{article.text}}}</p>
-            <p class="text-muted">{{createdAt}}</p>
-            <p class="text-muted">Latest update {{updatedAt}}</p>
-
         </section>
     </article>
 

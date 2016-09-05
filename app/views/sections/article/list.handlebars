@@ -12,6 +12,10 @@
         <div class="row marketing">
             <div class="col-lg-6">
                 <h2><a href="/articles/{{slug title}}/">{{{title}}}</a></h2>
+                <p>
+                    <small class="text-muted">{{formatRelative createdAt}}</small>
+                </p>
+
                 <p>{{{crop teaser limit=750}}}</p>
             </div>
             <div class="col-lg-6">
