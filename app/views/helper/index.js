@@ -9,6 +9,7 @@
 
 require('./age');
 require('./limit');
+require('./i18n');
 require('./crop');
 require('./compare');
 require('./pagination');

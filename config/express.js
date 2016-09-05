@@ -22,6 +22,7 @@ var
 	handlebarsIntl    = require('handlebars-intl'),
 	helmet            = require('helmet'),
 	helpers           = require('../app/views/helper'),
+	i18n      = require('./i18n'),
 	logger            = require('morgan'),
 	methodOverride    = require('method-override'),
 	passport          = require('passport'),
@@ -72,6 +73,9 @@ module.exports = function (app, config) {
 	app.set('views', config.root + '/app/views');
 	app.set('view engine', 'handlebars');
 
+	// l18n
+	app.use(i18n);
+
 	app.use(favicon(config.root + '/public/img/favicon/favicon.ico'));
 	app.use(logger('dev'));
 
@@ -118,7 +122,6 @@ module.exports = function (app, config) {
 	controllers.forEach(function (controller) {
 		require(controller)(app);
 	});
-
 
 	// Exception handling
 	app.use(function (req, res) {
