@@ -6,16 +6,9 @@
  */
 'use strict';
 
-var Handlebars = require('handlebars');
+var Handlebars = require('handlebars'),
+		i18n       = require('i18n');
 
-Handlebars.registerHelper('__', function (from, options) {
-	var now = new Date(),
-			to  = options.hash.to ? new Date(options.hash.to, now.getMonth(), now.getDate()) : new Date();
-
-	from = new Date(from, now.getMonth(), now.getDate());
-	if (!from) {
-		return;
-	}
-	var diff = to.getTime() - from.getTime();
-	return Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+Handlebars.registerHelper('__', function () {
+	return i18n.__.apply(this, arguments);
 });

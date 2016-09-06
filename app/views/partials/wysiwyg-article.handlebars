@@ -8,21 +8,21 @@
                         <input type="radio" name="state" id="draft" value="draft"
                                autocomplete="off"{{#if article.state}}{{#compare article.state "draft"}}
                                checked{{/compare}}{{else}} checked{{/if}}>
-                        Draft
+											{{__ "Draft"}}
                     </label>
                     <label class="btn btn-outline-danger{{#compare article.state "deleted"}} active{{/compare}}">
                         <input type="radio" name="state" id="deleted"
                                value="deleted"
                                autocomplete="off"{{#compare article.state "deleted"}}
                                checked{{/compare}}>
-                        Deleted
+											{{__ "Deleted"}}
                     </label>
                     <label class="btn btn-outline-success{{#compare article.state "published"}} active{{/compare}}">
                         <input type="radio" name="state" id="published"
                                value="published"
                                autocomplete="off"{{#compare article.state "published"}}
                                checked{{/compare}}>
-                        Published
+											{{__ "Published"}}
                     </label>
                 </div>
             </li>
@@ -44,16 +44,18 @@
             <ul class="nav navbar-nav pull-xs-right">
                 <li class="nav-item">
                     <a href="javascript:if(confirm('Realy?')) history.back()" class="btn btn-outline-danger"><i
-                            class="fa fa-ban" aria-hidden="true"></i>&nbsp;Cancel</a>
+                            class="fa fa-ban" aria-hidden="true"></i>&nbsp;{{__ "Cancel"}}</a>
                 </li>
                 <li class="nav-item">
                     <button type="submit"
                             class="btn btn-outline-primary pull-xs-right"
                             role="button">
 											{{#if article}}
-                          <i class="fa fa-pencil" aria-hidden="true"></i> <span class="hidden-sm-down">&nbsp;Edit</span>
+                          <i class="fa fa-pencil" aria-hidden="true"></i> <span class="hidden-sm-down">&nbsp;{{__
+												"Edit"}}</span>
 											{{else}}
-                          <i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-sm-down">&nbsp;Add</span>
+                          <i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-sm-down">&nbsp;{{__
+												"Add"}}</span>
 											{{/if}}
                     </button>
                 </li>
