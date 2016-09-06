@@ -4,19 +4,20 @@
             <li class="nav-item{{#compare state "published"}} active{{/compare}}">
                 <a class="nav-link"
                    href="/{{section}}/state/published">
-                    Published <span class="tag tag-pill tag-default">23</span>
+									{{{__ 'Published'}}}
+                    <span class="tag tag-pill tag-default">23</span>
                 </a>
             </li>
             <li class="nav-item{{#compare state "draft"}} active{{/compare}}">
                 <a class="nav-link"
                    href="/{{section}}/state/draft">
-                    Draft <span class="tag tag-pill tag-default">10</span>
+									{{{__ 'Draft'}}} <span class="tag tag-pill tag-default">10</span>
                 </a>
             </li>
             <li class="nav-item{{#compare state "deleted"}} active{{/compare}}">
                 <a class="nav-link"
                    href="/{{section}}/state/deleted">
-                    Deleted <span class="tag tag-pill tag-default">0</span>
+									{{{__ 'Deleted'}}} <span class="tag tag-pill tag-default">0</span>
                 </a>
             </li>
             <li class="nav-item pull-xs-right">

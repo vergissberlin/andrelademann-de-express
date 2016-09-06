@@ -16,6 +16,6 @@ module.exports = function (app) {
 
 router.get('/admin', passportUtil.ensureAuthenicated, function (req, res) {
 	res.render('admin', {
-		title: 'Admin page'
+		title: res.__('Admin page')
 	});
 });

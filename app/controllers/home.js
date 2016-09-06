@@ -26,7 +26,6 @@ module.exports = function (app) {
  * @function
  */
 router.get('/', function (req, res, next) {
-	console.log(res.__('Hello i18n'));
 	Article.find()
 		.limit(3)
 		.sort({updatedAt: -1})
@@ -35,7 +34,7 @@ router.get('/', function (req, res, next) {
 				return next(err);
 			}
 			res.render('home', {
-				title:    'Welcome',
+				title:    res.__('Welcome'),
 				articles: articles
 			});
 		});

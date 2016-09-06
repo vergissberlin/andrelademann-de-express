@@ -36,7 +36,7 @@ router.get('/articles', function (req, res, next) {
 				return next(err);
 			}
 			res.render('sections/article/list', {
-				title:      'Articles',
+				title:      res.__('Articles'),
 				articles:   articles,
 				pagination: {
 					page:      1,
@@ -61,7 +61,7 @@ router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (
 				return next(err);
 			}
 			res.render('sections/article/list', {
-				title:      'Articles',
+				title:      res.__('Articles'),
 				subtitle:   state.charAt(0).toUpperCase() + state.slice(1) + ' articles',
 				articles:   articles,
 				admin:      true,
@@ -81,9 +81,9 @@ router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (
  */
 router.get('/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
 	res.render('sections/article/edit', {
-		title:    'Articles',
-		admin:    true,
-		subtitle: 'Add articles'
+		title:    res.__('Articles'),
+		subtitle: res.__('Add articles'),
+		admin:    true
 	});
 });
 
@@ -141,7 +141,7 @@ router.get('/articles/:slug', function (req, res, next) {
 				return next(err);
 			}
 			res.render('sections/article/detail', {
-				title:   'Articles',
+				title:   res.__('Articles'),
 				article: article
 			});
 		});

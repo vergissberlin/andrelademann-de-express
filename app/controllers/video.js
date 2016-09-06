@@ -17,6 +17,6 @@ module.exports = function (app) {
 
 router.get('/video', function (req, res) {
 	res.render('video', {
-		title: 'Video'
+		title: res.__('Video')
 	});
 });

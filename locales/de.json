@@ -1,4 +1,8 @@
 {
 	"Hello i18n": "Hello i18n",
-	"Hello i18n template": "Hello i18n template"
+	"Hello i18n template": "Hello i18n template",
+	"Welcome": "Welcome",
+	"Weather": "Weather",
+	"Please login.": "Please login.",
+	"User": "User"
 }

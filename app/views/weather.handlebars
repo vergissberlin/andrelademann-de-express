@@ -1,4 +1,5 @@
 {{> header}}
+
 <div class="row">
     <div class="col-md-12">
         <h2>{{{weather.0.location.name}}}</h2>
@@ -14,7 +15,7 @@
                   <div class="row">
                       <div class="col-sm-5 col-xs-6 temperature-condition">
                           <p class="h3">{{low}}
-                              <small>up to</small> {{high}}°C
+                              <small>{{{__ "up to"}}}</small> {{high}}°C
                           </p>
                           <p class="headline-xs">{{skytextday}}</p>
                       </div>
@@ -22,9 +23,9 @@
                           <p class="h3">{{day}}, {{date}}</p>
                           <p class="headline-xs"></p>
 												{{#if precip}}
-                            <em>Possibility of precipitation {{precip}}%</em>
+                            <em>{{{__ "Possibility of precipitation"}}} {{precip}}%</em>
 												{{else}}
-                            <em>No chance of rain.</em>
+                            <em>{{{__ "No chance of rain."}}}</em>
 												{{/if}}
                       </div>
                   </div>
@@ -33,4 +34,3 @@
 			{{/each}}
     </div>
 </div>
-

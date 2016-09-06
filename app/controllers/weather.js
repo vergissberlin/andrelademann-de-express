@@ -28,10 +28,10 @@ router.get('/weather', function (req, res) {
 		var flash = '';
 		if (err) {
 			console.err(err);
-			flash = 'Couldn\'t get weather information jet.';
+			flash = res.__('Couldn`t get weather information jet.');
 		}
 		res.render('weather', {
-			title:   'Weather',
+			title:   res.__('Weather'),
 			weather: result,
 			flash:   flash
 		});

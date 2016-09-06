@@ -21,12 +21,12 @@ module.exports = function (app) {
 router.get('/user/login', function (req, res) {
 	req.session.flash = {
 		type:    'info',
-		message: 'Please login.'
+		message: res.__('Please login.')
 	};
 
 	res.render('sections/user/login', {
 		brand:    'primary',
-		title:    'User',
+		title:    res.__('User'),
 		category: 'User Login'
 	});
 });
@@ -45,8 +45,8 @@ router.post('/user/login', passport.authenticate('local',
 router.get('/user/signup', function (req, res) {
 	res.render('sections/user/register', {
 		brand:    'primary',
-		title:    'Benutzer',
-		category: 'Benutzer Registrierung',
+		title:    res.__('User'),
+		category: res.__('User registrierung'),
 		message:  req.flash('message')
 	});
 });
@@ -72,8 +72,8 @@ router.get('/user/logout', function (req, res) {
 router.get('/user/profile', passportUtil.ensureAuthenicated, function (req, res) {
 	res.render('sections/user/profile', {
 		brand:    'primary',
-		title:    'Benutzer',
-		category: 'Benutzer Profil',
+		title:    res.__('User'),
+		category: 'User profil',
 		profile:  req.user
 	});
 });

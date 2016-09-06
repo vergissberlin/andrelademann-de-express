@@ -15,6 +15,6 @@ module.exports = function (app) {
 
 router.get('/form', function (req, res) {
 	res.render('form', {
-		title: 'Upload formular'
+		title: res.__('Upload formular')
 	});
 });
