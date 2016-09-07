@@ -1,0 +1,19 @@
+{
+	"@context": "http://schema.org",
+	"@type": "Person",
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Leipzig",
+		"addressRegion": "DE",
+		"postalCode": "04275",
+		"streetAddress": "Hardenbergstraße 48, 04275 Leipzig"
+	},
+	"colleague": [
+		"https://de.wikipedia.org/wiki/Schulen_in_Frankfurt_(Oder)"
+	],
+	"email": "mailto:info@andrelademann.de",
+	"image": "andrelademann.jpg",
+	"jobTitle": "Developer",
+	"name": "André Lademann",
+	"url": "http://www.andrelademann.de"
+}

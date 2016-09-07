@@ -4,17 +4,24 @@
 	{{> wysiwyg-article}}
 	{{> wysiwyg}}
 {{else}}
-    <article id="content">
+
+    <article id="content" itemscope itemType="http://schema.org/BlogPosting">
         <header>
-            <h1>{{{article.title}}}</h1>
-            <time datetime="{{article.createdAt}}" class="text-muted">
+            <h1 itemprop="headline">{{{article.title}}}</h1>
+            <time datetime="{{article.createdAt}}" class="text-muted" itemprop="datePublished"
+                  content="{{article.createdAt}}>
 							{{{__ 'Created at'}}}&nbsp;{{formatDate article.createdAt}}
-							{{#if article.updatedAt}}, {{__ 'updated at'}}
+										{{#if article.updatedAt}}, {{__ 'updated at'}}
                   &nbsp;{{formatDate article.updatedAt}}{{/if}}
             </time>
-            <p class="lead">{{{article.teaser}}}</p>
+            <p class=" lead
+            " itemprop="description">{{{article.teaser}}}</p>
         </header>
-        <p>{{{article.text}}}</p>
+        <div itemprop="articleBody">{{{article.text}}}</div>
+
+        <footer>
+            <a itemprop="url" href="http://..." title="permanent link">Permalink</a>
+        </footer>
     </article>
 
 		{{>prism}}
