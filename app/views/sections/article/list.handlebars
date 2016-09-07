@@ -12,10 +12,9 @@
         <div class="row marketing">
             <div class="col-lg-6">
                 <h2><a href="/articles/{{slug title}}/">{{{title}}}</a></h2>
-                <p>
+                <time datetime="{{createdAt}}">
                     <small class="text-muted">{{formatRelative createdAt}}</small>
-                </p>
-
+                </time>
                 <p>{{{crop teaser limit=750}}}</p>
             </div>
             <div class="col-lg-6">

@@ -8,10 +8,10 @@
         <section>
             <header>
                 <h1>{{{article.title}}}</h1>
-                <p class="text-muted">
+                <time datetime="{{article.createdAt}}" class="text-muted">
 									{{{__ 'Created at'}}}&nbsp;{{formatDate article.createdAt}}
-									{{#if article.updatedAt}}, {{{__ 'Updated at'}}}&nbsp;{{formatDate article.updatedAt}}{{/if}}
-                </p>
+									{{#if article.updatedAt}}, {{__ 'updated at'}}&nbsp;{{formatDate article.updatedAt}}{{/if}}
+                </time>
                 <p class="lead">{{{article.teaser}}}</p>
             </header>
             <p>{{{article.text}}}</p>
