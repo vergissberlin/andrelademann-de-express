@@ -1,6 +1,10 @@
 <header>
+{{#if tagType}}
+        <{{tagType}} class="display-3">{{title}}</{{tagType}}>
+{{else}}
     <p class="display-3">{{title}}</p>
-	{{#if subtitle}}
-      <p class="lead">{{subtitle}}</p>
-	{{/if}}
+{{/if}}
+{{#if subtitle}}
+    <p class="lead">{{subtitle}}</p>
+{{/if}}
 </header>

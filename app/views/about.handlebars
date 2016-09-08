@@ -1,58 +1,88 @@
-<div id="hcard-André-Lademann" class="vcard row">
-    <div class="col-xs-2"><img
-            src="http://www.gravatar.com/avatar/fb4aa793fc841faebe60042772c865ee?s=300&d=identicon"
-            alt="photo of André Lademann" class="img-fluid" />
-    </div>
-    <div class="col-xs-10">
-        <h1>{{__ "About me"}}</h1>
-        <h2>{{__ "Get in contact"}}</h2>
-        <a class="url fn" href="http://andrelademann.de">André Lademann</a> (<em
-            class="nickname">vergissberlin</em>)
+{{> header tagType="h1"}}
 
-        <div class="org">Netresearch GmbH & Co.KG</div>
-        <a class="email"
-           href="mailto:info@andrelademann.de">info@andrelademann.de</a>
-        <div class="adr">
-            <div class="street-address">Hardenbergstraße 48</div>
-            <span class="locality">Leipzig</span>,
-            <span class="region">Saxony</span>,
-            <span class="postal-code">04275</span>
-            <span class="country-name">Germany</span>
+<div id="hcard-André-Lademann" class="vcard">
+    <div class="jumbotron row">
+        <div class="col-xs-12 col-sm-2">
+            <figure>
+                <img src="http://www.gravatar.com/avatar/fb4aa793fc841faebe60042772c865ee?s=512&d=identicon"
+                     alt="photo of André Lademann" class="img-fluid"/>
+                <figcaption class="nickname text-xs-center">
+                    vergissberlin
+                </figcaption>
+            </figure>
+            <a class="btn btn-outline-info btn-block hidden-sm-up" rel="me" href="tel:00491707353067">
+                <i class="fa fa-phone" aria-hidden="true">&nbsp;</i>
+                <span class="tel">+491707353067</span>
+            </a>
+            <a class="btn btn-outline-info btn-block hidden-sm-up" rel="me" href="mailto:info@andrelademann.de">
+                <i class="fa fa-envelope-o" aria-hidden="true">&nbsp;</i>
+                <span class="tel">Email</span>
+            </a>
 
         </div>
-        <div class="bday">1980-08-27T11:11:00</div>
-        <div class="category hidden-xs">development</div>
-        <h2>{{__ "Links"}}</h2>
-        <ul class="list-unstyled">
-            <li>
-                <a class="tel" rel="me" href="tel:00491707353067">+491707353067</a>,
-            </li>
-            <li>
-                <a class="url" rel="me" href="xmpp:vergissberlin">Jabber</a>,
-            </li>
-            <li>
-                <a class="url" rel="me" href="skype:vergissberlin">Skype</a>,
-            </li>
-            <li>
-                <a class="url" rel="me" href="https://github.com/vergissberlin">GitHub</a>
-            </li>
-        </ul>
-        <h3>{{__ "Projects"}}</h3>
-        <ul class="list-unstyled">
-            <li>
-                <a class="url" rel="me"
-                   href="https://github.com/vergissberlin/andrelademann-de">andrelademann-de
-                    <span class="text-muted">ExpressJS Website</span> </a>
-            </li>
-            <li>
-                <a class="url" rel="me" href="https://github.com/vergissberlin/9xr">GitHub</a>
-            </li>
-            <li>
-                <a class="url" rel="me" href="https://github.com/vergissberlin">GitHub</a>
-            </li>
-            <li>
-                <a class="url" rel="me" href="https://github.com/vergissberlin">GitHub</a>
-            </li>
-        </ul>
+        <section class="col-xs-12 col-sm-10">
+            <h2>{{__ "Get in contact"}}</h2>
+            <p>
+                <a class="url fn clearfix" href="http://andrelademann.de">André Lademann</a>
+                <span class="org clearfix">NULLzueEINS Inh. André Lademann</span>
+                <a class="email hidden-sm-down" href="mailto:info@andrelademann.de">info@andrelademann.de</a>
+            </p>
+            <address class="adr">
+                <div class="street-address">Hardenbergstraße 48</div>
+                <div>
+                    <span class="postal-code">04275</span> <span class="locality">Leipzig</span>,
+                </div>
+                <div>
+                    <span class="region">Saxony</span>, <span class="country-name">Germany</span>
+                </div>
+            </address>
+            <div class="bday invisible">1980-08-27T11:11:00</div>
+            <div class="category invisible">development</div>
+        </section>
+    </div>
+
+    <div class="row">
+        <section class="col-sm-12 col-md-6">
+            <h2>{{__ "Links"}}</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a class="url" rel="me" href="xmpp:vergissberlin">Jabber</a>
+                </li>
+                <li class="list-group-item">
+                    <a class="url" rel="me" href="skype:vergissberlin">Skype</a>
+                </li>
+                <li class="list-group-item">
+                    <a class="url" rel="me" href="https://github.com/vergissberlin">GitHub</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="col-sm-12 col-md-6">
+            <h3>{{__ "Projects"}}</h3>
+            <div class="list-group">
+                <a class="url list-group-item list-group-item-action" rel="me"
+                   href="https://github.com/vergissberlin/andrelademann-de">
+                    <p class="h4 list-group-item-heading">andrelademann.de</p>
+                    <p class="list-group-item-text">
+                        ExpressJS Website mit Handlebars als Template-Engine
+                        und MongoDB als Datenbank.
+                    </p>
+                </a>
+                <a class="url list-group-item list-group-item-action" rel="me"
+                   href="https://github.com/vergissberlin/piball">
+                    <p class="h4 list-group-item-heading">Piball</p>
+                    <p class="list-group-item-text">
+                        Digitaler Tischerkicker Torezähler mit JavaScript auf einem RaspberryPi.
+                    </p>
+                </a>
+                <a class="url list-group-item list-group-item-action" rel="me"
+                   href="https://github.com/vergissberlin/piball-clients">
+                    <p class="h4 list-group-item-heading">Piball Clients</p>
+                    <p class="list-group-item-text">
+                        Clients für den Tischkicker-Counter für Chrome, Web und Smartphone Apps.
+                    </p>
+                </a>
+            </div>
+        </section>
     </div>
 </div>
