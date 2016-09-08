@@ -23,7 +23,7 @@ module.exports = function (app) {
  *
  * @function
  */
-router.get('/', function (req, res) {
+router.get('/about', function (req, res) {
 	res.render('about', {
 		title: res.__('About me')
 	});

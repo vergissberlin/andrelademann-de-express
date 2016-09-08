@@ -1,4 +1,6 @@
 {
+	"About me": "Über mich",
+	"About": "Über mich",
 	"Add": "Erstellen",
 	"Add new": "Neuer",
 	"Add articles": "Artikel hinzufügen",
@@ -9,10 +11,13 @@
 	"Draft": "Entwurf",
 	"Edit": "Bearbeiten",
 	"Error": "Fehler",
+	"Get in contact": "In Kontakt treten",
+	"Links": "Links",
 	"OK": "OK",
 	"Password": "Passwort",
 	"Please fill the form!": "Bitte fülle das Formular aus!",
 	"Please login.": "Bitte einloggen.",
+	"Projects": "Projekte",
 	"Published": "Veröffentlicht",
 	"Read more": "weiterlesen",
 	"Sign in": "Log in",
@@ -25,10 +30,5 @@
 	"Weather": "Wetter",
 	"Welcome": "Willkommen",
 	"Welcome to": "Willkommen zum",
-	"Your data": "Ihre Daten",
-	"About me": "About me",
-	"About": "About",
-	"Get in contact": "Get in contact",
-	"Links": "Links",
-	"Projects": "Projects"
+	"Your data": "Ihre Daten"
 }
