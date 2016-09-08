@@ -1,5 +1,5 @@
 /**
- * Form controller
+ * Home controller
  *
  * @project      AndreLademannDe
  * @author       André Lademann <info@andrelademann.de>
@@ -7,14 +7,24 @@
  * @license      https://opensource.org/licenses/MIT
  */
 var express = require('express'),
-		router  = express.Router();
+	router = express.Router();
 
+/**
+ * Home controller
+ *
+ * @module controller/home
+ */
 module.exports = function (app) {
 	app.use('/', router);
 };
 
-router.get('/form', function (req, res) {
-	res.render('form', {
-		title: res.__('Upload formular')
+/**
+ * Home controller
+ *
+ * @function
+ */
+router.get('/', function (req, res) {
+	res.render('about', {
+		title: res.__('About me')
 	});
 });

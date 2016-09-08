@@ -2,7 +2,7 @@
  * User Model
  *
  * @project      AndreLademannDe
- * @author       André Lademann <vergissberlin@googlemail.com>
+ * @author       André Lademann <info@andrelademann.de>
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
@@ -16,7 +16,7 @@ module.exports = {
 			lastname:  'Lademann',
 			password:  process.env.AUTH_SECRET || 'iPhone',
 			gender:    'Herr',
-			email:     'vergissberlin@googlemail.com'
+			email: 'info@andrelademann.de'
 		}
 	],
 

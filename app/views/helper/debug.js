@@ -2,7 +2,7 @@
  * Debug view helper
  *
  * @project      AndreLademannDe
- * @author       André Lademann <vergissberlin@googlemail.com>
+ * @author       André Lademann <info@andrelademann.de>
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  * @see           @commondream (http://thinkvitamin.com/code/handlebars-js-part-3-tips-and-tricks/)

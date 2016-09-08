@@ -2,7 +2,7 @@
  * Limit view helper
  *
  * @project      AndreLademannDe
- * @author       André Lademann <vergissberlin@googlemail.com>
+ * @author       André Lademann <info@andrelademann.de>
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
