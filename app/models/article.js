@@ -22,6 +22,10 @@ var ArticleSchema = new Schema({
 			unique:   true,
 			required: true
 		},
+		meta:     {
+			description: String,
+			keywords:    String
+		},
 		image:    String,
 		teaser:   String,
 		text:     String,

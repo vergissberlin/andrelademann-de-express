@@ -4,7 +4,8 @@
         <ul class="nav navbar-nav">
             <li class="nav-item pull-xs-right">
                 <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-outline-primary{{#if article.state}}{{#compare article.state "draft"}} active{{/compare}}{{else}} active{{/if}}">
+                    <label class="btn btn-outline-primary{{#if article.state}}{{#compare article.state
+																																												 "draft"}} active{{/compare}}{{else}} active{{/if}}">
                         <input type="radio" name="state" id="draft" value="draft"
                                autocomplete="off"{{#if article.state}}{{#compare article.state "draft"}}
                                checked{{/compare}}{{else}} checked{{/if}}>
@@ -29,13 +30,50 @@
         </ul>
     </nav>
 
-    <article>
-        <section>
-            <header>
-                <h1 id="title" class="wysiwyg-plain">{{{article.title}}}</h1>
-                <p id="teaser" class="lead wysiwyg-plain">{{{article.teaser}}}</p>
-            </header>
-            <div class="wysiwyg" id="text">{{{article.text}}}</div>
+    <article id="accordion" role="tablist" aria-multiselectable="true">
+        <section class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <p class="panel-title h3">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+                       aria-controls="collapseOne">
+                        Main
+                    </a>
+                </p>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <header>
+                    <h1 id="title" class="wysiwyg-plain">{{{article.title}}}</h1>
+                    <p id="teaser" class="lead wysiwyg-plain">{{{article.teaser}}}</p>
+                </header>
+                <div class="wysiwyg" id="text">{{{article.text}}}</div>
+            </div>
+        </section>
+        <section class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <p class="panel-title h3">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                       aria-expanded="false" aria-controls="collapseTwo">
+                        Meta-Data
+                    </a>
+                </p>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="form-group row">
+                    <label for="description" class="col-xs-2 col-form-label">Meta
+                        description {{{article.meta.description}}}</label>
+                    <div class="col-xs-10">
+                        <input class="form-control" type="text" placeholder="Meta description (Max 120 chars)"
+                               value="{{{article.meta.description}}}" id="description">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="description" class="col-xs-2 col-form-label">Meta keywords</label>
+                    <div class="col-xs-10">
+                        <input class="form-control" type="text" placeholder="Meta keywords"
+                               value="{{{article.meta.keywords}}}" id="keywords">
+                    </div>
+                </div>
+            </div>
         </section>
     </article>
 

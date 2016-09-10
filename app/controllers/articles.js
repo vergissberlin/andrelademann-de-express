@@ -98,6 +98,10 @@ router.post('/articles/add', passportUtil.ensureAuthenicated, function (req, res
 		title:  req.body.title,
 		slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
 		state:  req.body.state,
+		meta:   {
+			description: req.body.descripton,
+			keywords:    req.body.keywords
+		},
 		image:  req.body.image,
 		teaser: req.body.teaser,
 		text:   req.body.text
@@ -118,6 +122,10 @@ router.post('/articles/edit/:id', passportUtil.ensureAuthenicated, function (req
 			title:  req.body.title,
 			slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
 			state:  req.body.state,
+			meta:   {
+				description: req.body.descripton,
+				keywords:    req.body.keywords
+			},
 			image:  req.body.image,
 			teaser: req.body.teaser,
 			text:   req.body.text
