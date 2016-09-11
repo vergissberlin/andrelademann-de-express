@@ -34,13 +34,14 @@
         <section class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingOne">
                 <p class="panel-title h3">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
-                       aria-controls="collapseOne">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#mainContent" aria-expanded="true"
+                       aria-controls="mainContent">
                         Main
                     </a>
                 </p>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div id="mainContent" class="panel-collapse collapse in" role="tabpanel"
+                 aria-labelledby="Main content aria">
                 <header>
                     <h1 id="title" class="wysiwyg-plain">{{{article.title}}}</h1>
                     <p id="teaser" class="lead wysiwyg-plain">{{{article.teaser}}}</p>
@@ -51,26 +52,52 @@
         <section class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingTwo">
                 <p class="panel-title h3">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
-                       aria-expanded="false" aria-controls="collapseTwo">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#metaData"
+                       aria-expanded="false" aria-controls="metaData">
                         Meta-Data
                     </a>
                 </p>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div id="metaData" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Meta data">
+
                 <div class="form-group row">
-                    <label for="description" class="col-xs-2 col-form-label">Meta
-                        description {{{article.meta.description}}}</label>
-                    <div class="col-xs-10">
-                        <input class="form-control" type="text" placeholder="Meta description (Max 120 chars)"
-                               value="{{{article.meta.description}}}" id="description">
+                    <label class="col-sm-2">
+											{{__ "Index"}}
+                    </label>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="checkbox" class="form-check-input" id="index" name="index"
+																			 {{#if article.meta.index}}checked{{/if}}>
+                                Index that
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="description" class="col-xs-2 col-form-label">Meta keywords</label>
+                    <label for="description" class="col-xs-2 col-form-label">
+											{{__ "Description"}}
+                    </label>
                     <div class="col-xs-10">
-                        <input class="form-control" type="text" placeholder="Meta keywords"
-                               value="{{{article.meta.keywords}}}" id="keywords">
+                        <textarea class="form-control"
+                                  placeholder="Meta description (Max 120 chars)"
+                                  maxlength="120"
+                                  id="description"
+                                  name="description">{{{article.meta.description}}}</textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="description" class="col-xs-2 col-form-label">
+											{{__ "Keywords"}}
+                    </label>
+                    <div class="col-xs-10">
+                        <input class="form-control"
+                               type="text"
+                               maxlength="120"
+                               placeholder="Meta keywords"
+                               value="{{{article.meta.keywords}}}"
+                               id="keywords"
+                               name="keywords">
                     </div>
                 </div>
             </div>
@@ -89,11 +116,11 @@
                             class="btn btn-outline-primary pull-xs-right"
                             role="button">
 											{{#if article}}
-                          <i class="fa fa-pencil" aria-hidden="true"></i> <span class="hidden-sm-down">&nbsp;{{__
-												"Edit"}}</span>
+                          <i class="fa fa-pencil" aria-hidden="true"></i>
+                          <span class="hidden-sm-down">&nbsp;{{__ "Edit"}}</span>
 											{{else}}
-                          <i class="fa fa-plus" aria-hidden="true"></i> <span class="hidden-sm-down">&nbsp;{{__
-												"Add"}}</span>
+                          <i class="fa fa-plus" aria-hidden="true"></i>
+                          <span class="hidden-sm-down">&nbsp;{{__ "Add"}}</span>
 											{{/if}}
                     </button>
                 </li>

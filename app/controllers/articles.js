@@ -37,6 +37,10 @@ router.get('/articles', function (req, res, next) {
 			}
 			res.render('sections/article/list', {
 				title:      res.__('Articles'),
+				robots:     {
+					current: false,
+					follow:  true
+				},
 				articles:   articles,
 				pagination: {
 					page:      1,
@@ -66,6 +70,10 @@ router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (
 				articles:   articles,
 				admin:      true,
 				state:      state,
+				robots:     {
+					current: false,
+					follow:  false
+				},
 				pagination: {
 					page:      1,
 					pageCount: 10
@@ -83,6 +91,10 @@ router.get('/articles/add', passportUtil.ensureAuthenicated, function (req, res)
 	res.render('sections/article/edit', {
 		title:    res.__('Articles'),
 		subtitle: res.__('Add articles'),
+		robots:   {
+			current: false,
+			follow:  false
+		},
 		admin:    true
 	});
 });
@@ -99,7 +111,8 @@ router.post('/articles/add', passportUtil.ensureAuthenicated, function (req, res
 		slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
 		state:  req.body.state,
 		meta:   {
-			description: req.body.descripton,
+			index:       req.body.index,
+			description: req.body.description,
 			keywords:    req.body.keywords
 		},
 		image:  req.body.image,
@@ -123,7 +136,8 @@ router.post('/articles/edit/:id', passportUtil.ensureAuthenicated, function (req
 			slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
 			state:  req.body.state,
 			meta:   {
-				description: req.body.descripton,
+				index:       req.body.index,
+				description: req.body.description,
 				keywords:    req.body.keywords
 			},
 			image:  req.body.image,
@@ -150,6 +164,10 @@ router.get('/articles/:slug', function (req, res, next) {
 			}
 			res.render('sections/article/detail', {
 				title:   res.__('Articles'),
+				robots:  {
+					current: Article.meta.index || false,
+					follow:  true
+				},
 				article: article
 			});
 		});

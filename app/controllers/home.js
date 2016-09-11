@@ -35,7 +35,11 @@ router.get('/', function (req, res, next) {
 			}
 			res.render('home', {
 				title:    res.__('Welcome'),
-				articles: articles
+				articles: articles,
+				robots:   {
+					current: false,
+					follow:  true
+				}
 			});
 		});
 });

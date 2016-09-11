@@ -23,6 +23,7 @@ var ArticleSchema = new Schema({
 			required: true
 		},
 		meta:     {
+			index:       Boolean,
 			description: String,
 			keywords:    String
 		},
