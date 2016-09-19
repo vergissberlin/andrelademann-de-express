@@ -47,6 +47,12 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="robots" content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if
 			robots.follow}}, follow{{else}}, nofollow{{/if}}">
+	{{#if meta.keywords}}
+      <meta name="keywords" content="{{meta.keywords}}">
+	{{/if}}
+	{{#if meta.description}}
+      <meta name="description" content="{{meta.description}}">
+	{{/if}}
 </head>
 <body>
 <a class="sr-only sr-only-focusable"

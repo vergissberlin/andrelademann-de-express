@@ -165,9 +165,10 @@ router.get('/articles/:slug', function (req, res, next) {
 			res.render('sections/article/detail', {
 				title:   res.__('Articles'),
 				robots:  {
-					current: Article.meta.index || false,
+					current: article.meta.index || false,
 					follow:  true
 				},
+				meta:    article.meta,
 				article: article
 			});
 		});
