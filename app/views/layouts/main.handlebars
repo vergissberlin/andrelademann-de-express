@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	{{#if admin}}
-      <meta name="robots" content="noindex">
-	{{/if}}
     <title>{{title}}</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i|Questrial|Arvo"
           rel="stylesheet">
@@ -45,8 +42,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <meta name="robots" content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if
-			robots.follow}}, follow{{else}}, nofollow{{/if}}">
+	{{#if admin}}
+      <meta name="robots" content="noindex">
+	{{else}}
+      <meta name="robots" content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if
+				robots.follow}}, follow{{else}}, nofollow{{/if}}">
+	{{/if}}
 	{{#if meta.keywords}}
       <meta name="keywords" content="{{meta.keywords}}">
 	{{/if}}
