@@ -7,8 +7,9 @@
  * @license      https://opensource.org/licenses/MIT
  */
 'use strict';
+
 var
-	basicAuth = require('basicauth-middleware'),
+	basicAuth         = require('basicauth-middleware'),
 	bodyParser        = require('body-parser'),
 	compress          = require('compression'),
 	cookieParser      = require('cookie-parser'),
@@ -22,7 +23,7 @@ var
 	handlebarsIntl    = require('handlebars-intl'),
 	helmet            = require('helmet'),
 	helpers           = require('../app/views/helper'),
-	i18n      = require('./i18n'),
+	i18n              = require('./i18n'),
 	logger            = require('morgan'),
 	methodOverride    = require('method-override'),
 	passport          = require('passport'),
