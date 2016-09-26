@@ -1,5 +1,6 @@
 public/components
 public/uploads/
+credentials.md
 .sass-cache
 .idea/workspace.xml
 .idea/tasks.xml

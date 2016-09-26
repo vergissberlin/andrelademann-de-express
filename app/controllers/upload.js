@@ -7,14 +7,21 @@
  * @license      https://opensource.org/licenses/MIT
  */
 
-var express = require('express'),
-		multer  = require('multer'),
-		router  = express.Router();
-
-var upload = multer({
-	dest: 'public/uploads/'
-});
-
+var express          = require('express'),
+		multer           = require('multer'),
+		multerStorageS3  = require('multer-storage-s3'),
+		router           = express.Router(),
+		storage          = multerStorageS3({
+			destination: function (req, file, cb) {
+				cb(null, 'uploads');
+			},
+			filename:    function (req, file, cb) {
+				cb(null, file.originalname);
+			},
+			bucket:      'vgbln-andrelademann',
+			region:      'eu-central-1'
+		}),
+		uploadMiddleware = multer({storage: storage});
 
 /**
  * Home controller
@@ -43,10 +50,6 @@ router.get('/upload', function (req, res) {
  *
  * @function
  */
-router.post('/upload', upload.single('sampleFile'), function (req, res) {
-	console.log(req.file);
-	// req.file is the `avatar` file
-	// req.body will hold the text fields, if there were any
+router.post('/upload', uploadMiddleware.single('sampleFile'), function (req, res) {
 	res.redirect('/upload');
 });
-
