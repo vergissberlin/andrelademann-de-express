@@ -17,9 +17,7 @@ var express          = require('express'),
 			},
 			filename:    function (req, file, cb) {
 				cb(null, file.originalname);
-			},
-			bucket:      'vgbln-andrelademann',
-			region:      'eu-central-1'
+			}
 		}),
 		uploadMiddleware = multer({storage: storage});
 
