@@ -15,14 +15,14 @@ describe('Handlebars Tests', function() {
 
 		it('will return false when the values are not equal', function() {
 			var template =  Handlebars.compile(this.html);
-			this.fields['last'] = 123;
+			this.fields.last = 123;
 			var result = template(this.fields);
 			expect(result).toEqual('false');
 		});
 
 		it('will return true when the values are equal', function() {
 			var template =  Handlebars.compile(this.html);
-			this.fields['last'] = '123';
+			this.fields.last = '123';
 			var result = template(this.fields);
 			expect(result).toEqual('true');
 		});
