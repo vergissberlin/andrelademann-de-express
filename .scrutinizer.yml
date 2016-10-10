@@ -1,0 +1,20 @@
+checks:
+    javascript: true
+build:
+    environment:
+             node: '5.1.0'
+    dependencies:
+        before:
+            - npm install istanbul
+    tests:
+        override:
+            -  jshint-run
+            -
+                command: 'istanbul cover --report clover app/views/helper/age.js'
+                coverage:
+                    file: 'coverage/clover.xml'
+                    format: 'clover'
+filter:
+    excluded_paths:
+        - test/*
+        - public/js/plugins/*

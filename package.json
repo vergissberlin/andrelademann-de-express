@@ -46,6 +46,7 @@
     "grunt-responsive-images": "^0.1.9",
     "grunt-sass": "^1.0.0",
     "grunt-template-jasmine-nml": "^2.0.1",
+    "istanbul": "^0.4.5",
     "jshint-stylish": "^2.2.1",
     "karma": "^1.2.0",
     "karma-chrome-launcher": "^1.0.1",
