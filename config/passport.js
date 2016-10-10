@@ -30,9 +30,7 @@ module.exports = function () {
 			if (user) {
 				return done(null, user);
 			}
-			else {
-				return done(null, false, {message: 'Benutzername oder Passwort inkorrekt.'});
-			}
+			return done(null, false, {message: 'Benutzername oder Passwort inkorrekt.'});
 		});
 	}));
 
@@ -40,6 +38,7 @@ module.exports = function () {
 		if (user) {
 			return done(null, user._id);
 		}
+		return;
 	});
 
 	passport.deserializeUser(function (id, done) {
