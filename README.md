@@ -1,4 +1,4 @@
-# Personal homepage
+# andrelademann.de
 
 [![Coverage Status](https://coveralls.io/repos/github/vergissberlin/andrelademann-de/badge.svg?branch=master)](https://coveralls.io/github/vergissberlin/andrelademann-de?branch=master)
 [![Build Status](https://travis-ci.org/vergissberlin/andrelademann-de.svg?branch=master)](https://travis-ci.org/vergissberlin/andrelademann-de)
@@ -13,7 +13,8 @@ This is the repository to my personal homepage andrelademann.de. I decided to ma
 ## Used technologies
 ### Server site
 Node.js, Express, Handlebars, Grunt, Mongoosejs ODM, MongoDB, S3 Image upload, CloudFront CDN, imagemagick, SASS
-Development and deployment
+
+### Development and deployment
 Webstorm, herokuapp app build and hosting, Travis CI, Scrutinizer,   
 
 ### Client site
