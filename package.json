@@ -42,6 +42,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-coveralls": "^1.0.1",
     "grunt-develop": "^0.4.0",
+		"grunt-istanbul-coverage": "^0.1.4",
     "grunt-manifest": "^0.4.4",
     "grunt-responsive-images": "^0.1.9",
     "grunt-sass": "^1.0.0",

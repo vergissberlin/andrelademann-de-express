@@ -10,7 +10,7 @@ build:
     override:
       - jshint-run
       -
-        command: 'istanbul cover --report clover app/views/helper/age.js'
+        command: 'istanbul cover --report clover app/views/helper/*.js'
         coverage:
           file: 'coverage/clover.xml'
           format: 'clover'

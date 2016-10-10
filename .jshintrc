@@ -13,19 +13,20 @@
 	"undef": true,
 	"quotmark": "single",
 	"globals": {
-		"console": true,
-		"it": false,
-		"xit": false,
-		"describe": false,
-		"xdescribe": false,
-		"beforeEach": false,
 		"afterEach": false,
+		"beforeEach": false,
+		"console": true,
+		"describe": false,
 		"expect": false,
-		"spyOn": false,
 		"exports": true,
+		"it": false,
 		"module": true,
+		"setTimeout": true,
+		"spyOn": false,
 		"process": true,
 		"require": true,
-		"setTimeout": true
+		"tinymce": false,
+		"xdescribe": false,
+		"xit": false
 	}
 }

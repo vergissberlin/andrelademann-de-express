@@ -47,6 +47,21 @@ module.exports = function (grunt) {
 			}
 		},
 
+		coverage: {
+			default: {
+				options: {
+					thresholds: {
+						'statements': 90,
+						'branches': 90,
+						'lines': 90,
+						'functions': 90
+					},
+					dir: 'app',
+					root: 'test'
+				}
+			}
+		},
+
 		develop: {
 			server: {
 				file: 'app.js'
