@@ -15,7 +15,7 @@ This is the repository to my personal homepage andrelademann.de. I decided to ma
 Node.js, Express, Handlebars, Grunt, Mongoosejs ODM, MongoDB, S3 Image upload, CloudFront CDN, imagemagick, SASS
 
 ### Development and deployment
-Webstorm, herokuapp app build and hosting, Travis CI, Scrutinizer,   
+Webstorm, herokuapp app build and hosting, Travis CI, Scrutinizer,
 
 ### Client site
 HTML5, Bootstrap 4 alpha CDN Version, font awesome, RDF, vCard, Microformats, Open Graph, Twitter card, Syntax highlighting with prism, Comments with Disqus
@@ -58,3 +58,25 @@ To see the current status, take a look in the milestones overview page.
 
 ## Contributing
 Please report bugs and security gaps. My promis: For every bug that you find within my source code and report it, I give an hour for your project. Thanks!
+
+### Installation
+
+1. Clone the repository
+- Type ``npm install`` to install the dependencies
+- Start a mongodb database an configure the credentials in ``config/database.js``
+- Set the Environment variables
+-- ``NODE_END=development``
+-- ``AWS_ACCESS_KEY_ID=foo``
+-- ``AWS_SECRET_ACCESS_KEY=foo``
+-- ``S3_BUCKET=foo``
+- Type ``npm start`` to start a local webserver
+
+#### Optional settings
+
+- Set the Environment variables
+-- ``MONGODB_URI=foo`` (To override configuration file settings)
+-- ``NODE_SECRET=foo``
+-- ``AUTH_SECRET=foo``
+-- ``BASE_USER=foo`` (For Basic aus activation)
+-- ``BASE_SECRET=foo`` (For Basic aus activation)
+-- ``AWS_REGION=foo``

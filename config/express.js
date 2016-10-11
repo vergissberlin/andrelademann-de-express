@@ -26,10 +26,9 @@ var
 	i18n              = require('./i18n'),
 	logger            = require('morgan'),
 	methodOverride    = require('method-override'),
+	nodeSecret = process.env.NODE_SECRET || 'superhero',
 	passport          = require('passport'),
 	session           = require('express-session');
-
-var secret = process.env.NODE_SECRET || 'superhero';
 
 // Register additional header
 handlebarsIntl.registerWith(handlebars);
@@ -58,7 +57,7 @@ module.exports = function (app, config) {
 	app.use(passport.session({
 		cookie: {
 			maxAge: 60000,
-			secret: secret
+			secret: nodeSecret
 		}
 	}));
 
@@ -112,8 +111,10 @@ module.exports = function (app, config) {
 	// Security
 	app.use(helmet());
 
-	// Basic auth
-	app.use(basicAuth('ala', process.env.BASE_SECRET || 'base', 'Please enter the credentials!'));
+	// Optional basic auth
+	if (process.env.BASE_USER && process.env.BASE_SECRET) {
+		app.use(basicAuth(process.env.BASE_USER, process.env.BASE_SECRET, 'Please enter the credentials!'));
+	}
 
 	// Override
 	app.use(methodOverride());
