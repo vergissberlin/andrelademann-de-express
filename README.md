@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/vergissberlin/andrelademann-de.png?label=ready&title=Ready)](https://waffle.io/vergissberlin/andrelademann-de)
 # andrelademann.de
 
 [![Coverage Status](https://coveralls.io/repos/github/vergissberlin/andrelademann-de/badge.svg?branch=master)](https://coveralls.io/github/vergissberlin/andrelademann-de?branch=master)
