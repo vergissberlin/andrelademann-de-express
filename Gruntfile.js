@@ -252,7 +252,8 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('test', [
 		'jshint',
-		'csslint'
+		'csslint',
+		'scsslint'
 	]);
 
 	grunt.registerTask('prod', [
