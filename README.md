@@ -73,10 +73,11 @@ Please report bugs and security gaps. My promis: For every bug that you find wit
 
 #### Optional settings
 
-- Set the Environment variables
--- ``MONGODB_URI=foo`` (To override configuration file settings)
--- ``NODE_SECRET=foo``
--- ``AUTH_SECRET=foo``
--- ``BASE_USER=foo`` (For Basic aus activation)
--- ``BASE_SECRET=foo`` (For Basic aus activation)
--- ``AWS_REGION=foo``
+- **Set the Environment variables**
+  - ``MONGODB_URI=foo`` (To override configuration file settings)
+  - ``NODE_SECRET=foo``
+  - ``AUTH_SECRET=foo``
+  - ``BASE_USER=foo`` (For Basic aus activation)
+  - ``BASE_SECRET=foo`` (For Basic aus activation)
+  - ``AWS_REGION=foo``
+  - ``BUGSNAG_TOKEN=foo`` To monitor bug messages.
