@@ -9,9 +9,9 @@
 
 .imageupload {
 	&.imageupload-disabled {
-		cursor: not-allowed;
-		opacity: 0.60;
 		pointer-events: none;
+		cursor: not-allowed;
+		opacity: .60;
 	}
 
 	.panel-title {
@@ -23,19 +23,20 @@
 	}
 
 	.btn-file {
-		overflow: hidden;
 		position: relative;
-		input[type="file"] {
-			cursor: inherit;
-			display: block;
-			font-size: 100px;
-			min-height: 100%;
-			min-width: 100%;
-			opacity: 0;
+		overflow: hidden;
+
+		[type="file"] {
 			position: absolute;
-			right: 0;
-			text-align: right;
 			top: 0;
+			right: 0;
+			display: block;
+			min-width: 100%;
+			min-height: 100%;
+			font-size: 100px;
+			text-align: right;
+			cursor: inherit;
+			opacity: 0;
 		}
 	}
 
@@ -58,16 +59,16 @@
 
 .upload-drop-zone {
 	height: 200px;
-	border-width: 3px;
 	margin-bottom: 20px;
+	border-width: 3px;
 }
 
 .upload-drop-zone {
-	color: #ccc;
-	border-style: dashed;
-	border-color: #ccc;
 	line-height: 200px;
-	text-align: center
+	color: #ccc;
+	text-align: center;
+	border-color: #ccc;
+	border-style: dashed;
 }
 
 .upload-drop-zone.drop {

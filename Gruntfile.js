@@ -15,6 +15,7 @@ module.exports = function (grunt) {
 	require('time-grunt')(grunt);
 	// load all grunt tasks
 	require('load-grunt-tasks')(grunt);
+//	grunt.loadNpmTasks('grunt-scss-lint');
 
 	var reloadPort = 35729, files;
 
@@ -151,6 +152,16 @@ module.exports = function (grunt) {
 					'public/css/style.css': 'public/css/style.scss',
 					'public/css/admin.css': 'public/css/admin.scss'
 				}
+			}
+		},
+
+		scsslint: {
+			allFiles: [
+				'public/css/*.scss'
+			],
+			options: {
+				config: '.scss-lint.yml',
+				colorizeOutput: false
 			}
 		},
 
