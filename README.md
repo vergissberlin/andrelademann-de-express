@@ -46,15 +46,15 @@ HTML5, Bootstrap 4 alpha CDN Version, font awesome, RDF, vCard, Microformats, Op
 - Social Links https://www.npmjs.com/package/social-media-links
 - Projects simple CMS
 - Improvements
--- Unit Tests for ViewHelper
--- Caching
--- Generated Sitemap
+  - Unit Tests for ViewHelper
+  - Caching
+  - Generated Sitemap
 - Enhancements
--- epub - Create ebooks from all blog articles to specific categories
--- Pingback
--- Rest API for Articles
--- Alternat Style https://mobirise.com/extensions/puritym/
--- Search for articles and projects
+  - epub - Create ebooks from all blog articles to specific categories
+  - Pingback  
+	- Rest API for Articles
+  - Alternat Style https://mobirise.com/extensions/puritym/
+  - Search for articles and projects
 
 ## Contributing
 Please report bugs and security gaps. My promis: For every bug that you find within my source code and report it, I give an hour for your project. Thanks! Fee free to contact me on [![Gitter](https://badges.gitter.im/vergissberlin/andrelademann-de.svg)](https://gitter.im/vergissberlin/andrelademann-de?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge).
@@ -65,10 +65,10 @@ Please report bugs and security gaps. My promis: For every bug that you find wit
 - Type ``npm install`` to install the dependencies
 - Start a mongodb database an configure the credentials in ``config/database.js``
 - Set the Environment variables
--- ``NODE_END=development``
--- ``AWS_ACCESS_KEY_ID=foo``
--- ``AWS_SECRET_ACCESS_KEY=foo``
--- ``S3_BUCKET=foo``
+  - ``NODE_END=development``
+  - ``AWS_ACCESS_KEY_ID=foo``
+  - ``AWS_SECRET_ACCESS_KEY=foo``
+  - ``S3_BUCKET=foo``
 - Type ``npm start`` to start a local webserver
 
 #### Optional settings
