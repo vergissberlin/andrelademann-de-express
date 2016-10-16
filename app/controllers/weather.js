@@ -5,7 +5,8 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
-var weather = require('weather-js'),
+var bugsnag = require('bugsnag'),
+		weather = require('weather-js'),
 		express = require('express'),
 		router  = express.Router();
 
@@ -27,6 +28,7 @@ router.get('/weather', function (req, res) {
 	weather.find({search: 'Cape town', degreeType: 'C', lang: 'en-GB'}, function (err, result) {
 		var flash = '';
 		if (err) {
+			bugsnag.notify(err);
 			console.err(err);
 			flash = res.__('Couldn`t get weather information jet.');
 		}

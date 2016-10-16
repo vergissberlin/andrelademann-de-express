@@ -6,7 +6,8 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
-var express      = require('express'),
+var bugsnag      = require('bugsnag'),
+		express      = require('express'),
 		router       = express.Router(),
 		mongoose     = require('mongoose'),
 		passportUtil = require('../../util/passport'),
@@ -33,6 +34,7 @@ router.get('/articles', function (req, res, next) {
 		.sort({updatedAt: -1})
 		.exec(function (err, articles) {
 			if (err) {
+				bugsnag.notify(err);
 				return next(err);
 			}
 			res.render('sections/article/list', {
@@ -62,6 +64,7 @@ router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (
 		.sort({updatedAt: -1})
 		.exec(function (err, articles) {
 			if (err) {
+				bugsnag.notify(err);
 				return next(err);
 			}
 			res.render('sections/article/list', {
@@ -145,6 +148,7 @@ router.post('/articles/edit/:id', passportUtil.ensureAuthenicated, function (req
 			text:   req.body.text
 		}, function (err) {
 			if (err) {
+				bugsnag.notify(err);
 				throw err;
 			}
 			res.redirect('/articles/state/' + req.body.state);
@@ -160,6 +164,7 @@ router.get('/articles/:slug', function (req, res, next) {
 	Article.findOne({'slug': req.params.slug})
 		.exec(function (err, article) {
 			if (err) {
+				bugsnag.notify(err);
 				return next(err);
 			}
 			res.render('sections/article/detail', {

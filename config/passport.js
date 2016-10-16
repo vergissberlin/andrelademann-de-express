@@ -7,7 +7,8 @@
  * @license      https://opensource.org/licenses/MIT
  */
 'use strict';
-var passport      = require('passport'),
+var bugsnag       = require('bugsnag'),
+		passport      = require('passport'),
 		LocalPassport = require('passport-local'),
 		User          = require('../app/models/user');
 
