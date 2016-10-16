@@ -11,16 +11,17 @@
 	&.imageupload-disabled {
 		cursor: not-allowed;
 		opacity: 0.60;
-		> * {
-			pointer-events: none;
-		}
+		pointer-events: none;
 	}
+
 	.panel-title {
 		padding-top: 8px;
 	}
+
 	.alert {
 		margin-bottom: 10px;
 	}
+
 	.btn-file {
 		overflow: hidden;
 		position: relative;
@@ -37,6 +38,7 @@
 			top: 0;
 		}
 	}
+
 	.file-tab {
 		button {
 			display: none;
@@ -45,6 +47,7 @@
 			margin-bottom: 10px;
 		}
 	}
+
 	.url-tab {
 		display: none;
 		.thumbnail {
