@@ -30,7 +30,9 @@ module.exports = function () {
 			if (user) {
 				return done(null, user);
 			}
-			return done(null, false, {message: 'Benutzername oder Passwort inkorrekt.'});
+			return done(null, false, {
+				message: 'Please check your credentials!'
+			});
 		});
 	}));
 
@@ -38,12 +40,20 @@ module.exports = function () {
 		if (user) {
 			return done(null, user._id);
 		}
-		return;
+		return false;
 	});
 
 	passport.deserializeUser(function (id, done) {
 		User.findOneById(id, function (user, error) {
 			if (error) {
+				bugsnag.notify(new Error('Error loading user'),
+					{
+						message: error.message,
+						error:   error,
+						user:    user,
+						env:     app.get('env')
+					});
+
 				console.error('Error loading user: ' + error);
 				return;
 			}

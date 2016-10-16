@@ -11,6 +11,7 @@
 var
 	basicAuth         = require('basicauth-middleware'),
 	bodyParser        = require('body-parser'),
+	bugsnag           = require('bugsnag'),
 	compress          = require('compression'),
 	cookieParser      = require('cookie-parser'),
 	express           = require('express'),
@@ -26,11 +27,12 @@ var
 	i18n              = require('./i18n'),
 	logger            = require('morgan'),
 	methodOverride    = require('method-override'),
-	nodeSecret = process.env.NODE_SECRET || 'superhero',
+	nodeSecret        = process.env.NODE_SECRET || 'superhero',
 	passport          = require('passport'),
 	session           = require('express-session');
 
 // Register additional header
+bugsnag.register(process.env.BUGSNAG_TOKEN);
 handlebarsIntl.registerWith(handlebars);
 
 /**
@@ -126,9 +128,19 @@ module.exports = function (app, config) {
 	});
 
 	// Exception handling
+	app.use(bugsnag.requestHandler);
+	app.use(bugsnag.errorHandler);
 	app.use(function (req, res) {
 		var err    = new Error('Not Found');
 		err.status = 404;
+
+		bugsnag.notify(new Error('404 Not found'),
+			{
+				message: err.message,
+				error:   err,
+				env:     app.get('env')
+			});
+
 		res.render('error', {
 			message: err.message,
 			error:   err,
