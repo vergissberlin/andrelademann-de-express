@@ -5,7 +5,7 @@ node_js:
 
 before_script:
   - npm install coveralls grunt-cli -g
-  - gem install sass-lint
+  - gem install scss-lint
 
 
 cache:
