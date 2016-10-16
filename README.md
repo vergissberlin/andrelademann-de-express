@@ -1,5 +1,7 @@
 # andrelademann.de
 
+[![Join the chat at https://gitter.im/vergissberlin/andrelademann-de](https://badges.gitter.im/vergissberlin/andrelademann-de.svg)](https://gitter.im/vergissberlin/andrelademann-de?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Coverage Status](https://coveralls.io/repos/github/vergissberlin/andrelademann-de/badge.svg?branch=master)](https://coveralls.io/github/vergissberlin/andrelademann-de?branch=master)
 [![Build Status](https://travis-ci.org/vergissberlin/andrelademann-de.svg?branch=master)](https://travis-ci.org/vergissberlin/andrelademann-de)
 [![Build Status](https://scrutinizer-ci.com/g/vergissberlin/andrelademann-de/badges/build.png?b=master)](https://scrutinizer-ci.com/g/vergissberlin/andrelademann-de/build-status/master)
