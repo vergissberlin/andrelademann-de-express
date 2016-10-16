@@ -6,7 +6,6 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vergissberlin/andrelademann-de/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/vergissberlin/andrelademann-de/?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d71d9adb1c8b4ba7a08ff58b86e5ff6d)](https://www.codacy.com/app/andre_1725/andrelademann-de?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vergissberlin/andrelademann-de&amp;utm_campaign=Badge_Grade)
 [![BlackDuck Badge](https://www.openhub.net/p/andrelademann-de/widgets/project_thin_badge?format=gif&amp;ref=Thin+badge)](https://www.openhub.net/p/andrelademann-de?ref=Thin+badge)
-[![Stories in Ready](https://badge.waffle.io/vergissberlin/andrelademann-de.png?label=ready&title=Ready)](https://waffle.io/vergissberlin/andrelademann-de)
 
 ## What
 This is the repository to my personal homepage andrelademann.de. I decided to make the source code public for two reasons. Firstly to inspire other people to create there own Website with Node.js and secondly to give pros the chance to find and report bugs and security voluntaries.
@@ -22,7 +21,7 @@ Webstorm, herokuapp app build and hosting, Travis CI, Scrutinizer,
 HTML5, Bootstrap 4 alpha CDN Version, font awesome, RDF, vCard, Microformats, Open Graph, Twitter card, Syntax highlighting with prism, Comments with Disqus
 
 ## Milestones
-To see the current status, take a look in the milestones overview page.
+[![Stories in Ready](https://badge.waffle.io/vergissberlin/andrelademann-de.png?label=ready&title=Ready)](https://waffle.io/vergissberlin/andrelademann-de) To see the current status, take a look in the milestones overview page or the on waffle.io board.
 
 ### Milestone #01 - Setup and static page
 - Configure custom domain andrelademann.de
@@ -58,7 +57,7 @@ To see the current status, take a look in the milestones overview page.
 -- Search for articles and projects
 
 ## Contributing
-Please report bugs and security gaps. My promis: For every bug that you find within my source code and report it, I give an hour for your project. Thanks!
+Please report bugs and security gaps. My promis: For every bug that you find within my source code and report it, I give an hour for your project. Thanks! Fee free to contact me on [![Gitter](https://badges.gitter.im/vergissberlin/andrelademann-de.svg)](https://gitter.im/vergissberlin/andrelademann-de?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge).
 
 ### Installation
 
