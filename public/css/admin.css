@@ -5,9 +5,9 @@
   outline: 6px solid rgba(50, 50, 50, 0.1); }
 
 .imageupload.imageupload-disabled {
+  pointer-events: none;
   cursor: not-allowed;
-  opacity: 0.60;
-  pointer-events: none; }
+  opacity: .60; }
 
 .imageupload .panel-title {
   padding-top: 8px; }
@@ -16,19 +16,19 @@
   margin-bottom: 10px; }
 
 .imageupload .btn-file {
-  overflow: hidden;
-  position: relative; }
-  .imageupload .btn-file input[type="file"] {
-    cursor: inherit;
-    display: block;
-    font-size: 100px;
-    min-height: 100%;
-    min-width: 100%;
-    opacity: 0;
+  position: relative;
+  overflow: hidden; }
+  .imageupload .btn-file [type="file"] {
     position: absolute;
+    top: 0;
     right: 0;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
     text-align: right;
-    top: 0; }
+    cursor: inherit;
+    opacity: 0; }
 
 .imageupload .file-tab button {
   display: none; }
@@ -43,15 +43,15 @@
 
 .upload-drop-zone {
   height: 200px;
-  border-width: 3px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  border-width: 3px; }
 
 .upload-drop-zone {
-  color: #ccc;
-  border-style: dashed;
-  border-color: #ccc;
   line-height: 200px;
-  text-align: center; }
+  color: #ccc;
+  text-align: center;
+  border-color: #ccc;
+  border-style: dashed; }
 
 .upload-drop-zone.drop {
   color: #222;

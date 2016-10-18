@@ -11,10 +11,10 @@ main {
   margin-top: 20px; }
 
 footer {
-  margin-top: 30px;
   padding-top: 5px;
-  border-top: 1px #ddd solid;
-  color: #bbb; }
+  margin-top: 30px;
+  color: #bbb;
+  border-top: 1px #ddd solid; }
 
 p, i, em {
   font-weight: 300; }
@@ -30,7 +30,7 @@ pre {
 
 .media-author {
   padding: 20px 30px;
-  background-color: aliceblue;
+  background-color: #f0f8ff;
   border-top: 1px #eee solid; }
 
 .text-overflow {
