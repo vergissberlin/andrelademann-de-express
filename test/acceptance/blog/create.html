@@ -12,6 +12,21 @@
 <tr><td rowspan="1" colspan="3">create</td></tr>
 </thead><tbody>
 <tr>
+	<td>storeEval</td>
+	<td>Math.floor(Math.random()*20)</td>
+	<td>randomImage</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Math.floor(Math.random()*100)</td>
+	<td>random</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>Preferences.getString(TestSuite.TEST_SUITE_DIRECTORY_PREF) + &quot;/../fixtures&quot;</td>
+	<td>fixturesFolder</td>
+</tr>
+<tr>
 	<td>open</td>
 	<td>/</td>
 	<td></td>
@@ -37,6 +52,21 @@
 	<td>Selenium IDE is just awesome! Selenium IDE is an integrated development environment for Selenium tests. It is implemented as a Firefox extension, and allows you to record, edit, and debug tests.</td>
 </tr>
 <tr>
+	<td>runScript</td>
+	<td>document.getElementById('title').innerHTML = &quot;This is test content &quot; + ${random}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>document.getElementById('teaser').innerHTML = &quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat.&quot;;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>document.getElementById('text').innerHTML = &quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat&quot;;</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Meta-Data</td>
 	<td></td>
@@ -45,6 +75,11 @@
 	<td>type</td>
 	<td>id=description</td>
 	<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>document.getElementById('text').innerHTML = &quot;Selenium IDE is just awesome! Selenium IDE is an integrated development environment for Selenium tests. It is implemented as a Firefox extension, and allows you to record, edit, and debug tests.&quot;;</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
@@ -59,7 +94,7 @@
 <tr>
 	<td>type</td>
 	<td>name=image-file</td>
-	<td>/home/andre/Bilder/LoremPixum/zeigefinger.jpg</td>
+	<td>${fixturesFolder}/images/800x600-${randomImage}.jpg</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -78,8 +113,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=This is a test content</td>
-	<td>This is test content</td>
+	<td>css=h2 &gt; a</td>
+	<td>This is test content ${random}</td>
 </tr>
 </tbody></table>
 </body>

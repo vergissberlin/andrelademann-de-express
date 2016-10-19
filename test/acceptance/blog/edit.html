@@ -23,13 +23,18 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=This is a test content</td>
+	<td>css=h2 &gt; a</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=title</td>
-	<td>This is edited test content</td>
+	<td>This is edited test content ${random}</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>document.getElementById('title').innerHTML = &quot;This is edited test content &quot; +&nbsp;&nbsp;${random};</td>
+	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -38,8 +43,8 @@
 </tr>
 <tr>
 	<td>assertText</td>
-	<td>link=This is edited test content</td>
-	<td>This is edited test content</td>
+	<td>css=h2 &gt; a</td>
+	<td>This is edited test content ${random}</td>
 </tr>
 </tbody></table>
 </body>
