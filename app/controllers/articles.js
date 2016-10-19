@@ -6,13 +6,23 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
-var bugsnag      = require('bugsnag'),
-		express      = require('express'),
-		router       = express.Router(),
-		mongoose     = require('mongoose'),
-		passportUtil = require('../../util/passport'),
-		Article      = mongoose.model('Article');
-
+var bugsnag          = require('bugsnag'),
+		express          = require('express'),
+		mongoose         = require('mongoose'),
+		Article          = mongoose.model('Article'),
+		passportUtil     = require('../../util/passport'),
+		multer           = require('multer'),
+		multerStorageS3  = require('multer-storage-s3'),
+		router           = express.Router(),
+		storage          = multerStorageS3({
+			destination: function (req, file, cb) {
+				cb(null, 'uploads/article');
+			},
+			filename:    function (req, file, cb) {
+				cb(null, file.originalname);
+			}
+		}),
+		uploadMiddleware = multer({storage: storage});
 /**
  * Article controller
  *
@@ -107,24 +117,26 @@ router.get('/articles/add', passportUtil.ensureAuthenicated, function (req, res)
  *
  * @function
  */
-router.post('/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
-	var getSlug = require('speakingurl');
-	new Article({
-		title:  req.body.title,
-		slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
-		state:  req.body.state,
-		meta:   {
-			index:       req.body.index,
-			description: req.body.description,
-			keywords:    req.body.keywords
-		},
-		image:  req.body.image,
-		teaser: req.body.teaser,
-		text:   req.body.text
-	}).save();
+router.post(
+	'/articles/add',
+	uploadMiddleware.single('image-file'), function (req, res) {
+		var getSlug = require('speakingurl');
+		new Article({
+			title:  req.body.title,
+			slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
+			state:  req.body.state,
+			meta:   {
+				index:       req.body.index,
+				description: req.body.description,
+				keywords:    req.body.keywords
+			},
+			image:  req.body.image,
+			teaser: req.body.teaser,
+			text:   req.body.text
+		}).save();
 
-	res.redirect('/articles');
-});
+		res.redirect('/articles/state/published');
+	});
 
 /**
  * Edit article
