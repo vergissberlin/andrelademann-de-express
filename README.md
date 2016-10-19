@@ -65,7 +65,7 @@ Please report bugs and security gaps. My promis: For every bug that you find wit
 - Type ``npm install`` to install the dependencies
 - Start a mongodb database an configure the credentials in ``config/database.js``
 - Set the Environment variables
-  - ``NODE_END=development``
+  - ``NODE_ENV=development``
   - ``AWS_ACCESS_KEY_ID=foo``
   - ``AWS_SECRET_ACCESS_KEY=foo``
   - ``S3_BUCKET=foo``
