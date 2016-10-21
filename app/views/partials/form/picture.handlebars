@@ -9,7 +9,7 @@
     <div class="file-tab panel-body">
         <label class="btn btn-outline-primary btn-file" style="margin-bottom: 0">
             <span>Browse</span>
-            <input type="file" name="image-file">
+					<input type="file" name="image-file" id="image-file">
         </label>
         <button type="button" class="btn btn-default">Remove</button>
     </div>
@@ -79,7 +79,7 @@
 <script src="/js/plugins/bootstrap-imageupload.min.js"></script>
 <script>
     $('.imageupload').imageupload({
-        allowedFormats: ['jpg','png'],
-        maxFileSizeKb:  10240
+			allowedFormats: ['jpg'],
+			maxFileSizeKb:  10240
     });
 </script>

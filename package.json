@@ -61,6 +61,8 @@
     "mongoose-mock": "^0.4.0",
     "request": "^2.60.0",
     "requirejs": "^2.2.0",
-    "time-grunt": "^1.3.0"
+		"selenium-html-js-converter": "^0.4.7",
+		"time-grunt": "^1.3.0",
+		"wd-sync-raw": "^1.2.5"
   }
 }

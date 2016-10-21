@@ -143,7 +143,7 @@ router.post(
  *
  * @function
  */
-router.post('/articles/edit/:id', passportUtil.ensureAuthenicated, function (req, res) {
+router.post('/articles/edit/:id', uploadMiddleware.single('image-file'), function (req, res) {
 	var getSlug = require('speakingurl');
 	Article.findOneAndUpdate({'_id': req.params.id},
 		{
