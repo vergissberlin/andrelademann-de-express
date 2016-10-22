@@ -8,12 +8,6 @@
 }
 
 .imageupload {
-	&.imageupload-disabled {
-		pointer-events: none;
-		cursor: not-allowed;
-		opacity: .60;
-	}
-
 	.panel-title {
 		padding-top: 8px;
 	}
@@ -55,6 +49,12 @@
 			margin: 10px 0;
 		}
 	}
+}
+
+.imageupload-disabled {
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: .60;
 }
 
 .upload-drop-zone {
