@@ -119,7 +119,11 @@ router.get('/articles/add', passportUtil.ensureAuthenicated, function (req, res)
  */
 router.post(
 	'/articles/add',
-	uploadMiddleware.single('image-file'), function (req, res) {
+	[
+		passportUtil.ensureAuthenicated,
+		uploadMiddleware.single('image-file')
+	],
+	function (req, res) {
 		var getSlug = require('speakingurl');
 		new Article({
 			title:  req.body.title,
@@ -143,29 +147,35 @@ router.post(
  *
  * @function
  */
-router.post('/articles/edit/:id', uploadMiddleware.single('image-file'), function (req, res) {
-	var getSlug = require('speakingurl');
-	Article.findOneAndUpdate({'_id': req.params.id},
-		{
-			title:  req.body.title,
-			slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
-			state:  req.body.state,
-			meta:   {
-				index:       req.body.index,
-				description: req.body.description,
-				keywords:    req.body.keywords
-			},
-			image:  req.body.image,
-			teaser: req.body.teaser,
-			text:   req.body.text
-		}, function (err) {
-			if (err) {
-				bugsnag.notify(err);
-				throw err;
-			}
-			res.redirect('/articles/state/' + req.body.state);
-		});
-});
+router.post(
+	'/articles/edit/:id',
+	[
+		passportUtil.ensureAuthenicated,
+		uploadMiddleware.single('image-file')
+	],
+	function (req, res) {
+		var getSlug = require('speakingurl');
+		Article.findOneAndUpdate({'_id': req.params.id},
+			{
+				title:  req.body.title,
+				slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
+				state:  req.body.state,
+				meta:   {
+					index:       req.body.index,
+					description: req.body.description,
+					keywords:    req.body.keywords
+				},
+				image:  req.body.image,
+				teaser: req.body.teaser,
+				text:   req.body.text
+			}, function (err) {
+				if (err) {
+					bugsnag.notify(err);
+					throw err;
+				}
+				res.redirect('/articles/state/' + req.body.state);
+			});
+	});
 
 /**
  * Article detail action
