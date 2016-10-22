@@ -49,6 +49,7 @@
     "grunt-sass": "^1.0.0",
     "grunt-scss-lint": "^0.5.0",
     "grunt-template-jasmine-nml": "^2.0.1",
+    "grunt-webdriver": "^2.0.1",
     "istanbul": "^0.4.5",
     "jshint-stylish": "^2.2.1",
     "karma": "^1.2.0",
@@ -61,8 +62,15 @@
     "mongoose-mock": "^0.4.0",
     "request": "^2.60.0",
     "requirejs": "^2.2.0",
-		"selenium-html-js-converter": "^0.4.7",
-		"time-grunt": "^1.3.0",
-		"wd-sync-raw": "^1.2.5"
+    "selenium-html-js-converter": "^0.4.7",
+    "time-grunt": "^1.3.0",
+    "wd-sync-raw": "^1.2.5",
+    "wdio-junit-reporter": "^0.1.0",
+    "wdio-mocha-framework": "^0.4.3",
+    "wdio-phantomjs-service": "^0.2.2",
+    "wdio-sauce-service": "^0.2.5",
+    "wdio-selenium-standalone-service": "0.0.7",
+    "wdio-spec-reporter": "0.0.3",
+    "webdriverio": "^4.2.16"
   }
 }

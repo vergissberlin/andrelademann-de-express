@@ -204,7 +204,14 @@ module.exports = function (grunt) {
 				],
 				options: {livereload: reloadPort}
 			}
+		},
+
+		webdriver: {
+			test: {
+				configFile: './config/wdio.js'
+			}
 		}
+
 	});
 
 	grunt.config.requires('watch.js.files');
