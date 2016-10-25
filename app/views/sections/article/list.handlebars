@@ -6,7 +6,7 @@
 
 <section>
 	{{#each (limit articles 60)}}
-      <div class="jumbotron{{#unless profile}} hidden-xs-down{{/unless}}">
+      <div class="jumbotron">
 				{{#if profile}}
 					{{> toolbar-edit slug="articles"}}
 				{{/if}}
@@ -19,7 +19,7 @@
                   <p>{{{crop teaser limit=750}}}</p>
               </div>
               <div class="col-lg-6">
-                  <img src="//c1.staticflickr.com/2/1524/26726054816_427856b51a_n.jpg"
+                  <img src="{{config.media.cdn}}{{image}}"
                        class="img-fluid">
               </div>
           </div>
