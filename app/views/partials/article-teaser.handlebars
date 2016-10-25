@@ -4,7 +4,7 @@
 			{{#each (limit articles 3)}}
           <div class="card">
               <img class="card-img-top img-fluid"
-                   src="https://c3.staticflickr.com/2/1711/26558282962_0b2edbdd1f_h.jpg"
+                   src="{{config.media.cdn}}{{image}}"
                    alt="{{title}}" title="{{title}}">
               <div class="card-block">
                   <p class="h4 card-title" title="{{title}}">{{crop title limit="60"}}</p>
