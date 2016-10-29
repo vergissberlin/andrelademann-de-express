@@ -4,11 +4,6 @@
 .navbar-fixed-bottom {
   outline: 6px solid rgba(50, 50, 50, 0.1); }
 
-.imageupload.imageupload-disabled {
-  pointer-events: none;
-  cursor: not-allowed;
-  opacity: .60; }
-
 .imageupload .panel-title {
   padding-top: 8px; }
 
@@ -30,7 +25,7 @@
     cursor: inherit;
     opacity: 0; }
 
-.imageupload .file-tab button {
+.imageupload .file-tab > button {
   display: none; }
 
 .imageupload .file-tab .thumbnail {
@@ -40,6 +35,12 @@
   display: none; }
   .imageupload .url-tab .thumbnail {
     margin: 10px 0; }
+
+.imageupload-disabled {
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: .60;
+}
 
 .upload-drop-zone {
   height: 200px;

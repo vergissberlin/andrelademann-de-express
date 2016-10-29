@@ -32,5 +32,12 @@
 	"Cancel": "Cancel",
 	"Add": "Add",
 	"Edit": "Edit",
-	"Error": "Error"
+	"Error": "Error",
+	"Upload Image": "Upload Image",
+	"File": "File",
+	"URL": "URL",
+	"Browse": "Browse",
+	"Remove": "Remove",
+	"Image URL": "Image URL",
+	"Submit": "Submit"
 }

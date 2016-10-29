@@ -1,12 +1,4 @@
 <h2>{{title}}</h2>
 
-<form action="/upload/"
-      method="post"
-      encType="multipart/form-data">
 
-    <label for="sampleFile" class="form-group">Example file
-        <input type="file" name="sampleFile" class="form-control">
-    </label>
-    <input type='submit' value='Upload!' class="btn btn-primary">
-
-</form>
+{{> form/dropzone}}

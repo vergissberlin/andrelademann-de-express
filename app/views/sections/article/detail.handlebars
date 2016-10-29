@@ -5,28 +5,35 @@
 	{{> wysiwyg}}
 {{else}}
 
-    <article id="content" itemscope itemType="http://schema.org/BlogPosting">
-        <header>
-            <h1 itemprop="headline">{{{article.title}}}</h1>
-            <time datetime="{{article.createdAt}}" class="text-muted" itemprop="datePublished"
-                  content="{{article.createdAt}}>
-							{{{__ 'Created at'}}}&nbsp;{{formatDate article.createdAt}}
-										{{#if article.updatedAt}}, {{__ 'updated at'}}
-                  &nbsp;{{formatDate article.updatedAt}}{{/if}}
-            </time>
-            <p class=" lead
-            " itemprop="description">{{{article.teaser}}}</p>
-        </header>
-        <div itemprop="articleBody">{{{article.text}}}</div>
+	<article id="content" itemscope itemType="http://schema.org/BlogPosting">
+		<header>
+			<h1 itemprop="headline">{{{article.title}}}</h1>
+			<time datetime="{{article.createdAt}}" class="text-muted" itemprop="datePublished"
+						content="{{article.createdAt}}">
+				{{{__ 'Created at'}}}&nbsp;{{formatDate article.createdAt}}
+				{{#if article.updatedAt}}, {{__ 'updated at'}}
+					&nbsp;{{formatDate article.updatedAt}}{{/if}}
+			</time>
+			<p class="lead" itemprop="description">
+				{{{article.teaser}}}
+			</p>
+		</header>
 
-        <footer>
-            <a itemprop="url" href="http://..." title="permanent link">Permalink</a>
-        </footer>
-    </article>
+		<figure>
+			<img src="{{config.media.cdn}}{{article.image}}" alt="{{article.title}}" class="img-fluid">
+			<figcaption>{{article.title}}</figcaption>
+		</figure>
 
-		{{>prism}}
+		<div itemprop="articleBody">{{{article.text}}}</div>
 
-		{{>author}}
+	</article>
 
-		{{>disqus}}
+	{{>prism}}
+
+	{{>social/get-social}}
+
+	{{>author}}
+
+	{{>disqus}}
+
 {{/if}}

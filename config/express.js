@@ -104,6 +104,12 @@ module.exports = function (app, config) {
 		res.locals.flash = req.session.flash;
 		delete req.session.flash;
 		res.locals.messages = req.flash();
+
+		// Configuration
+		req.config        = config;
+		res.locals.config = config;
+
+		// User data
 		if (req.user) {
 			res.locals.profile = req.user;
 		}
@@ -128,19 +134,9 @@ module.exports = function (app, config) {
 	});
 
 	// Exception handling
-	app.use(bugsnag.requestHandler);
-	app.use(bugsnag.errorHandler);
 	app.use(function (req, res) {
 		var err    = new Error('Not Found');
 		err.status = 404;
-
-		bugsnag.notify(new Error('404 Not found'),
-			{
-				message: err.message,
-				error:   err,
-				env:     app.get('env')
-			});
-
 		res.render('error', {
 			message: err.message,
 			error:   err,
@@ -150,8 +146,18 @@ module.exports = function (app, config) {
 	});
 
 	if (app.get('env') === 'development' || app.get('env') === 'home') {
+		app.use(bugsnag.requestHandler);
+		app.use(bugsnag.errorHandler);
 		app.use(function (err, req, res) {
 			res.status(err.status || 500);
+
+			bugsnag.notify(new Error('404 Not found'),
+				{
+					message: err.message,
+					error:   err,
+					env:     app.get('env')
+				});
+
 			res.render('error', {
 				message: err.message,
 				error:   err,

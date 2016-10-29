@@ -37,14 +37,10 @@
 		<section class="panel panel-default">
 			<div class="panel-heading" role="tab">
 				<p class="panel-title h3">
-					<a data-toggle="collapse" data-parent="#accordion" href="#content" aria-expanded="true"
-						 aria-controls="content">
-						{{__ "Content"}}
-					</a>
+					{{__ "Content"}}
 				</p>
 			</div>
-			<div id="content" class="panel-collapse collapse in" role="tabpanel"
-					 aria-labelledby="Main content aria">
+			<div id="content" class="pane" aria-labelledby="Main content aria">
 				<header>
 					<h1 id="title" class="wysiwyg-plain">{{{article.title}}}</h1>
 					<p id="teaser" class="lead wysiwyg-plain">{{{article.teaser}}}</p>
@@ -52,16 +48,16 @@
 				<div class="wysiwyg" id="text">{{{article.text}}}</div>
 			</div>
 		</section>
+
+		<hr>
+
 		<section class="panel panel-default">
 			<div class="panel-heading" role="tab">
 				<p class="panel-title h3">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#metaData"
-						 aria-expanded="false" aria-controls="metaData">
-						{{__ "Meta-Data"}}
-					</a>
+					{{__ "Meta-Data"}}
 				</p>
 			</div>
-			<div id="metaData" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Meta data">
+			<div id="metaData" class="panel" aria-labelledby="Meta data">
 				<div class="form-group row">
 					<label class="col-sm-2">{{__ "Index"}}</label>
 					<div class="col-sm-10">
@@ -77,11 +73,11 @@
 				<div class="form-group row">
 					<label for="description" class="col-xs-2 col-form-label">{{__ "Description"}}</label>
 					<div class="col-xs-10">
-                        <textarea class="form-control"
-																	placeholder="Meta description (Max 120 chars)"
-																	maxlength="120"
-																	id="description"
-																	name="description">{{{article.meta.description}}}</textarea>
+							<textarea class="form-control"
+												placeholder="Meta description (Max 120 chars)"
+												maxlength="120"
+												id="description"
+												name="description">{{{article.meta.description}}}</textarea>
 					</div>
 				</div>
 				<div class="form-group row">
@@ -99,37 +95,20 @@
 			</div>
 		</section>
 
-		<section class="panel panel-default">
-			<div class="panel-heading" role="tab" id="og">
-				<p class="panel-title h3">
-					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#openGraph"
-						 aria-expanded="false" aria-controls="openGraph">
-						Open Graph
-					</a>
-				</p>
-			</div>
-			<div id="openGraph" class="panel-collapse collapse" role="tabpanel" aria-labelledby="Open Graph">
+		<input type="hidden" name="image" value="{{article.image}}" id="image">
 
-				<div class="form-group row">
-					<label class="col-sm-2">{{__ "Picture"}}</label>
-					<div class="col-sm-10">
-						{{> form/picture}}
-					</div>
-				</div>
-
-			</div>
-		</section>
 	</article>
 
 	<nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
 		<div class="container">
 			<ul class="nav navbar-nav pull-xs-right">
 				<li class="nav-item">
-					<a href="javascript:if(confirm('Realy?')) history.back()" class="btn btn-outline-danger">
+					<a href="javascript:if(confirm('Realy?')) history.back()" id="cancel" class="btn btn-outline-danger">
 						<i class="fa fa-ban" aria-hidden="true"></i>&nbsp;{{__ "Cancel"}}</a>
 				</li>
 				<li class="nav-item">
 					<button type="submit"
+									id="submit"
 									class="btn btn-outline-primary pull-xs-right"
 									role="button">
 						{{#if article}}
@@ -144,4 +123,29 @@
 			</ul>
 		</div>
 	</nav>
+
+
 </form>
+
+<section class="panel panel-default">
+	<div class="panel-heading" role="tab" id="og">
+		<p class="panel-title h3">
+			Open Graph
+		</p>
+	</div>
+	<div id="openGraph" class="panel" aria-labelledby="Open Graph">
+		<div class="form-group row">
+			<label class="col-sm-2">{{__ "Picture"}}</label>
+			<div class="col-sm-10">
+				{{#if article.image}}
+					<figure id="fileOriginalPreview">
+						<img src="{{config.media.images}}{{article.image}}?w=200&h=200&mode=crop" class="img-fluid img-rounded">
+						<figcaption class="text-muted">{{config.media.images}}{{article.image}}</figcaption>
+					</figure>
+				{{/if}}
+
+				{{> form/dropzone this file="image" name="title" }}
+			</div>
+		</div>
+	</div>
+</section>

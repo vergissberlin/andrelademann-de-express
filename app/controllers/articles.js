@@ -6,23 +6,14 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
-var bugsnag          = require('bugsnag'),
-		express          = require('express'),
-		mongoose         = require('mongoose'),
-		Article          = mongoose.model('Article'),
-		passportUtil     = require('../../util/passport'),
-		multer           = require('multer'),
-		multerStorageS3  = require('multer-storage-s3'),
-		router           = express.Router(),
-		storage          = multerStorageS3({
-			destination: function (req, file, cb) {
-				cb(null, 'uploads/article');
-			},
-			filename:    function (req, file, cb) {
-				cb(null, file.originalname);
-			}
-		}),
-		uploadMiddleware = multer({storage: storage});
+var bugsnag      = require('bugsnag'),
+		express      = require('express'),
+		getSlug      = require('speakingurl'),
+		mongoose     = require('mongoose'),
+		Article      = mongoose.model('Article'),
+		passportUtil = require('../../util/passport'),
+		router       = express.Router();
+
 /**
  * Article controller
  *
@@ -100,17 +91,20 @@ router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (
  *
  * @function
  */
-router.get('/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
-	res.render('sections/article/edit', {
-		title:    res.__('Articles'),
-		subtitle: res.__('Add articles'),
-		robots:   {
-			current: false,
-			follow:  false
-		},
-		admin:    true
+router.get(
+	'/articles/add',
+	passportUtil.ensureAuthenicated,
+	function (req, res) {
+		res.render('sections/article/edit', {
+			title:    res.__('Articles'),
+			subtitle: res.__('Add articles'),
+			robots:   {
+				current: false,
+				follow:  false
+			},
+			admin:    true
+		});
 	});
-});
 
 /**
  * Add article action
@@ -118,13 +112,8 @@ router.get('/articles/add', passportUtil.ensureAuthenicated, function (req, res)
  * @function
  */
 router.post(
-	'/articles/add',
-	[
-		passportUtil.ensureAuthenicated,
-		uploadMiddleware.single('image-file')
-	],
-	function (req, res) {
-		var getSlug = require('speakingurl');
+	'/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
+
 		new Article({
 			title:  req.body.title,
 			slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
@@ -149,12 +138,13 @@ router.post(
  */
 router.post(
 	'/articles/edit/:id',
-	[
-		passportUtil.ensureAuthenicated,
-		uploadMiddleware.single('image-file')
-	],
+	passportUtil.ensureAuthenicated,
 	function (req, res) {
-		var getSlug = require('speakingurl');
+		var fileName = req.body.image || null;
+		if (typeof req.file === 'object') {
+			fileName = req.file['filename'];
+		}
+
 		Article.findOneAndUpdate({'_id': req.params.id},
 			{
 				title:  req.body.title,
@@ -165,7 +155,7 @@ router.post(
 					description: req.body.description,
 					keywords:    req.body.keywords
 				},
-				image:  req.body.image,
+				image:  fileName,
 				teaser: req.body.teaser,
 				text:   req.body.text
 			}, function (err) {

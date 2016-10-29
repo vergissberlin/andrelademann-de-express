@@ -4,7 +4,7 @@
  * @project      AndreLademannDe
  * @author       André Lademann <info@andrelademann.de>
  * @copyright    MIT
- * @license      https://opensource.org/licenses/MIT
+ * @license      http://opensource.org/licenses/MIT
  */
 'use strict';
 var path     = require('path'),
@@ -13,57 +13,73 @@ var path     = require('path'),
 
 var config = {
 	home:        {
-		root: rootPath,
-		app:  {
+		root:  rootPath,
+		app:   {
 			name: 'andrelademannde'
 		},
-		aws:  {
+		aws:   {
 			id:     process.env.AWS_ACCESS_KEY_ID,
 			secret: process.env.AWS_SECRET_ACCESS_KEY,
 			bucket: process.env.S3_BUCKET
 		},
-		port: process.env.PORT || 3030,
-		db:   process.env.MONGODB_URI || 'mongodb://localhost:27017/andrelademannde-home'
+		media: {
+			cdn:    'http://development-cdn.andrelademann.de/',
+			images: 'http:///development-cdn.andrelademann.de.rsz.io/'
+		},
+		port:  process.env.PORT || 3030,
+		db:    process.env.MONGODB_URI || 'mongodb://localhost:27017/andrelademannde-home'
 	},
 	development: {
-		root: rootPath,
-		app:  {
+		root:  rootPath,
+		app:   {
 			name: 'andrelademannde'
 		},
-		aws:  {
+		aws:   {
 			id:     process.env.AWS_ACCESS_KEY_ID,
 			secret: process.env.AWS_SECRET_ACCESS_KEY,
 			bucket: process.env.S3_BUCKET
 		},
-		port: process.env.PORT || 3232,
-		db:   process.env.MONGODB_URI || 'mongodb://192.168.99.100:32769/andrelademannde-development'
+		media: {
+			cdn:    'http://development-cdn.andrelademann.de/',
+			images: 'http://development-cdn.andrelademann.de.rsz.io/'
+		},
+		port:  process.env.PORT || 3232,
+		db:    process.env.MONGODB_URI || 'mongodb://192.168.99.100:32769/andrelademannde-development'
 	},
-	test:        {
-		root: rootPath,
-		app:  {
+	staging:     {
+		root:  rootPath,
+		app:   {
 			name: 'andrelademannde'
 		},
-		aws:  {
+		aws:   {
 			id:     process.env.AWS_ACCESS_KEY_ID,
 			secret: process.env.AWS_SECRET_ACCESS_KEY,
 			bucket: process.env.S3_BUCKET
 		},
-		port: process.env.PORT || 3000,
-		db:   process.env.MONGODB_URI || 'mongodb://localhost/andrelademannde-test'
+		media: {
+			cdn:    'http://staging-cdn.andrelademann.de/',
+			images: 'http://staging-cdn.andrelademann.de.rsz.io/'
+		},
+		port:  process.env.PORT || 3000,
+		db:    process.env.MONGODB_URI || 'mongodb://localhost/andrelademannde-staging'
 	},
 
 	production: {
-		root: rootPath,
-		app:  {
+		root:  rootPath,
+		app:   {
 			name: 'andrelademannde'
 		},
-		aws:  {
+		aws:   {
 			id:     process.env.AWS_ACCESS_KEY_ID,
 			secret: process.env.AWS_SECRET_ACCESS_KEY,
 			bucket: process.env.S3_BUCKET
 		},
-		port: process.env.PORT || 3000,
-		db:   process.env.MONGODB_URI
+		media: {
+			cdn:    'http://cdn.andrelademann.de/',
+			images: 'http://cdn.andrelademann.de.rsz.io/'
+		},
+		port:  process.env.PORT || 3000,
+		db:    process.env.MONGODB_URI
 	}
 };
 
