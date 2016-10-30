@@ -111,9 +111,7 @@ router.get(
  *
  * @function
  */
-router.post(
-	'/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
-
+router.post('/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
 		new Article({
 			title:  req.body.title,
 			slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),

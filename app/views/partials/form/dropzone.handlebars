@@ -15,7 +15,6 @@
 	}
 </style>
 
-
 <script>
 	Dropzone.options.uploadWidget = {
 		acceptedFiles:      'image/*',
@@ -49,6 +48,6 @@
 </script>
 <form id="upload-widget" method="post" action="/upload" class="dropzone">
 	<div class="fallback">
-		<input name="file" type="file">
+		<input name="file" type="file" id="file">
 	</div>
 </form>
