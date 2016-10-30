@@ -112,22 +112,22 @@ router.get(
  * @function
  */
 router.post('/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
-		new Article({
-			title:  req.body.title,
-			slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
-			state:  req.body.state,
-			meta:   {
-				index:       req.body.index,
-				description: req.body.description,
-				keywords:    req.body.keywords
-			},
-			image:  req.body.image,
-			teaser: req.body.teaser,
-			text:   req.body.text
-		}).save();
+	new Article({
+		title:  req.body.title,
+		slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
+		state:  req.body.state,
+		meta:   {
+			index:       req.body.index,
+			description: req.body.description,
+			keywords:    req.body.keywords
+		},
+		image:  req.body.image,
+		teaser: req.body.teaser,
+		text:   req.body.text
+	}).save();
 
-		res.redirect('/articles/state/published');
-	});
+	res.redirect('/articles/state/published');
+});
 
 /**
  * Edit article
@@ -180,10 +180,10 @@ router.get('/articles/:slug', function (req, res, next) {
 			res.render('sections/article/detail', {
 				title:   res.__('Articles'),
 				robots:  {
-					current: article.meta.index || false,
+					current: !!article.meta.index,
 					follow:  true
 				},
-				meta:    article.meta,
+				meta:    !!article.meta,
 				article: article
 			});
 		});

@@ -19,10 +19,12 @@
 			</p>
 		</header>
 
-		<figure>
-			<img src="{{config.media.cdn}}{{article.image}}" alt="{{article.title}}" class="img-fluid">
-			<figcaption>{{article.title}}</figcaption>
-		</figure>
+		{{#if article.image}}
+			<figure>
+				<img src="{{config.media.cdn}}{{article.image}}" alt="{{article.title}}" class="img-fluid">
+				<figcaption>{{article.title}}</figcaption>
+			</figure>
+		{{/if}}
 
 		<div itemprop="articleBody">{{{article.text}}}</div>
 
