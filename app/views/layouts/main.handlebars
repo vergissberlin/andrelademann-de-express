@@ -1,128 +1,134 @@
 <!doctype html>
 <html lang="{{local}}">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{title}}</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i|Questrial|Arvo"
-          rel="stylesheet">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
-					integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj"
-					crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="alternate stylesheet"
-          title="Dark Bootstrap"
-          href="https://bootswatch.com/darkly/bootstrap.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
-          rel="stylesheet"
-          integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
-          crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{title}}</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i|Questrial|Arvo"
+				rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+				integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj"
+				crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="alternate stylesheet"
+				title="Dark Bootstrap"
+				href="https://bootswatch.com/darkly/bootstrap.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+				rel="stylesheet"
+				integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
+				crossorigin="anonymous">
 	{{#if profile}}
-      <link rel="stylesheet" href="/css/admin.css">
+		<link rel="stylesheet" href="/css/admin.css">
 	{{/if}}
-    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
 	{{#if ENV_DEVELOPMENT}}
-      <script src="//localhost:35729/livereload.js"></script>
-	{{/if}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-		<script src="/js/vendor/mixpanel.js"></script>
-	<script src="/js/vendor/getsocial.js"></script>
-    <meta http-equiv="Content-Language" content="{{local}}">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-	{{#if admin}}
-      <meta name="robots" content="noindex">
 	{{else}}
-      <meta name="robots" content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if
+		<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+	{{/if}}
+	{{#if ENV_DEVELOPMENT}}
+		<meta name="robots" content="noindex">
+		<script src="//localhost:35729/livereload.js"></script>
+	{{else}}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="/js/vendor/mixpanel.js"></script>
+		<script src="/js/vendor/getsocial.js"></script>
+		<meta http-equiv="Content-Language" content="{{local}}">
+		<meta name="msapplication-TileColor" content="#fffff">
+		<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		{{#if meta.keywords}}
+			<meta name="keywords" content="{{meta.keywords}}">
+		{{/if}}
+		{{#if meta.description}}
+			<meta name="description" content="{{meta.description}}">
+		{{/if}}
+		{{#if admin}}
+			<meta name="robots" content="noindex">
+		{{else}}
+			<meta name="robots" content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if
 				robots.follow}}, follow{{else}}, nofollow{{/if}}">
+		{{/if}}
 	{{/if}}
-	{{#if meta.keywords}}
-      <meta name="keywords" content="{{meta.keywords}}">
-	{{/if}}
-	{{#if meta.description}}
-      <meta name="description" content="{{meta.description}}">
-	{{/if}}
+	{{> social/opengraph this}}
 </head>
 <body>
 <a class="sr-only sr-only-focusable"
-   href="#content">{{__ "Skip to main content"}}</a>
+	 href="#content">{{__ "Skip to main content"}}</a>
 <div class="container">
-    <header class="header clearfix">
-        <nav class="navbar navbar-light bg-faded">
-            <ul class="nav navbar-nav">
-                <li class="nav-item">
-                    <a class="navbar-brand" href="/">
-											{{#if profile}}
-												{{profile.firstname}}&nbsp;{{profile.lastname}}
-											{{else}}
-                          André Lademann
-											{{/if}}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="/articles/{{#if profile}}state/published/{{/if}}">{{__ "Articles"}}</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/about/">{{__ "About"}}</a>
-                </li>
-            </ul>
+	<header class="header clearfix">
+		<nav class="navbar navbar-light bg-faded">
+			<ul class="nav navbar-nav">
+				<li class="nav-item">
+					<a class="navbar-brand" href="/">
+						{{#if profile}}
+							{{profile.firstname}}&nbsp;{{profile.lastname}}
+						{{else}}
+							André Lademann
+						{{/if}}
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link"
+						 href="/articles/{{#if profile}}state/published/{{/if}}">{{__ "Articles"}}</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/about/">{{__ "About"}}</a>
+				</li>
+			</ul>
 
-            <div class="form-inline pull-xs-right">
-							{{#if profile}}
-                  <a class="btn btn-outline-primary" href="/user/logout/">
-                      <i class="fa fa-sign-out"
-                         aria-hidden="true"></i> <span
-                          class="hidden-sm-down">&nbsp;{{__ "Sign out"}}</span></a>
-							{{else}}
-                  <a class="btn btn-outline-primary" href="/user/login/">
-                      <i class="fa fa-sign-in"
-                         aria-hidden="true"></i> <span
-                          class="hidden-sm-down">&nbsp;{{__ "Sign in"}}</span>
-                  </a>
-							{{/if}}
-            </div>
-        </nav>
-    </header>
+			<div class="form-inline pull-xs-right">
+				{{#if profile}}
+					<a class="btn btn-outline-primary" href="/user/logout/">
+						<i class="fa fa-sign-out"
+							 aria-hidden="true"></i> <span
+						class="hidden-sm-down">&nbsp;{{__ "Sign out"}}</span></a>
+				{{else}}
+					<a class="btn btn-outline-primary" href="/user/login/">
+						<i class="fa fa-sign-in"
+							 aria-hidden="true"></i> <span
+						class="hidden-sm-down">&nbsp;{{__ "Sign in"}}</span>
+					</a>
+				{{/if}}
+			</div>
+		</nav>
+	</header>
 
-    <main role="main">
-			{{{body}}}
-    </main>
+	<main role="main">
+		{{{body}}}
+	</main>
 
 	<footer class="footer hidden-print">
-        <div class="row">
-            <div class="col-xs-6"><p>&copy; André Lademann</p></div>
-            <div class="col-xs-6">
-                <p class="text-xs-right">
-                    <a href="http://validator.w3.org/check?uri=referer"
-                       class="btn btn-md btn-default">
-                        <i class="fa fa-html5" aria-hidden="true"></i>
-                    </a>
+		<div class="row">
+			<div class="col-xs-6"><p>&copy; André Lademann</p></div>
+			<div class="col-xs-6">
+				<p class="text-xs-right">
+					<a href="http://validator.w3.org/check?uri=referer"
+						 class="btn btn-md btn-default">
+						<i class="fa fa-html5" aria-hidden="true"></i>
+					</a>
 
-                    <a href="https://jigsaw.w3.org/css-validator/check/referer"
-                       class="btn btn-md btn-default">
-                        <i class="fa fa-css3" aria-hidden="true"></i>
-                    </a>
-                </p>
-            </div>
-        </div>
+					<a href="https://jigsaw.w3.org/css-validator/check/referer"
+						 class="btn btn-md btn-default">
+						<i class="fa fa-css3" aria-hidden="true"></i>
+					</a>
+				</p>
+			</div>
+		</div>
 
-    </footer>
+	</footer>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.3/js/tether.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js"

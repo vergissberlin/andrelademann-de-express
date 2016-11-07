@@ -45,7 +45,8 @@ module.exports = function (app, config) {
 	// Environment
 	var env                    = process.env.NODE_ENV || 'development';
 	app.locals.ENV             = env;
-	app.locals.ENV_DEVELOPMENT = env === 'development';
+	app.locals.ENV_DEVELOPMENT = env === 'development' || env === 'home';
+
 
 	// Passport
 	app.use(expressSession({
@@ -145,6 +146,7 @@ module.exports = function (app, config) {
 		});
 	});
 
+	// Development
 	if (app.get('env') === 'development' || app.get('env') === 'home') {
 		app.use(bugsnag.requestHandler);
 		app.use(bugsnag.errorHandler);
