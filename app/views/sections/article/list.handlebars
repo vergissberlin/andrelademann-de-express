@@ -13,7 +13,7 @@
 			<div class="row marketing">
 				<div class="col-lg-6">
 					<h2><a href="/articles/{{slug title}}/">{{{title}}}</a></h2>
-					<time datetime="{{createdAt}}">
+					<time datetime="{{datetime createdAt}}">
 						<small class="text-muted">{{formatRelative createdAt}}</small>
 					</time>
 					<p>{{{crop teaser limit=750}}}</p>
@@ -21,7 +21,8 @@
 				<div class="col-lg-6">
 					<a href="/articles/{{slug title}}/">
 						{{#if image}}
-							<img src="{{../config.media.images}}{{image}}?w=600&h=338&mode=crop" class="img-fluid">
+							<img src="{{../config.media.images}}{{image}}?w=600&h=338&mode=crop" class="img-fluid"
+									 alt="{{html2text title}}">
 						{{/if}}
 					</a>
 				</div>

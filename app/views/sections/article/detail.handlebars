@@ -4,11 +4,10 @@
 	{{> wysiwyg-article}}
 	{{> wysiwyg}}
 {{else}}
-
 	<article id="content" itemscope itemType="http://schema.org/BlogPosting">
 		<header>
 			<h1 itemprop="headline">{{{article.title}}}</h1>
-			<time datetime="{{article.createdAt}}" class="text-muted" itemprop="datePublished"
+			<time datetime="{{datetime article.createdAt}}" class="text-muted" itemprop="datePublished"
 						content="{{article.createdAt}}">
 				{{{__ 'Created at'}}}&nbsp;{{formatDate article.createdAt}}
 				{{#if article.updatedAt}}, {{__ 'updated at'}}
@@ -21,7 +20,7 @@
 
 		{{#if article.image}}
 			<figure>
-				<img src="{{config.media.cdn}}{{article.image}}" alt="{{article.title}}" class="img-fluid">
+				<img src="{{config.media.cdn}}{{article.image}}" alt="{{html2text article.title}}" class="img-fluid">
 				<figcaption>{{article.title}}</figcaption>
 			</figure>
 		{{/if}}

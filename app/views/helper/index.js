@@ -6,11 +6,13 @@
  */
 'use strict';
 
-
+// Custom
 require('./age');
 require('./limit');
 require('./i18n');
 require('./crop');
 require('./compare');
+require('./datetime');
+require('./html2text');
 require('./pagination');
 require('./slug');

@@ -24,7 +24,7 @@ var config = {
 		},
 		media: {
 			cdn:    'http://development-cdn.andrelademann.de/',
-			images: 'http:///development-cdn.andrelademann.de.rsz.io/'
+			images: 'http://development-cdn.andrelademann.de.rsz.io/'
 		},
 		port:  process.env.PORT || 3030,
 		db:    process.env.MONGODB_URI || 'mongodb://localhost:27017/andrelademannde-home'

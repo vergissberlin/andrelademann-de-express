@@ -1,6 +1,6 @@
 {{#if article.image}}
 	<img src="{{config.media.images}}{{article.image}}?mode=crop&w=120&h=120"
-			 alt="Thumbnail"
+			 alt="{{html2text article.title}}"
 			 class="img-fluid img-thumbnail" style="max-width: 250px; max-height: 250px">
 {{/if}}
 
@@ -16,7 +16,7 @@
 	<div class="file-tab panel-body">
 		{{#if article.image}}
 			<img src="{{config.media.images}}{{article.image}}?mode=crop&w=120&h=120"
-					 alt="Thumbnail"
+					 alt="{{html2text article.title}}"
 					 class="img-fluid img-thumbnail" style="max-width: 250px; max-height: 250px">
 		{{/if}}
 		<label class="btn btn-outline-primary btn-file" style="margin-bottom: 0">

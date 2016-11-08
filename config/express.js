@@ -129,19 +129,6 @@ module.exports = function (app, config) {
 	// Override
 	app.use(methodOverride());
 
-	// Minify HTML output
-	app.use(minifyHTML({
-		override:     true,
-		htmlMinifier: {
-			removeComments:            true,
-			collapseWhitespace:        true,
-			collapseBooleanAttributes: true,
-			removeAttributeQuotes:     false,
-			removeEmptyAttributes:     true,
-			minifyJS:                  true
-		}
-	}));
-
 	// Controllers
 	var controllers = glob.sync(config.root + '/app/controllers/**/*.js');
 	controllers.forEach(function (controller) {
@@ -180,6 +167,23 @@ module.exports = function (app, config) {
 				title:   'error'
 			});
 		});
+	}
+
+	// Staging & production
+	if (app.get('env') === 'staging' || app.get('env') === 'production') {
+
+		// Minify HTML output
+		app.use(minifyHTML({
+			override:     true,
+			htmlMinifier: {
+				removeComments:            true,
+				collapseWhitespace:        true,
+				collapseBooleanAttributes: true,
+				removeAttributeQuotes:     false,
+				removeEmptyAttributes:     true,
+				minifyJS:                  true
+			}
+		}));
 	}
 
 	app.use(function (err, req, res) {
