@@ -27,6 +27,7 @@ var
 	i18n              = require('./i18n'),
 	logger            = require('morgan'),
 	methodOverride    = require('method-override'),
+	minifyHTML = require('express-minify-html'),
 	nodeSecret        = process.env.NODE_SECRET || 'superhero',
 	passport          = require('passport'),
 	session           = require('express-session');
@@ -127,6 +128,19 @@ module.exports = function (app, config) {
 
 	// Override
 	app.use(methodOverride());
+
+	// Minify HTML output
+	app.use(minifyHTML({
+		override:     true,
+		htmlMinifier: {
+			removeComments:            true,
+			collapseWhitespace:        true,
+			collapseBooleanAttributes: true,
+			removeAttributeQuotes:     false,
+			removeEmptyAttributes:     true,
+			minifyJS:                  true
+		}
+	}));
 
 	// Controllers
 	var controllers = glob.sync(config.root + '/app/controllers/**/*.js');

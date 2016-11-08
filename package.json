@@ -16,6 +16,7 @@
     "express": "^4.13.3",
     "express-fileupload": "0.0.5",
     "express-handlebars": "^3.0.0",
+		"express-minify-html": "^0.6.0",
     "express-session": "^1.14.0",
     "glob": "^6.0.4",
     "handlebars": "^4.0.5",
