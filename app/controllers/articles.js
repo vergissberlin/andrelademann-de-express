@@ -140,7 +140,7 @@ router.post(
 	function (req, res) {
 		var fileName = req.body.image || null;
 		if (typeof req.file === 'object') {
-			fileName = req.file['filename'];
+			fileName = req.file.filename;
 		}
 
 		Article.findOneAndUpdate({'_id': req.params.id},

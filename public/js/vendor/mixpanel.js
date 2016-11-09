@@ -15,7 +15,7 @@
 		a.init          = function (b, c, f) {
 			function e(b, a) {
 				var c = a.split('.');
-				2 == c.length && (b = b[c[0]], a = c[1]);
+				2 === c.length && (b = b[c[0]], a = c[1]);
 				b[a] = function () {
 					b.push([a].concat(Array.prototype.slice.call(arguments,
 						0)))

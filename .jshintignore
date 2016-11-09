@@ -1,3 +1,3 @@
 test/acceptance/js/
-private/js/vendor/
-public/js
+private/js/plugins/
+public/js/vendor/

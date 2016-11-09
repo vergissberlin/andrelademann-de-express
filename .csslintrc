@@ -1,6 +1,7 @@
 {
 	"adjoining-classes": false,
-	"qualified-headings": true,
+	"known-properties": false,
 	"unique-headings": true,
-	"known-properties": false
+	"unqualified-attributes": false,
+	"qualified-headings": true
 }
