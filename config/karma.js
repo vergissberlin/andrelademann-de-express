@@ -23,7 +23,7 @@ module.exports = function (config) {
 		// list of files / patterns to load in the browser
 		files: [
 			'test-main.js',
-			{pattern: '../app/views/helper/**/*.js', included: false},
+			{pattern: '../app/views/helpers/**/*.js', included: false},
 			{pattern: '../test/spec/**/*Spec.js', included: false}
 		],
 

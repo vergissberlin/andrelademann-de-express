@@ -1,10 +1,10 @@
 'use strict';
-//require('../../../../app/views/helper/crop');
+//require('../../../../app/views/helpers/crop');
 var Handlebars = require('handlebars');
 
 describe('Handlebars Tests', function() {
 
-	describe('ifequal helper tests', function() {
+	describe('ifequal helpers tests', function () {
 
 		var fields, html;
 

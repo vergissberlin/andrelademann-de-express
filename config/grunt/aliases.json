@@ -1,0 +1,41 @@
+{
+	"default": [
+		"availabletasks"
+	],
+	"all": [
+		"sass:dev"
+	],
+	"debug": [
+		"sass",
+		"manifest",
+		"jshint",
+		"develop:debug",
+		"watch"
+	],
+	"dev": [
+		"sass",
+		"manifest",
+		"develop:server",
+		"watch"
+	],
+	"prod": [
+		"sass",
+		"manifest",
+		"responsive_images"
+	],
+	"release": [
+		"sass",
+		"cssmin",
+		"browserify:prod",
+		"uglify",
+		"bump",
+		"git_changelog"
+	],
+	"test": [
+		"jasmine",
+		"jsdoc",
+		"jshint",
+		"sassdoc",
+		"scsslint"
+	]
+}

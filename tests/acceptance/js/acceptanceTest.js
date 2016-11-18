@@ -1,7 +1,7 @@
 // Convert
 require('../seleniumConverter');
 
-// Run the test
+// Run the tests
 var wdSync  = require('wd-sync'),
 		client  = wdSync.remote('127.0.0.1', 8910),
 		browser = client.browser,
@@ -17,7 +17,7 @@ var blog = {
 
 sync(function () {
 	var config = {
-		screenshotFolder: 'test/report/screenshots/exceptions/',
+		screenshotFolder: 'tests/reports/screenshots/exceptions/',
 		timeout:          5000
 	};
 
