@@ -23,11 +23,11 @@ var
 	handlebars        = require('handlebars'),
 	handlebarsIntl    = require('handlebars-intl'),
 	helmet            = require('helmet'),
-	helpers           = require('../app/views/helper'),
+	helpers           = require('../app/views/helpers'),
 	i18n              = require('./i18n'),
 	logger            = require('morgan'),
 	methodOverride    = require('method-override'),
-	minifyHTML = require('express-minify-html'),
+	minifyHTML        = require('express-minify-html'),
 	nodeSecret        = process.env.NODE_SECRET || 'superhero',
 	passport          = require('passport'),
 	session           = require('express-session');
