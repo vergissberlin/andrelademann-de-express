@@ -4,6 +4,8 @@ language:
 
 rvm:
   - 2.2
+  - jruby
+  - rbx-2
 
 node_js:
   - 'stable'
