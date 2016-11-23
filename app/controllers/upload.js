@@ -7,29 +7,30 @@
  * @license      https://opensource.org/licenses/MIT
  */
 
-var express          = require('express'),
-		getSlug          = require('speakingurl'),
-		mime             = require('mime'),
-		multer           = require('multer'),
-		multerStorageS3  = require('multer-storage-s3'),
-		router           = express.Router(),
-		storage          = multerStorageS3({
-			destination: function (req, file, cb) {
-				cb(null, 'uploads');
-			},
-			filename:    function (req, file, cb) {
-				cb(
-					null,
-					getSlug(
-						req.body.name,
-						{
-							lang:     'de',
-							truncate: 80
-						}) + '.' + mime.extension(file.mimetype)
-				);
-			}
-		}),
-		uploadMiddleware = multer({storage: storage});
+var
+	express          = require('express'),
+	getSlug          = require('speakingurl'),
+	mime             = require('mime'),
+	multer           = require('multer'),
+	multerStorageS3  = require('multer-storage-s3'),
+	router           = express.Router(),
+	storage          = multerStorageS3({
+		destination: function (req, file, cb) {
+			cb(null, 'uploads');
+		},
+		filename:    function (req, file, cb) {
+			cb(
+				null,
+				getSlug(
+					req.body.name,
+					{
+						lang:     'de',
+						truncate: 80
+					}) + '.' + mime.extension(file.mimetype)
+			);
+		}
+	}),
+	uploadMiddleware = multer({storage: storage});
 
 require('string.prototype.startswith');
 /**

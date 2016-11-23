@@ -6,7 +6,8 @@
  */
 'use strict';
 
-var Handlebars = require('handlebars');
+var
+	Handlebars = require('handlebars');
 
 Handlebars.registerHelper('html2text', function (string) {
 	if (!string) {

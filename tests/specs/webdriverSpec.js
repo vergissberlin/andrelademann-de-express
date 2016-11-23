@@ -3,18 +3,18 @@ var webdriverio = require('webdriverio'),
 
 module.exports = {
 
-	setUp: function (callback) {
-		client = webdriverio.remote({ desiredCapabilities: {browserName: 'phantomjs'} });
+	setUp:    function (callback) {
+		client = webdriverio.remote({desiredCapabilities: {browserName: 'phantomjs'}});
 		client.init();
 
 		callback();
 	},
-	test1: function (test) {
+	test1:    function (test) {
 		client
 			.url('https://github.com/')
 			.getElementSize('.header-logo-wordmark').then(function (result) {
 			test.ok(result.height === 26, 'logo height should be 32px');
-			test.ok(result.width  === 89, 'logo width should be 89px');
+			test.ok(result.width === 89, 'logo width should be 89px');
 		})
 			.getTitle().then(function (title) {
 			test.ok(title === 'GitHub · Where software is built', 'title should be "GitHub · Where software is built"');

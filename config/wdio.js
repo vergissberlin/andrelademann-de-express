@@ -62,7 +62,7 @@ exports.config = {
 	// Sauce Labs platform configurator - a great tool to configure your capabilities:
 	// https://docs.saucelabs.com/reference/platforms-configurator
 	//
-	capabilities:    [{
+	capabilities: [{
 
 		// maxInstances can get overwritten per capability. So if you have an in-house Selenium
 		// grid with only 5 firefox instance available you can make sure that not more than
@@ -135,7 +135,7 @@ exports.config = {
 	// your test setup with almost no effort. Unlike plugins, they don't add new
 	// commands. Instead, they hook themselves up into the test process.
 	// services:             ['sauce', 'selenium-standalone', 'phantomjs'],
-	services:        ['selenium-standalone'],
+	services:     ['selenium-standalone'],
 	//	services:             ['sauce'],
 
 	//

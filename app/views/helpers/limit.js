@@ -7,7 +7,8 @@
  * @license      https://opensource.org/licenses/MIT
  */
 'use strict';
-var Handlebars = require('handlebars');
+var
+	Handlebars = require('handlebars');
 
 // limit an array to a maximum of elements (from the start)
 Handlebars.registerHelper('limit', function (arr, limit) {

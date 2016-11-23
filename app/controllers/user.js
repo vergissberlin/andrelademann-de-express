@@ -6,11 +6,10 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
-var express      = require('express'),
-		passport     = require('passport'),
-		passportUtil = require('../../util/passport'),
-		user         = require('../models/user'),
-		router       = express.Router();
+var
+	express  = require('express'),
+	passport = require('passport'),
+	router   = express.Router();
 
 module.exports = function (app) {
 	app.use('/', router);

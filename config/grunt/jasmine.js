@@ -17,10 +17,11 @@ module.exports = {
 
 	// BDD tests
 	pivotal: {
-		src:     '<%= package.directories.app.helpers %>/**/*.js',
+		src:     '<%= package.directories.app.helpers %>*.js',
 		options: {
-			specs:   '<%= package.directories.tests.spec %>/**/*Spec.js',
-			helpers: '<%= package.directories.tests.spec %>/**/*Helper.js'
+			specs:    '<%= package.directories.tests.specs %>**/testSpec.js',
+			helpers:  '<%= package.directories.tests.specs %>**/*Helper.js',
+			template: require('grunt-template-jasmine-requirejs')
 		}
 	}
 };

@@ -17,16 +17,22 @@ module.exports = {
 
 	// eslint
 	server: {
-		src: [
-			'<%= package.directories.app.controllers %>/**/*.js',
-			'<%= package.directories.app.models %>/**/*.js',
-			'<%= package.directories.app.helpers %>/**/*.js'
+		options: {
+			configFile: "config/linter/.eslintrc-server.json"
+		},
+		src:     [
+			'<%= package.directories.app.controllers %>**/*.js',
+			'<%= package.directories.app.models %>**/*.js',
+			'<%= package.directories.app.helpers %>**/*.js'
 		]
 	},
 
 	client: {
-		src: [
-			'<%= package.directories.private.js %>/**/*.js'
+		options: {
+			configFile: "config/linter/.eslintrc-client.json"
+		},
+		src:     [
+			'<%= package.directories.private.js %>**/*.js'
 		]
 	}
 

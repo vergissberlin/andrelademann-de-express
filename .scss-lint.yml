@@ -1,6 +1,9 @@
 # Default application configuration that all configurations inherit from.
 scss_files:
-  - "public/css/**/*.scss"
+  - "private/scss/**/*.scss"
+
+exclude:
+  - 'node_modules/**'
 
 # List of gem names to load custom linters from (make sure they are already
 # installed)

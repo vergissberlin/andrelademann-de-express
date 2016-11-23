@@ -1,11 +1,11 @@
 {{#if expressFlash}}
-    <div class="alert alert-info" role="alert">
-        <p><strong class="text-uppercase">{{expressFlash.type}}</strong> {{ expressFlash }}</p>
-    </div>
+	<div class="alert alert-info" role="alert">
+		<p><strong class="text-uppercase">{{expressFlash.type}}</strong> {{ expressFlash }}</p>
+	</div>
 {{/if}}
 
 {{#if flash}}
-    <div class="alert alert-{{flash.type}}" role="alert">
-        <strong class="text-uppercase">{{flash.type}}</strong> {{flash.message}}
-    </div>
+	<div class="alert alert-{{flash.type}}" role="alert">
+		<strong class="text-uppercase">{{flash.type}}</strong> {{flash.message}}
+	</div>
 {{/if}}

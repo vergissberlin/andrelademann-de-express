@@ -14,11 +14,10 @@
 'use strict';
 
 module.exports = {
-	allFiles: [
-		'<%= package.directories.private.scss %>/*.scss'
+	private: [
+		'<%= package.directories.private.scss %>**/*.scss'
 	],
-	options:  {
-		bundleExec:           true,
+	options: {
 		config:               '.scss-lint.yml',
 		failOnWarning:        false,
 		reporterOutput:       '<%= package.directories.tests.reports %>/scss-lint-report.xml',

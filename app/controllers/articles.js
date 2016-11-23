@@ -6,13 +6,14 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
-var bugsnag      = require('bugsnag'),
-		express      = require('express'),
-		getSlug      = require('speakingurl'),
-		mongoose     = require('mongoose'),
-		Article      = mongoose.model('Article'),
-		passportUtil = require('../../util/passport'),
-		router       = express.Router();
+var
+	bugsnag      = require('bugsnag'),
+	express      = require('express'),
+	getSlug      = require('speakingurl'),
+	mongoose     = require('mongoose'),
+	Article      = mongoose.model('Article'),
+	passportUtil = require('../../util/passport'),
+	router       = express.Router();
 
 /**
  * Article controller

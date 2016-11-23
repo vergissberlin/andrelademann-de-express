@@ -6,8 +6,9 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
-var express = require('express'),
-	router = express.Router();
+var
+	express = require('express'),
+	router  = express.Router();
 
 /**
  * Home controller

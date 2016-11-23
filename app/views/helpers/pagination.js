@@ -7,7 +7,8 @@
  * @license      https://opensource.org/licenses/MIT
  */
 'use strict';
-var Handlebars = require('handlebars'),
-		paginate   = require('handlebars-paginate');
+var
+	Handlebars = require('handlebars'),
+	paginate   = require('handlebars-paginate');
 
 Handlebars.registerHelper('paginate', paginate);

@@ -1,3 +1,4 @@
+/*eslint indent: "off"*/
 /**
  * Article Model
  *
@@ -6,35 +7,37 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
-var mongoose = require('mongoose'),
-		Schema   = mongoose.Schema;
+var
+	mongoose = require('mongoose'),
+	Schema   = mongoose.Schema;
 
-var ArticleSchema = new Schema({
-		state:    String,
-		title:    {
-			type:     String,
-			index:    true,
-			required: true
+var
+	ArticleSchema = new Schema({
+			state:    String,
+			title:    {
+				type:     String,
+				index:    true,
+				required: true
+			},
+			slug:     {
+				type:     String,
+				index:    true,
+				unique:   true,
+				required: true
+			},
+			meta:     {
+				index:       Boolean,
+				description: String,
+				keywords:    String
+			},
+			image:    String,
+			teaser:   String,
+			text:     String,
+			comments: []
 		},
-		slug:     {
-			type:     String,
-			index:    true,
-			unique:   true,
-			required: true
-		},
-		meta:     {
-			index:       Boolean,
-			description: String,
-			keywords:    String
-		},
-		image:    String,
-		teaser:   String,
-		text:     String,
-		comments: []
-	},
-	{
-		timestamps: true
-	}
-);
+		{
+			timestamps: true
+		}
+	);
 
 mongoose.model('Article', ArticleSchema);

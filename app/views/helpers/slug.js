@@ -8,8 +8,9 @@
  */
 'use strict';
 
-var Handlebars = require('handlebars'),
-		getSlug    = require('speakingurl');
+var
+	Handlebars = require('handlebars'),
+	getSlug    = require('speakingurl');
 
 Handlebars.registerHelper('slug', function (context) {
 	return new Handlebars.SafeString(getSlug(context));

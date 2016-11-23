@@ -1,3 +1,4 @@
+/*eslint no-console: "off" */
 /**
  * Debug view helper
  *
@@ -9,7 +10,8 @@
  * @example
  *  {{debug}} or {{debug someValue}}
  */
-var Handlebars = require('handlebars');
+var
+	Handlebars = require('handlebars');
 
 Handlebars.registerHelper('debug', function (optionalValue) {
 	console.info('\nCurrent Context');

@@ -8,7 +8,7 @@
 	"debug": [
 		"sass",
 		"manifest",
-		"jshint",
+		"eslint",
 		"develop:debug",
 		"watch"
 	],
@@ -34,7 +34,7 @@
 	"test": [
 		"jasmine",
 		"jsdoc",
-		"jshint",
+		"eslint",
 		"sassdoc",
 		"scsslint"
 	]

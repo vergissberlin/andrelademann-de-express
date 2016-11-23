@@ -2,118 +2,130 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://localhost:3030/" />
-<title>create</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="selenium.base" href="http://localhost:3030/"/>
+	<title>create</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
-<thead>
-<tr><td rowspan="1" colspan="3">create</td></tr>
-</thead><tbody>
-<tr>
-	<td>storeEval</td>
-	<td>Math.floor(Math.random()*20)</td>
-	<td>randomImage</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>Math.floor(Math.random()*10000)</td>
-	<td>random</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>Preferences.getString(TestSuite.TEST_SUITE_DIRECTORY_PREF) + &quot;/../../fixtures&quot;</td>
-	<td>fixturesFolder</td>
-</tr>
-<tr>
-	<td>open</td>
-	<td>/</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=Articles</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=Articles</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>css=i.fa.fa-plus</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=title</td>
-	<td>This is test content</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=teaser</td>
-	<td>Selenium IDE is just awesome! Selenium IDE is an integrated development environment for Selenium tests. It is implemented as a Firefox extension, and allows you to record, edit, and debug tests.</td>
-</tr>
-<tr>
-	<td>runScript</td>
-	<td>document.getElementById('title').innerHTML = &quot;This is test content &quot; + ${random}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>runScript</td>
-	<td>document.getElementById('teaser').innerHTML = &quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat.&quot;;</td>
-	<td></td>
-</tr>
-<tr>
-	<td>runScript</td>
-	<td>document.getElementById('text').innerHTML = &quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat&quot;;</td>
-	<td></td>
-</tr>
-<tr>
-	<td>runScript</td>
-	<td>document.getElementById('text').innerHTML = &quot;Selenium IDE is just awesome! Selenium IDE is an integrated
-		development environment for Selenium tests. It is implemented as a Firefox extension, and allows you to record,
-		edit, and debug tests.&quot;;
-	</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=index</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=description</td>
-	<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=keywords</td>
-	<td>foo,bar</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=label.btn.btn-outline-success</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>//button[@type='submit']</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>css=div.container &gt; ul.nav.navbar-nav &gt; li.nav-item &gt; a.nav-link</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>css=h2 &gt; a</td>
-	<td>This is test content ${random}</td>
-</tr>
-</tbody></table>
+	<thead>
+	<tr>
+		<td rowspan="1" colspan="3">create</td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+		<td>storeEval</td>
+		<td>Math.floor(Math.random()*20)</td>
+		<td>randomImage</td>
+	</tr>
+	<tr>
+		<td>storeEval</td>
+		<td>Math.floor(Math.random()*10000)</td>
+		<td>random</td>
+	</tr>
+	<tr>
+		<td>storeEval</td>
+		<td>Preferences.getString(TestSuite.TEST_SUITE_DIRECTORY_PREF) + &quot;/../../fixtures&quot;</td>
+		<td>fixturesFolder</td>
+	</tr>
+	<tr>
+		<td>open</td>
+		<td>/</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>waitForElementPresent</td>
+		<td>link=Articles</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>clickAndWait</td>
+		<td>link=Articles</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>clickAndWait</td>
+		<td>css=i.fa.fa-plus</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>type</td>
+		<td>id=title</td>
+		<td>This is test content</td>
+	</tr>
+	<tr>
+		<td>type</td>
+		<td>id=teaser</td>
+		<td>Selenium IDE is just awesome! Selenium IDE is an integrated development environment for Selenium tests. It is
+			implemented as a Firefox extension, and allows you to record, edit, and debug tests.
+		</td>
+	</tr>
+	<tr>
+		<td>runScript</td>
+		<td>document.getElementById('title').innerHTML = &quot;This is test content &quot; + ${random}</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>runScript</td>
+		<td>document.getElementById('teaser').innerHTML = &quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+			Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat.&quot;;
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>runScript</td>
+		<td>document.getElementById('text').innerHTML = &quot;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+			Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat&quot;;
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>runScript</td>
+		<td>document.getElementById('text').innerHTML = &quot;Selenium IDE is just awesome! Selenium IDE is an integrated
+			development environment for Selenium tests. It is implemented as a Firefox extension, and allows you to record,
+			edit, and debug tests.&quot;;
+		</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>click</td>
+		<td>id=index</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>type</td>
+		<td>id=description</td>
+		<td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+			sociis nat
+		</td>
+	</tr>
+	<tr>
+		<td>type</td>
+		<td>id=keywords</td>
+		<td>foo,bar</td>
+	</tr>
+	<tr>
+		<td>click</td>
+		<td>css=label.btn.btn-outline-success</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>clickAndWait</td>
+		<td>//button[@type='submit']</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>clickAndWait</td>
+		<td>css=div.container &gt; ul.nav.navbar-nav &gt; li.nav-item &gt; a.nav-link</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>assertText</td>
+		<td>css=h2 &gt; a</td>
+		<td>This is test content ${random}</td>
+	</tr>
+	</tbody>
+</table>
 </body>
 </html>

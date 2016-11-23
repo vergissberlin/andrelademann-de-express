@@ -5,10 +5,11 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  */
-var bugsnag = require('bugsnag'),
-		weather = require('weather-js'),
-		express = require('express'),
-		router  = express.Router();
+var
+	bugsnag = require('bugsnag'),
+	weather = require('weather-js'),
+	express = require('express'),
+	router  = express.Router();
 
 /**
  * Weather controller
@@ -29,7 +30,6 @@ router.get('/weather', function (req, res) {
 		var flash = '';
 		if (err) {
 			bugsnag.notify(err);
-			console.err(err);
 			flash = res.__('Couldn`t get weather information jet.');
 		}
 		res.render('weather', {

@@ -27,6 +27,7 @@ module.exports = function (grunt) {
 				bump:           'grunt-bump-skiphook',
 				chagelog:       'grunt-templated-changelog',
 				cmq:            'grunt-combine-media-queries',
+				eslint:         'gruntify-eslint',
 				sass:           'grunt-sass',
 				scsslint:       'grunt-scss-lint'
 			}

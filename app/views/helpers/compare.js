@@ -16,10 +16,13 @@
  */
 'use strict';
 
-var Handlebars = require('handlebars');
+var
+	Handlebars = require('handlebars');
 Handlebars.registerHelper('compare', function (lvalue, operator, rvalue, options) {
 
-	var operators, result;
+	var
+		operators,
+		result;
 
 	if (arguments.length < 3) {
 		throw new Error('Handlerbars Helper "compare" needs 2 parameters');

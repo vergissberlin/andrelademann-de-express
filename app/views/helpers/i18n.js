@@ -6,8 +6,9 @@
  */
 'use strict';
 
-var Handlebars = require('handlebars'),
-		i18n       = require('i18n');
+var
+	Handlebars = require('handlebars'),
+	i18n       = require('i18n');
 
 Handlebars.registerHelper('__', function () {
 	return i18n.__.apply(this, arguments);

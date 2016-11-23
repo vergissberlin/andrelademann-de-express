@@ -8,10 +8,12 @@
  */
 'use strict';
 
-var Handlebars = require('handlebars');
+var
+	Handlebars = require('handlebars');
 
 Handlebars.registerHelper('crop', function (context, options) {
-	var limit = parseInt(options.hash.limit);
+	var
+		limit = parseInt(options.hash.limit);
 	if (!context) {
 		return;
 	}
