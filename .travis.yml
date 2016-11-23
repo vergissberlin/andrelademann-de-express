@@ -8,10 +8,6 @@ before_script:
   - npm install coveralls grunt-cli eslint -g
   - gem install scss_lint
 
-install:
-  - make npm
-  - make bundler
-
 cache:
   bundler: true
   directories:
