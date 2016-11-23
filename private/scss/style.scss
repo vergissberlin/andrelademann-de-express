@@ -1,3 +1,9 @@
+////
+/// Frontend styling
+///
+/// @author André Lademann <vergissberlin@googlemail.com>
+////
+
 html {
 	overflow-y: scroll;
 }
@@ -57,6 +63,8 @@ pre {
 	@include text-overflow;
 }
 
+/// Disqus
+/// @group vendor
 .disqus {
 	margin-top: 2em;
 }

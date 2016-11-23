@@ -17,18 +17,17 @@ module.exports = {
 
 	bsFiles: {
 		src: [
-			'Resources/Public/Css/**/*.css',
-			'Resources/Public/Icons/*',
-			'Resources/Public/Images/*',
-			'Resources/Public/JavaScript/**/*.js'
+			'<%= package.directories.public.css %>/**/*.css',
+			'<%= package.directories.public.img %>/*',
+			'<%= package.directories.public.js %>/**/*.js'
 		]
 	},
 	options: {
 		watchTask: true,
-		proxy:     process.env.DEV_INITIALS + '.<%= package.project.url %>',
-		port:      process.env.DEV_BROWSERSYNC_PORT || 3000,
+		proxy:     '<%= package.project.url %>',
+		port:      4000,
 		ui:        {
-			port: parseInt(process.env.DEV_BROWSERSYNC_PORT) + 1 || 3001
+			port: parseInt(process.env.DEV_BROWSERSYNC_PORT) + 1 || 4001
 		}
 	}
 

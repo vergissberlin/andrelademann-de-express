@@ -31,6 +31,7 @@ bower_components/
 *.log
 build/
 dist/
+doc/
 logs
 npm-debug.log*
 pids
@@ -38,7 +39,6 @@ pids
 *.seed
 lib-cov
 coverage
-.nyc_output
 .grunt
 .lock-wscript
 build/Release
@@ -48,3 +48,4 @@ jspm_packages
 manifest.appcache
 tests/reports/
 tests/acceptance/js/*/
+_SpecRunner.html

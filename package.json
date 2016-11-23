@@ -6,6 +6,10 @@
     "start": "node app.js",
     "test": "grunt test"
   },
+	"project": {
+		"url": "http://localhost:3030",
+		"port": 3030
+	},
 	"directories": {
 		"app": {
 			"controllers": "app/controllers",
@@ -74,6 +78,7 @@
 		"grunt-browser-sync": "^2.2.0",
 		"grunt-browserify": "^5.0.0",
 		"grunt-bump-skiphook": "0.0.15",
+		"grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-jasmine": "^1.0.3",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",

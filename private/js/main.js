@@ -13,16 +13,8 @@
  */
 'use strict';
 
-module.exports = {
-
-	// Compression css
-	files: [
-		{
-			expand: true,
-			cwd:    '<%= package.directories.public.css %>',
-			src:    '*.css',
-			dest:   '<%= package.directories.public.js %>'
-		}
-	]
-
-};
+window.addEventListener('deviceorientation', function (e) {
+	document
+		.getElementById('avatar')
+		.setAttribute('style', 'transform: rotate(' + Math.round(e.alpha) + 'deg)');
+}, false);

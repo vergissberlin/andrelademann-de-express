@@ -14,6 +14,7 @@
 	"quotmark": "single",
 	"globals": {
 		"afterEach": false,
+		"app": false,
 		"beforeEach": false,
 		"console": true,
 		"describe": false,
@@ -21,11 +22,12 @@
 		"exports": true,
 		"it": false,
 		"module": true,
-		"setTimeout": true,
-		"spyOn": false,
 		"process": true,
 		"require": true,
+		"setTimeout": true,
+		"spyOn": false,
 		"tinymce": false,
+		"window": false,
 		"xdescribe": false,
 		"xit": false
 	}

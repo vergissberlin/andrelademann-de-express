@@ -11,8 +11,6 @@
  * @license   https://opensource.org/licenses/MIT
  * @link      https://www.gnu.org/licenses/gpl.html
  */
-'use strict';
-
 module.exports = {
 
 	// SASS API documentation

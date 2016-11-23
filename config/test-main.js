@@ -17,7 +17,7 @@ Object.keys(window.__karma__.files).forEach(function (file) {
 		// If you require sub-dependencies of test files to be loaded as-is (requiring file extension)
 		// then do not normalize the paths
 		var normalizedTestModule = file.replace(/^\/base\/|\.js$/g, '');
-		allTestFiles.push(normalizedTestModule)
+		allTestFiles.push(normalizedTestModule);
 	}
 });
 
