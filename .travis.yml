@@ -4,7 +4,8 @@ node_js:
   - 'stable'
 
 before_install:
-  - apt-get install g++ build-essential
+  - apt-get -qq update
+  - apt-get install -y g++ build-essential
   - gem update
   - gem install compass scss_lint
   - rvm install 2.2.2
