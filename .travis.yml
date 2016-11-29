@@ -6,10 +6,8 @@ node_js:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y g++ build-essential
-  - sudo rvm install 2.2.2
-  - sudo gem update
-  - sudo gem install compass scss_lint
-  - sudo npm install coveralls grunt-cli eslint marked node-gyp -g
+  - gem install compass scss_lint
+  - npm install coveralls grunt-cli eslint marked node-gyp -g
 
 cache:
   bundler: true
