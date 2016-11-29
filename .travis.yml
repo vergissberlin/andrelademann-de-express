@@ -7,7 +7,7 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y g++ build-essential
   - gem install compass scss_lint
-  - npm install coveralls grunt-cli eslint marked -g
+  - npm install coveralls grunt-cli eslint marked coffee-script -g
 
 cache:
   bundler: true
