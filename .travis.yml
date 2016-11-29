@@ -1,12 +1,10 @@
 language: node_js
 
 node_js:
-  - '4'
-  - '5'
-  - '6'
   - 'stable'
 
 before_script:
+  - gem update
   - gem install compass scss_lint
   - rvm install 2.2.2
   - npm install coveralls grunt-cli eslint marked node-gyp -g
