@@ -34,7 +34,6 @@
 	"test": [
 		"jasmine",
 		"jsdoc",
-		"eslint",
 		"sassdoc",
 		"scsslint"
 	]
