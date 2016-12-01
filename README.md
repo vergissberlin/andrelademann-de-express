@@ -51,7 +51,7 @@ HTML5, Bootstrap 4 alpha CDN Version, font awesome, RDF, vCard, Microformats, Op
   - Generated Sitemap
 - Enhancements
   - epub - Create ebooks from all blog articles to specific categories
-  - Pingback  
+  - Pingback
 	- Rest API for Articles
   - Alternat Style https://mobirise.com/extensions/puritym/
   - Search for articles and projects
@@ -69,7 +69,7 @@ Please report bugs and security gaps. My promis: For every bug that you find wit
   - ``AWS_ACCESS_KEY_ID=foo``
   - ``AWS_SECRET_ACCESS_KEY=foo``
   - ``S3_BUCKET=foo``
-- Type ``npm start`` to start a local webserver
+- Type ``npm start`` to start a local web server
 
 #### Optional settings
 
@@ -77,7 +77,7 @@ Please report bugs and security gaps. My promis: For every bug that you find wit
   - ``MONGODB_URI=foo`` (To override configuration file settings)
   - ``NODE_SECRET=foo``
   - ``AUTH_SECRET=foo``
-  - ``BASE_USER=foo`` (For Basic aus activation)
-  - ``BASE_SECRET=foo`` (For Basic aus activation)
+  - ``BASE_USER=foo`` (For basic authentication)
+  - ``BASE_SECRET=foo`` (For basic authentication)
   - ``AWS_REGION=foo``
   - ``BUGSNAG_TOKEN=foo`` To monitor bug messages.

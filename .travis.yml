@@ -15,3 +15,7 @@ cache:
   bundler: true
   directories:
   - node_modules
+
+env:
+  - NODE_ENV=development
+  - S3_BUCKET=andrelademann-testing
