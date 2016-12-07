@@ -1,4 +1,4 @@
-# andrelademann.de
+# :star: :star: :star: andrelademann.de :star: :star: :star:
 
 [![Coverage Status](https://coveralls.io/repos/github/vergissberlin/andrelademann-de/badge.svg?branch=master)](https://coveralls.io/github/vergissberlin/andrelademann-de?branch=master)
 [![Build Status](https://travis-ci.org/vergissberlin/andrelademann-de.svg?branch=master)](https://travis-ci.org/vergissberlin/andrelademann-de)
@@ -8,6 +8,7 @@
 [![BlackDuck Badge](https://www.openhub.net/p/andrelademann-de/widgets/project_thin_badge?format=gif&amp;ref=Thin+badge)](https://www.openhub.net/p/andrelademann-de?ref=Thin+badge)
 
 ## What
+
 This is the repository to my personal homepage andrelademann.de. I decided to make the source code public for two reasons. Firstly to inspire other people to create there own Website with Node.js and secondly to give pros the chance to find and report bugs and security voluntaries.
 
 ## Used technologies
@@ -24,60 +25,61 @@ HTML5, Bootstrap 4 alpha CDN Version, font awesome, RDF, vCard, Microformats, Op
 [![Stories in Ready](https://badge.waffle.io/vergissberlin/andrelademann-de.png?label=ready&title=Ready)](https://waffle.io/vergissberlin/andrelademann-de) To see the current status, take a look in the milestones overview page or the on waffle.io board.
 
 ### Milestone #01 - Setup and static page
-- Configure custom domain andrelademann.de
-- Static sitemap for Google Webmaster Tools
-- Grunt tasks
-- Acceptance tests
-- Multi Language support
-- Check and improve coding style (JavaScript, SCSS, HTML)
-- Semantic Check
-- Accessibility Check https://paypal.github.io/bootstrap-accessibility-plugin/demo.html#content
-- Security Shield
-- Error pages e.g. 404
+-   Configure custom domain andrelademann.de
+-   Static sitemap for Google Webmaster Tools
+-   Grunt tasks
+-   Acceptance tests
+-   Multi Language support
+-   Check and improve coding style (JavaScript, SCSS, HTML)
+-   Semantic Check
+-   Accessibility Check <https://paypal.github.io/bootstrap-accessibility-plugin/demo.html#content>
+-   Security Shield
+-   Error pages e.g. 404
 
 ### Milestone #02 - Blog
-- Simple custom CMS for blog articles
-- Rss Feed /Atom Feed
-- Open Graph Support http://ogp.me/
-- Twitter Card support
-- Automatic enhanced content - TinyMCE Plugin for FREME
+-   Simple custom CMS for blog articles
+-   Rss Feed /Atom Feed
+-   Open Graph Support <http://ogp.me/>
+-   Twitter Card support
+-   Automatic enhanced content - TinyMCE Plugin for FREME
 
 ### Milestone #03 - Projects and blog improvements
-- Social Links https://www.npmjs.com/package/social-media-links
-- Projects simple CMS
-- Improvements
-  - Unit Tests for ViewHelper
-  - Caching
-  - Generated Sitemap
-- Enhancements
-  - epub - Create ebooks from all blog articles to specific categories
-  - Pingback
-	- Rest API for Articles
-  - Alternat Style https://mobirise.com/extensions/puritym/
-  - Search for articles and projects
+-   Social Links <https://www.npmjs.com/package/social-media-links>
+-   Projects simple CMS
+-   Improvements
+-   Unit Tests for ViewHelper
+-   Caching
+-   Generated Sitemap
+-   Enhancements
+-   epub - Create ebooks from all blog articles to specific categories
+-   Pingback
+-   Rest API for Articles
+-   Alternate style <https://mobirise.com/extensions/puritym/>
+-   Search for articles and projects
 
 ## Contributing
-Please report bugs and security gaps. My promis: For every bug that you find within my source code and report it, I give an hour for your project. Thanks! Fee free to contact me on [![Gitter](https://badges.gitter.im/vergissberlin/andrelademann-de.svg)](https://gitter.im/vergissberlin/andrelademann-de?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge).
+
+Please report bugs and security gaps. My promis: For every bug that you find within my source code and report it, I give an hour for your project. Thanks! :thumbsup: Fee free to contact me on [![Gitter](https://badges.gitter.im/vergissberlin/andrelademann-de.svg)](https://gitter.im/vergissberlin/andrelademann-de?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge).
 
 ### Installation
 
-1. Clone the repository
-- Type ``npm install`` to install the dependencies
-- Start a mongodb database an configure the credentials in ``config/database.js``
-- Set the Environment variables
-  - ``NODE_ENV=development``
-  - ``AWS_ACCESS_KEY_ID=foo``
-  - ``AWS_SECRET_ACCESS_KEY=foo``
-  - ``S3_BUCKET=foo``
-- Type ``npm start`` to start a local web server
+1.  Clone the repository
+2.  Type ``npm install`` to install the dependencies
+3.  Start a mongodb database an configure the credentials in ``config/database.js``
+4.  Set the Environment variables
+    -   ``NODE_ENV=development``
+    -   ``AWS_ACCESS_KEY_ID=foo``
+    -   ``AWS_SECRET_ACCESS_KEY=foo``
+    -   ``S3_BUCKET=foo``
+5.  Type ``npm start`` to start a local web server
 
 #### Optional settings
 
-- **Set the Environment variables**
-  - ``MONGODB_URI=foo`` (To override configuration file settings)
-  - ``NODE_SECRET=foo``
-  - ``AUTH_SECRET=foo``
-  - ``BASE_USER=foo`` (For basic authentication)
-  - ``BASE_SECRET=foo`` (For basic authentication)
-  - ``AWS_REGION=foo``
-  - ``BUGSNAG_TOKEN=foo`` To monitor bug messages.
+-   **Set the Environment variables**
+    -   ``MONGODB_URI=foo`` (To override configuration file settings)
+    -   ``NODE_SECRET=foo``
+    -   ``AUTH_SECRET=foo``
+    -   ``BASE_USER=foo``   (For basic authentication)
+    -   ``BASE_SECRET=foo`` (For basic authentication)
+    -   ``AWS_REGION=foo``
+    -   ``BUGSNAG_TOKEN=foo`` To monitor bug messages.
