@@ -24,10 +24,9 @@ module.exports = {
 				'lines':      90,
 				'functions':  90
 			},
-			dir:        'app',
-			root:       'test'
+			dir:        'coverage',
+			root:       'tests/reports'
 		}
 	}
-
 
 };

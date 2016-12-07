@@ -3,12 +3,22 @@
 		"availabletasks"
 	],
 	"all": [
-		"sass:dev"
+		"browserify",
+		"coverage",
+		"coveralls",
+		"cssmin",
+		"jasmine",
+		"jsdoc",
+		"manifest",
+		"responsive_images",
+		"sass",
+		"sassdoc",
+		"scsslint",
+		"uglify"
 	],
 	"debug": [
 		"sass",
 		"manifest",
-		"eslint",
 		"develop:debug",
 		"watch"
 	],

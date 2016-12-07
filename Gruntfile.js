@@ -25,9 +25,7 @@ module.exports = function (grunt) {
 			staticMappings: {
 				availabletasks: 'grunt-available-tasks',
 				bump:           'grunt-bump-skiphook',
-				chagelog:       'grunt-templated-changelog',
-				cmq:            'grunt-combine-media-queries',
-				eslint:         'gruntify-eslint',
+				coverage:				'grunt-istanbul-coverage',
 				sass:           'grunt-sass',
 				scsslint:       'grunt-scss-lint'
 			}
