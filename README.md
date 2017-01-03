@@ -6,6 +6,7 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vergissberlin/andrelademann-de/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/vergissberlin/andrelademann-de/?branch=master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d71d9adb1c8b4ba7a08ff58b86e5ff6d)](https://www.codacy.com/app/andre_1725/andrelademann-de?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vergissberlin/andrelademann-de&amp;utm_campaign=Badge_Grade)
 [![BlackDuck Badge](https://www.openhub.net/p/andrelademann-de/widgets/project_thin_badge?format=gif&amp;ref=Thin+badge)](https://www.openhub.net/p/andrelademann-de?ref=Thin+badge)
+[![NSP Status](https://nodesecurity.io/orgs/programmerq/projects/87c69c1b-a0e8-4f36-964f-5718605064ec/badge)](https://nodesecurity.io/orgs/programmerq/projects/87c69c1b-a0e8-4f36-964f-5718605064ec)
 
 ## What
 
