@@ -16,13 +16,18 @@
 module.exports = {
 
 	// Compression css
-	files: [
-		{
-			expand: true,
-			cwd:    '<%= package.directories.public.css %>',
-			src:    '*.css',
-			dest:   '<%= package.directories.public.js %>'
-		}
-	]
+	options: {
+     shorthandCompacting: true,
+     roundingPrecision: -1
+   },
+   target: {
+		files: [{
+       expand: true,
+       cwd: '<%= package.directories.public.css %>',
+       src: ['*.css', '!*.min.css'],
+       dest: '<%= package.directories.public.css %>',
+       ext: '.min.css'
+     }]
+   }
 
 };

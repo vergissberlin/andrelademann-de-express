@@ -13,19 +13,25 @@
 This is the repository to my personal homepage andrelademann.de. I decided to make the source code public for two reasons. Firstly to inspire other people to create there own Website with Node.js and secondly to give pros the chance to find and report bugs and security voluntaries.
 
 ## Used technologies
+
 ### Server site
+
 Node.js, Express, Handlebars, Grunt, Mongoosejs ODM, MongoDB, S3 Image upload, CloudFront CDN, imagemagick, SASS
 
 ### Development and deployment
+
 Webstorm, herokuapp app build and hosting, Travis CI, Scrutinizer,
 
 ### Client site
+
 HTML5, Bootstrap 4 alpha CDN Version, font awesome, RDF, vCard, Microformats, Open Graph, Twitter card, Syntax highlighting with prism, Comments with Disqus
 
 ## Milestones
+
 [![Stories in Ready](https://badge.waffle.io/vergissberlin/andrelademann-de.png?label=ready&title=Ready)](https://waffle.io/vergissberlin/andrelademann-de) To see the current status, take a look in the milestones overview page or the on waffle.io board.
 
 ### Milestone #01 - Setup and static page
+
 -   Configure custom domain andrelademann.de
 -   Static sitemap for Google Webmaster Tools
 -   Grunt tasks
@@ -38,6 +44,7 @@ HTML5, Bootstrap 4 alpha CDN Version, font awesome, RDF, vCard, Microformats, Op
 -   Error pages e.g. 404
 
 ### Milestone #02 - Blog
+
 -   Simple custom CMS for blog articles
 -   Rss Feed /Atom Feed
 -   Open Graph Support <http://ogp.me/>
@@ -45,6 +52,7 @@ HTML5, Bootstrap 4 alpha CDN Version, font awesome, RDF, vCard, Microformats, Op
 -   Automatic enhanced content - TinyMCE Plugin for FREME
 
 ### Milestone #03 - Projects and blog improvements
+
 -   Social Links <https://www.npmjs.com/package/social-media-links>
 -   Projects simple CMS
 -   Improvements
