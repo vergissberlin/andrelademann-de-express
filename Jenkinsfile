@@ -15,6 +15,11 @@ pipeline {
         )
       }
     }
+    stage('Moo') {
+      steps {
+        sh 'pwd'
+      }
+    }
   }
   environment {
     DIRK = 'sven'
