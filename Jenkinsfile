@@ -3,7 +3,16 @@ pipeline {
   stages {
     stage('Browserstack') {
       steps {
-        echo 'Hello Dude!'
+        parallel(
+          "Browserstack": {
+            echo 'Hello Dude!'
+            
+          },
+          "Chrome": {
+            sleep 2
+            
+          }
+        )
       }
     }
   }
