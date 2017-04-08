@@ -18,6 +18,7 @@ pipeline {
     stage('Moo') {
       steps {
         sh 'pwd'
+        mail(subject: 'Test from Jenkis', body: 'Jo', from: 'vergissberlin@gmail.com', replyTo: 'vergissberlin@gmail.com', to: 'vergissberlin@gmail.com')
       }
     }
   }
