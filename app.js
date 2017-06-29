@@ -9,12 +9,12 @@
 'use strict';
 
 var
+    env      = require('dotenv').config(),
     express  = require('express'),
     config   = require('./config/config'),
     glob     = require('glob'),
     mongoose = require('mongoose');
 
-require('dotenv').config();
 mongoose.Promise = global.Promise;
 mongoose.connect(config.db, {useMongoClient: true});
 

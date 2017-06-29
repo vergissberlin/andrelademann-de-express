@@ -44,7 +44,7 @@ var config = {
 			images: 'http://development-cdn.andrelademann.de.rsz.io/'
 		},
 		port:  process.env.PORT || 3232,
-		db:    process.env.MONGODB_URI || 'mongodb://192.168.99.100:32769/andrelademannde-development'
+        db:    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/andrelademannde-development'
 	},
 	staging:     {
 		root:  rootPath,
