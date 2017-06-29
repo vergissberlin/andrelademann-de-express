@@ -7,9 +7,10 @@
  * @license      https://opensource.org/licenses/MIT
  */
 var
-	express  = require('express'),
-	passport = require('passport'),
-	router   = express.Router();
+    express      = require('express'),
+    passport     = require('passport'),
+    passportUtil = require('../../util/passport'),
+    router       = express.Router();
 
 module.exports = function (app) {
 	app.use('/', router);
@@ -45,7 +46,7 @@ router.get('/user/signup', function (req, res) {
 	res.render('sections/user/register', {
 		brand:    'primary',
 		title:    res.__('User'),
-		category: res.__('User registrierung'),
+        category: res.__('User registration'),
 		message:  req.flash('message')
 	});
 });

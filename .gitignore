@@ -30,6 +30,7 @@ node_modules/
 bower_components/
 *.log
 build/
+data/
 dist/
 doc/
 logs
@@ -49,3 +50,4 @@ manifest.appcache
 tests/reports/
 tests/acceptance/js/*/
 _SpecRunner.html
+.env

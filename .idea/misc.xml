@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="IdProvider" IDEtalkID="9066839BCC09F6F3D77B9CDE3BD5179F" />
+  <component name="WebPackConfiguration">
+    <option name="path" value="$PROJECT_DIR$/webpack.config.js" />
+  </component>
 </project>
