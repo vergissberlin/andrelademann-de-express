@@ -20,10 +20,10 @@ module.exports = {
 		options: {
 			basePath:     'public',
 			cache:        [
-				'//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css',
-				'//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js',
-				'//cdnjs.cloudflare.com/ajax/libs/tether/1.3.3/js/tether.min.js',
-				'//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js'
+				'//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css',
+				'//code.jquery.com/jquery-3.2.1.slim.min.js',
+				'//cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js',
+				'//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js'
 			],
 			network:      ['http://*', 'https://*'],
 			fallback:     ['/ /offline.html'],

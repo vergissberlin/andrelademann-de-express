@@ -48,90 +48,85 @@
 			</div>
 		</section>
 
-		<hr>
+		<div class="collapse" id="meta-data">
+			<div class="card text-white bg-dark">
 
-		<section class="panel panel-default">
-			<div class="panel-heading" role="tab">
-				<p class="panel-title h3">
-					{{__ "Meta-Data"}}
-				</p>
-			</div>
-			<div id="metaData" class="panel" aria-labelledby="Meta data">
-				<div class="form-group row">
-					<label class="col-sm-2">{{__ "Index"}}</label>
-					<div class="col-sm-10">
-						<div class="form-check">
-							<label class="form-check-label">
-								<input type="checkbox" class="form-check-input" id="index" name="index"
-											 {{#if article.meta.index}}checked{{/if}}>
-								{{__ "Index that"}}
-							</label>
+				<div class="card-body">
+					<h4 class="card-title">{{__ "Meta-Data"}}</h4>
+					<div class="card-text">
+						<div class="form-group row">
+							<label class="col-sm-2">{{__ "Index"}}</label>
+							<div class="col-sm-10">
+								<div class="form-check">
+									<label class="form-check-label">
+										<input type="checkbox" class="form-check-input" id="index" name="index"
+													 {{#if article.meta.index}}checked{{/if}}>
+										{{__ "Index that"}}
+									</label>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="form-group row">
-					<label for="description" class="col-xs-2 col-form-label">{{__ "Description"}}</label>
-					<div class="col-xs-10">
+						<div class="form-group">
+							<label for="description" class="col-xs-2 col-form-label">{{__ "Description"}}</label>
+							<div class="col-xs-10">
 							<textarea class="form-control"
+												rows="2"
 												placeholder="Meta description (Max 120 chars)"
 												maxlength="120"
 												id="description"
 												name="description">{{{article.meta.description}}}</textarea>
-					</div>
-				</div>
-				<div class="form-group row">
-					<label for="description" class="col-xs-2 col-form-label">{{__ "Keywords"}}</label>
-					<div class="col-xs-10">
-						<input class="form-control"
-									 type="text"
-									 maxlength="120"
-									 placeholder="Meta keywords"
-									 value="{{{article.meta.keywords}}}"
-									 id="keywords"
-									 name="keywords">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="keywords" class="col-xs-2 col-form-label">{{__ "Keywords"}}</label>
+							<div class="col-xs-10">
+								<input class="form-control"
+											 type="text"
+											 maxlength="120"
+											 placeholder="Meta keywords"
+											 value="{{{article.meta.keywords}}}"
+											 id="keywords"
+											 name="keywords">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-
+		</div>
 		<input type="hidden" name="image" value="{{article.image}}" id="image">
 
 	</article>
 
-	<nav class="navbar navbar-fixed-bottom navbar-light bg-faded">
+	<nav class="navbar fixed-bottom navbar-light bg-faded">
 		<div class="container">
-			<ul class="nav navbar-nav pull-xs-right">
-				<li class="nav-item">
-					<a href="javascript:if(confirm('Realy?')) history.back()" id="cancel" class="btn btn-outline-danger">
-						<i class="fa fa-ban" aria-hidden="true"></i>&nbsp;{{__ "Cancel"}}</a>
-				</li>
-				<li class="nav-item">
-					<button type="submit"
-									id="submit"
-									class="btn btn-outline-primary pull-xs-right"
-									role="button">
-						{{#if article}}
-							<i class="fa fa-pencil" aria-hidden="true"></i>
-							<span class="hidden-sm-down">&nbsp;{{__ "Edit"}}</span>
-						{{else}}
-							<i class="fa fa-plus" aria-hidden="true"></i>
-							<span class="hidden-sm-down">&nbsp;{{__ "Add"}}</span>
-						{{/if}}
-					</button>
-				</li>
-			</ul>
+			<div class="btn-group btn-group-xs pull-xs-right" role="group" aria-label="Controls">
+				<a href="javascript:if(confirm('Realy?')) history.back()" id="cancel" class="btn btn-outline-danger">
+					<i class="fa fa-ban" aria-hidden="true"></i>&nbsp;{{__ "Cancel"}}</a>
+				<a class="btn btn-outline-dark" data-toggle="collapse" href="#meta-data" aria-expanded="false"
+								aria-controls="meta-data">
+					{{__ "Meta-Data"}}
+				</a>
+				<button type="submit"
+								id="submit"
+								class="btn btn-outline-primary"
+								role="button">
+					{{#if article}}
+						<i class="fa fa-pencil" aria-hidden="true"></i>
+						<span class="hidden-sm-down">&nbsp;{{__ "Edit"}}</span>
+					{{else}}
+						<i class="fa fa-plus" aria-hidden="true"></i>
+						<span class="hidden-sm-down">&nbsp;{{__ "Add"}}</span>
+					{{/if}}
+				</button>
+			</div>
 		</div>
 	</nav>
 
 </form>
 
-<section class="panel panel-default">
-	<div class="panel-heading" role="tab" id="og">
-		<p class="panel-title h3">
-			Open Graph
-		</p>
-	</div>
-	<div id="openGraph" class="panel" aria-labelledby="Open Graph">
+
+<section class="card">
+	<div id="openGraph" class="card-body" aria-labelledby="Open Graph">
 		<div class="form-group row">
 			<label class="col-sm-2">{{__ "Picture"}}</label>
 			<div class="col-sm-10">

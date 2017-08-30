@@ -25,6 +25,7 @@
 
 </section>
 
+{{#unless ENV_DEVELOPMENT}}
 <script>
 	mixpanel.track('User profile');
 	mixpanel.identify('{{profile._id}}');
@@ -35,3 +36,4 @@
 		'$email':      '{{profile.email}}'
 	});
 </script>
+{{/unless}}

@@ -1,8 +1,10 @@
 .wysiwyg-plain {
   outline: 1px dashed #ddd; }
 
-.navbar-fixed-bottom {
-  outline: 6px solid rgba(50, 50, 50, 0.1); }
+.fixed-bottom {
+  outline: 6px solid rgba(50, 50, 50, 0.1);
+	background: #fff;
+}
 
 .imageupload .panel-title {
   padding-top: 8px; }

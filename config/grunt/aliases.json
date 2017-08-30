@@ -25,7 +25,6 @@
 	"dev": [
 		"sass",
 		"manifest",
-		"develop:server",
 		"watch"
 	],
 	"prod": [
