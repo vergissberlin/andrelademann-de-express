@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2673426-47a4-4a0d-b4a4-41f3cc710847" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/prism.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/prism.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/main.handlebars" afterPath="$PROJECT_DIR$/app/views/layouts/main.handlebars" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -738,6 +738,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="46" lean-forward="false" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
