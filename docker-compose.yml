@@ -1,18 +1,17 @@
 version: '3'
 services:
     nodejs:
-        image: node
+        image: node:alpine
         environment:
           - MONGO_DATA_DIR=/data/db
-          - NODE_ENV=development
+          - NODE_ENV=production
           - AWS_ACCESS_KEY_ID=foo
           - AWS_SECRET_ACCESS_KEY=foo
           - S3_BUCKET=foo
         volumes:
-          - ./app:/var/www/app
-          - ./config:/var/www/config
+          - ./:/usr/src/app
         ports:
-          - "3000:3000"
+          - 3000:3000
         links:
           - mongodb:mongodb
     mongodb:

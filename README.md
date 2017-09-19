@@ -75,6 +75,7 @@ Please report bugs and security gaps. My promis: For every bug that you find wit
 1.  Clone the repository
 2.  Type ``npm install`` to install the dependencies
 3.  Start a mongodb database an configure the credentials in ``config/database.js``
+    - ``docker-compose up -d``
 4.  Set the Environment variables
     -   ``NODE_ENV=development``
     -   ``AWS_ACCESS_KEY_ID=foo``
