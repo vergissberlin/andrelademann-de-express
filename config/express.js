@@ -8,159 +8,55 @@
  */
 'use strict';
 
-var
-	basicAuth         = require('basicauth-middleware'),
-	bodyParser        = require('body-parser'),
-	bugsnag           = require('bugsnag'),
-	compress          = require('compression'),
-	cookieParser      = require('cookie-parser'),
-	express           = require('express'),
-	expressHandlebars = require('express-handlebars'),
-	expressSession    = require('express-session'),
-	favicon           = require('serve-favicon'),
-	flash             = require('connect-flash'),
-	glob              = require('glob'),
-	handlebars        = require('handlebars'),
-	handlebarsIntl    = require('handlebars-intl'),
-	helmet            = require('helmet'),
-	helpers           = require('../app/views/helpers'),
-	i18n              = require('./i18n'),
-	logger            = require('morgan'),
-	methodOverride    = require('method-override'),
-	minifyHTML        = require('express-minify-html'),
-	nodeSecret        = process.env.NODE_SECRET || 'superhero',
-	passport          = require('passport'),
-	session           = require('express-session');
+var express = require('express');
+var glob = require('glob');
 
-// Register additional header
-bugsnag.register(process.env.BUGSNAG_TOKEN);
-handlebarsIntl.registerWith(handlebars);
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
+var compress = require('compression');
+var methodOverride = require('method-override');
+var exphbs = require('express-handlebars');
 
-/**
- * Express configuration
- *
- * @module configuration/express
- */
 module.exports = function (app, config) {
+	var env = process.env.NODE_ENV || 'development';
+	app.locals.ENV = env;
+	app.locals.ENV_DEVELOPMENT = env == 'development';
 
-	// Environment
-	var env                    = process.env.NODE_ENV || 'development';
-	app.locals.ENV             = env;
-	app.locals.ENV_DEVELOPMENT = env === 'development' || env === 'home';
-
-
-	// Passport
-	app.use(expressSession({
-		secret:            'keyboard cat',
-		resave:            false,
-		saveUninitialized: false,
-		cookie:            {secure: false}
-	}));
-	app.use(passport.initialize());
-	app.use(cookieParser());
-	app.use(passport.session({
-		cookie: {
-			maxAge: 60000,
-			secret: nodeSecret
-		}
-	}));
-
-	// Rendering
-	app.engine('handlebars', expressHandlebars({
+	app.engine('handlebars', exphbs({
 		layoutsDir:    config.root + '/app/views/layouts/',
-		partialsDir:   [config.root + '/app/views/partials/'],
 		defaultLayout: 'main',
-		helpers:       helpers
+		partialsDir:   [config.root + '/app/views/partials/']
 	}));
-
-	// Views
 	app.set('views', config.root + '/app/views');
 	app.set('view engine', 'handlebars');
 
-	// l18n
-	app.use(i18n);
-
-	app.use(favicon(config.root + '/public/img/favicon/favicon.ico'));
+	app.use(favicon(config.root + '/public/img/favicon.ico'));
 	app.use(logger('dev'));
-
-	// Parser
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({
 		extended: true
 	}));
-
-	// Compression and caching
+	app.use(cookieParser());
 	app.use(compress());
 	app.use(express.static(config.root + '/public'));
-	app.use(express.static('img'));
-	app.use(express.static('css'));
-	app.use(express.static('fnt'));
-	app.use(express.static('js'));
-
-	// Flash messages
-	app.use(flash());
-	/// Custom flash middleware
-	app.use(function (req, res, next) {
-		// if there's a flash message in the session request,
-		// make it available in the response, then delete it
-		res.locals.flash = req.session.flash;
-		delete req.session.flash;
-		res.locals.messages = req.flash();
-
-		// Configuration
-		req.config        = config;
-		res.locals.config = config;
-
-		// User data
-		if (req.user) {
-			res.locals.profile = req.user;
-		}
-		next();
-	});
-
-	// Security
-	app.use(helmet());
-
-	// Optional basic auth
-	if (process.env.BASE_USER && process.env.BASE_SECRET) {
-		app.use(basicAuth(process.env.BASE_USER, process.env.BASE_SECRET, 'Please enter the credentials!'));
-	}
-
-	// Override
 	app.use(methodOverride());
 
-	// Controllers
-	var controllers = glob.sync(config.root + '/app/controllers/**/*.js');
+	var controllers = glob.sync(config.root + '/app/controllers/*.js');
 	controllers.forEach(function (controller) {
 		require(controller)(app);
 	});
 
-	// Exception handling
-	app.use(function (req, res) {
-		var err    = new Error('Not Found');
+	app.use(function (req, res, next) {
+		var err = new Error('Not Found');
 		err.status = 404;
-		res.render('error', {
-			message: err.message,
-			error:   err,
-			env:     app.get('env'),
-			title:   'Page not found.'
-		});
+		next(err);
 	});
 
-	// Development
-	if (app.get('env') === 'development' || app.get('env') === 'home') {
-		app.use(bugsnag.requestHandler);
-		app.use(bugsnag.errorHandler);
-		app.use(function (err, req, res) {
+	if (app.get('env') === 'development') {
+		app.use(function (err, req, res, next) {
 			res.status(err.status || 500);
-
-			bugsnag.notify(new Error('404 Not found'),
-				{
-					message: err.message,
-					error:   err,
-					env:     app.get('env')
-				});
-
 			res.render('error', {
 				message: err.message,
 				error:   err,
@@ -169,24 +65,7 @@ module.exports = function (app, config) {
 		});
 	}
 
-	// Staging & production
-	if (app.get('env') === 'staging' || app.get('env') === 'production') {
-
-		// Minify HTML output
-		app.use(minifyHTML({
-			override:     true,
-			htmlMinifier: {
-				removeComments:            true,
-				collapseWhitespace:        true,
-				collapseBooleanAttributes: true,
-				removeAttributeQuotes:     false,
-				removeEmptyAttributes:     true,
-				minifyJS:                  true
-			}
-		}));
-	}
-
-	app.use(function (err, req, res) {
+	app.use(function (err, req, res, next) {
 		res.status(err.status || 500);
 		res.render('error', {
 			message: err.message,
@@ -194,4 +73,6 @@ module.exports = function (app, config) {
 			title:   'error'
 		});
 	});
+
+	return app;
 };

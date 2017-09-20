@@ -1,13 +1,4 @@
-<div class="alert alert-danger" role="alert" id="content">
-	<strong>{{{__ "Error"}}}</strong> {{error.status}} {{message}}
-</div>
+{{ message }}
+{{ error.status }}
+{{ error.stack }}
 
-<div class="jumbotron jumbotron-fluid">
-	<div class="container">
-		<h1 class="display-3">Stack
-			<small class="text-muted">{{error.status}} {{message}}</small>
-		</h1>
-		<pre class="text-small"
-				 style="font-size: .8rem; max-height: 300px; overflow-x:hidden ; overflow-y:auto;">{{ error.stack }}</pre>
-	</div>
-</div>
