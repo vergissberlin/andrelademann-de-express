@@ -7,7 +7,6 @@
 		"coverage",
 		"coveralls",
 		"cssmin",
-		"jasmine",
 		"jsdoc",
 		"manifest",
 		"responsive_images",
@@ -41,7 +40,6 @@
 		"git_changelog"
 	],
 	"test": [
-		"jasmine",
 		"jsdoc",
 		"sassdoc",
 		"scsslint"

@@ -12,49 +12,48 @@
  * @copyright MIT
  * @license   https://opensource.org/licenses/MIT
  * @link      https://www.gnu.org/licenses/gpl.html
+ * @see       https://www.npmjs.com/package/grunt-git-changelog
  */
 
 /**
  * git_changelog
  *
  * @type {{release: {options: {version: string, labels: string[], branch: string}}}}
- *
+ * @see http://git-scm.com/docs/git-log for mapping content
  * @return void
  */
 module.exports = {
 
 	manifest:         'package.json',
-	changelog:        'CHANGELOG',
-	history:          'CHANGELOG_HISTORY',
-	changesSeparator: '\n*******************************************************' +
-										'*****************************************************************\n',
+	changelog:        'CHANGELOG.md.md',
+	history:          'HISTORY.md',
+	changesSeparator: '---------------------------------------------------------\n\n',
 
 	masks: [
 		{
-			title:  '\nImplemented\n',
+			title:  '\n\n## Implemented\n\n',
 			mask:   /(([^\.]+\s)*(Task|Add|Implement)(\s[^\.]+)*)/gim,
-			format: '- #%h %an %ad: %s %b'
-			// see http://git-scm.com/docs/git-log for mapping content,
+			format: '- %h %an %ad: %s %b'
 		},
 		{
-			title:  '\nImprovements\n',
+			title:  '\n## Improvements\n',
 			mask:   /(([^\.]+\s)*(Improve|Enhance|Reduce)(\s[^\.]+)*)/gim,
-			format: '- #%h %an %ad: %s %b'
+			format: '- %h %an %ad: %s %b'
 		},
 		{
-			title:  '\nFixes\n',
+			title:  '\n## Fixes\n',
 			mask:   /(([^\.]+\s)*(Bug|Fix|Clean|Remove)(\s[^\.]+)*)/gim,
-			format: '- #%h %an %ad: %s %b'
+			format: '- %h %an %ad: %s %b'
 		},
 		{
-			title:  '\nRelease\n',
+			title:  '\n## Release\n',
 			mask:   /(([^\.]+\s)*(Release)(\s[^\.]+)*)/gim,
-			format: '- #%h: %s %b'
+			format: '- %h: %s %b'
 		},
 		{
-			title:  '\nOthers\n',
+			title:  '\n## Others\n',
 			mask:   /./gim,
-			format: '- #%h: %s %b'
+			format: '- %h: %s %b'
 		}
 	]
 
