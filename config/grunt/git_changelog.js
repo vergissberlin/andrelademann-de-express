@@ -25,7 +25,7 @@
 module.exports = {
 
 	manifest:         'package.json',
-	changelog:        'CHANGELOG.md.md',
+	changelog:        'CHANGELOG.md',
 	history:          'HISTORY.md',
 	changesSeparator: '---------------------------------------------------------\n\n',
 

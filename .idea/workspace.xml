@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/config/grunt/git_changelog.js" description="format: '- %h %an %ad: %s %b'" line="35" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f2673426-47a4-4a0d-b4a4-41f3cc710847" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_about.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_about.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_articles.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_articles.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_form.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_form.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_home.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_home.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_upload.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_upload.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_user.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_user.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_video.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_video.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_weather.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_weather.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/global.html" afterPath="$PROJECT_DIR$/doc/JavaScript/global.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/index.html" afterPath="$PROJECT_DIR$/doc/JavaScript/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/models_article.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/models_article.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/models_user.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/models_user.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/module-controller_article.html" afterPath="$PROJECT_DIR$/doc/JavaScript/module-controller_article.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/module-controller_home.html" afterPath="$PROJECT_DIR$/doc/JavaScript/module-controller_home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/module-controller_weather.html" afterPath="$PROJECT_DIR$/doc/JavaScript/module-controller_weather.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/views_helpers_debug.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/views_helpers_debug.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/Sass/index.html" afterPath="$PROJECT_DIR$/doc/Sass/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/scss/admin.scss" afterPath="$PROJECT_DIR$/private/scss/admin.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home.handlebars" afterPath="$PROJECT_DIR$/app/views/home.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/grunt/git_changelog.js" afterPath="$PROJECT_DIR$/config/grunt/git_changelog.js" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -392,7 +379,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -534,12 +520,14 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="45">
             <caret line="3" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
