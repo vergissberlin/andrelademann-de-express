@@ -179,7 +179,7 @@ router.get('/articles/:slug', function (req, res, next) {
 				return next(err);
 			}
 			res.render('sections/article/detail', {
-				title:   res.__('Articles'),
+				title:   article.title,
 				robots:  {
 					current: !!article.meta.index,
 					follow:  true

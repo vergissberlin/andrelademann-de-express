@@ -2,55 +2,40 @@
 	action="/articles/{{#if article}}edit/{{article._id}}{{else}}add{{/if}}"
 	method="post">
 
-	<nav class="navbar bg-faded">
-		<ul class="nav navbar-nav">
-			<li class="nav-item pull-xs-right">
-				<div class="btn-group" data-toggle="buttons">
-					<label class="btn btn-outline-primary{{#if article.state}}{{#compare article.state
-																																							 "draft"}} active{{/compare}}{{else}} active{{/if}}">
-						<input type="radio" name="state" id="draft" value="draft"
-									 autocomplete="off"{{#if article.state}}{{#compare article.state "draft"}}
-									 checked{{/compare}}{{else}} checked{{/if}}>
-						{{__ "Draft"}}
-					</label>
-					<label class="btn btn-outline-danger{{#compare article.state "deleted"}} active{{/compare}}">
-						<input type="radio" name="state" id="deleted"
-									 value="deleted"
-									 autocomplete="off"{{#compare article.state "deleted"}}
-									 checked{{/compare}}>
-						{{__ "Deleted"}}
-					</label>
-					<label class="btn btn-outline-success{{#compare article.state "published"}} active{{/compare}}">
-						<input type="radio" name="state" id="published"
-									 value="published"
-									 autocomplete="off"{{#compare article.state "published"}}
-									 checked{{/compare}}>
-						{{__ "Published"}}
-					</label>
-				</div>
-			</li>
-		</ul>
-	</nav>
+	<div class="btn-group btn-group-sm" data-toggle="buttons">
+		<label class="btn btn-outline-primary{{#if article.state}}{{#compare article.state "draft"}} active{{/compare}}{{else}} active{{/if}}">
+			<input type="radio" name="state" id="draft" value="draft"
+						 autocomplete="off"{{#if article.state}}{{#compare article.state "draft"}}
+						 checked{{/compare}}{{else}} checked{{/if}}>
+			{{__ "Draft"}}
+		</label>
+		<label class="btn btn-outline-danger{{#compare article.state "deleted"}} active{{/compare}}">
+			<input type="radio" name="state" id="deleted"
+						 value="deleted"
+						 autocomplete="off"{{#compare article.state "deleted"}}
+						 checked{{/compare}}>
+			{{__ "Deleted"}}
+		</label>
+		<label class="btn btn-outline-success{{#compare article.state "published"}} active{{/compare}}">
+			<input type="radio" name="state" id="published"
+						 value="published"
+						 autocomplete="off"{{#compare article.state "published"}}
+						 checked{{/compare}}>
+			{{__ "Published"}}
+		</label>
+	</div>
 
-	<article id="accordion" role="tablist" aria-multiselectable="true">
-		<section class="panel panel-default">
-			<div class="panel-heading" role="tab">
-				<p class="panel-title h3">
-					{{__ "Content"}}
-				</p>
-			</div>
-			<div id="content" class="pane" aria-labelledby="Main content aria">
-				<header>
-					<h1 id="title" class="wysiwyg-plain">{{{article.title}}}</h1>
-					<p id="teaser" class="lead wysiwyg-plain">{{{article.teaser}}}</p>
-				</header>
-				<div class="wysiwyg" id="text">{{{article.text}}}</div>
-			</div>
+	<article>
+		<section>
+			<header>
+				<h1 id="title" class="wysiwyg-plain" data-toggle="tooltip" data-placement="top" title="Tooltip on top">{{{article.title}}}</h1>
+				<p id="teaser" class="lead wysiwyg-plain">{{{article.teaser}}}</p>
+			</header>
+			<div class="wysiwyg" id="text">{{{article.text}}}</div>
 		</section>
 
 		<div class="collapse" id="meta-data">
-			<div class="card text-white bg-dark">
-
+			<div class="card text-white bg-dark mb-3">
 				<div class="card-body">
 					<h4 class="card-title">{{__ "Meta-Data"}}</h4>
 					<div class="card-text">
@@ -103,7 +88,7 @@
 				<a href="javascript:if(confirm('Realy?')) history.back()" id="cancel" class="btn btn-outline-danger">
 					<i class="fa fa-ban" aria-hidden="true"></i>&nbsp;{{__ "Cancel"}}</a>
 				<a class="btn btn-outline-dark" data-toggle="collapse" href="#meta-data" aria-expanded="false"
-								aria-controls="meta-data">
+					 aria-controls="meta-data">
 					{{__ "Meta-Data"}}
 				</a>
 				<button type="submit"
