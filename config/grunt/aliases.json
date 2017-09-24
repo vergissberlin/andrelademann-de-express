@@ -4,9 +4,8 @@
 	],
 	"all": [
 		"browserify",
-		"coverage",
-		"coveralls",
 		"cssmin",
+		"doxdox",
 		"jsdoc",
 		"manifest",
 		"responsive_images",
@@ -34,6 +33,9 @@
 	"release": [
 		"sass",
 		"cssmin",
+		"doxdox",
+		"jsdoc",
+		"sassdoc",
 		"browserify:prod",
 		"uglify",
 		"bump",

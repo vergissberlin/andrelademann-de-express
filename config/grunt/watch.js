@@ -46,7 +46,6 @@ module.exports = {
 			'<%= package.directories.private.js %>/**/*.js'
 		],
 		tasks: [
-			'eslint',
 			'browserify:dev'
 		]
 	},
@@ -60,9 +59,7 @@ module.exports = {
 			'config/*.js'
 		],
 		tasks: [
-			'eslint',
-			'develop',
-			'delayed-livereload'
+			'develop'
 		]
 	},
 

@@ -17,17 +17,17 @@ module.exports = {
 
 	// Compression css
 	options: {
-     shorthandCompacting: true,
-     roundingPrecision: -1
-   },
-   target: {
+		shorthandCompacting: true,
+		roundingPrecision:   -1
+	},
+	target:  {
 		files: [{
-       expand: true,
-       cwd: '<%= package.directories.public.css %>',
-       src: ['*.css', '!*.min.css'],
-       dest: '<%= package.directories.public.css %>',
-       ext: '.min.css'
-     }]
-   }
+			expand: true,
+			cwd:    '<%= package.directories.public.css %>',
+			src:    ['*.css', '!*.min.css'],
+			dest:   '<%= package.directories.public.css %>',
+			ext:    '.min.css'
+		}]
+	}
 
 };

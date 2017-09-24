@@ -17,7 +17,11 @@ module.exports = {
 
 	// API documentation
 	dist: {
-		src:     ['<%= package.directories.private.js %>/**/*.js'],
+		src:     [
+			'app.js',
+			'app/**/*.js',
+			'<%= package.directories.private.js %>/**/*.js'
+		],
 		options: {
 			destination: '<%= package.directories.public.doc %>/JavaScript'
 		}

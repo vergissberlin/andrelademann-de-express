@@ -14,25 +14,24 @@
 'use strict';
 
 module.exports = function (grunt) {
-    var path = require('path');
+	var path = require('path');
 
-    require('time-grunt')(grunt);
-    require('load-grunt-config')(grunt, {
-        configPath: path.join(process.cwd(), 'config/grunt'),
-        init:       true,
+	require('time-grunt')(grunt);
+	require('load-grunt-config')(grunt, {
+		configPath: path.join(process.cwd(), 'config/grunt'),
+		init:       true,
 
-        jitGrunt: {
-            staticMappings: {
-                availabletasks: 'grunt-available-tasks',
-                bump:           'grunt-bump-skiphook',
-                coverage:       'grunt-istanbul-coverage',
-                sass:           'grunt-sass',
-                scsslint:       'grunt-scss-lint'
-            }
-        },
-        data:     {
-            path: path
-        }
-    });
+		jitGrunt: {
+			staticMappings: {
+				availabletasks: 'grunt-available-tasks',
+				bump:           'grunt-bump-skiphook',
+				sass:           'grunt-sass',
+				scsslint:       'grunt-scss-lint'
+			}
+		},
+		data:     {
+			path: path
+		}
+	});
 
 };

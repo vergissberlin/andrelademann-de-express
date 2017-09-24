@@ -14,15 +14,25 @@
 'use strict';
 
 module.exports = {
-
-	// Collect code coverage
-	options: {
-		force: false
+	'markdown':  {
+		'inputs': [
+			'app.js',
+			'app/controllers/*.js',
+			'app/models/*.js',
+			'app/views/helpers/*.js'
+		],
+		'output': 'doc/index.md'
 	},
-
-	development: {
-		src:     '<%= package.directories.app.helpers %>/**/*.js',
-		options: {}
+	'bootstrap': {
+		'inputs': [
+			'app.js',
+			'app/controllers/*.js',
+			'app/models/*.js',
+			'app/views/helpers/*.js'
+		],
+		'output': 'doc/index.html',
+		'config': {
+			'layout': 'bootstrap'
+		}
 	}
-
 };

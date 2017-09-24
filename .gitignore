@@ -32,7 +32,6 @@ bower_components/
 build/
 data/
 dist/
-doc/
 logs
 npm-debug.log*
 pids

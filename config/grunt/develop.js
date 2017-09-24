@@ -16,9 +16,9 @@
 module.exports = {
 
 	server: {
-		file: 'app.js',
+		file:     'app.js',
 		nodeArgs: ['--inspect'],
-		env: { NODE_ENV: 'development'}
+		env:      {NODE_ENV: 'development'}
 	},
 
 	debug: {

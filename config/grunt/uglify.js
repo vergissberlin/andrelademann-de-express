@@ -15,14 +15,16 @@
 
 module.exports = {
 
-	// Compress JavaScript
-	files: [
-		{
-			expand: true,
-			cwd:    '<%= package.directories.public.js %>',
-			src:    '*.js',
-			dest:   '<%= package.directories.public.js %>'
+	all: {
+		options: {
+			sourceMap: true,
+			sourceMapName: '<%= package.directories.public.js %>/sourcemap.map'
+		},
+		files: {
+			'<%= package.directories.public.js %>/main.min.js': [
+				'<%= package.directories.public.js %>/main.js'
+			]
 		}
-	]
+	}
 
 };

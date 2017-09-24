@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: controllers/articles.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: controllers/articles.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Articles controller
+ *
+ * @project      AndreLademannDe
+ * @author       André Lademann &lt;info@andrelademann.de>
+ * @copyright    MIT
+ * @license      https://opensource.org/licenses/MIT
+ */
+var
+	bugsnag      = require('bugsnag'),
+	express      = require('express'),
+	getSlug      = require('speakingurl'),
+	mongoose     = require('mongoose'),
+	Article      = mongoose.model('Article'),
+	passportUtil = require('../../util/passport'),
+	router       = express.Router();
+
+/**
+ * Article controller
+ *
+ * @module controller/article
+ */
+module.exports = function (app) {
+	app.use('/', router);
+};
+
+/**
+ * Article controller
+ *
+ * @function
+ */
+router.get('/articles', function (req, res, next) {
+	Article.find()
+		.limit(1000)
+		.where('state').equals('published')
+		.sort({updatedAt: -1})
+		.exec(function (err, articles) {
+			if (err) {
+				bugsnag.notify(err);
+				return next(err);
+			}
+			res.render('sections/article/list', {
+				title:      res.__('Articles'),
+				robots:     {
+					current: false,
+					follow:  true
+				},
+				articles:   articles,
+				pagination: {
+					page:      1,
+					pageCount: 10
+				}
+			});
+		});
+});
+
+/**
+ * Articles state action
+ *
+ * @function
+ */
+router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (req, res, next) {
+	var state = req.params.state;
+	Article.find()
+		.where('state').equals(state)
+		.sort({updatedAt: -1})
+		.exec(function (err, articles) {
+			if (err) {
+				bugsnag.notify(err);
+				return next(err);
+			}
+			res.render('sections/article/list', {
+				title:      res.__('Articles'),
+				subtitle:   state.charAt(0).toUpperCase() + state.slice(1) + ' articles',
+				articles:   articles,
+				admin:      true,
+				state:      state,
+				robots:     {
+					current: false,
+					follow:  false
+				},
+				pagination: {
+					page:      1,
+					pageCount: 10
+				}
+			});
+		});
+});
+
+/**
+ * Add article action
+ *
+ * @function
+ */
+router.get(
+	'/articles/add',
+	passportUtil.ensureAuthenicated,
+	function (req, res) {
+		res.render('sections/article/edit', {
+			title:    res.__('Articles'),
+			subtitle: res.__('Add articles'),
+			robots:   {
+				current: false,
+				follow:  false
+			},
+			admin:    true
+		});
+	});
+
+/**
+ * Add article action
+ *
+ * @function
+ */
+router.post('/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
+	new Article({
+		title:  req.body.title,
+		slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
+		state:  req.body.state,
+		meta:   {
+			index:       req.body.index,
+			description: req.body.description,
+			keywords:    req.body.keywords
+		},
+		image:  req.body.image,
+		teaser: req.body.teaser,
+		text:   req.body.text
+	}).save();
+
+	res.redirect('/articles/state/published');
+});
+
+/**
+ * Edit article
+ *
+ * @function
+ */
+router.post(
+	'/articles/edit/:id',
+	passportUtil.ensureAuthenicated,
+	function (req, res) {
+		var fileName = req.body.image || null;
+		if (typeof req.file === 'object') {
+			fileName = req.file.filename;
+		}
+
+		Article.findOneAndUpdate({'_id': req.params.id},
+			{
+				title:  req.body.title,
+				slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
+				state:  req.body.state,
+				meta:   {
+					index:       req.body.index,
+					description: req.body.description,
+					keywords:    req.body.keywords
+				},
+				image:  fileName,
+				teaser: req.body.teaser,
+				text:   req.body.text
+			}, function (err) {
+				if (err) {
+					bugsnag.notify(err);
+					throw err;
+				}
+				res.redirect('/articles/state/' + req.body.state);
+			});
+	});
+
+/**
+ * Article detail action
+ *
+ * @function
+ */
+router.get('/articles/:slug', function (req, res, next) {
+	Article.findOne({'slug': req.params.slug})
+		.exec(function (err, article) {
+			if (err) {
+				bugsnag.notify(err);
+				return next(err);
+			}
+			res.render('sections/article/detail', {
+				title:   article.title,
+				robots:  {
+					current: !!article.meta.index,
+					follow:  true
+				},
+				meta:    !!article.meta,
+				article: article
+			});
+		});
+});
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-controller_article.html">controller/article</a></li><li><a href="module-controller_home.html">controller/home</a></li><li><a href="module-controller_weather.html">controller/weather</a></li></ul><h3>Global</h3><ul><li><a href="global.html#bugsnag">bugsnag</a></li><li><a href="global.html#express">express</a></li><li><a href="global.html#Handlebars">Handlebars</a></li><li><a href="global.html#mongoose">mongoose</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Mon Sep 25 2017 00:01:40 GMT+0200 (CEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
