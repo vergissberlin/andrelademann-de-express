@@ -2,9 +2,8 @@
   outline: 1px dashed #ddd; }
 
 .fixed-bottom {
-  outline: 6px solid rgba(50, 50, 50, 0.1);
-	background: #fff;
-}
+  background: #fff;
+  outline: 6px solid rgba(50, 50, 50, 0.1); }
 
 .imageupload .panel-title {
   padding-top: 8px; }
@@ -39,10 +38,9 @@
     margin: 10px 0; }
 
 .imageupload-disabled {
-	pointer-events: none;
-	cursor: not-allowed;
-	opacity: .6;
-}
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: .6; }
 
 .upload-drop-zone {
   height: 200px;
@@ -53,9 +51,11 @@
   line-height: 200px;
   color: #ccc;
   text-align: center;
-  border-color: #ccc;
-  border-style: dashed; }
+  border: dashed #ccc; }
 
 .upload-drop-zone.drop {
   color: #222;
   border-color: #222; }
+
+footer {
+  padding-bottom: 4em; }

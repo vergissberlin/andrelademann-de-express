@@ -29,63 +29,68 @@ module.exports = function (app) {
  *
  * @function
  */
-router.get('/articles', function (req, res, next) {
-	Article.find()
-		.limit(1000)
-		.where('state').equals('published')
-		.sort({updatedAt: -1})
-		.exec(function (err, articles) {
-			if (err) {
-				bugsnag.notify(err);
-				return next(err);
-			}
-			res.render('sections/article/list', {
-				title:      res.__('Articles'),
-				robots:     {
-					current: false,
-					follow:  true
-				},
-				articles:   articles,
-				pagination: {
-					page:      1,
-					pageCount: 10
+router.get(
+	'/articles',
+	function (req, res, next) {
+		Article.find()
+			.limit(1000)
+			.where('state').equals('published')
+			.sort({updatedAt: -1})
+			.exec(function (err, articles) {
+				if (err) {
+					bugsnag.notify(err);
+					return next(err);
 				}
+				res.render('sections/article/list', {
+					title:      res.__('Articles'),
+					robots:     {
+						current: false,
+						follow:  true
+					},
+					articles:   articles,
+					pagination: {
+						page:      1,
+						pageCount: 10
+					}
+				});
 			});
-		});
-});
+	});
 
 /**
  * Articles state action
  *
  * @function
  */
-router.get('/articles/state/:state', passportUtil.ensureAuthenicated, function (req, res, next) {
-	var state = req.params.state;
-	Article.find()
-		.where('state').equals(state)
-		.sort({updatedAt: -1})
-		.exec(function (err, articles) {
-			if (err) {
-				bugsnag.notify(err);
-				return next(err);
-			}
-			res.render('sections/article/list', {
-				title:      res.__('Articles'),
-				subtitle:   state.charAt(0).toUpperCase() + state.slice(1) + ' articles',
-				articles:   articles,
-				admin:      true,
-				state:      state,
-				robots:     {
-					current: false,
-					follow:  false
-				},
-				pagination: {
-					page:      1,
-					pageCount: 10
+router.get(
+	'/articles/state/:state',
+	passportUtil.ensureAuthenicated,
+	function (req, res, next) {
+		var state = req.params.state;
+		Article.find()
+			.where('state').equals(state)
+			.sort({updatedAt: -1})
+			.exec(function (err, articles) {
+				if (err) {
+					bugsnag.notify(err);
+					return next(err);
 				}
+				res.render('sections/article/list', {
+					title:      res.__('Articles'),
+					subtitle:   state.charAt(0).toUpperCase() + state.slice(1) + ' articles',
+					articles:   articles,
+					admin:      true,
+					state:      state,
+					robots:     {
+						current: false,
+						follow:  false
+					},
+					pagination: {
+						page:      1,
+						pageCount: 10
+					}
+				});
 			});
-		});
-});
+	});
 
 /**
  * Add article action
@@ -112,23 +117,26 @@ router.get(
  *
  * @function
  */
-router.post('/articles/add', passportUtil.ensureAuthenicated, function (req, res) {
-	new Article({
-		title:  req.body.title,
-		slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
-		state:  req.body.state,
-		meta:   {
-			index:       req.body.index,
-			description: req.body.description,
-			keywords:    req.body.keywords
-		},
-		image:  req.body.image,
-		teaser: req.body.teaser,
-		text:   req.body.text
-	}).save();
+router.post(
+	'/articles/add',
+	passportUtil.ensureAuthenicated,
+	function (req, res) {
+		new Article({
+			title:  req.body.title,
+			slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
+			state:  req.body.state,
+			meta:   {
+				index:       req.body.index,
+				description: req.body.description,
+				keywords:    req.body.keywords
+			},
+			image:  req.body.image,
+			teaser: req.body.teaser,
+			text:   req.body.text
+		}).save();
 
-	res.redirect('/articles/state/published');
-});
+		res.redirect('/articles/state/published');
+	});
 
 /**
  * Edit article
@@ -171,21 +179,23 @@ router.post(
  *
  * @function
  */
-router.get('/articles/:slug', function (req, res, next) {
-	Article.findOne({'slug': req.params.slug})
-		.exec(function (err, article) {
-			if (err) {
-				bugsnag.notify(err);
-				return next(err);
-			}
-			res.render('sections/article/detail', {
-				title:   article.title,
-				robots:  {
-					current: !!article.meta.index,
-					follow:  true
-				},
-				meta:    !!article.meta,
-				article: article
+router.get(
+	'/articles/:slug',
+	function (req, res, next) {
+		Article.findOne({'slug': req.params.slug})
+			.exec(function (err, article) {
+				if (err) {
+					bugsnag.notify(err);
+					return next(err);
+				}
+				res.render('sections/article/detail', {
+					title:   res.__('Articles'),
+					robots:  {
+						current: !!article.meta.index,
+						follow:  true
+					},
+					meta:    !!article.meta,
+					article: article
+				});
 			});
-		});
-});
+	});

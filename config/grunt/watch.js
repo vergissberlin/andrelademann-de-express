@@ -15,12 +15,6 @@
 
 module.exports = {
 
-	// Watch file changes
-	options: {
-		nospawn:    true,
-		livereload: 8484
-	},
-
 	configurations: {
 		files: [
 			'Gruntfile.js'
@@ -36,8 +30,7 @@ module.exports = {
 		],
 		tasks: [
 			'responsive_images',
-			'develop:server',
-			'delayed-livereload'
+			'develop'
 		]
 	},
 
@@ -46,16 +39,17 @@ module.exports = {
 			'<%= package.directories.private.js %>/**/*.js'
 		],
 		tasks: [
-			'browserify:dev'
+			'browserify:dev',
+			'develop'
 		]
 	},
 
 	javascriptServer: {
 		files: [
 			'app.js',
-			'<%= package.directories.app.controller %>/**/*.js',
-			'<%= package.directories.app.models %>/**/*.js',
-			'<%= package.directories.app.helpers %>/**/*.js',
+			'<%= package.directories.app.controller %>/*.js',
+			'<%= package.directories.app.models %>/*.js',
+			'<%= package.directories.app.helpers %>/*.js',
 			'config/*.js'
 		],
 		tasks: [
@@ -64,15 +58,13 @@ module.exports = {
 	},
 
 	sass: {
-		options: {
-			livereload: 8484
-		},
 		files:   [
 			'<%= package.directories.private.sass %>/**/*.scss'
 		],
 		tasks:   [
+			'scsslint',
 			'sass',
-			'csslint'
+			'develop'
 		]
 	},
 
@@ -81,9 +73,9 @@ module.exports = {
 			'<%= package.directories.app.views %>/*.handlebars',
 			'<%= package.directories.app.views %>/**/*.handlebars'
 		],
-		options: {
-			livereload: 8484
-		}
+		tasks: [
+			'develop'
+		]
 	}
 
 };

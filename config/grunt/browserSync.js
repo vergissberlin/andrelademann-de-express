@@ -13,6 +13,9 @@
  */
 'use strict';
 
+var config = require('../config'),
+		port   = config.port;
+
 module.exports = {
 
 	bsFiles: {
@@ -25,9 +28,9 @@ module.exports = {
 	options: {
 		watchTask: true,
 		proxy:     '<%= package.project.url %>',
-		port:      4000,
+		port:      port,
 		ui:        {
-			port: parseInt(process.env.DEV_BROWSERSYNC_PORT) + 1 || 4001
+			port: port + 1 || 4001
 		}
 	}
 

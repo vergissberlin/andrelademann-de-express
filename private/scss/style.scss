@@ -10,6 +10,7 @@ html {
 
 body {
 	font-family: 'Open Sans Condensed', sans-serif;
+	color: #656c7a;
 }
 
 // Logical
@@ -53,8 +54,9 @@ pre {
 // Classes
 .media-author {
 	padding: 20px 30px;
+	color:  #7b90bb;
 	background-color: #f0f8ff;
-	border-top: 1px #eee solid;
+	border-top: 10px #a3b0c6 solid;
 }
 
 @mixin text-overflow() {
@@ -66,7 +68,6 @@ pre {
 .text-overflow {
 	@include text-overflow;
 }
-
 
 /// Disqus
 /// @group vendor

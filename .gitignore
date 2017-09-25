@@ -1,5 +1,7 @@
 public/components
 public/uploads/
+private/scss/*.css
+private/scss/*.map
 credentials.md
 .sass-cache
 .idea/workspace.xml

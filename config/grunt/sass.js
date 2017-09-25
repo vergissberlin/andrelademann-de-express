@@ -15,10 +15,14 @@
 
 module.exports = {
 
-	// Compile SASS files
-	files: {
-		'<%= package.directories.public.css %>/style.css': '<%= package.directories.private.sass %>/style.scss',
-		'<%= package.directories.public.css %>/admin.css': '<%= package.directories.private.sass %>/admin.scss'
+	all: {
+		options: {
+			style: 'expanded'
+		},
+		files:   {
+			'<%= package.directories.public.css %>/admin.css': '<%= package.directories.private.sass %>/admin.scss',
+			'<%= package.directories.public.css %>/style.css': '<%= package.directories.private.sass %>/style.scss'
+		}
 	}
 
 };

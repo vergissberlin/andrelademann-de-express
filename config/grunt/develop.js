@@ -17,15 +17,11 @@ module.exports = {
 
 	server: {
 		file:     'app.js',
-		nodeArgs: ['--inspect'],
-		env:      {NODE_ENV: 'development'}
-	},
-
-	debug: {
-		file:     'app.js',
-		nodeArgs: ['--inspect-brk'],
-		env:      {NODE_ENV: 'development'}
+		nodeArgs: [
+			'--inspect'
+		],
+		env:      {
+			NODE_ENV: 'development'
+		}
 	}
-
-
 };

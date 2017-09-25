@@ -2,7 +2,8 @@ html {
   overflow-y: scroll; }
 
 body {
-  font-family: 'Open Sans Condensed', sans-serif; }
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #656c7a; }
 
 header {
   margin-top: 20px; }
@@ -25,13 +26,17 @@ h1, h2, h3, b, strong {
 i, em {
   font-style: italic; }
 
+img {
+  background-color: #efefef; }
+
 pre {
   font-size: 1em; }
 
 .media-author {
   padding: 20px 30px;
+  color: #7b90bb;
   background-color: #f0f8ff;
-  border-top: 1px #eee solid; }
+  border-top: 10px #a3b0c6 solid; }
 
 .text-overflow {
   overflow: hidden;
