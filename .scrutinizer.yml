@@ -3,3 +3,9 @@ checks:
 build:
   environment:
     node: '8.4.0'
+filter:
+    paths:
+      - "app/*"
+      - "config/*"
+      - "private/js/*"
+      - "util/*"
