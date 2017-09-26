@@ -12,8 +12,14 @@
 	"User": "User",
 	"Please fill the form!": "Please fill the form!",
 	"User name": "User name",
+	"male": "male",
+	"female": "female",
 	"Password": "Password",
 	"OK": "OK",
+	"Last name": "Last name",
+	"First name": "First name",
+	"e-mail": "e-mail",
+	"Gender": "Gender",
 	"Personal data": "Personal data",
 	"Your data": "Your data",
 	"Sign out": "Sign out",
@@ -39,5 +45,8 @@
 	"Browse": "Browse",
 	"Remove": "Remove",
 	"Image URL": "Image URL",
-	"Submit": "Submit"
+	"Submit": "Submit",
+	"up to": "up to",
+	"No chance of rain.": "No chance of rain.",
+	"Possibility of precipitation": "Possibility of precipitation"
 }

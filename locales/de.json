@@ -26,6 +26,8 @@
 	"updated at": "aktualisiert am",
 	"User": "Benutzer",
 	"User name": "Benutzername",
+	"male": "männlich",
+	"female": "weiblich",
 	"Personal data": "Personal data",
 	"Weather": "Wetter",
 	"Welcome": "Willkommen",
@@ -49,5 +51,9 @@
 	"Submit": "Senden",
 	"ExpressJS Website mit Handlebars als Template-Engine und MongoDB als Datenbank.": "ExpressJS Website mit Handlebars als Template-Engine und MongoDB als Datenbank.",
 	"Digitaler Tischerkicker Torezähler mit JavaScript auf einem RaspberryPi.": "Digitaler Tischerkicker Torezähler mit JavaScript auf einem RaspberryPi.",
-	"Clients für den Tischkicker-Counter für Chrome, Web und Smartphone Apps.": "Clients für den Tischkicker-Counter für Chrome, Web und Smartphone Apps."
+	"Clients für den Tischkicker-Counter für Chrome, Web und Smartphone Apps.": "Clients für den Tischkicker-Counter für Chrome, Web und Smartphone Apps.",
+	"Last name": "Last name",
+	"First name": "First name",
+	"e-mail": "e-mail",
+	"Gender": "Gender"
 }
