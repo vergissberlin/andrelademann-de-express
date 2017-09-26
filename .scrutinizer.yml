@@ -9,3 +9,5 @@ filter:
       - "config/*"
       - "private/js/*"
       - "util/*"
+    excluded_paths:
+      - "private/js/plugins/*"
