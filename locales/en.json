@@ -23,9 +23,9 @@
 	"Personal data": "Personal data",
 	"Your data": "Your data",
 	"Sign out": "Sign out",
-	"Published": "Published",
-	"Draft": "Draft",
-	"Deleted": "Deleted",
+	"published": "published",
+	"draft": "draft",
+	"deleted": "deleted",
 	"Add new": "Add new",
 	"Add articles": "Add articles",
 	"Content": "Content",
@@ -48,5 +48,6 @@
 	"Submit": "Submit",
 	"up to": "up to",
 	"No chance of rain.": "No chance of rain.",
-	"Possibility of precipitation": "Possibility of precipitation"
+	"Possibility of precipitation": "Possibility of precipitation",
+	"No articles available": "No articles available"
 }

@@ -7,9 +7,9 @@
 	"Articles": "Artikel",
 	"Cancel": "Abbrechen",
 	"Created at": "Erstellt am",
-	"Deleted": "Gelöscht",
-	"Draft": "Entwurf",
-	"Edit": "Bearbeiten",
+	"deleted": "gelöscht",
+	"draft": "entwurf",
+	"edit": "bearbeiten",
 	"Error": "Fehler",
 	"Get in contact": "In Kontakt treten",
 	"Links": "Links",
@@ -55,5 +55,10 @@
 	"Last name": "Last name",
 	"First name": "First name",
 	"e-mail": "e-mail",
-	"Gender": "Gender"
+	"Gender": "Gender",
+	"Draft": "Draft",
+	"Deleted": "Deleted",
+	"published": "published",
+	"No articles availeable": "No articles availeable",
+	"No articles available": "No articles available"
 }

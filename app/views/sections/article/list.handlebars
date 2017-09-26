@@ -5,12 +5,18 @@
 {{/unless}}
 
 <section>
+	{{#unless articles}}
+		<div class="alert alert-info" role="alert">
+			{{__ "No articles available"}}
+		</div>
+	{{/unless}}
+
 	{{#each (limit articles 60)}}
 		<div class="jumbotron">
 			{{#if profile}}
 				{{> toolbar-edit slug="articles"}}
 			{{/if}}
-			<div class="row marketing">
+			<div class="row">
 				<div class="col-lg-6">
 					<h2><a href="/articles/{{slug title}}/">{{{title}}}</a></h2>
 					<time datetime="{{datetime createdAt}}">

@@ -76,7 +76,7 @@ router.get(
 				}
 				res.render('sections/article/list', {
 					title:      res.__('Articles'),
-					subtitle:   state.charAt(0).toUpperCase() + state.slice(1) + ' articles',
+					subtitle:   res.__('Articles') + ' - ' + res.__(state),
 					articles:   articles,
 					admin:      true,
 					state:      state,

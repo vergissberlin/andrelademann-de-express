@@ -111,8 +111,26 @@
 							 aria-expanded="false">{{__ "Articles"}}
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navigation-article">
-							<a class="dropdown-item" href="/articles/add">{{__ "Add new"}}</a>
-							<a class="dropdown-item" href="/articles/state/published/">List published</a>
+							<a class="dropdown-item"
+								 href="/articles/state/published">
+								{{{__ 'published'}}}
+								<span class="badge badge-pill badge-success pull-right">99</span>
+							</a>
+							<a class="dropdown-item"
+								 href="/articles/state/draft">
+								{{{__ 'draft'}}}
+								<span class="badge badge-pill badge-warning pull-right">99</span>
+							</a>
+							<a class="dropdown-item"
+								 href="/articles/state/deleted">
+								{{{__ 'deleted'}}}
+								<span class="badge badge-pill badge-danger pull-right">99</span>
+							</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="/articles/add">
+								{{__ "Articles"}} {{{__ 'Add'}}}
+								<i class="fa fa-plus"></i>
+							</a>
 						</div>
 					</li>
 				{{else}}
@@ -153,7 +171,7 @@
 </div>
 
 <footer class="bg-light text-muted">
-	<div class="container p-3 p-md-5">
+	<div class="container pt-3 pt-md-5 pb-3 pb-md-5">
 		<p class="float-right">
 			<a href="http://validator.w3.org/check?uri=referer"
 				 class="btn btn-md btn-default">
