@@ -1,6 +1,6 @@
-@page {
+@page :left {
   @bottom-left {
-    content: counter(page) "/" counter(pages); } }
+    content: counter(page) " / " counter(pages); } }
 
 @media print {
   body {

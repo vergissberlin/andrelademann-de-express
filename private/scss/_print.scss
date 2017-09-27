@@ -2,12 +2,14 @@
 /// Frontend styling
 ///
 /// @author André Lademann <info@andrelademann.de>
+/// @link   https://www.smashingmagazine.com/2015/01/designing-for-print-with-css/
 ////
 
-@page {
+
+@page:left{
   @bottom-left {
-       content: counter(page) "/" counter(pages);
-   }
+    content:counter(page) " / " counter(pages);
+  }
 }
 
 @media print {
