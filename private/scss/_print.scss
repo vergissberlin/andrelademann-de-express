@@ -4,6 +4,12 @@
 /// @author André Lademann <info@andrelademann.de>
 ////
 
+@page {
+  @bottom-left {
+       content: counter(page) "/" counter(pages);
+   }
+}
+
 @media print {
   body {
     background: #fff;
@@ -17,10 +23,6 @@
     border: 0;
     margin: 0;
     padding: 0;
-  }
-  body:after {
-		counter-increment: page;
-	 	content: counter(page);
   }
 
   h1, h2, h3, h4, h5 {
