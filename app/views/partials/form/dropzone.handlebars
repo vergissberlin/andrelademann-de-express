@@ -1,7 +1,9 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css"
-			integrity="sha256-0Z6mOrdLEtgqvj7tidYQnCYWG3G2GAIpatAWKhDx+VM=" crossorigin="anonymous"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.js"
-				integrity="sha256-vnXjg9TpLhXuqU0OcVO7x+DpR/H1pCeVLLSeQ/I/SUs=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/min/basic.min.css"
+			integrity="sha256-RvDmZ4ZtPtrWmZdibCa80jCE32m21xuR5SuW6zfJaW4=" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/min/dropzone.min.css"
+			integrity="sha256-e47xOkXs1JXFbjjpoRr1/LhVcqSzRmGmPqsrUQeVs+g=" crossorigin="anonymous"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/min/dropzone.min.js"
+				integrity="sha256-0dCrNKhVyiX4bBpScyU5PT/iZpxzlxjn2oyaR7GQutE=" crossorigin="anonymous"></script>
 
 <style>
 	.dropzone {
@@ -19,7 +21,7 @@
 	Dropzone.options.uploadWidget = {
 		acceptedFiles:      'image/*',
 		dictDefaultMessage: 'Drag an image here to upload, or click to select one',
-		maxFilesize:        2, // MB
+		maxFilesize:        5, // MB
 		maxFiles:           1,
 		parallelUploads:    2,
 		paramName:          'file',
@@ -36,8 +38,6 @@
 		success:            function () {
 			$('#cancel').removeClass('disabled');
 			$('#submit').removeClass('disabled');
-			$('#fileOriginalPreview').slideUp();
-
 		},
 		error:              function () {
 			$('#cancel').removeClass('disabled');

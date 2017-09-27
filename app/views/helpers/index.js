@@ -14,6 +14,7 @@ require('./crop');
 require('./compare');
 require('./capitalize');
 require('./datetime');
+// require('./debug');
 require('./html2text');
 require('./pagination');
 require('./slug');
