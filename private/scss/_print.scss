@@ -5,94 +5,160 @@
 /// @link   https://www.smashingmagazine.com/2015/01/designing-for-print-with-css/
 ////
 
+$white: #fff;
+$black: #000;
+$gray: #999;
+$link: #369;
 
-@page:left{
-  @bottom-left {
-    content:counter(page) " / " counter(pages);
-  }
+@page {
+	size: A4;
+	margin: 70pt 60pt 70pt;
+
+	:blank {
+	@top-center {
+		content: "This page is intentionally left blank."
+	}
+	}
+
+	:left {
+	@bottom-left {
+		margin: 10pt 0 30pt 0;
+		border-top: .25pt solid $gray;
+		content: counter(page) " / " counter(pages);
+		font-size: 9pt;
+		color: $black;
+	}
+	}
 }
 
 @media print {
-  body {
-    background: #fff;
-    text-align: left;
-    width: auto !important;
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-  .container {
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
 
-  h1, h2, h3, h4, h5 {
-    page-break-after: avoid;
-  }
+	@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
 
-  h1 {
-    padding: 18pt 0;
-  }
+	body {
+		background: $white;
+		width: auto !important;
+		border: 0;
+		padding: 2em 3.5em 4em 5em;
+	}
 
-	  p, address, li, dt, dd {
-    font-size: 12pt;
-  }
-  pre {
-    border: 0;
-    padding: 0;
-  }
-
-  ul {
-    list-style: square;
-    margin-left: 18pt;
-  }
-
-  ol {
-    list-style: decimal;
-    margin-left: 18pt;
-  }
-
-  li {
-    line-height: 1.6em;
-  }
-
-  abbr[title]:after, acronym[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  a[href]:after {
-    content: " <" attr(href) ">";
-    color: #369;
-    background-color: inherit;
-    font-style: italic;
-    font-size: 12pt;
-    text-decoration: underline;
-  }
+	main {
+		p {
+			text-align: justify;
+		}
+	}
 
 	*[cite]:before {
-    content: close-quote " (Quelle: " attr(cite) ")";
-    color: #369;
-    font-style: italic;
-  }
+		content: close-quote " (Quelle: " attr(cite) ")";
+		color: $link;
+		font-style: italic;
+	}
 
-	h1 {
-    font-size: 50pt;
-    letter-spacing: -6pt;
-  }
+	abbr[title]:after,
+	acronym[title]:after {
+		content: " (" attr(title) ")";
+	}
+
+	a[href]:after {
+		content: " <" attr(href) ">";
+		color: $link;
+		background-color: inherit;
+		font-style: italic;
+		font-size: 12pt;
+		text-decoration: underline;
+	}
 
 	a {
-    color: #000;
-    text-decoration: underline;
-    font-style: italic;
-  }
+		color: $black;
+		text-decoration: underline;
+		font-style: italic;
+	}
 
-	html {
-    i, em {
-      overflow: visible;
-    }
-  }
-  strong {
-    overflow: visible;
-  }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		page-break-after: avoid;
+	}
+
+	h1 {
+		padding: 4pt 0 8pt;
+		font-size: 48pt;
+	}
+
+	p,
+	address,
+	li,
+	dt,
+	dd {
+		font-size: 12pt;
+	}
+
+	pre {
+		border: 0;
+		padding: 0;
+	}
+
+	ul {
+		list-style: square;
+		margin-left: 18pt;
+	}
+
+	ol {
+		list-style: decimal;
+		margin-left: 18pt;
+	}
+
+	li {
+		line-height: 1.6em;
+	}
+
+	blockquote {
+		border: none;
+		border-left: 10px solid $gray;
+		font-size: 1.8em;
+		font-style: italic;
+		margin: 1.5em 10px;
+		padding: 0.5em 10px;
+		quotes: "\201C""\201D""\2018""\2019";
+
+		&:before {
+			color: $gray;
+			content: open-quote;
+			font-size: 3em;
+			line-height: 0.1em;
+			margin-right: 0.25em;
+			vertical-align: -0.4em;
+		}
+	}
+
+	time {
+		font-style: italic;
+	}
+
+	// Bootstrap
+	.container {
+		font-family: 'Crimson Text', serif;
+		color: $black;
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	.media {
+		padding: 0;
+		border: none;
+	}
+
+	.media-author {
+		color: $gray !important;
+		border: none !important;
+		margin: 0;
+		padding: 0;
+		border-top: $black 2px solid;
+		background: $white;
+		font-size: 8pt !important;
+	}
+
 }

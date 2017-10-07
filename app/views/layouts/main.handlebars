@@ -3,41 +3,57 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<title>{{title}}</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i%7CQuestrial%7CArvo"
-				rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-				integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="alternate stylesheet"
-				title="Dark Bootstrap"
-				href="https://bootswatch.com/darkly/bootstrap.css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
-				rel="stylesheet"
-				integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
-				crossorigin="anonymous">
 	{{#if profile}}
 		<link rel="stylesheet" href="/css/admin.css">
 	{{/if}}
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	{{#if admin}}
+		<meta name="robots" content="noindex">
+	{{else}}
+		<meta name="robots" content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if
+			robots.follow}}, follow{{else}}, nofollow{{/if}}">
+	{{/if}}
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+				rel="stylesheet"
+				integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+				crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i%7CQuestrial%7CArvo"
+				rel="stylesheet">
+	<link rel="stylesheet"
+				href="/css/style.css">
+	<meta name="msapplication-TileColor" content="#fffff">
+	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	{{#if meta.keywords}}
+		<meta name="keywords" content="{{meta.keywords}}">
+	{{/if}}
+	{{#if meta.description}}
+		<meta name="description" content="{{meta.description}}">
+	{{/if}}
+	{{> social/opengraph this}}
+	{{> social/twitter this}}
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+					integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+					crossorigin="anonymous"
+					defer>
+	</script>
 	{{#unless ENV_DEVELOPMENT}}
-		<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/manifest.json">
-		<script src="/js/vendor/mixpanel.js"></script>
-		<script src="/js/vendor/getsocial.js"></script>
+		<script src="/js/vendor/mixpanel.js" async></script>
 		<script>(function (w, d, s, l, i) {
 				w[l] = w[l] || [];
 				w[l].push({
@@ -52,27 +68,7 @@
 			}
 		)(window, document, 'script', 'dataLayer', 'GTM-K5N7CS4');
 		</script>
-		{{#if admin}}
-			<meta name="robots" content="noindex">
-		{{else}}
-			<meta name="robots" content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if
-				robots.follow}}, follow{{else}}, nofollow{{/if}}">
-		{{/if}}
 	{{/unless}}
-	<meta name="msapplication-TileColor" content="#fffff">
-	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
-	{{#if meta.keywords}}
-		<meta name="keywords" content="{{meta.keywords}}">
-	{{/if}}
-	{{#if meta.description}}
-		<meta name="description" content="{{meta.description}}">
-	{{/if}}
-	{{> social/opengraph this}}
-	{{> social/twitter this}}
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-					integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-					crossorigin="anonymous"></script>
 </head>
 <body>
 {{#unless ENV_DEVELOPMENT}}
@@ -171,28 +167,40 @@
 
 </div>
 
-<footer class="bg-light text-muted">
+<footer class="bg-light text-muted d-print-none">
 	<div class="container pt-3 pt-md-5 pb-3 pb-md-5">
 		<p class="float-right">
 			<a href="http://validator.w3.org/check?uri=referer"
 				 class="btn btn-md btn-default">
 				<i class="fa fa-html5" aria-hidden="true"></i>
+				<span class="sr-only sr-only-focusable">Validate HTML</span>
 			</a>
 
 			<a href="https://jigsaw.w3.org/css-validator/check/referer"
 				 class="btn btn-md btn-default">
 				<i class="fa fa-css3" aria-hidden="true"></i>
+				<span class="sr-only sr-only-focusable">Validate CSS</span>
 			</a>
 		</p>
 		&copy; André Lademann
 	</div>
 </footer>
-
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+			rel="stylesheet"
+			integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
+			crossorigin="anonymous">
+<link rel="alternate stylesheet"
+			title="Dark Bootstrap"
+			href="https://bootswatch.com/darkly/bootstrap.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
 				integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-				crossorigin="anonymous"></script>
+				crossorigin="anonymous"
+				async
+				defer></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
 				integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-				crossorigin="anonymous"></script>
+				crossorigin="anonymous"
+				async
+				defer></script>
 </body>
 </html>

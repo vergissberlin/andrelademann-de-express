@@ -1,8 +1,8 @@
 <header>
 {{#if tagType}}
-		<{{tagType}} class="display-3">{{title}}</{{tagType}}>
+		<{{tagType}} class="display-3 d-print-none">{{title}}</{{tagType}}>
 {{else}}
-	<p class="display-3">{{title}}</p>
+	<p class="display-3 d-print-none">{{title}}</p>
 {{/if}}
 {{#if subtitle}}
 	<p class="lead">{{capitalize subtitle}}</p>

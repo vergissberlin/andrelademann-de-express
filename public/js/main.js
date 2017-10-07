@@ -20,4 +20,11 @@ window.addEventListener('deviceorientation', function (e) {
 		.setAttribute('style', 'transform: rotate(' + Math.round(e.alpha) + 'deg)');
 }, false);
 
+$(function () {
+	$.getScript('//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js', function () {
+		$('main .img-fluid').lazyload({});
+		alert('load');
+	});
+});
+
 },{}]},{},[1]);

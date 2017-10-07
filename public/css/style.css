@@ -1,24 +1,59 @@
-@page :left {
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text");
+@page {
+  size: A4;
+  margin: 70pt 60pt 70pt;
+  @top-center {
+    :blank {
+      content: "This page is intentionally left blank."; } }
   @bottom-left {
-    content: counter(page) " / " counter(pages); } }
+    :left {
+      margin: 10pt 0 30pt 0;
+      border-top: 0.25pt solid #999;
+      content: counter(page) " / " counter(pages);
+      font-size: 9pt;
+      color: #000; } } }
 
 @media print {
   body {
     background: #fff;
-    text-align: left;
     width: auto !important;
     border: 0;
-    margin: 0;
-    padding: 0; }
-  .container {
-    border: 0;
-    margin: 0;
-    padding: 0; }
-  h1, h2, h3, h4, h5 {
+    padding: 2em 3.5em 4em 5em; }
+  main p, main i, main em {
+    text-align: justify; }
+  *[cite]:before {
+    content: close-quote " (Quelle: " attr(cite) ")";
+    color: #369;
+    font-style: italic; }
+  abbr[title]:after,
+  acronym[title]:after {
+    content: " (" attr(title) ")"; }
+  a[href]:after {
+    content: " <" attr(href) ">";
+    color: #369;
+    background-color: inherit;
+    font-style: italic;
+    font-size: 12pt;
+    text-decoration: underline; }
+  a {
+    color: #000;
+    text-decoration: underline;
+    font-style: italic; }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     page-break-after: avoid; }
   h1 {
-    padding: 18pt 0; }
-  p, i, em, address, li, dt, dd {
+    padding: 4pt 0 8pt;
+    font-size: 48pt; }
+  p, i, em,
+  address,
+  li,
+  dt,
+  dd {
     font-size: 12pt; }
   pre {
     border: 0;
@@ -31,30 +66,40 @@
     margin-left: 18pt; }
   li {
     line-height: 1.6em; }
-  abbr[title]:after, acronym[title]:after {
-    content: " (" attr(title) ")"; }
-  a[href]:after {
-    content: " <" attr(href) ">";
-    color: #369;
-    background-color: inherit;
+  blockquote {
+    border: none;
+    border-left: 10px solid #999;
+    font-size: 1.8em;
     font-style: italic;
-    font-size: 12pt;
-    text-decoration: underline; }
-  *[cite]:before {
-    content: close-quote " (Quelle: " attr(cite) ")";
-    color: #369;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "“" "”" "‘" "’"; }
+    blockquote:before {
+      color: #999;
+      content: open-quote;
+      font-size: 3em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em; }
+  time {
     font-style: italic; }
-  h1 {
-    font-size: 50pt;
-    letter-spacing: -6pt; }
-  a {
+  .container {
+    font-family: 'Crimson Text', serif;
     color: #000;
-    text-decoration: underline;
-    font-style: italic; }
-  html i, html em {
-    overflow: visible; }
-  strong {
-    overflow: visible; } }
+    border: 0;
+    margin: 0;
+    padding: 0; }
+  .media {
+    padding: 0;
+    border: none; }
+  .media-author {
+    color: #999 !important;
+    border: none !important;
+    margin: 0;
+    padding: 0;
+    border-top: #000 2px solid;
+    background: #fff;
+    font-size: 8pt !important; } }
 
 html {
   overflow-y: scroll; }

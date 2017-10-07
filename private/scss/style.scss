@@ -3,7 +3,13 @@
 ///
 /// @author André Lademann <info@andrelademann.de>
 ////
+
+// Variables
+$primary: 		#00B7FF;
+$text-color: 	#656c7a;
+
 @import "print";
+
 
 html {
 	overflow-y: scroll;
@@ -11,7 +17,7 @@ html {
 
 body {
 	font-family: 'Open Sans Condensed', sans-serif;
-	color: #656c7a;
+	color: $text-color;
 }
 
 // Logical

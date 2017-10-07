@@ -8,7 +8,6 @@
 		<header>
 			<h1 itemprop="headline">{{{article.title}}}</h1>
 			<time datetime="{{datetime article.createdAt}}"
-						class="text-muted"
 						itemprop="datePublished"
 						content="{{article.createdAt}}">
 				{{{__ 'Created at'}}}&nbsp;{{formatDate article.createdAt}}
@@ -20,19 +19,20 @@
 			</p>
 		</header>
 
+		<div itemprop="articleBody">{{{article.text}}}</div>
+
 		{{#if article.image}}
 			<figure>
-				<img src="{{config.media.cdn}}{{article.image}}" alt="{{html2text article.title}}" class="img-fluid">
+				<img src="{{config.media.images}}{{article.image}}?w=1100"
+						 class="img-fluid"
+						 alt="{{html2text article.title}}">
 				<figcaption>{{article.title}}</figcaption>
 			</figure>
 		{{/if}}
 
-		<div itemprop="articleBody">{{{article.text}}}</div>
 	</article>
 
 	{{>prism}}
-
-	{{>social/get-social}}
 
 	{{>author}}
 
