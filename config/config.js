@@ -61,7 +61,7 @@ var config = {
 			images: 'https://rsz.io/staging-cdn.andrelademann.de/'
 		},
 		port:  process.env.PORT || 3000,
-		db:    process.env.MONGODB_URI || 'mongodb://localhost/andrelademannde-staging'
+		db:    process.env.MONGOLAB_YELLOW_URI || 'mongodb://localhost/andrelademannde-staging'
 	},
 
 	production: {
@@ -79,7 +79,7 @@ var config = {
 			images: 'https://rsz.io/cdn.andrelademann.de/'
 		},
 		port:  process.env.PORT || 3000,
-		db:    process.env.MONGODB_URI
+		db:    process.env.MONGOLAB_YELLOW_URI
 	}
 };
 
