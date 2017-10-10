@@ -57,8 +57,8 @@ var config = {
 			bucket: process.env.S3_BUCKET
 		},
 		media: {
-			cdn:    'http://staging-cdn.andrelademann.de/',
-			images: 'http://staging-cdn.andrelademann.de.rsz.io/'
+			cdn:    'https://staging-cdn.andrelademann.de/',
+			images: 'https://rsz.io/staging-cdn.andrelademann.de/'
 		},
 		port:  process.env.PORT || 3000,
 		db:    process.env.MONGODB_URI || 'mongodb://localhost/andrelademannde-staging'
@@ -75,8 +75,8 @@ var config = {
 			bucket: process.env.S3_BUCKET
 		},
 		media: {
-			cdn:    'http://cdn.andrelademann.de/',
-			images: 'http://cdn.andrelademann.de.rsz.io/'
+			cdn:    'https://cdn.andrelademann.de/',
+			images: 'https://rsz.io/cdn.andrelademann.de/'
 		},
 		port:  process.env.PORT || 3000,
 		db:    process.env.MONGODB_URI
