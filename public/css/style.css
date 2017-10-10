@@ -22,10 +22,6 @@
     padding: 2em 3.5em 4em 5em; }
   main p, main i, main em {
     text-align: justify; }
-  *[cite]:before {
-    content: close-quote " (Quelle: " attr(cite) ")";
-    color: #369;
-    font-style: italic; }
   abbr[title]:after,
   acronym[title]:after {
     content: " (" attr(title) ")"; }
@@ -39,6 +35,25 @@
   a {
     color: #000;
     text-decoration: underline;
+    font-style: italic; }
+  blockquote {
+    border: none;
+    border-left: 10px solid #999;
+    font-size: 1.8em;
+    font-style: italic;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "“" "”" "‘" "’"; }
+    blockquote:before {
+      color: #999;
+      content: open-quote;
+      font-size: 3em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em; }
+  *[cite]:before {
+    content: close-quote " (Quelle: " attr(cite) ")";
+    color: #369;
     font-style: italic; }
   h1,
   h2,
@@ -58,6 +73,8 @@
   pre {
     border: 0;
     padding: 0; }
+  time {
+    font-style: italic; }
   ul {
     list-style: square;
     margin-left: 18pt; }
@@ -66,23 +83,6 @@
     margin-left: 18pt; }
   li {
     line-height: 1.6em; }
-  blockquote {
-    border: none;
-    border-left: 10px solid #999;
-    font-size: 1.8em;
-    font-style: italic;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-    quotes: "“" "”" "‘" "’"; }
-    blockquote:before {
-      color: #999;
-      content: open-quote;
-      font-size: 3em;
-      line-height: 0.1em;
-      margin-right: 0.25em;
-      vertical-align: -0.4em; }
-  time {
-    font-style: italic; }
   .container {
     font-family: 'Crimson Text', serif;
     color: #000;
