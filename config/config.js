@@ -58,7 +58,7 @@ var config = {
 		},
 		media: {
 			cdn:    'https://staging-cdn.andrelademann.de/',
-			images: 'https://rsz.io/staging-cdn.andrelademann.de/'
+			images: 'https://zimage.global.ssl.fastly.net/?url=staging-cdn.andrelademann.de/'
 		},
 		url:  process.env.URL || 'https://staging.andrelademann.de',
 		port:  process.env.PORT || 443,
@@ -77,7 +77,7 @@ var config = {
 		},
 		media: {
 			cdn:    'https://cdn.andrelademann.de/',
-			images: 'https://rsz.io/cdn.andrelademann.de/'
+			images: 'https://zimage.global.ssl.fastly.net/?url='
 		},
 		url:  process.env.URL || 'https://andrelademann.de',
 		port:  process.env.PORT || 443,
