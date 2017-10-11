@@ -60,7 +60,8 @@ var config = {
 			cdn:    'https://staging-cdn.andrelademann.de/',
 			images: 'https://rsz.io/staging-cdn.andrelademann.de/'
 		},
-		port:  process.env.PORT || 3000,
+		url:  process.env.URL || 'https://staging.andrelademann.de',
+		port:  process.env.PORT || 443,
 		db:    process.env.MONGOLAB_YELLOW_URI || 'mongodb://localhost/andrelademannde-staging'
 	},
 
@@ -78,7 +79,8 @@ var config = {
 			cdn:    'https://cdn.andrelademann.de/',
 			images: 'https://rsz.io/cdn.andrelademann.de/'
 		},
-		port:  process.env.PORT || 3000,
+		url:  process.env.URL || 'https://andrelademann.de',
+		port:  process.env.PORT || 443,
 		db:    process.env.MONGOLAB_YELLOW_URI
 	}
 };

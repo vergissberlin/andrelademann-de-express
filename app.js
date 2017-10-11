@@ -33,5 +33,5 @@ require('./config/express')(app, config);
 require('./config/passport')();
 
 app.listen(config.port, function () {
-	console.info('Express server listening on http://localhost:' + config.port);
+	console.info('Express server listening on ' + config.url + ':' + config.port);
 });
