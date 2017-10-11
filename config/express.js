@@ -48,33 +48,39 @@ module.exports = function (app, config) {
 	app.locals.ENV             = env;
 	app.locals.ENV_DEVELOPMENT = env === 'development' || env === 'home';
 
-		// Staging & production
-		if (app.get('env') === 'staging' || app.get('env') === 'production') {
+	// Staging & production
+	if (app.get('env') === 'staging' || app.get('env') === 'production') {
 
-			// Minify HTML output
-			app.use(minifyHTML({
-				override:     true,
-				exception_url: false,
-				htmlMinifier: {
-					html5:                         true,
-					removeComments:                true,
-					collapseWhitespace:            true,
-					collapseBooleanAttributes:     true,
-					removeAttributeQuotes:         true,
-					removeEmptyAttributes:         true,
-					minifyJS:                      true,
-					minifyCSS:                     true,
-					removeEmptyElements:           true,
-					removeRedundantAttributes:     true,
-					removeOptionalTags:            true,
-					removeScriptTypeAttributes:    true,
-					removeStyleLinkTypeAttributes: true,
-					sortAttributes:                true,
-					maxLineLength:                 144,
-					decodeEntities:                true
-				}
-			}));
-		}
+		// Minify HTML output
+		app.use(minifyHTML({
+			override:     true,
+			exception_url: false,
+			htmlMinifier: {
+				html5:                         true,
+				removeComments:                true,
+				collapseWhitespace:            true,
+				collapseBooleanAttributes:     true,
+				removeAttributeQuotes:         true,
+				removeEmptyAttributes:         true,
+				minifyJS:                      true,
+				minifyCSS:                     true,
+				removeEmptyElements:           true,
+				removeRedundantAttributes:     true,
+				removeOptionalTags:            true,
+				removeScriptTypeAttributes:    true,
+				removeStyleLinkTypeAttributes: true,
+				sortAttributes:                true,
+				maxLineLength:                 144,
+				decodeEntities:                true
+			}
+		}));
+
+		// Redirect to https
+		app.all('*', function(req, res) {
+		  console.log('HTTP: ' + req.url);
+		  return res.redirect('https://' + req.headers['host'] + req.url);
+		});
+	}
 
 	// Passport
 	app.use(expressSession({
