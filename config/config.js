@@ -41,7 +41,7 @@ var config = {
 		},
 		media: {
 			cdn:    'http://development-cdn.andrelademann.de/',
-			images: 'http://edge.zimage.io/?url=development-cdn.andrelademann.de'
+			images: 'http://edge.zimage.io/?url=https://development-cdn.andrelademann.de'
 		},
 		port:  process.env.PORT || 3232,
         db:    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/andrelademannde-development'
@@ -58,7 +58,7 @@ var config = {
 		},
 		media: {
 			cdn:    'https://staging-cdn.andrelademann.de/',
-			images: 'https://zimage.global.ssl.fastly.net/?url=staging-cdn.andrelademann.de'
+			images: 'https://zimage.global.ssl.fastly.net/?url=https://staging-cdn.andrelademann.de'
 		},
 		url:  process.env.URL || 'https://staging.andrelademann.de',
 		port:  process.env.PORT || 443,
@@ -77,7 +77,7 @@ var config = {
 		},
 		media: {
 			cdn:    'https://cdn.andrelademann.de/',
-			images: 'https://zimage.global.ssl.fastly.net/?url=cdn.andrelademann.de'
+			images: 'https://zimage.global.ssl.fastly.net/?url=https://cdn.andrelademann.de'
 		},
 		url:  process.env.URL || 'https://andrelademann.de',
 		port:  process.env.PORT || 443,

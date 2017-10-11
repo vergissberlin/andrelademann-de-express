@@ -1,5 +1,5 @@
 {{#if article.image}}
-	<img src="{{config.media.images}}{{article.image}}?mode=crop&w=120&h=120"
+	<img src="{{config.media.images}}{{article.image}}&mode=crop&w=120&h=120"
 			 alt="{{html2text article.title}}"
 			 class="img-fluid img-thumbnail" style="max-width: 250px; max-height: 250px">
 {{/if}}
@@ -15,7 +15,7 @@
 	</div>
 	<div class="file-tab panel-body">
 		{{#if article.image}}
-			<img src="{{config.media.images}}{{article.image}}?mode=crop&w=120&h=120"
+			<img src="{{config.media.images}}{{article.image}}&mode=crop&w=120&h=120"
 					 alt="{{html2text article.title}}"
 					 class="img-fluid img-thumbnail" style="max-width: 250px; max-height: 250px">
 		{{/if}}
