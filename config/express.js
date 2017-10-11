@@ -175,7 +175,9 @@ module.exports = function (app, config) {
 		// Minify HTML output
 		app.use(minifyHTML({
 			override:     true,
+			exception_url: false,
 			htmlMinifier: {
+				html5:                     true,
 				removeComments:            true,
 				collapseWhitespace:        true,
 				collapseBooleanAttributes: true,
