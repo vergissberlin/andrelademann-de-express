@@ -48,6 +48,33 @@ module.exports = function (app, config) {
 	app.locals.ENV             = env;
 	app.locals.ENV_DEVELOPMENT = env === 'development' || env === 'home';
 
+		// Staging & production
+		if (app.get('env') === 'staging' || app.get('env') === 'production') {
+
+			// Minify HTML output
+			app.use(minifyHTML({
+				override:     true,
+				exception_url: false,
+				htmlMinifier: {
+					html5:                         true,
+					removeComments:                true,
+					collapseWhitespace:            true,
+					collapseBooleanAttributes:     true,
+					removeAttributeQuotes:         true,
+					removeEmptyAttributes:         true,
+					minifyJS:                      true,
+					minifyCSS:                     true,
+					removeEmptyElements:           true,
+					removeRedundantAttributes:     true,
+					removeOptionalTags:            true,
+					removeScriptTypeAttributes:    true,
+					removeStyleLinkTypeAttributes: true,
+					sortAttributes:                true,
+					maxLineLength:                 144,
+					decodeEntities:                true
+				}
+			}));
+		}
 
 	// Passport
 	app.use(expressSession({
@@ -167,25 +194,6 @@ module.exports = function (app, config) {
 				title:   'error'
 			});
 		});
-	}
-
-	// Staging & production
-	if (app.get('env') === 'staging' || app.get('env') === 'production') {
-
-		// Minify HTML output
-		app.use(minifyHTML({
-			override:     true,
-			exception_url: false,
-			htmlMinifier: {
-				html5:                     true,
-				removeComments:            true,
-				collapseWhitespace:        true,
-				collapseBooleanAttributes: true,
-				removeAttributeQuotes:     false,
-				removeEmptyAttributes:     true,
-				minifyJS:                  true
-			}
-		}));
 	}
 
 	app.use(function (err, req, res) {

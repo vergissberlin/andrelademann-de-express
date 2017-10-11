@@ -22,12 +22,6 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.json">
-	{{#if admin}}
-		<meta name="robots" content="noindex">
-	{{else}}
-		<meta name="robots" content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if
-			robots.follow}}, follow{{else}}, nofollow{{/if}}">
-	{{/if}}
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
 				rel="stylesheet"
 				integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
@@ -36,6 +30,11 @@
 				rel="stylesheet">
 	<link rel="stylesheet"
 				href="/css/style.css">
+	{{#if admin}}
+		<meta name="robots" content="noindex">
+	{{else}}
+		<meta name="robots" content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if robots.follow}}, follow{{else}}, nofollow{{/if}}">
+	{{/if}}
 	<meta name="msapplication-TileColor" content="#fffff">
 	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
@@ -50,8 +49,7 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 					integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 					crossorigin="anonymous"
-					defer>
-	</script>
+					defer></script>
 	{{#unless ENV_DEVELOPMENT}}
 		<script>(function (w, d, s, l, i) {
 			w[l] = w[l] || [];
