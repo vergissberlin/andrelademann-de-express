@@ -76,9 +76,12 @@ module.exports = function (app, config) {
 		}));
 
 		// Redirect to https
-		app.all('*', function(req, res) {
-		  console.log('HTTP: ' + req.url);
-		  return res.redirect('https://' + req.headers['host'] + req.url);
+		app.all('*', function(req, res, next) {
+			if (req.headers['x-forwarded-proto'] === 'https'){
+				return next();
+			}
+			console.log('HTTP: ' + req.url);
+			return res.redirect('https://' + req.headers['host'] + req.url);
 		});
 	}
 
