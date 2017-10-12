@@ -3,6 +3,9 @@ checks:
 build:
   environment:
     node: '8.4.0'
+  tests:
+    override:
+      - scss-lint-run
 filter:
     paths:
       - "app/*"
