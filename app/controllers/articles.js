@@ -93,6 +93,27 @@ router.get(
 	});
 
 /**
+ * Articles state counter
+ *
+ * @function
+ */
+router.get(
+	'/articles/count/:state',
+	passportUtil.ensureAuthenicated,
+	function (req, res, next) {
+		var state = req.params.state;
+		Article.find()
+			.where('state').equals(state)
+			.count(function (err, count) {
+				if (err) {
+					bugsnag.notify(err);
+					return next(err);
+				}
+				res.send(JSON.stringify(count));
+			});
+	});
+
+/**
  * Add article action
  *
  * @function

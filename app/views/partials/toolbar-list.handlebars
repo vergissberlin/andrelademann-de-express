@@ -3,18 +3,24 @@
 		<div>
 			<a class="btn"
 				 href="/{{section}}/state/published">
-				<span class="hidden-xs-down">{{{ __ 'Published'}}} </span><span
-				class="badge badge-pill badge-success">99</span>
+				<span class="hidden-xs-down">{{{ __ 'Published'}}} </span>
+				<span
+					class="badge badge-pill badge-success"
+					data-ajax="/articles/count/published">99</span>
 			</a>
 			<a class="btn"
 				 href="/{{section}}/state/draft">
-				<span class="hidden-xs-down">{{{__ 'Draft'}}} </span><span
-				class="badge badge-pill badge-warning">99</span>
+				<span class="hidden-xs-down">{{{__ 'Draft'}}} </span>
+				<span
+					class="badge badge-pill badge-warning"
+					data-ajax="/articles/count/draft">99</span>
 			</a>
 			<a class="btn"
 				 href="/{{section}}/state/deleted">
-				<span class="hidden-xs-down">{{{__ 'Deleted'}}} </span><span
-				class="badge badge-pill badge-danger">99</span>
+				<span class="hidden-xs-down">{{{__ 'Deleted'}}} </span>
+				<span
+				class="badge badge-pill badge-danger"
+				data-ajax="/articles/count/deleted">99</span>
 			</a>
 			<a class="btn" href="/{{section}}/add">
 				<i class="fa fa-plus"></i>

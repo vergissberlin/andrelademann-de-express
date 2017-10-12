@@ -29,6 +29,7 @@
 	"prod": [
 		"sass",
 		"cssmin",
+		"uglify",
 		"manifest",
 		"responsive_images"
 	],

@@ -15,9 +15,9 @@
 'use strict';
 
 $(function () {
-	$.getScript('//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js', function () {
-		$('main .img-fluid').lazyload({});
-		alert('load');
+	var $elements = $('[data-ajax]');
+	$.each( $elements, function( index, value ) {
+		$(this).load($(this).data().ajax);
 	});
 });
 

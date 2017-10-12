@@ -23,6 +23,9 @@ module.exports = {
 		files: {
 			'<%= package.directories.public.js %>/main.min.js': [
 				'<%= package.directories.public.js %>/main.js'
+			],
+			'<%= package.directories.public.js %>/profile.min.js': [
+				'<%= package.directories.public.js %>/profile.js'
 			]
 		}
 	}
