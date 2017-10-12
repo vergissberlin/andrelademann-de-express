@@ -15,19 +15,19 @@ $link: #369;
 	margin: 70pt 60pt 70pt;
 
 	:blank {
-	@top-center {
-		content: "This page is intentionally left blank."
-	}
+		@top-center {
+			content: "This page is intentionally left blank."
+		}
 	}
 
 	:left {
-	@bottom-left {
-		margin: 10pt 0 30pt 0;
-		border-top: .25pt solid $gray;
-		content: counter(page) " / " counter(pages);
-		font-size: 9pt;
-		color: $black;
-	}
+		@bottom-left {
+			margin: 10pt 0 30pt 0;
+			border-top: .25pt solid $gray;
+			content: counter(page) " / " counter(pages);
+			font-size: 9pt;
+			color: $black;
+		}
 	}
 }
 
@@ -146,19 +146,21 @@ $link: #369;
 		padding: 0;
 	}
 
-	.media {
+	.media-author {
 		padding: 0;
-		border: none;
+		margin: 0;
+		border-top: none !important;
+		background-color: $white;
 	}
 
-	.media-author {
-		color: $gray !important;
-		border: none !important;
+	.media-body {
+		color: $gray;
+		border: none;
 		margin: 0;
 		padding: 0;
 		border-top: $black 2px solid;
 		background: $white;
-		font-size: 8pt !important;
+		font-size: 8pt;
 	}
 
 }

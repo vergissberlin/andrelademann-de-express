@@ -6,11 +6,11 @@
 
 <div class="imageupload panel panel-default">
 	<div class="panel-heading clearfix">
-		<h3 class="panel-title pull-left">{{__ "Upload Image"}}</h3>
+		<h3 class="panel-title pull-left">{{__ 'Upload Image'}}</h3>
 		<div class="btn-group pull-right">
 			<input type="hidden" name="image-holder" value="{{article.image}}">
-			<button type="button" class="btn btn-default active">{{__ "File"}}</button>
-			<button type="button" class="btn btn-default">{{__ "URL"}}</button>
+			<button type="button" class="btn btn-default active">{{__ 'File'}}</button>
+			<button type="button" class="btn btn-default">{{__ 'URL'}}</button>
 		</div>
 	</div>
 	<div class="file-tab panel-body">
@@ -20,19 +20,19 @@
 					 class="img-fluid img-thumbnail" style="max-width: 250px; max-height: 250px">
 		{{/if}}
 		<label class="btn btn-outline-primary btn-file" style="margin-bottom: 0">
-			<span>{{__ "Browse"}}</span>
+			<span>{{__ 'Browse'}}</span>
 			<input type="file" name="image" value="{{article.image}}" id="image">
 		</label>
-		<button type="button" class="btn btn-default">{{__ "Remove"}}</button>
+		<button type="button" class="btn btn-default">{{__ 'Remove'}}</button>
 	</div>
 	<div class="url-tab panel-body">
 		<div class="input-group">
-			<input type="text" value="{{article.image}}" class="form-control" placeholder="{{__ "Image URL"}}">
+			<input type="text" value="{{article.image}}" class="form-control" placeholder="{{__ 'Image URL'}}">
 			<div class="input-group-btn">
-				<button type="button" class="btn btn-default">{{__ "Submit"}}</button>
+				<button type="button" class="btn btn-default">{{__ 'Submit'}}</button>
 			</div>
 		</div>
-		<button type="button" class="btn btn-default" style="display: inline-block">{{__ "Remove"}}</button>
+		<button type="button" class="btn btn-default" style="display: inline-block">{{__ 'Remove'}}</button>
 		<input type="hidden" name="image-url" class="form-control">
 	</div>
 </div>

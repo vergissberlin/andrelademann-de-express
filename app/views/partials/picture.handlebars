@@ -3,5 +3,10 @@
 	<source srcset="/img/content/1024/{{src}}" media="(min-width: 820px)"/>
 	<source srcset="/img/content/640/{{src}}" media="(min-width: 370px)"/>
 	<source srcset="/img/content/320/{{src}}"/>
-	<img src="/img/content/1200/{{src}}" alt="{{html2text alt}}" title="{{html2text title}}" class="{{class}}"/>
+	<img
+		src="/img/content/1200/{{src}}"
+		lowsrc="/img/content/320/{{src}}"
+		alt="{{html2text alt}}"
+		title="{{html2text title}}"
+		class="{{class}}"/>
 </picture>

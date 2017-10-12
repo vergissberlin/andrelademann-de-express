@@ -116,9 +116,11 @@
 			<div class="col-sm-10">
 				{{#if article.image}}
 					<figure id="fileOriginalPreview">
-						<img src="{{config.media.images}}{{article.image}}&w=200&h=200&mode=crop" class="img-fluid img-rounded"
+						<img src="{{config.media.images}}{{article.image}}&w=200&h=200&mode=crop"
+								 lowsrc=""{{config.media.images}}{{article.image}}&w=200&h=200&mode=crop&quality=20&blur=20"
+								 class="img-fluid img-rounded"
 								 alt="{{html2text title}}">
-						<figcaption class="text-muted">{{config.media.images}}{{article.image}}</figcaption>
+						<figcaption class="text-muted">{{__ "Original"}}: <a href="{{config.media.cdn}}{{article.image}}" target="image">{{config.media.cdn}}{{article.image}}</a></figcaption>
 					</figure>
 				{{/if}}
 				{{> form/dropzone this file="image" name="title" }}

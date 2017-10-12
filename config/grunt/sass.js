@@ -21,7 +21,8 @@ module.exports = {
 		},
 		files:   {
 			'<%= package.directories.public.css %>/admin.css': '<%= package.directories.private.sass %>/admin.scss',
-			'<%= package.directories.public.css %>/style.css': '<%= package.directories.private.sass %>/style.scss'
+			'<%= package.directories.public.css %>/print.css': '<%= package.directories.private.sass %>/print.scss',
+			'<%= package.directories.public.css %>/screen.css': '<%= package.directories.private.sass %>/screen.scss'
 		}
 	}
 

@@ -1,0 +1,10 @@
+@charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Crimson+Text);@page{size:A4;margin:70pt 60pt 70pt;@top-center {
+    :blank {
+      content: "This page is intentionally left blank."; } }
+  @bottom-left {
+    :left {
+      margin: 10pt 0 30pt 0;
+      border-top: 0.25pt solid #999;
+      content: counter(page) " / " counter(pages);
+      font-size: 9pt;
+      color: #000; } };}@media print{a,a[href]:after{text-decoration:underline}[cite]:before,a[href]:after{color:#369;font-style:italic}[cite]:before,a,a[href]:after,blockquote,time{font-style:italic}ol,ul{margin-left:18pt}body{background:#fff;width:auto!important;border:0;padding:2em 3.5em 4em 5em}main p{text-align:justify}abbr[title]:after,acronym[title]:after{content:" (" attr(title) ")"}a[href]:after{content:" <" attr(href) ">";background-color:inherit;font-size:12pt}a{color:#000}blockquote{border:none;border-left:10px solid #999;font-size:1.8em;margin:1.5em 10px;padding:.5em 10px;quotes:"“" "”" "‘" "’"}blockquote:before{color:#999;content:open-quote;font-size:3em;line-height:.1em;margin-right:.25em;vertical-align:-.4em}[cite]:before{content:close-quote " (Quelle: " attr(cite) ")"}h1,h2,h3,h4,h5{page-break-after:avoid}h1{padding:4pt 0 8pt;font-size:48pt}address,dd,dt,li,p{font-size:12pt}pre{border:0;padding:0}ul{list-style:square}ol{list-style:decimal}.container,.media-author,.media-body{margin:0;padding:0}li{line-height:1.6em}.container{font-family:'Crimson Text',serif;color:#000;border:0}.media-author{border-top:none!important;background-color:#fff}.media-body{color:#999;border:none;border-top:#000 2px solid;background:#fff;font-size:8pt}}

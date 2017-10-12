@@ -28,6 +28,7 @@
 	],
 	"prod": [
 		"sass",
+		"cssmin",
 		"manifest",
 		"responsive_images"
 	],

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<title>{{title}}</title>
 	{{#if profile}}
-		<link rel="stylesheet" href="/css/admin.css">
+		<link rel="stylesheet" href="/css/admin{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css">
 	{{/if}}
 	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
@@ -29,7 +29,11 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i%7CQuestrial%7CArvo"
 				rel="stylesheet">
 	<link rel="stylesheet"
-				href="/css/style.css">
+				href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css"
+				media="screen">
+	<link rel="stylesheet"
+				href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css"
+				media="print">
 	{{#if admin}}
 		<meta name="robots" content="noindex">
 	{{else}}

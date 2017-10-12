@@ -26,6 +26,7 @@ var config = {
 			cdn:    'http://development-cdn.andrelademann.de/',
 			images: 'http://edge.zimage.io/?url=http://development-cdn.andrelademann.de/'
 		},
+		url:   process.env.URL || 'http://localhost',
 		port:  process.env.PORT || 3030,
 		db:    process.env.MONGODB_URI || 'mongodb://localhost:27017/andrelademannde-home'
 	},
@@ -43,8 +44,9 @@ var config = {
 			cdn:    'http://development-cdn.andrelademann.de/',
 			images: 'http://edge.zimage.io/?url=http://development-cdn.andrelademann.de/'
 		},
+		url:   process.env.URL || 'http://localhost',
 		port:  process.env.PORT || 3232,
-        db:    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/andrelademannde-development'
+		db:    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/andrelademannde-development'
 	},
 	staging:     {
 		root:  rootPath,
@@ -60,7 +62,7 @@ var config = {
 			cdn:    'https://staging-cdn.andrelademann.de/',
 			images: 'https://zimage.global.ssl.fastly.net/?url=http://staging-cdn.andrelademann.de/'
 		},
-		url:  process.env.URL || 'https://staging.andrelademann.de',
+		url:   process.env.URL || 'https://staging.andrelademann.de',
 		port:  process.env.PORT || 443,
 		db:    process.env.MONGOLAB_YELLOW_URI || 'mongodb://localhost/andrelademannde-staging'
 	},
@@ -79,7 +81,7 @@ var config = {
 			cdn:    'https://cdn.andrelademann.de/',
 			images: 'https://zimage.global.ssl.fastly.net/?url=http://cdn.andrelademann.de/'
 		},
-		url:  process.env.URL || 'https://andrelademann.de',
+		url:   process.env.URL || 'https://andrelademann.de',
 		port:  process.env.PORT || 443,
 		db:    process.env.MONGOLAB_YELLOW_URI
 	}

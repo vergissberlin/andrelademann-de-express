@@ -5,6 +5,7 @@
 				{{#if image}}
 					<img class="card-img-top"
 							 src="{{../config.media.images}}{{image}}?w=400&h=300&mode=crop"
+							 lowsrc="{{../config.media.images}}{{image}}?w=400&h=300&mode=crop&quality=20&blur=20"
 							 alt="{{html2text title}}" title="{{html2text title}}">
 				{{else}}
 					<img src="/img/content/1200/feed_ship.jpg" alt="{{title}}" class="card-img-top">

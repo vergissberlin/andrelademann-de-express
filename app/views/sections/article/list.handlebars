@@ -27,8 +27,11 @@
 				<div class="col-lg-6">
 					<a href="/articles/{{slug title}}/">
 						{{#if image}}
-							<img src="{{../config.media.images}}{{image}}&w=600&h=338&mode=crop" class="img-fluid"
-									 alt="{{html2text title}}">
+							<img
+								src="{{../config.media.images}}{{image}}&w=600&h=338&mode=crop"
+								lowsrc="{{../config.media.images}}{{image}}&w=600&h=338&mode=crop&quality=20&blur=20"
+								class="img-fluid"
+								alt="{{html2text title}}">
 						{{/if}}
 					</a>
 				</div>
