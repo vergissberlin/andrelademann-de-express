@@ -5,6 +5,8 @@
 /// @link   https://www.smashingmagazine.com/2015/01/designing-for-print-with-css/
 ////
 
+@import "variables";
+
 $white: #fff;
 $black: #000;
 $gray: #999;
@@ -32,7 +34,7 @@ $link: #369;
 }
 
 @media print {
-
+	// @import "../../node_modules/bootstrap/scss/print";
 	@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
 
 	body {
