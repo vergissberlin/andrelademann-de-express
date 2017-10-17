@@ -28,7 +28,8 @@ HTML5, Bootstrap 4 alpha CDN Version, font awesome, RDF, vCard, Microformats, Op
 
 ## Milestones
 
-[![Stories in Ready](https://badge.waffle.io/vergissberlin/andrelademann-de.png?label=ready&title=Ready)](https://waffle.io/vergissberlin/andrelademann-de) To see the current status, take a look in the milestones overview page or the on waffle.io board.
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/vergissberlin/andrelademann-de.svg?columns=all)](http://waffle.io/vergissberlin/andrelademann-de)
+To see the current status, take a look in the milestones overview page or the on waffle.io board.
 
 ### Milestone #01 - Setup and static page
 
@@ -68,7 +69,7 @@ HTML5, Bootstrap 4 alpha CDN Version, font awesome, RDF, vCard, Microformats, Op
 
 ## Contributing
 
-Please report bugs and security gaps. My promis: For every bug that you find within my source code and report it, I give an hour for your project. Thanks! :thumbsup: Fee free to contact me on [![Gitter](https://badges.gitter.im/vergissberlin/andrelademann-de.svg)](https://gitter.im/vergissberlin/andrelademann-de?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge).
+[![Stories in Ready](https://badge.waffle.io/vergissberlin/andrelademann-de.png?label=ready&title=Ready)](https://waffle.io/vergissberlin/andrelademann-de) Please report bugs and security gaps. My promis: For every bug that you find within my source code and report it, I give an hour for your project. Thanks! :thumbsup: Fee free to contact me on [![Gitter](https://badges.gitter.im/vergissberlin/andrelademann-de.svg)](https://gitter.im/vergissberlin/andrelademann-de?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge).
 
 ### Installation
 
