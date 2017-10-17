@@ -185,6 +185,18 @@ module.exports = function (app, config) {
 
 	// Development
 	if (app.get('env') === 'development' || app.get('env') === 'home') {
+		app.use(function (err, req, res) {
+			res.status(err.status || 500);
+			res.render('error', {
+				message: err.message,
+				error:   err,
+				title:   'error'
+			});
+		});
+	}
+
+	// Staging & Production
+	if (app.get('env') === 'staging' || app.get('env') === 'production') {
 		app.use(bugsnag.requestHandler);
 		app.use(bugsnag.errorHandler);
 		app.use(function (err, req, res) {
