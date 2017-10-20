@@ -20,8 +20,9 @@ module.exports = {
 			style: 'expanded'
 		},
 		files:   {
-			'<%= package.directories.public.css %>/admin.css': '<%= package.directories.private.sass %>/admin.scss',
-			'<%= package.directories.public.css %>/print.css': '<%= package.directories.private.sass %>/print.scss',
+			'<%= package.directories.public.css %>/admin.css':  '<%= package.directories.private.sass %>/admin.scss',
+			'<%= package.directories.public.css %>/fonts.css':  '<%= package.directories.private.sass %>/fonts.scss',
+			'<%= package.directories.public.css %>/print.css':  '<%= package.directories.private.sass %>/print.scss',
 			'<%= package.directories.public.css %>/screen.css': '<%= package.directories.private.sass %>/screen.scss'
 		}
 	}

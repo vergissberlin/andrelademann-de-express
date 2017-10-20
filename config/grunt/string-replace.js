@@ -23,6 +23,10 @@ module.exports = {
 		options: {
 			replacements: [
 				{
+					pattern:     '<style data-replace="fonts"></style>',
+					replacement: "<style><%= grunt.file.read('public/css/fonts.min.css') %></style>"
+				},
+				{
 					pattern:     '<style data-replace="critical"></style>',
 					replacement: "<style><%= grunt.file.read('public/css/critical.min.css') %></style>"
 				},

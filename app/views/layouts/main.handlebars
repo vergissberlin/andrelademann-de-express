@@ -2,9 +2,10 @@
 <html lang="{{local}}">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{title}}</title>
+	<style data-replace="fonts"></style>
 	<style data-replace="critical"></style>
 	{{#if profile}}
 		<link rel="stylesheet" href="/css/admin{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css">
@@ -27,15 +28,9 @@
 	<noscript>
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
 					integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i%7CQuestrial%7CArvo"
-					rel="stylesheet">
 		<link rel="stylesheet" href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="screen">
 		<link rel="stylesheet" href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="print">
 	</noscript>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i%7CQuestrial%7CArvo"
-				rel="preload"
-				as="style"
-				onload="this.rel='stylesheet'">
 	<link rel="preload" href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="print" as="style"
 				onload="this.rel='stylesheet'">
 	<link rel="preload" href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="screen" as="style"

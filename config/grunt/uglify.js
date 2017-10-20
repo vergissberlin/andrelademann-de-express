@@ -32,7 +32,7 @@ module.exports = {
 
 	critical: {
 		options: {
-			sourceMap: false
+			compress: false
 		},
 		files:   {
 			'<%= package.directories.public.js %>/critical.min.js': [

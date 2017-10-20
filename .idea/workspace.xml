@@ -5,32 +5,23 @@
     <bookmark url="file://$PROJECT_DIR$/public/critical-test.html" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2673426-47a4-4a0d-b4a4-41f3cc710847" name="Default" comment="Implement critical css. refs #57">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/grunt/critical.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/config/grunt/string-replace.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/private/js/critical.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/private/server/ssl/localhost.crt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/private/server/ssl/localhost.key" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/critical-test.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/css/critical.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/css/critical.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/js/critical.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/public/js/critical.min.js" />
+    <list default="true" id="f2673426-47a4-4a0d-b4a4-41f3cc710847" name="Default" comment="Remove shrink-to-fit=no">
+      <change beforePath="" afterPath="$PROJECT_DIR$/private/scss/fonts.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/css/fonts.min.css" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change beforePath="$PROJECT_DIR$/app/views/helpers/capitalize.js" afterPath="$PROJECT_DIR$/app/views/helpers/capitalize.js" />
-      <change beforePath="$PROJECT_DIR$/app/views/helpers/limit.js" afterPath="$PROJECT_DIR$/app/views/helpers/limit.js" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" afterPath="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/main.handlebars" afterPath="$PROJECT_DIR$/app/views/layouts/main.handlebars" />
-      <change beforePath="$PROJECT_DIR$/config/express.js" afterPath="$PROJECT_DIR$/config/express.js" />
-      <change beforePath="$PROJECT_DIR$/config/grunt/aliases.json" afterPath="$PROJECT_DIR$/config/grunt/aliases.json" />
+      <change beforePath="$PROJECT_DIR$/config/grunt/sass.js" afterPath="$PROJECT_DIR$/config/grunt/sass.js" />
+      <change beforePath="$PROJECT_DIR$/config/grunt/string-replace.js" afterPath="$PROJECT_DIR$/config/grunt/string-replace.js" />
       <change beforePath="$PROJECT_DIR$/config/grunt/uglify.js" afterPath="$PROJECT_DIR$/config/grunt/uglify.js" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change beforePath="$PROJECT_DIR$/private/scss/screen.scss" afterPath="$PROJECT_DIR$/private/scss/screen.scss" />
-      <change beforePath="$PROJECT_DIR$/private/server/ssl/ca.crt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/private/server/ssl/ca.key" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/public/css/critical.css" afterPath="$PROJECT_DIR$/public/css/critical.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/critical.min.css" afterPath="$PROJECT_DIR$/public/css/critical.min.css" />
       <change beforePath="$PROJECT_DIR$/public/css/screen.css" afterPath="$PROJECT_DIR$/public/css/screen.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/screen.min.css" afterPath="$PROJECT_DIR$/public/css/screen.min.css" />
+      <change beforePath="$PROJECT_DIR$/public/js/critical.js" afterPath="$PROJECT_DIR$/public/js/critical.js" />
+      <change beforePath="$PROJECT_DIR$/public/js/critical.min.js" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,71 +36,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="uglify.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/grunt/uglify.js">
+      <file leaf-file-name="fonts.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/scss/fonts.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            <state relative-caret-position="15">
+              <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+              <folding>
+                <element signature="e#86#289939#0" expanded="false" />
+                <element signature="e#121#289877#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/main.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="29" column="118" lean-forward="false" selection-start-line="29" selection-start-column="118" selection-end-line="29" selection-end-column="118" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aliases.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/grunt/aliases.json">
+      <file leaf-file-name="string-replace.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/grunt/string-replace.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+            <state relative-caret-position="510">
+              <caret line="34" column="66" lean-forward="false" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="express.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/express.js">
+      <file leaf-file-name="screen.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/private/scss/screen.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="116" column="18" lean-forward="true" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="24" column="71" lean-forward="true" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="localhost.crt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/server/ssl/localhost.crt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="localhost.key" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/server/ssl/localhost.key">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="critical-result.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/critical-result.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="587">
+              <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -118,35 +82,8 @@
       <file leaf-file-name="main-critical.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/main-critical.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-              <folding>
-                <element signature="e#2189#2432#2#HTML" expanded="true" />
-                <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#6827#6833#0#HTML" expanded="true" />
-                <element signature="e#9036#9042#1#HTML" expanded="true" />
-                <element signature="e#9253#9259#1#HTML" expanded="true" />
-                <element signature="e#9960#9966#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="critical.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/js/critical.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="critical.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/grunt/critical.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+            <state relative-caret-position="647">
+              <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -163,18 +100,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>public</find>
-      <find>embed.js</find>
-      <find>disqu</find>
-      <find>embed</find>
-      <find>http</find>
-      <find>listen(</find>
-      <find>fs.readFileSync</find>
-      <find>createServer</find>
-      <find>listen</find>
-      <find>require('express')</find>
-      <find>https</find>
-      <find>&lt;img</find>
       <find>unle</find>
       <find>card-deck mb-4</find>
       <find>max</find>
@@ -193,11 +118,24 @@
       <find>ugli</find>
       <find>.pem</find>
       <find>ca.</find>
+      <find>shrin</find>
+      <find>, shrink-to-fit=no</find>
+      <find>:b</find>
+      <find>scree</find>
+      <find>print.css</find>
+      <find />
+      <find>main.js</find>
+      <find>profile.js</find>
+      <find>\n</find>
+      <find>repla</find>
+      <find>repl</find>
+      <find>open</find>
     </findStrings>
     <replaceStrings>
-      <replace />
       <replace>badge</replace>
       <replace>'</replace>
+      <replace />
+      <replace>::b</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/views</dir>
@@ -214,10 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/grunt/jsdoc2md.js" />
-        <option value="$PROJECT_DIR$/doc/template.hbs" />
-        <option value="$PROJECT_DIR$/doc/docs.md" />
-        <option value="$PROJECT_DIR$/config/grunt/doxdox.js" />
         <option value="$PROJECT_DIR$/.eshintignore" />
         <option value="$PROJECT_DIR$/.dockerignore" />
         <option value="$PROJECT_DIR$/.scrutinizer.yml" />
@@ -227,7 +161,6 @@
         <option value="$PROJECT_DIR$/.travis.yml" />
         <option value="$PROJECT_DIR$/config/grunt/develop.js" />
         <option value="$PROJECT_DIR$/config/grunt/watch.js" />
-        <option value="$PROJECT_DIR$/config/grunt/sass.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/grunt/browserSync.js" />
@@ -250,21 +183,26 @@
         <option value="$PROJECT_DIR$/app/views/helpers/printFile.js" />
         <option value="$PROJECT_DIR$/public/css/critical.css" />
         <option value="$PROJECT_DIR$/public/css/screen.css" />
-        <option value="$PROJECT_DIR$/private/scss/screen.scss" />
         <option value="$PROJECT_DIR$/app/views/helpers/index.js" />
         <option value="$PROJECT_DIR$/public/critical-result.html" />
         <option value="$PROJECT_DIR$/app/views/layouts/main-critical-css.handlebars" />
-        <option value="$PROJECT_DIR$/app/views/layouts/main.handlebars" />
         <option value="$PROJECT_DIR$/config/express.js" />
-        <option value="$PROJECT_DIR$/config/grunt/string-replace.js" />
-        <option value="$PROJECT_DIR$/config/grunt/uglify.js" />
         <option value="$PROJECT_DIR$/config/grunt/aliases.json" />
         <option value="$PROJECT_DIR$/private/server/ssl/localhost-key.pem" />
         <option value="$PROJECT_DIR$/private/server/ssl/localhost-cert.pem" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/config/grunt/critical.js" />
+        <option value="$PROJECT_DIR$/private/scss/_fonts.scss" />
+        <option value="$PROJECT_DIR$/private/scss/basic/_fonts-fontawsome.scss" />
+        <option value="$PROJECT_DIR$/private/scss/basic/_fonts.scss" />
+        <option value="$PROJECT_DIR$/config/grunt/sass.js" />
+        <option value="$PROJECT_DIR$/private/scss/fonts.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" />
         <option value="$PROJECT_DIR$/private/js/critical.js" />
-        <option value="$PROJECT_DIR$/config/grunt/critical.js" />
+        <option value="$PROJECT_DIR$/config/grunt/uglify.js" />
+        <option value="$PROJECT_DIR$/config/grunt/string-replace.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/main.handlebars" />
+        <option value="$PROJECT_DIR$/private/scss/screen.scss" />
       </list>
     </option>
   </component>
@@ -388,13 +326,6 @@
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="critical.js" type="620a8d5e:NestingTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -411,15 +342,17 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/private/scss" />
+      <recent name="$PROJECT_DIR$/private/scss/basic" />
       <recent name="$PROJECT_DIR$/private/server/ssl" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/private/server/ssl" />
       <recent name="$PROJECT_DIR$/config/grunt" />
       <recent name="$PROJECT_DIR$/app/views/helpers" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/public/img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -487,7 +420,7 @@
       <workItem from="1508777539471" duration="459000" />
       <workItem from="1508872224646" duration="206000" />
       <workItem from="1508872662983" duration="1852000" />
-      <workItem from="1508876022113" duration="8749000" />
+      <workItem from="1508876022113" duration="12564000" />
     </task>
     <task id="LOCAL-00001" summary="Added yarn lock file to prevent dependency hell">
       <created>1498716591453</created>
@@ -545,11 +478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508875446115</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implement critical css. refs #57">
+      <created>1508886642925</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1508886642926</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75606000" />
+    <option name="totallyTimeSpent" value="79421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -641,7 +581,9 @@
     <MESSAGE value="Added SSL for development environment. closes #53" />
     <MESSAGE value="Added picture tag with responsive image versions. resolves #50" />
     <MESSAGE value="Implemented and checked ETags ##56" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented and checked ETags ##56" />
+    <MESSAGE value="Implement critical css. refs #57" />
+    <MESSAGE value="Added fonts as base64 encoded. refs #57" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fonts as base64 encoded. refs #57" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -663,34 +605,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/private/server/ssl/ca.key">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="43" lean-forward="true" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="91" column="8" lean-forward="false" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/picture.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sections/article/list.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="29" column="69" lean-forward="false" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sections/article/detail.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -795,30 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/critical-test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="192" column="14" lean-forward="true" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
-          <folding>
-            <element signature="e#3502#3508#0" expanded="false" />
-            <element signature="e#10711#10715#0" expanded="false" />
-            <element signature="e#10822#10826#0" expanded="false" />
-            <element signature="e#10828#10832#0" expanded="false" />
-            <element signature="e#10978#10982#0" expanded="false" />
-            <element signature="e#10982#10986#0" expanded="false" />
-            <element signature="e#10993#10997#0" expanded="false" />
-            <element signature="e#10999#11003#0" expanded="false" />
-            <element signature="e#11199#11203#0" expanded="false" />
-            <element signature="e#11203#11207#0" expanded="false" />
-            <element signature="e#11214#11218#0" expanded="false" />
-            <element signature="e#11220#11224#0" expanded="false" />
-            <element signature="e#11426#11430#0" expanded="false" />
-            <element signature="e#11430#11434#0" expanded="false" />
-            <element signature="e#11441#11445#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/helpers/limit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -899,14 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/scss/screen.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="88" column="14" lean-forward="false" selection-start-line="88" selection-start-column="14" selection-end-line="88" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/critical.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -943,35 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/main.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="216" column="41" lean-forward="false" selection-start-line="216" selection-start-column="41" selection-end-line="216" selection-end-column="41" />
-          <folding>
-            <element signature="e#4315#4321#0#HTML" expanded="false" />
-            <element signature="e#6524#6530#1#HTML" expanded="false" />
-            <element signature="e#6741#6747#1#HTML" expanded="false" />
-            <element signature="e#7448#7454#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/grunt/string-replace.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/grunt/uglify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1027,23 +880,7 @@
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
-          <caret line="24" column="71" lean-forward="true" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/server/ssl/localhost.crt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/server/ssl/localhost.key">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <caret line="24" column="71" lean-forward="false" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -1056,25 +893,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/main-critical.handlebars">
+    <entry file="file://$PROJECT_DIR$/private/scss/basic/_fonts-fontawsome.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-          <folding>
-            <element signature="e#2189#2432#2#HTML" expanded="true" />
-            <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#6827#6833#0#HTML" expanded="true" />
-            <element signature="e#9036#9042#1#HTML" expanded="true" />
-            <element signature="e#9253#9259#1#HTML" expanded="true" />
-            <element signature="e#9960#9966#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="262">
+          <caret line="62" column="11" lean-forward="true" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/js/critical.js">
+    <entry file="file://$PROJECT_DIR$/public/critical-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="8" lean-forward="false" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
+        <state relative-caret-position="360">
+          <caret line="24" column="41" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/server/ssl/localhost.key">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/server/ssl/localhost.crt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1083,6 +929,81 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" column="7" lean-forward="false" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/grunt/sass.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/scss/print.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/js/critical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/grunt/uglify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/scss/fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding>
+            <element signature="e#86#289939#0" expanded="false" />
+            <element signature="e#121#289877#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/main-critical.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/grunt/string-replace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="66" lean-forward="false" selection-start-line="34" selection-start-column="66" selection-end-line="34" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/main.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="29" column="118" lean-forward="false" selection-start-line="29" selection-start-column="118" selection-end-line="29" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/scss/screen.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
           <folding />
         </state>
       </provider>
