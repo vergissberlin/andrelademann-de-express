@@ -26,7 +26,7 @@ var config = {
 			cdn:    'http://development-cdn.andrelademann.de/',
 			images: 'http://edge.zimage.io/?url=http://development-cdn.andrelademann.de/'
 		},
-		url:   process.env.URL || 'http://localhost',
+		url:   process.env.URL || 'https://localhost',
 		port:  process.env.PORT || 3030,
 		db:    process.env.MONGODB_URI || 'mongodb://localhost:27017/andrelademannde-home'
 	},
@@ -44,7 +44,7 @@ var config = {
 			cdn:    'http://development-cdn.andrelademann.de/',
 			images: 'http://edge.zimage.io/?url=http://development-cdn.andrelademann.de/'
 		},
-		url:   process.env.URL || 'http://localhost',
+		url:   process.env.URL || 'https://localhost',
 		port:  process.env.PORT || 3232,
 		db:    process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/andrelademannde-development'
 	},

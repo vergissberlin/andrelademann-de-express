@@ -1,3 +1,12 @@
+var
+	env      = require('dotenv').config(),
+	express  = require('express'),
+	config   = require('./config/config'),
+	glob     = require('glob'),
+	fs       = require('fs'),
+	https    = require('https'),
+	mongoose = require('mongoose');
+
 /**
  * Slug view helper
  *
@@ -8,15 +17,15 @@
  */
 'use strict';
 
-var
-	env      = require('dotenv').config(),
-	express  = require('express'),
-	config   = require('./config/config'),
-	glob     = require('glob'),
-	mongoose = require('mongoose');
-
 mongoose.Promise = global.Promise;
 mongoose.connect(config.db, {useMongoClient: true});
+
+var sslOptions = {
+	key:                fs.readFileSync('./private/server/ssl/ca.key'),
+	cert:               fs.readFileSync('./private/server/ssl/ca.crt'),
+	requestCert:        false,
+	rejectUnauthorized: false
+};
 
 var db = mongoose.connection;
 db.on('error', function () {
@@ -32,6 +41,14 @@ var app = express();
 require('./config/express')(app, config);
 require('./config/passport')();
 
-app.listen(config.port, function () {
-	console.info('Express server listening on ' + config.url + ':' + config.port);
-});
+
+if (process.env.NODE_ENV === 'development') {
+	https.createServer(sslOptions, app).listen(config.port, function () {
+		console.log('Express server with ssl listen on  ' + config.url + ':' + config.port);
+	});
+} else {
+	app.listen(config.port, function () {
+		console.info('Express server listening on ' + config.url + ':' + config.port);
+	});
+}
+
