@@ -27,11 +27,7 @@
 				<div class="col-lg-6">
 					<a href="/articles/{{slug title}}/">
 						{{#if image}}
-							<img
-								src="{{../config.media.images}}{{image}}&w=600&h=338&mode=crop"
-								lowsrc="{{../config.media.images}}{{image}}&w=600&h=338&mode=crop&quality=1"
-								class="img-fluid"
-								alt="{{html2text title}}">
+							{{> picture src=image config=../config class="img-fluid" crop=true alt=title title=title }}
 						{{/if}}
 					</a>
 				</div>

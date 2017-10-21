@@ -23,11 +23,7 @@
 
 		{{#if article.image}}
 			<figure class="d-print-none">
-				<img
-					src="{{config.media.images}}{{article.image}}&w=1100"
-					lowsrc="{{config.media.images}}{{article.image}}&w=1100&quality=1"
-					class="img-fluid"
-					alt="{{html2text article.title}}">
+				{{> picture src=article.image config=config class="img-fluid img-thumbnail" alt=article.title title=article.title }}
 				<figcaption>{{article.title}}</figcaption>
 			</figure>
 		{{/if}}

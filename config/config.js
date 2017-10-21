@@ -41,8 +41,8 @@ var config = {
 			bucket: process.env.S3_BUCKET
 		},
 		media: {
-			cdn:    'http://development-cdn.andrelademann.de/',
-			images: 'http://edge.zimage.io/?url=http://development-cdn.andrelademann.de/'
+			cdn:    'https://development-cdn.andrelademann.de/',
+			images: 'https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/'
 		},
 		url:   process.env.URL || 'https://localhost',
 		port:  process.env.PORT || 3232,
