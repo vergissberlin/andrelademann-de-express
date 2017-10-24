@@ -3,7 +3,6 @@
 ///
 /// @author André Lademann <info@andrelademann.de>
 ////
-
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -37,30 +36,34 @@
 //@import "../../node_modules/bootstrap/scss/carousel";
 @import "../../node_modules/bootstrap/scss/utilities";
 
-
 // Variables
-$primary: 		#00B7FF;
-$text-color: 	#656c7a;
+$primary: #00B7FF;
+$text-color: #656c7a;
 
 html {
+	@extend html;
 	overflow-y: scroll;
 }
 
 body {
+	@extend body;
 	font-family: 'Open Sans Condensed', sans-serif;
 	color: $text-color;
 }
 
 // Logical
 header {
+	@extend header;
 	margin-top: 20px;
 }
 
 main {
+	@extend main;
 	margin-top: 20px;
 }
 
 footer {
+	@extend footer;
 	padding-top: 5px;
 	margin-top: 30px;
 	color: #bbb;
@@ -69,6 +72,7 @@ footer {
 
 // Content
 p {
+	@extend p;
 	font-weight: 300;
 }
 
@@ -82,17 +86,19 @@ i, em {
 }
 
 img {
+	@extend img;
 	background-color: #efefef;
 }
 
 pre {
+	@extend pre;
 	font-size: 1em;
 }
 
 // Classes
 .media-author {
 	padding: 20px 30px;
-	color:  #7b90bb;
+	color: #7b90bb;
 	background-color: #f0f8ff;
 	border-top: 10px #a3b0c6 solid;
 }

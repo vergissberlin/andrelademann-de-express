@@ -103,10 +103,10 @@ module.exports = function (app, config) {
 
     // Rendering
     app.engine('handlebars', expressHandlebars({
-        layoutsDir:    config.root + '/app/views/layouts/',
-        partialsDir:   [config.root + '/app/views/partials/'],
-        defaultLayout: 'main',
-        helpers:       helpers
+        layoutsDir:  config.root + '/app/views/layouts/',
+        partialsDir: [config.root + '/app/views/partials/'],
+			defaultLayout: 'main-critical',
+        helpers:     helpers
     }));
 
     // Views

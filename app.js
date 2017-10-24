@@ -21,8 +21,8 @@ mongoose.Promise = global.Promise;
 mongoose.connect(config.db, {useMongoClient: true});
 
 var sslOptions = {
-	key:                fs.readFileSync('./private/server/ssl/ca.key'),
-	cert:               fs.readFileSync('./private/server/ssl/ca.crt'),
+	key:                fs.readFileSync('./private/server/ssl/localhost.key'),
+	cert:               fs.readFileSync('./private/server/ssl/localhost.crt'),
 	requestCert:        false,
 	rejectUnauthorized: false
 };

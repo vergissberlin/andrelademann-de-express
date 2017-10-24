@@ -15,17 +15,28 @@
 
 module.exports = {
 
-	all: {
+	production: {
 		options: {
-			sourceMap: true,
+			sourceMap:     true,
 			sourceMapName: '<%= package.directories.public.js %>/sourcemap.map'
 		},
-		files: {
-			'<%= package.directories.public.js %>/main.min.js': [
+		files:   {
+			'<%= package.directories.public.js %>/main.min.js':    [
 				'<%= package.directories.public.js %>/main.js'
 			],
 			'<%= package.directories.public.js %>/profile.min.js': [
 				'<%= package.directories.public.js %>/profile.js'
+			]
+		}
+	},
+
+	critical: {
+		options: {
+			sourceMap: false
+		},
+		files:   {
+			'<%= package.directories.public.js %>/critical.min.js': [
+				'<%= package.directories.public.js %>/critical.js'
 			]
 		}
 	}

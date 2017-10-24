@@ -5,7 +5,190 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{title}}</title>
-	<style data-replace="critical"></style>
+	<style>.nav-link, nav {
+		display: block
+	}
+
+	*, ::after, ::before {
+		box-sizing: border-box
+	}
+
+	html {
+		font-family: sans-serif;
+		line-height: 1.15;
+		-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+		-ms-overflow-style: scrollbar
+	}
+
+	@-ms-viewport {
+		width: device-width
+	}
+
+	body {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.5;
+		text-align: left;
+		background-color: #fff
+	}
+
+	ul {
+		margin-top: 0;
+		margin-bottom: 1rem
+	}
+
+	a {
+		color: #007bff;
+		text-decoration: none;
+		background-color: transparent;
+		-webkit-text-decoration-skip: objects
+	}
+
+	a, button {
+		touch-action: manipulation
+	}
+
+	button {
+		margin: 0;
+		font-family: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		overflow: visible;
+		text-transform: none
+	}
+
+	button, html [type=button] {
+		-webkit-appearance: button
+	}
+
+	[type=button]::-moz-focus-inner, button::-moz-focus-inner {
+		padding: 0;
+		border-style: none
+	}
+
+	::-webkit-file-upload-button {
+		font: inherit;
+		-webkit-appearance: button
+	}
+
+	.container {
+		margin-right: auto;
+		margin-left: auto;
+		padding-right: 15px;
+		padding-left: 15px;
+		width: 100%
+	}
+
+	.nav-link, .navbar {
+		padding: .5rem 1rem
+	}
+
+	.navbar {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between
+	}
+
+	.navbar-brand {
+		display: inline-block;
+		padding-top: .3125rem;
+		padding-bottom: .3125rem;
+		margin-right: 1rem;
+		font-size: 1.25rem;
+		line-height: inherit;
+		white-space: nowrap
+	}
+
+	.navbar-nav {
+		display: flex;
+		flex-direction: column;
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style: none
+	}
+
+	.navbar-nav .nav-link {
+		padding-right: 0;
+		padding-left: 0
+	}
+
+	.navbar-collapse {
+		flex-basis: 100%;
+		align-items: center
+	}
+
+	.navbar-toggler {
+		padding: .25rem .75rem;
+		font-size: 1.25rem;
+		line-height: 1;
+		background: 0 0;
+		border: 1px solid transparent;
+		border-radius: .25rem
+	}
+
+	.navbar-toggler-icon {
+		display: inline-block;
+		width: 1.5em;
+		height: 1.5em;
+		vertical-align: middle;
+		content: "";
+		background: center center no-repeat;
+		background-size: 100% 100%
+	}
+
+	.navbar-light .navbar-brand {
+		color: rgba(0, 0, 0, .9)
+	}
+
+	.navbar-light .navbar-nav .nav-link {
+		color: rgba(0, 0, 0, .5)
+	}
+
+	.navbar-light .navbar-toggler {
+		color: rgba(0, 0, 0, .5);
+		border-color: rgba(0, 0, 0, .1)
+	}
+
+	.navbar-light .navbar-toggler-icon {
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+	}
+
+	.bg-light {
+		background-color: #f8f9fa !important
+	}
+
+	.rounded {
+		border-radius: .25rem !important
+	}
+
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		clip-path: inset(50%);
+		border: 0
+	}
+
+	.mr-auto {
+		margin-right: auto !important
+	}
+
+	html {
+		overflow-y: scroll
+	}
+
+	body {
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: #656c7a
+	}</style>
 	{{#if profile}}
 		<link rel="stylesheet" href="/css/admin{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css">
 	{{/if}}
@@ -214,6 +397,65 @@
 				integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
 				crossorigin="anonymous"
 				async></script>
-<script data-replace="critical"></script>
+<script>!function (e) {
+	"use strict";
+	var t = function (t, n, r) {
+		function o(e) {
+			if (i.body) return e();
+			setTimeout(function () {
+				o(e)
+			})
+		}
+
+		function a() {
+			d.addEventListener && d.removeEventListener("load", a), d.media = r || "all"
+		}
+
+		var l, i = e.document, d = i.createElement("link");
+		if (n) l = n; else {
+			var s = (i.body || i.getElementsByTagName("head")[0]
+			).childNodes;
+			l = s[s.length - 1]
+		}
+		var u = i.styleSheets;
+		d.rel = "stylesheet", d.href = t, d.media = "only x", o(function () {
+			l.parentNode.insertBefore(d, n ? l : l.nextSibling)
+		});
+		var f = function (e) {
+			for (var t = d.href, n = u.length; n--;) if (u[n].href === t) return e();
+			setTimeout(function () {
+				f(e)
+			})
+		};
+		return d.addEventListener && d.addEventListener("load", a), d.onloadcssdefined = f, f(a), d
+	};
+	"undefined" != typeof exports ? exports.loadCSS = t : e.loadCSS = t
+}("undefined" != typeof global ? global : this), function (e) {
+	if (e.loadCSS) {
+		var t = loadCSS.relpreload = {};
+		if (t.support = function () {
+				try {
+					return e.document.createElement("link").relList.supports("preload")
+				} catch (e) {
+					return !1
+				}
+			}, t.poly = function () {
+				for (var t = e.document.getElementsByTagName("link"), n = 0; n < t.length; n++) {
+					var r = t[n];
+					"preload" === r.rel && "style" === r.getAttribute("as") &&
+					(e.loadCSS(r.href, r, r.getAttribute("media")), r.rel = null
+					)
+				}
+			}, !t.support()) {
+			t.poly();
+			var n = e.setInterval(t.poly, 300);
+			e.addEventListener && e.addEventListener("load", function () {
+				t.poly(), e.clearInterval(n)
+			}), e.attachEvent && e.attachEvent("onload", function () {
+				e.clearInterval(n)
+			})
+		}
+	}
+}(this);</script>
 </body>
 </html>

@@ -6,7 +6,7 @@
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
  * @example
- *  {{{#capitalize value}}}
+ *  {{{capitalize value}}}
  */
 'use strict';
 var
