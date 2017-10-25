@@ -31,11 +31,6 @@ body {
 	background-color: #fff;
 }
 
-ul {
-	margin-top: 0;
-	margin-bottom: 1rem;
-}
-
 a {
 	color: #007bff;
 	text-decoration: none;
@@ -87,11 +82,6 @@ button::-moz-focus-inner,
 	width: 100%;
 }
 
-.nav-link {
-	display: block;
-	padding: 0.5rem 1rem;
-}
-
 .navbar {
 	position: relative;
 	display: flex;
@@ -109,24 +99,6 @@ button::-moz-focus-inner,
 	font-size: 1.25rem;
 	line-height: inherit;
 	white-space: nowrap;
-}
-
-.navbar-nav {
-	display: flex;
-	flex-direction: column;
-	padding-left: 0;
-	margin-bottom: 0;
-	list-style: none;
-}
-
-.navbar-nav .nav-link {
-	padding-right: 0;
-	padding-left: 0;
-}
-
-.navbar-collapse {
-	flex-basis: 100%;
-	align-items: center;
 }
 
 .navbar-toggler {
@@ -150,10 +122,6 @@ button::-moz-focus-inner,
 
 .navbar-light .navbar-brand {
 	color: rgba(0, 0, 0, 0.9);
-}
-
-.navbar-light .navbar-nav .nav-link {
-	color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-light .navbar-toggler {
@@ -183,10 +151,6 @@ button::-moz-focus-inner,
 	white-space: nowrap;
 	clip-path: inset(50%);
 	border: 0;
-}
-
-.mr-auto {
-	margin-right: auto !important;
 }
 
 html {

@@ -19,11 +19,15 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.json">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
-				integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i%7CQuestrial%7CArvo" rel="stylesheet">
-	<link rel="stylesheet" href="/css/screen.css" media="screen">
-	<link rel="stylesheet" href="/css/print.css" media="print">
+
+	<noscript>
+		<link rel="stylesheet" href="/css/screen.css" media="screen">
+		<link rel="stylesheet" href="/css/print.css" media="print">
+	</noscript>
+	<link rel="preload" href="/css/print.css" media="print" as="style"
+				onload="this.rel='stylesheet'">
+	<link rel="preload" href="/css/screen.css" media="screen" as="style"
+				onload="this.rel='stylesheet'">
 	<meta name="robots" content="noindex, follow">
 	<meta name="msapplication-TileColor" content="#fffff">
 	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
@@ -38,7 +42,8 @@
 
 </head>
 <body>
-<a class="sr-only sr-only-focusable" href="#content">Zum Inhalt springen</a>
+<a class="sr-only sr-only-focusable"
+	 href="#content">Zum Inhalt springen</a>
 <div class="container">
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light rounded d-print-none">
@@ -55,7 +60,8 @@
 			<ul class="navbar-nav mr-auto">
 
 				<li class="nav-item">
-					<a class="nav-link" href="/articles/">
+					<a class="nav-link"
+						 href="/articles/">
 						Artikel</a>
 				</li>
 
@@ -66,131 +72,121 @@
 			</ul>
 
 			<div class="form-inline my-2 my-md-0">
-				<a class="btn btn-sm btn-outline-primary btn-block" href="/user/login/">
-					<i class="fa fa-sign-in" aria-hidden="true"></i> <span class="hidden-sm-down">&nbsp;Log in</span>
+				<a class="btn btn-outline-primary btn-block" href="/user/login/">
+					<i class="fa fa-sign-in"
+						 aria-hidden="true"></i> <span
+					class="hidden-sm-down">&nbsp;Log in</span>
 				</a>
 			</div>
 		</div>
 	</nav>
 
 	<main id="content">
-		<section>
-
-			<aside class="hidden-print">
-				<picture>
-					<source srcset="/img/content/1200/feed_ship.jpg" media="(min-width: 1025px)">
-					<source srcset="/img/content/1024/feed_ship.jpg" media="(min-width: 820px)">
-					<source srcset="/img/content/640/feed_ship.jpg" media="(min-width: 370px)">
-					<source srcset="/img/content/320/feed_ship.jpg">
-					<img src="/img/content/1200/feed_ship.jpg" lowsrc="/img/content/320/feed_ship.jpg" alt="Risiko"
-							 title="Over the sea" class="img-fluid rounded">
-				</picture>
-			</aside>
-
-			<hr>
-
-			<aside>
-				<div class="card-deck mb-4">
-					<div class="card">
-						<a href="/articles/und-noch-einer/" class="card-link">
-							<picture>
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/und-noch-einer.jpeg&amp;w=1400&amp;h=768&amp;mode=crop"
-									media="(min-width: 1025px)">
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/und-noch-einer.jpeg&amp;w=200&amp;h=112&amp;mode=crop"
-									media="(min-width: 820px)">
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/und-noch-einer.jpeg&amp;w=640&amp;h=360&amp;mode=crop"
-									media="(min-width: 370px)">
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/und-noch-einer.jpeg&amp;w=320&amp;h=180&amp;mode=crop">
-								<img
-									src="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/und-noch-einer.jpeg&amp;w=600&amp;h=338&amp;mode=crop"
-									lowsrc="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/und-noch-einer.jpeg&amp;w=600&amp;h=338&amp;mode=crop&amp;quality=1"
-									alt="Und noch einer" title="Und noch einer" class="img-fluid img-rounded">
-							</picture>
-						</a>
-						<div class="card-body">
-							<p class="card-title h5" title="Und noch einer">Und noch einer</p>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-								dolor. Aenean massa. Cum sociis natoque penatibus et magnis …</p>
-							<a href="/articles/und-noch-einer/" class="card-link">Read more …</a>
-							<p class="card-text">
-								<time datetime="2017-09-22T20:17:23.090Z">
-									<small class="text-muted">last month</small>
-								</time>
-							</p>
-						</div>
-					</div>
-					<div class="card">
-						<a href="/articles/ein-weiterer-artikel/" class="card-link">
-							<picture>
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&amp;w=1400&amp;h=768&amp;mode=crop"
-									media="(min-width: 1025px)">
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&amp;w=200&amp;h=112&amp;mode=crop"
-									media="(min-width: 820px)">
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&amp;w=640&amp;h=360&amp;mode=crop"
-									media="(min-width: 370px)">
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&amp;w=320&amp;h=180&amp;mode=crop">
-								<img
-									src="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&amp;w=600&amp;h=338&amp;mode=crop"
-									lowsrc="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&amp;w=600&amp;h=338&amp;mode=crop&amp;quality=1"
-									alt="Ein weiterer Artikel" title="Ein weiterer Artikel" class="img-fluid img-rounded">
-							</picture>
-						</a>
-						<div class="card-body">
-							<p class="card-title h5" title="Ein weiterer Artikel">Ein weiterer Artikel</p>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-								dolor. Aenean massa. Cum sociis natoque penatibus et magnis …</p>
-							<a href="/articles/ein-weiterer-artikel/" class="card-link">Read more …</a>
-							<p class="card-text">
-								<time datetime="2017-09-22T20:16:28.749Z">
-									<small class="text-muted">last month</small>
-								</time>
-							</p>
-						</div>
-					</div>
-					<div class="card">
-						<a href="/articles/wir-sind-zufrieden-mit-der-welt/" class="card-link">
-							<picture>
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&amp;w=1400&amp;h=768&amp;mode=crop"
-									media="(min-width: 1025px)">
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&amp;w=200&amp;h=112&amp;mode=crop"
-									media="(min-width: 820px)">
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&amp;w=640&amp;h=360&amp;mode=crop"
-									media="(min-width: 370px)">
-								<source
-									srcset="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&amp;w=320&amp;h=180&amp;mode=crop">
-								<img
-									src="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&amp;w=600&amp;h=338&amp;mode=crop"
-									lowsrc="https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&amp;w=600&amp;h=338&amp;mode=crop&amp;quality=1"
-									alt="Wir sind zufrieden mit der Welt" title="Wir sind zufrieden mit der Welt"
-									class="img-fluid img-rounded">
-							</picture>
-						</a>
-						<div class="card-body">
-							<p class="card-title h5" title="Wir sind zufrieden mit der Welt">Wir sind zufrieden mit der Welt</p>
-							<p class="card-text">Das kann man so soagen Kollege</p>
-							<a href="/articles/wir-sind-zufrieden-mit-der-welt/" class="card-link">Read more …</a>
-							<p class="card-text">
-								<time datetime="2017-09-22T00:00:18.183Z">
-									<small class="text-muted">last month</small>
-								</time>
-							</p>
-						</div>
+		<aside>
+			<div class="card-deck mb-4">
+				<div class="card">
+					<a href="/articles/und-noch-einer/" class="card-link">
+						<picture>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/und-noch-einer.jpeg&w=1400&h=768&mode=crop"
+								media="(min-width: 1025px)"/>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/und-noch-einer.jpeg&w=200&h=112&mode=crop"
+								media="(min-width: 820px)"/>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/und-noch-einer.jpeg&w=640&h=360&mode=crop"
+								media="(min-width: 370px)"/>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/und-noch-einer.jpeg&w=320&h=180&mode=crop"/>
+							<img
+								src="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/und-noch-einer.jpeg&w=600&h=338&mode=crop"
+								lowsrc="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/und-noch-einer.jpeg&w=600&h=338&mode=crop&quality=1"
+								alt="Und noch einer"
+								title="Und noch einer"
+								class="img-fluid img-rounded"/>
+						</picture>
+					</a>
+					<div class="card-body">
+						<p class="card-title h5" title="Und noch einer">Und noch einer</p>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+							dolor. Aenean massa. Cum sociis natoque penatibus et magnis …</p>
+						<a href="/articles/und-noch-einer/" class="card-link">Read more …</a>
+						<p class="card-text">
+							<time datetime="2017-09-22T20:17:23.090Z">
+								<small class="text-muted">last month</small>
+							</time>
+						</p>
 					</div>
 				</div>
-			</aside>
-
-		</section>
+				<div class="card">
+					<a href="/articles/ein-weiterer-artikel/" class="card-link">
+						<picture>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&w=1400&h=768&mode=crop"
+								media="(min-width: 1025px)"/>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&w=200&h=112&mode=crop"
+								media="(min-width: 820px)"/>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&w=640&h=360&mode=crop"
+								media="(min-width: 370px)"/>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&w=320&h=180&mode=crop"/>
+							<img
+								src="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&w=600&h=338&mode=crop"
+								lowsrc="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/ein-weiterer-artikel.jpeg&w=600&h=338&mode=crop&quality=1"
+								alt="Ein weiterer Artikel"
+								title="Ein weiterer Artikel"
+								class="img-fluid img-rounded"/>
+						</picture>
+					</a>
+					<div class="card-body">
+						<p class="card-title h5" title="Ein weiterer Artikel">Ein weiterer Artikel</p>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+							dolor. Aenean massa. Cum sociis natoque penatibus et magnis …</p>
+						<a href="/articles/ein-weiterer-artikel/" class="card-link">Read more …</a>
+						<p class="card-text">
+							<time datetime="2017-09-22T20:16:28.749Z">
+								<small class="text-muted">last month</small>
+							</time>
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<a href="/articles/wir-sind-zufrieden-mit-der-welt/" class="card-link">
+						<picture>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&w=1400&h=768&mode=crop"
+								media="(min-width: 1025px)"/>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&w=200&h=112&mode=crop"
+								media="(min-width: 820px)"/>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&w=640&h=360&mode=crop"
+								media="(min-width: 370px)"/>
+							<source
+								srcset="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&w=320&h=180&mode=crop"/>
+							<img
+								src="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&w=600&h=338&mode=crop"
+								lowsrc="https://zimage.global.ssl.fastly.net/?url&#x3D;http://development-cdn.andrelademann.de/wir-sind-zufrieden-mit-der-welt.jpeg&w=600&h=338&mode=crop&quality=1"
+								alt="Wir sind zufrieden mit der Welt"
+								title="Wir sind zufrieden mit der Welt"
+								class="img-fluid img-rounded"/>
+						</picture>
+					</a>
+					<div class="card-body">
+						<p class="card-title h5" title="Wir sind zufrieden mit der Welt">Wir sind zufrieden mit der Welt</p>
+						<p class="card-text">Das kann man so soagen Kollege</p>
+						<a href="/articles/wir-sind-zufrieden-mit-der-welt/" class="card-link">Read more …</a>
+						<p class="card-text">
+							<time datetime="2017-09-22T00:00:18.183Z">
+								<small class="text-muted">last month</small>
+							</time>
+						</p>
+					</div>
+				</div>
+			</div>
+		</aside>
 
 	</main>
 
@@ -199,34 +195,95 @@
 <footer class="bg-light text-muted d-print-none">
 	<div class="container pt-3 pt-md-5 pb-3 pb-md-5">
 		<p class="float-right">
-			<a href="http://validator.w3.org/check?uri=referer" class="btn btn-md btn-default">
+			<a href="http://validator.w3.org/check?uri=referer"
+				 class="btn btn-md btn-default">
 				<i class="fa fa-html5" aria-hidden="true"></i>
 				<span class="sr-only sr-only-focusable">Validate HTML</span>
 			</a>
 
-			<a href="https://jigsaw.w3.org/css-validator/check/referer" class="btn btn-md btn-default">
+			<a href="https://jigsaw.w3.org/css-validator/check/referer"
+				 class="btn btn-md btn-default">
 				<i class="fa fa-css3" aria-hidden="true"></i>
 				<span class="sr-only sr-only-focusable">Validate CSS</span>
 			</a>
 		</p>
-		© André Lademann
+		&copy; André Lademann
 	</div>
 </footer>
 <noscript class="lazyload">
-	&lt;link rel="alternate stylesheet"
-	title="Dark Bootstrap"
-	href="https://bootswatch.com/darkly/bootstrap.css"&gt;
-	&lt;script src="https://code.jquery.com/jquery-3.2.1.min.js"
-	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	crossorigin="anonymous"&gt;&lt;/script&gt;
-	&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-	integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-	crossorigin="anonymous"&gt;&lt;/script&gt;
-	&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
-	integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-	crossorigin="anonymous"
-	async&gt;&lt;/script&gt;
+	<link rel="alternate stylesheet"
+				title="Dark Bootstrap"
+				href="https://bootswatch.com/darkly/bootstrap.css">
 </noscript>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+				crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+				integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+				crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+				integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+				crossorigin="anonymous"
+				async></script>
+<script>!function (e) {
+	"use strict";
+	var t = function (t, n, r) {
+		function o(e) {
+			if (i.body) return e();
+			setTimeout(function () {
+				o(e)
+			})
+		}
 
+		function a() {
+			d.addEventListener && d.removeEventListener("load", a), d.media = r || "all"
+		}
+
+		var l, i = e.document, d = i.createElement("link");
+		if (n) l = n; else {
+			var s = (i.body || i.getElementsByTagName("head")[0]
+			).childNodes;
+			l = s[s.length - 1]
+		}
+		var u = i.styleSheets;
+		d.rel = "stylesheet", d.href = t, d.media = "only x", o(function () {
+			l.parentNode.insertBefore(d, n ? l : l.nextSibling)
+		});
+		var f = function (e) {
+			for (var t = d.href, n = u.length; n--;) if (u[n].href === t) return e();
+			setTimeout(function () {
+				f(e)
+			})
+		};
+		return d.addEventListener && d.addEventListener("load", a), d.onloadcssdefined = f, f(a), d
+	};
+	"undefined" != typeof exports ? exports.loadCSS = t : e.loadCSS = t
+}("undefined" != typeof global ? global : this), function (e) {
+	if (e.loadCSS) {
+		var t = loadCSS.relpreload = {};
+		if (t.support = function () {
+				try {
+					return e.document.createElement("link").relList.supports("preload")
+				} catch (e) {
+					return !1
+				}
+			}, t.poly = function () {
+				for (var t = e.document.getElementsByTagName("link"), n = 0; n < t.length; n++) {
+					var r = t[n];
+					"preload" === r.rel && "style" === r.getAttribute("as") &&
+					(e.loadCSS(r.href, r, r.getAttribute("media")), r.rel = null
+					)
+				}
+			}, !t.support()) {
+			t.poly();
+			var n = e.setInterval(t.poly, 300);
+			e.addEventListener && e.addEventListener("load", function () {
+				t.poly(), e.clearInterval(n)
+			}), e.attachEvent && e.attachEvent("onload", function () {
+				e.clearInterval(n)
+			})
+		}
+	}
+}(this);</script>
 </body>
 </html>
