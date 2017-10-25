@@ -17,8 +17,8 @@
 //@import "../../node_modules/bootstrap/scss/transitions";
 @import "../../node_modules/bootstrap/scss/dropdown";
 @import "../../node_modules/bootstrap/scss/button-group";
-@import "../../node_modules/bootstrap/scss/input-group";
-@import "../../node_modules/bootstrap/scss/custom-forms";
+//@import "../../node_modules/bootstrap/scss/input-group";
+//@import "../../node_modules/bootstrap/scss/custom-forms";
 @import "../../node_modules/bootstrap/scss/nav";
 @import "../../node_modules/bootstrap/scss/navbar";
 @import "../../node_modules/bootstrap/scss/card";
@@ -38,7 +38,7 @@
 
 // Variables
 $primary: #00B7FF;
-$text-color: #656c7a;
+$text-color: #343a40;
 
 html {
 	@extend html;
@@ -47,7 +47,7 @@ html {
 
 body {
 	@extend body;
-	font-family: "Open Sans", "Helvetica Neue", open-sans, Arial, sans-serif;
+	font-family: "Helvetica Neue", open-sans, Arial, sans-serif;
 	color: $text-color;
 }
 

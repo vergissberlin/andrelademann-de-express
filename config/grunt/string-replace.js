@@ -24,7 +24,7 @@ module.exports = {
 			replacements: [
 				{
 					pattern:     '<style data-replace="fonts"></style>',
-					replacement: "<style><%= grunt.file.read('public/css/fonts.min.css') %></style>"
+					replacement: "<style>.img-fluid{ max-width: 100%;height: auto;}body{font-family: \"Helvetica Neue\", open-sans, Arial, sans-serif; font-weight: 100}</style>"
 				},
 				{
 					pattern:     '<style data-replace="critical"></style>',

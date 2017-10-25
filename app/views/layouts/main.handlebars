@@ -7,6 +7,7 @@
 	<title>{{title}}</title>
 	<style data-replace="fonts"></style>
 	<style data-replace="critical"></style>
+
 	{{#if profile}}
 		<link rel="stylesheet" href="/css/admin{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css">
 	{{/if}}
@@ -26,8 +27,6 @@
 	<link rel="manifest" href="/manifest.json">
 
 	<noscript>
-		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
-					integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 		<link rel="stylesheet" href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="screen">
 		<link rel="stylesheet" href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="print">
 	</noscript>
