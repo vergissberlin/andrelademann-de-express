@@ -19,6 +19,11 @@ var
 				index:    true,
 				required: true
 			},
+			subtitle: {
+				type:     String,
+				index:    true,
+				required: true
+			},
 			slug:     {
 				type:     String,
 				index:    true,

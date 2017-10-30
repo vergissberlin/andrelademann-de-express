@@ -1,13 +1,9 @@
-<div class="alert alert-danger" role="alert">
-	<strong>{{{__ "Error"}}}</strong> {{error.status}} {{message}}
-</div>
-
-<div class="jumbotron jumbotron-fluid">
-	<div class="container">
-		<h1 class="display-3">Stack
-			<small class="text-muted">{{error.status}} {{message}}</small>
-		</h1>
-		<pre class="text-small"
-				 style="font-size: .8rem; max-height: 300px; overflow-x:hidden ; overflow-y:auto;">{{ error.stack }}</pre>
+<div class="message is-danger" role="alert">
+	<div class="message-header">
+		<p>{{{__ "Error"}}}</p>
+		<button class="delete" aria-label="delete" onclick="this.parentNode.parentNode.className += ' is-hidden'"></button>
+	</div>
+	<div class="message-body">
+		{{error.status}} {{message}}
 	</div>
 </div>

@@ -1,56 +1,61 @@
-<section class="profile">
-	<h1>
-		{{{__ "Personal data"}}}
-	</h1>
-
-	{{>flash}}
-
-	<h2>
-		{{{__ "Your data"}}}
-	</h2>
-
-	<div class="list-group">
-		<div class="list-group-item list-group-item-action flex-column align-items-start">
-			<div class="d-flex w-100 justify-content-between">
-				<p class="mb-1">{{profile.lastname}}</p>
-				<small>{{{__ "Last name"}}}</small>
-			</div>
-		</div>
-		<div class="list-group-item list-group-item-action flex-column align-items-start">
-			<div class="d-flex w-100 justify-content-between">
-				<p class="mb-1">{{profile.firstname}}</p>
-				<small>{{{__ "First name"}}}</small>
-			</div>
-		</div>
-		<div class="list-group-item list-group-item-action flex-column align-items-start">
-			<div class="d-flex w-100 justify-content-between">
-				<p class="mb-1">{{profile.email}}</p>
-				<small class="text-muted">{{{__ "e-mail"}}}</small>
-			</div>
-		</div>
-		<div class="list-group-item list-group-item-action flex-column align-items-start">
-			<div class="d-flex w-100 justify-content-between">
-				<p class="mb-1">
-					{{#compare profile.gender "m"}}{{{__ "male"}}}{{/compare}}
-					{{#compare profile.gender "f"}}{{{__ "female"}}}{{/compare}}
-				</p>
-				<small class="text-muted">{{{__ "Gender"}}}</small>
-			</div>
-		</div>
-		<div class="list-group-item list-group-item-action flex-column align-items-start">
-			<div class="d-flex w-100 justify-content-between">
-				<p class="mb-1">
-					<time datetime="{{datetime profile.createdAt}}"
-								class="text-muted"
-								itemprop="datePublished"
-								content="{{profile.createdAt}}">{{formatDate profile.createdAt}}
-					</time>
-				</p>
-				<small class="text-muted">{{{__ "Created at"}}}</small>
-			</div>
+<section class="hero is-primary">
+	<div class="hero-body">
+		<div class="container">
+			<h1 class="title">{{{__ "Personal data"}}}</h1>
+			<h2>{{{__ "Your data"}}}</h2>
 		</div>
 	</div>
 </section>
+
+<div class="section">
+	<div class="container">
+		{{>flash}}
+		<div class="content">
+
+			{{>flash}}
+
+			<table>
+				<thead>
+				<tr>
+					<th>{{ __ "Key" }}</th>
+					<th>{{ __ "Value" }}</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>{{{__ "Last name"}}}</td>
+					<td>{{profile.lastname}}</td>
+				</tr>
+				<tr>
+					<td>{{{__ "First name"}}}</td>
+					<td>{{profile.firstname}}</td>
+				</tr>
+				<tr>
+					<td>{{{__ "e-mail"}}}</td>
+					<td>{{profile.email}}</td>
+				</tr>
+				<tr>
+					<td>{{{__ "Gender"}}}</td>
+					<td>
+						{{#compare profile.gender "m"}}{{{__ "male"}}}{{/compare}}
+						{{#compare profile.gender "f"}}{{{__ "female"}}}{{/compare}}
+					</td>
+				</tr>
+				<tr>
+					<td>{{{__ "Created at"}}}</td>
+					<td>
+						<time datetime="{{datetime profile.createdAt}}"
+									class="text-muted"
+									itemprop="datePublished"
+									content="{{profile.createdAt}}">{{formatDate profile.createdAt}}
+						</time>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
 
 {{#unless ENV_DEVELOPMENT}}
 	<script>

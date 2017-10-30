@@ -6,11 +6,11 @@
 			<source srcset="{{config.media.images}}{{src}}&w=640&h=360&mode=crop" media="(min-width: 370px)"/>
 			<source srcset="{{config.media.images}}{{src}}&w=320&h=180&mode=crop"/>
 			<img
-				data-src="{{config.media.images}}{{src}}&w=600&h=338&mode=crop"
+				src="{{config.media.images}}{{src}}&w=600&h=338&mode=crop"
 				lowsrc="{{config.media.images}}{{src}}&w=600&h=338&mode=crop&quality=1"
 				alt="{{html2text alt}}"
 				title="{{html2text title}}"
-				class="lozad {{class}}"/>
+				class="{{class}}"/>
 		</picture>
 	{{else}}
 		<picture>
@@ -19,11 +19,11 @@
 			<source srcset="{{config.media.images}}{{src}}&w=640" media="(min-width: 370px)"/>
 			<source srcset="{{config.media.images}}{{src}}&w=320"/>
 			<img
-				data-src="{{config.media.images}}{{src}}&w=1200"
+				src="{{config.media.images}}{{src}}&w=1200"
 				lowsrc="{{config.media.images}}{{src}}&w=400&quality=1"
 				alt="{{html2text alt}}"
 				title="{{html2text title}}"
-				class="lozad {{class}}"/>
+				class="{{class}}"/>
 		</picture>
 	{{/if}}
 {{else}}
@@ -33,10 +33,10 @@
 		<source srcset="/img/content/640/{{src}}" media="(min-width: 370px)"/>
 		<source srcset="/img/content/320/{{src}}"/>
 		<img
-			data-src="/img/content/1200/{{src}}"
+			src="/img/content/1200/{{src}}"
 			lowsrc="/img/content/320/{{src}}"
 			alt="{{html2text alt}}"
 			title="{{html2text title}}"
-			class="lozad {{class}}"/>
+			class="{{class}}"/>
 	</picture>
 {{/if}}

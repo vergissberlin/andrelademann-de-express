@@ -1,39 +1,89 @@
-{{> header}}
-
 {{#if profile}}
 	{{> wysiwyg-article}}
 	{{> wysiwyg}}
 {{else}}
+
 	<article itemscope itemType="http://schema.org/BlogPosting">
-		<header>
-			<h1 itemprop="headline">{{{article.title}}}</h1>
-			<time datetime="{{datetime article.createdAt}}"
-						itemprop="datePublished"
-						content="{{article.createdAt}}">
-				{{{__ 'Created at'}}}&nbsp;{{formatDate article.createdAt}}
-				{{#if article.updatedAt}}, {{__ 'updated at'}}
-					&nbsp;{{formatDate article.updatedAt}}{{/if}}
-			</time>
-			<p class="lead" itemprop="description">
-				{{{article.teaser}}}
-			</p>
-		</header>
+		<div class="hero is-medium is-primary" id="header">
+			<header class="hero-body">
+				<div class="container">
+					<h1 class="title">
+						{{{article.title}}}
+					</h1>
+					{{#if article.subtitle}}
+						<h2 class="subtitle">
+							{{{article.subtitle}}}
+						</h2>
+					{{/if}}
+				</div>
+			</header>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="content">
+					<time class="is-size-7" datetime="{{datetime article.createdAt}}"
+								itemprop="datePublished"
+								content="{{article.createdAt}}">
+						{{{__ 'Created at'}}}&nbsp;{{formatDate article.createdAt}}
+						{{#if article.updatedAt}}, {{__ 'updated at'}}
+							&nbsp;{{formatDate article.updatedAt}}{{/if}}
+					</time>
+					<p class="subtitle" itemprop="description">
+						{{{article.teaser}}}
+					</p>
+				</div>
 
-		<div itemprop="articleBody">{{{article.text}}}</div>
-
-		{{#if article.image}}
-			<figure class="d-print-none">
-				{{> picture src=article.image config=config class="img-fluid img-thumbnail" alt=article.title title=article.title }}
-				<figcaption>{{article.title}}</figcaption>
-			</figure>
-		{{/if}}
-
+				<div class="content" itemprop="articleBody">{{{article.text}}}</div>
+			</div>
+		</div>
 	</article>
 
 	{{>prism}}
 
-	{{>author}}
+	<aside>
+		<div class="container">
+			<div class="content">
+				{{>author}}
+			</div>
+		</div>
+	</aside>
 
-	{{>disqus}}
+	<style>
+		@media screen and (max-width: 768px) {
+			.hero-image {
+				background-image: url(https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/{{article.image}}&w=768);
+			}
+		}
 
+		@media screen and (max-width: 1023px) {
+			.hero-image {
+				background-image: url(https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/{{article.image}}&w=1023);
+			}
+		}
+
+		@media screen and (min-width: 1024px) {
+			.hero-image {
+				background-image: url(https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/{{article.image}}&w=1216);
+			}
+		}
+
+		@media screen and (min-width: 1216px) {
+			.hero-image {
+				background-image: url(https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/{{article.image}}&w=1408);
+			}
+		}
+
+		@media screen and (min-width: 1408px) {
+			.hero-image {
+				background-image: url(https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/{{article.image}}&w=2000);
+			}
+		}
+
+
+	</style>
+	<script>
+		window.onload = function () {
+			document.getElementById('header').className = document.getElementById('header').className + ' hero-image';
+		};
+	</script>
 {{/if}}

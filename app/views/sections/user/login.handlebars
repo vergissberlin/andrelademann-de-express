@@ -1,47 +1,65 @@
-<section>
-
-	<header>
-		<h2>{{{__ "Please fill the form!"}}}</h2>
-	</header>
-
-	{{>flash}}
-
-	<div class="jumbotron">
-		<div class="row">
-			<div class="col-xs-12 col-lg-6">
-				<form method="post"
-							action="/user/login">
-					<div class="form-group input-svg">
-						<input placeholder="{{{__ "User name"}}}"
-									 class="form-control"
-									 id="username"
-									 tabindex="1"
-									 name="username"
-									 style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=');"
-									 autocomplete="off">
-					</div>
-
-					<div class="form-group">
-						<input placeholder="{{{__ "Password"}}}"
-									 class="form-control"
-									 tabindex="2"
-									 type="password"
-									 name="password"
-									 value=""
-									 style="cursor: auto; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=');"
-									 autocomplete="off">
-					</div>
-
-					<div class="form-group">
-						<button id="login-submit"
-										type="submit"
-										tabindex="3"
-										class="btn btn-primary btn-lg btn-block">
-							{{{__ "OK"}}}
-						</button>
-					</div>
-				</form>
-			</div>
+<section class="hero is-primary">
+	<div class="hero-body">
+		<div class="container">
+			<h1 class="title">{{ __ "User login" }}</h1>
+			<h2 class="subtitle">{{__ "Please fill the form!" }}</h2>
 		</div>
 	</div>
 </section>
+
+<div class="section">
+	<div class="container">
+		<div class="columns">
+			<div class="column is-half-tablet">
+				<div class="content">
+
+					{{>flash}}
+					<form method="post"
+								action="/user/login">
+
+						<div class="field">
+							<label class="label">{{ __ "User name" }}</label>
+
+							<div class="control has-icons-left">
+								<input
+									class="input"
+									type="text"
+									placeholder="{{ __ "User name" }}"
+									id="username"
+									tabindex="1"
+									name="username"
+									autocomplete="off">
+								<span class="icon is-small is-left"><i class="fa fa-user"></i></span>
+							</div>
+						</div>
+
+						<div class="field">
+							<label class="label">{{ __ "Password" }}</label>
+							<div class="control has-icons-left">
+								<input
+									class="input"
+									type="password"
+									placeholder="{{ __ "Password" }}"
+									id="password"
+									name="password"
+									tabindex="1"
+									autocomplete="off">
+								<span class="icon is-small is-left"><i class="fa fa-unlock-alt"></i></span>
+							</div>
+						</div>
+
+						<hr>
+
+						<div class="field is-half is-grouped is-grouped-right">
+							<div class="control">
+								<button id="login-submit"
+												tabindex="3"
+												class="button is-info is-block is-link">{{{__ "Login"}}}</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

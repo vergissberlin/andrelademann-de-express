@@ -61,5 +61,20 @@
 	"published": "veröffentlicht",
 	"No articles available": "Keine passenden Artikel verfügbar",
 	"Edit": "Bearbeiten",
-	"Original": "Original"
+	"Original": "Original",
+	"Hint": "Hinweis",
+	"Aurhor": "Aurhor",
+	"Author": "Author",
+	"photo of André Lademann": "photo of André Lademann",
+	"Email": "Email",
+	"Saxony": "Saxony",
+	"Germany": "Germany",
+	"ExpressJS website with handlebars as template engine and MongoDB as database.": "ExpressJS website with handlebars as template engine and MongoDB as database.",
+	"Digital table kicker score with JavaScript on a RaspberryPi.": "Digital table kicker score with JavaScript on a RaspberryPi.",
+	"User login": "User login",
+	"Login": "Login",
+	"Warning": "Warning",
+	"User profile": "User profile",
+	"Key": "Key",
+	"Value": "Value"
 }

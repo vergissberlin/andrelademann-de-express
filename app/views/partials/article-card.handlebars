@@ -1,0 +1,29 @@
+<div class="card card-equal-height">
+	<a href="/articles/{{slug article.title}}/" class="card-image">
+		<figure class="image is-16by9">
+			{{#if article.image}}
+				{{> picture src=article.image crop=true alt=title title=title cdn=true}}
+			{{else}}
+				<img src="/img/content/1200/feed_ship.jpg" alt="{{title}}">
+			{{/if}}
+		</figure>
+	</a>
+	<div class="card-content">
+		<p class="title is-5" title="{{title}}">{{crop article.title limit="20"}}</p>
+		<p class="content">
+			{{{crop article.teaser limit="140"}}} <a>@vergissberlin</a>.
+			<br>
+			<time datetime="{{datetime article.createdAt}}">
+				<small>{{formatRelative article.createdAt}}</small>
+			</time>
+		</p>
+	</div>
+	<footer class="card-footer">
+		{{#if profile}}
+			<a href="#" class="card-footer-item">{{__ "Save" }}</a>
+			<a href="#" class="card-footer-item">{{__ "Edit" }}</a>
+			<a href="#" class="card-footer-item">{{__ "Delete" }}</a>
+		{{/if}}
+		<a href="/articles/{{slug article.title}}/" class="card-footer-item">{{__ "Read more"}} …</a>
+	</footer>
+</div>

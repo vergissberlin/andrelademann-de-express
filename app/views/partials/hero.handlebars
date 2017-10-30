@@ -1,0 +1,17 @@
+<section class="hero {{#if brand}}is-{{brand}}{{else}}is-primary{{/if}} is-hidden-print">
+	<div class="hero-body">
+		<div class="container">
+			{{#if tag}}
+				<h1 class="title">{{title}}</h1>
+				{{#if subtitle}}
+					<h2 class="subtitle">{{capitalize subtitle}}</h2>
+				{{/if}}
+			{{else}}
+				<p class="title">{{title}}</p>
+				{{#if subtitle}}
+					<p class="subtitle">{{subtitle}}</p>
+				{{/if}}
+			{{/if}}
+		</div>
+	</div>
+</section>

@@ -1,0 +1,66 @@
+{{#if articles}}
+	{{#each (limit articles 60)}}
+		<article class="media">
+			<a href="/articles/{{slug title}}/" class="media-left">
+				<figure class="image is-128x128">
+					{{#if image}}
+						<img
+							data-src="{{../config.media.images}}{{image}}&w=256&h=256&mode=crop"
+							lowsrc="{{../config.media.images}}{{image}}&w=12&h=12&mode=crop&quality=1"
+							alt="{{html2text alt}}"
+							title="{{html2text title}}"
+							class="lozad">
+					{{/if}}
+				</figure>
+			</a>
+			<div class="media-content">
+				<div class="content">
+					<p class="title is-5" title="{{title}}">{{crop title limit="120"}}</p>
+					<p>
+						<strong>André Lademann</strong>
+						<small>@vergissberlin</small>
+						<time datetime="{{datetime createdAt}}">
+							<small>{{formatRelative createdAt}}</small>
+						</time>
+						<br>
+						{{{crop teaser limit="240"}}}
+					</p>
+				</div>
+				<nav class="level is-mobile">
+					<div class="level-left">
+
+						{{#if profile}}
+							<a class="level-item">
+								<span class="icon is-small"><i class="fa fa-save"></i></span>
+							</a>
+							<a class="level-item">
+								<span class="icon is-small"><i class="fa fa-edit"></i></span>
+							</a>
+							<a class="level-item">
+								<span class="icon is-small"><i class="fa fa-trash"></i></span>
+							</a>
+						{{/if}}
+					</div>
+					<div class="level-right">
+						<a class="level-item is-small" href="/articles/{{slug title}}/">{{__ "Read more"}}&nbsp;<span
+							class="icon is-small"><i class="fa fa-caret-right"></i></span></a>
+					</div>
+				</nav>
+			</div>
+			<div class="media-right">
+				<a href="/articles/{{slug title}}/" class="">
+					<span class="icon"><i class="fa fa-text-o"></i></span>
+				</a>
+			</div>
+		</article>
+	{{/each}}
+{{else}}
+	<div class="message is-info">
+		<div class="message-header">
+			<p>{{__ "Hint"}}</p>
+		</div>
+		<div class="message-body">
+			{{__ "No articles available"}}
+		</div>
+	</div>
+{{/if}}

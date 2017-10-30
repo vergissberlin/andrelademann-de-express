@@ -6,13 +6,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2673426-47a4-4a0d-b4a4-41f3cc710847" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/helpers/log.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/article-card.handlebars" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/article-list.handlebars" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/hero.handlebars" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/image.handlebars" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/private/scss/utlities/_screenreaders.scss" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/articles.js" afterPath="$PROJECT_DIR$/app/controllers/articles.js" />
+      <change beforePath="$PROJECT_DIR$/app/models/article.js" afterPath="$PROJECT_DIR$/app/models/article.js" />
+      <change beforePath="$PROJECT_DIR$/app/views/about.handlebars" afterPath="$PROJECT_DIR$/app/views/about.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/error.handlebars" afterPath="$PROJECT_DIR$/app/views/error.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/helpers/index.js" afterPath="$PROJECT_DIR$/app/views/helpers/index.js" />
+      <change beforePath="$PROJECT_DIR$/app/views/home.handlebars" afterPath="$PROJECT_DIR$/app/views/home.handlebars" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" afterPath="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" />
-      <change beforePath="$PROJECT_DIR$/config/grunt/string-replace.js" afterPath="$PROJECT_DIR$/config/grunt/string-replace.js" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/main.handlebars" afterPath="$PROJECT_DIR$/app/views/layouts/main.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/article-teaser.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/article-teaser.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/author.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/author.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/disqus.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/disqus.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/flash.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/flash.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/header.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/header.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/picture.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/picture.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/prism.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/prism.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/toolbar-list.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/toolbar-list.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/wysiwyg-article.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/wysiwyg-article.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/wysiwyg.handlebars" afterPath="$PROJECT_DIR$/app/views/partials/wysiwyg.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/sections/article/detail.handlebars" afterPath="$PROJECT_DIR$/app/views/sections/article/detail.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/sections/article/list.handlebars" afterPath="$PROJECT_DIR$/app/views/sections/article/list.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/sections/user/login.handlebars" afterPath="$PROJECT_DIR$/app/views/sections/user/login.handlebars" />
+      <change beforePath="$PROJECT_DIR$/app/views/sections/user/profile.handlebars" afterPath="$PROJECT_DIR$/app/views/sections/user/profile.handlebars" />
+      <change beforePath="$PROJECT_DIR$/config/grunt/watch.js" afterPath="$PROJECT_DIR$/config/grunt/watch.js" />
+      <change beforePath="$PROJECT_DIR$/doc/JavaScript/styles/prettify-tomorrow.css" afterPath="$PROJECT_DIR$/doc/JavaScript/styles/prettify-tomorrow.css" />
+      <change beforePath="$PROJECT_DIR$/doc/Sass/assets/js/vendor/jquery.min.js" afterPath="$PROJECT_DIR$/doc/Sass/assets/js/vendor/jquery.min.js" />
+      <change beforePath="$PROJECT_DIR$/locales/de.json" afterPath="$PROJECT_DIR$/locales/de.json" />
+      <change beforePath="$PROJECT_DIR$/locales/en.json" afterPath="$PROJECT_DIR$/locales/en.json" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/private/js/main.js" afterPath="$PROJECT_DIR$/private/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/private/scss/_variables.scss" afterPath="$PROJECT_DIR$/private/scss/_variables.scss" />
+      <change beforePath="$PROJECT_DIR$/private/scss/admin.scss" afterPath="$PROJECT_DIR$/private/scss/admin.scss" />
+      <change beforePath="$PROJECT_DIR$/private/scss/screen.scss" afterPath="$PROJECT_DIR$/private/scss/screen.scss" />
       <change beforePath="$PROJECT_DIR$/public/critical-test.html" afterPath="$PROJECT_DIR$/public/critical-test.html" />
       <change beforePath="$PROJECT_DIR$/public/css/admin.css" afterPath="$PROJECT_DIR$/public/css/admin.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/admin.min.css" afterPath="$PROJECT_DIR$/public/css/admin.min.css" />
       <change beforePath="$PROJECT_DIR$/public/css/critical.css" afterPath="$PROJECT_DIR$/public/css/critical.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/critical.min.css" afterPath="$PROJECT_DIR$/public/css/critical.min.css" />
       <change beforePath="$PROJECT_DIR$/public/css/screen.css" afterPath="$PROJECT_DIR$/public/css/screen.css" />
+      <change beforePath="$PROJECT_DIR$/public/css/screen.min.css" afterPath="$PROJECT_DIR$/public/css/screen.min.css" />
+      <change beforePath="$PROJECT_DIR$/public/js/critical.js" afterPath="$PROJECT_DIR$/public/js/critical.js" />
+      <change beforePath="$PROJECT_DIR$/public/js/critical.min.js" afterPath="$PROJECT_DIR$/public/js/critical.min.js" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.min.js" afterPath="$PROJECT_DIR$/public/js/main.min.js" />
+      <change beforePath="$PROJECT_DIR$/tests/acceptance/html/blog/login.html" afterPath="$PROJECT_DIR$/tests/acceptance/html/blog/login.html" />
+      <change beforePath="$PROJECT_DIR$/tests/acceptance/html/blog/logout.html" afterPath="$PROJECT_DIR$/tests/acceptance/html/blog/logout.html" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,38 +73,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="main.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/main.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="332">
+              <caret line="141" column="58" lean-forward="false" selection-start-line="141" selection-start-column="58" selection-end-line="141" selection-end-column="58" />
+              <folding>
+                <element signature="e#5494#5500#0#HTML" expanded="true" />
+                <element signature="e#5693#5699#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#a#2;n#div#1;n#div#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#a#3;n#div#1;n#div#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main-critical.handlebars" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/main-critical.handlebars">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/helpers/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="135">
+              <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.handlebars" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home.handlebars">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="picture.handlebars" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/partials/picture.handlebars">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -67,55 +118,52 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="detail.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/sections/article/detail.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="disqus.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/disqus.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="screen.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/private/scss/screen.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+            <state relative-caret-position="615">
+              <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/scss/admin.scss">
+      <file leaf-file-name="flash.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/flash.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="195">
+              <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.handlebars" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/main.handlebars">
+      <file leaf-file-name="article-card.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/article-card.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="38" />
+            <state relative-caret-position="326">
+              <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="string-replace.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/grunt/string-replace.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="68" lean-forward="false" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="critical-test.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/critical-test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="134" column="21" lean-forward="false" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
-              <folding>
-                <element signature="e#3396#3402#0" expanded="true" />
-                <element signature="e#9619#9625#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -131,45 +179,55 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>unle</find>
-      <find>card-deck mb-4</find>
-      <find>max</find>
-      <find>maxAge</find>
-      <find>serve-static</find>
-      <find>static</find>
-      <find>offline.html</find>
-      <find>{{age</find>
-      <find>handle</find>
-      <find>&quot;</find>
-      <find>main.hand</find>
-      <find>main</find>
-      <find>css</find>
-      <find>critic</find>
-      <find>main-critical-css</find>
-      <find>ugli</find>
-      <find>.pem</find>
-      <find>ca.</find>
-      <find>shrin</find>
-      <find>, shrink-to-fit=no</find>
-      <find>:b</find>
-      <find>scree</find>
-      <find>print.css</find>
-      <find />
-      <find>main.js</find>
-      <find>profile.js</find>
-      <find>\n</find>
-      <find>repla</find>
-      <find>open</find>
-      <find>repl</find>
+      <find>prism</find>
+      <find>display-3</find>
+      <find>d-print-none</find>
+      <find>meta.</find>
+      <find>glo</find>
+      <find>confi</find>
+      <find>128</find>
+      <find>meta</find>
+      <find>img</find>
+      <find>is-link</find>
+      <find>imag</find>
+      <find>null</find>
+      <find>message</find>
+      <find>&quot;alert</find>
+      <find>addClas</find>
+      <find>text-uppercase</find>
+      <find>Hello World</find>
+      <find>fixed-bo</find>
+      <find>dark</find>
+      <find>fixed-bottom</find>
+      <find>mess</find>
+      <find>hidden-xs-down</find>
+      <find>hidden-sm-down</find>
+      <find>tag-</find>
+      <find>prima</find>
+      <find>desktop</find>
+      <find>navMenu</find>
+      <find>{{debug</find>
+      <find>media</find>
+      <find>99</find>
     </findStrings>
     <replaceStrings>
       <replace>badge</replace>
-      <replace>'</replace>
       <replace />
       <replace>::b</replace>
+      <replace>'</replace>
+      <replace>192</replace>
+      <replace>is-hidden-print</replace>
+      <replace>is-size-3</replace>
+      <replace>is-uppercase</replace>
+      <replace>is-hidden-mobile</replace>
+      <replace>is-hidden-tablet</replace>
+      <replace>is-</replace>
+      <replace>0</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/views</dir>
+      <dir>$PROJECT_DIR$/node_modules/bootstrap</dir>
+      <dir>$PROJECT_DIR$/node_modules</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -183,38 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.dockerignore" />
-        <option value="$PROJECT_DIR$/.scrutinizer.yml" />
-        <option value="$PROJECT_DIR$/config/grunt/jsdoc.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/.travis.yml" />
-        <option value="$PROJECT_DIR$/config/grunt/develop.js" />
-        <option value="$PROJECT_DIR$/config/grunt/watch.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/config/grunt/browserSync.js" />
-        <option value="$PROJECT_DIR$/private/scss/style.scss" />
-        <option value="$PROJECT_DIR$/app/views/partials/disqus.handlebars" />
-        <option value="$PROJECT_DIR$/app/views/partials/wysiwyg-article.handlebars" />
-        <option value="$PROJECT_DIR$/app/views/partials/form/picture.handlebars" />
-        <option value="$PROJECT_DIR$/app/views/sections/article/detail.handlebars" />
-        <option value="$PROJECT_DIR$/app/views/partials/article-teaser.handlebars" />
-        <option value="$PROJECT_DIR$/app/views/sections/article/list.handlebars" />
-        <option value="$PROJECT_DIR$/app/views/partials/picture.handlebars" />
-        <option value="$PROJECT_DIR$/public/manifest.json" />
-        <option value="$PROJECT_DIR$/config/grunt/critical_css.js" />
-        <option value="$PROJECT_DIR$/public/critical.html" />
-        <option value="$PROJECT_DIR$/app/views/helpers/limit.js" />
-        <option value="$PROJECT_DIR$/app/views/helpers/capitalize.js" />
-        <option value="$PROJECT_DIR$/app/views/helpers/printFile.js" />
-        <option value="$PROJECT_DIR$/public/css/critical.css" />
-        <option value="$PROJECT_DIR$/public/css/screen.css" />
-        <option value="$PROJECT_DIR$/app/views/helpers/index.js" />
-        <option value="$PROJECT_DIR$/public/critical-result.html" />
-        <option value="$PROJECT_DIR$/app/views/layouts/main-critical-css.handlebars" />
-        <option value="$PROJECT_DIR$/config/express.js" />
-        <option value="$PROJECT_DIR$/config/grunt/aliases.json" />
         <option value="$PROJECT_DIR$/private/server/ssl/localhost-key.pem" />
         <option value="$PROJECT_DIR$/private/server/ssl/localhost-cert.pem" />
         <option value="$PROJECT_DIR$/private/scss/_fonts.scss" />
@@ -225,15 +251,47 @@
         <option value="$PROJECT_DIR$/private/js/critical.js" />
         <option value="$PROJECT_DIR$/config/grunt/uglify.js" />
         <option value="$PROJECT_DIR$/config/config.js" />
-        <option value="$PROJECT_DIR$/private/scss/admin.scss" />
-        <option value="$PROJECT_DIR$/private/scss/screen.scss" />
         <option value="$PROJECT_DIR$/config/grunt/critical.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/app/views/home.handlebars" />
-        <option value="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" />
-        <option value="$PROJECT_DIR$/app/views/layouts/main.handlebars" />
         <option value="$PROJECT_DIR$/config/grunt/string-replace.js" />
         <option value="$PROJECT_DIR$/public/critical-test.html" />
+        <option value="$PROJECT_DIR$/node_modules/bulma/bulma.sass" />
+        <option value="$PROJECT_DIR$/config/grunt/watch.js" />
+        <option value="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/helpers/debug.js" />
+        <option value="$PROJECT_DIR$/app/views/helpers/logger.js" />
+        <option value="$PROJECT_DIR$/app/views/helpers/log.js" />
+        <option value="$PROJECT_DIR$/app/models/article.js" />
+        <option value="$PROJECT_DIR$/app/controllers/articles.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/wysiwyg.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/partials/wysiwyg-article.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/partials/picture.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/partials/header.handlebars" />
+        <option value="$PROJECT_DIR$/locales/de.json" />
+        <option value="$PROJECT_DIR$/locales/en.json" />
+        <option value="$PROJECT_DIR$/config/express.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/article-list.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/partials/author.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/about.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/home.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/partials/article-teaser.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/partials/prism.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/error.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/sections/user/login.handlebars" />
+        <option value="$PROJECT_DIR$/private/scss/screen.scss" />
+        <option value="$PROJECT_DIR$/app/views/sections/user/profile.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/partials/toolbar-list.handlebars" />
+        <option value="$PROJECT_DIR$/private/scss/admin.scss" />
+        <option value="$PROJECT_DIR$/app/views/partials/hero.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/sections/article/list.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/partials/disqus.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/sections/article/detail.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/layouts/main.handlebars" />
+        <option value="$PROJECT_DIR$/private/js/main.js" />
+        <option value="$PROJECT_DIR$/app/views/helpers/index.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/flash.handlebars" />
+        <option value="$PROJECT_DIR$/app/views/partials/article-card.handlebars" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
       </list>
     </option>
   </component>
@@ -280,6 +338,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -287,65 +346,10 @@
               <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
               <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="private" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="private" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ssl" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="andrelademann-de" type="b2602c69:ProjectViewProjectNode" />
-              <item name="andrelademann-de" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,18 +360,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/partials" />
+      <recent name="$PROJECT_DIR$/app/views/helpers" />
+      <recent name="$PROJECT_DIR$/private/scss/elements" />
+      <recent name="$PROJECT_DIR$/public/js" />
+      <recent name="$PROJECT_DIR$/private/server/ssl" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/private/scss" />
       <recent name="$PROJECT_DIR$/private/scss/basic" />
       <recent name="$PROJECT_DIR$/private/server/ssl" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/js" />
-      <recent name="$PROJECT_DIR$/private/server/ssl" />
-      <recent name="$PROJECT_DIR$/config/grunt" />
-      <recent name="$PROJECT_DIR$/app/views/helpers" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -435,7 +439,9 @@
       <workItem from="1508777539471" duration="459000" />
       <workItem from="1508872224646" duration="206000" />
       <workItem from="1508872662983" duration="1852000" />
-      <workItem from="1508876022113" duration="17277000" />
+      <workItem from="1508876022113" duration="19649000" />
+      <workItem from="1509045002629" duration="69174000" />
+      <workItem from="1509316535419" duration="4676000" />
     </task>
     <task id="LOCAL-00001" summary="Added yarn lock file to prevent dependency hell">
       <created>1498716591453</created>
@@ -514,32 +520,38 @@
       <option name="project" value="LOCAL" />
       <updated>1508963600933</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Remove external fonts. refs #57">
+      <created>1508964371410</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1508964371410</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84134000" />
+    <option name="totallyTimeSpent" value="160356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2962515" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2962515" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20193471" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5060606" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22031474" sideWeight="0.4873035" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22603719" sideWeight="0.4873035" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22031474" sideWeight="0.5126965" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22031474" sideWeight="0.5126965" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -631,150 +643,39 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/partials/wysiwyg-article.handlebars">
+    <entry file="file://$PROJECT_DIR$/config/grunt/watch.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="117" column="43" lean-forward="false" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
+        <state relative-caret-position="651">
+          <caret line="85" column="12" lean-forward="false" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/author.handlebars">
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_screenreaders.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+        <state relative-caret-position="60">
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/weather.handlebars">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/main-critical.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/article-teaser.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="10" lean-forward="false" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/about.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/offline.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="159">
+          <caret line="82" column="49" lean-forward="true" selection-start-line="82" selection-start-column="49" selection-end-line="82" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/grunt/manifest.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/bulma/sass/components/_all.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/manifest.json">
+    <entry file="file://$PROJECT_DIR$/config/grunt/string-replace.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/app-images-2/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/grunt/critical_css.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index-critical.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1814">
-          <caret line="121" column="33" lean-forward="true" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/limit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="27" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/i18n.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/crop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="12" lean-forward="true" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/datetime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/html2text.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/age.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/printFile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/capitalize.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="390">
+          <caret line="26" column="68" lean-forward="false" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -786,131 +687,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/critical.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="24" lean-forward="false" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dest/public/critical-result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/main-critical.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/critical.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/grunt/aliases.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="21" lean-forward="false" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/server/ssl/localhost-key.pem">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/server/ssl/cert.pem">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/server/ssl/localhost-cert.pem">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="31" lean-forward="false" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/express.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="116" column="18" lean-forward="true" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/server/ssl/key.pem">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/critical-result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/scss/basic/_fonts-fontawsome.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="62" column="11" lean-forward="true" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/server/ssl/localhost.key">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/server/ssl/localhost.crt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/grunt/sass.js">
+    <entry file="file://$PROJECT_DIR$/app/views/helpers/log.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="50" lean-forward="false" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-          <folding />
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/helpers/debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -922,121 +715,326 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/js/critical.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_display.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="39" lean-forward="true" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="549">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/grunt/uglify.js">
+    <entry file="file://$PROJECT_DIR$/private/js/profile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/scss/fonts.scss">
+    <entry file="file://$PROJECT_DIR$/public/js/main.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/image.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/wysiwyg-article.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="128" lean-forward="false" selection-start-line="31" selection-start-column="128" selection-end-line="31" selection-end-column="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="9" lean-forward="false" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sections/article/edit.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/wysiwyg.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-462">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/Sass/assets/js/vendor/prism.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/header.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locales/de.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="64" column="18" lean-forward="false" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locales/en.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="52" column="15" lean-forward="false" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/express.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/author.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/article-list.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="71" lean-forward="false" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
           <folding>
-            <element signature="e#86#289939#0" expanded="false" />
-            <element signature="e#121#289877#1" expanded="false" />
+            <element signature="e#1447#1453#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.js">
+    <entry file="file://$PROJECT_DIR$/app/views/partials/picture.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="32" column="16" lean-forward="true" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+        <state relative-caret-position="375">
+          <caret line="25" column="20" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/about.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/article-teaser.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/prism.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/error.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sections/user/login.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="264" column="0" lean-forward="true" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/articles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="78" column="30" lean-forward="false" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/toolbar-list.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/private/scss/admin.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="327">
+          <caret line="25" column="9" lean-forward="false" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/grunt/critical.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="19" lean-forward="true" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/picture.handlebars">
+    <entry file="file://$PROJECT_DIR$/app/views/sections/article/list.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="24" lean-forward="true" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home.handlebars">
+    <entry file="file://$PROJECT_DIR$/app/views/partials/hero.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="135">
+          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sections/user/profile.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bulma/sass/grid/_all.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bulma/sass/grid/columns.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4226">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/private/scss/screen.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="615">
+          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/main-critical.handlebars">
+    <entry file="file://$PROJECT_DIR$/app/views/partials/disqus.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="19" />
+          <caret line="0" column="53" lean-forward="false" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sections/article/detail.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="46" column="12" lean-forward="false" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/main.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/grunt/string-replace.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="68" lean-forward="false" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/critical-test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="134" column="21" lean-forward="false" selection-start-line="134" selection-start-column="21" selection-end-line="134" selection-end-column="21" />
+        <state relative-caret-position="332">
+          <caret line="141" column="58" lean-forward="false" selection-start-line="141" selection-start-column="58" selection-end-line="141" selection-end-column="58" />
           <folding>
-            <element signature="e#3396#3402#0" expanded="true" />
-            <element signature="e#9619#9625#0" expanded="true" />
+            <element signature="e#5494#5500#0#HTML" expanded="true" />
+            <element signature="e#5693#5699#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#2;n#div#1;n#div#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#3;n#div#1;n#div#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/helpers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/flash.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bulma/css/bulma.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="445" column="0" lean-forward="true" selection-start-line="445" selection-start-column="0" selection-end-line="445" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/article-card.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

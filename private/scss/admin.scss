@@ -6,7 +6,6 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/badge";
 @import "../../node_modules/bootstrap/scss/input-group";
 @import "../../node_modules/bootstrap/scss/custom-forms";
 
@@ -14,7 +13,15 @@
 	outline: 1px dashed #ddd;
 }
 
-.fixed-bottom {
+.is-fixed-bottom {
+	position: fixed !important;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+}
+
+.navbar-admin {
 	background: #fff;
 	outline: 6px solid rgba(50, 50, 50, .1);
 }

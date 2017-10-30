@@ -29,6 +29,8 @@
 		<section>
 			<header>
 				<h1 id="title" class="wysiwyg-plain" data-toggle="tooltip" data-placement="top" title="Tooltip on top">{{{article.title}}}</h1>
+				<h2 id="subtitle" class="wysiwyg-plain" data-toggle="tooltip" data-placement="top"
+						title="Tooltip on top">{{{article.subtitle}}}</h2>
 				<p id="teaser" class="lead wysiwyg-plain">{{{article.teaser}}}</p>
 			</header>
 			<div class="wysiwyg" id="text">{{{article.text}}}</div>
@@ -96,10 +98,10 @@
 								role="button">
 					{{#if article}}
 						<i class="fa fa-pencil" aria-hidden="true"></i>
-						<span class="hidden-sm-down">&nbsp;{{__ "Edit"}}</span>
+						<span class="is-hidden-tablet">&nbsp;{{__ "Edit"}}</span>
 					{{else}}
 						<i class="fa fa-plus" aria-hidden="true"></i>
-						<span class="hidden-sm-down">&nbsp;{{__ "Add"}}</span>
+						<span class="is-hidden-tablet">&nbsp;{{__ "Add"}}</span>
 					{{/if}}
 				</button>
 			</div>

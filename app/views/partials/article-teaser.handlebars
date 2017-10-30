@@ -1,23 +1,37 @@
-<div class="card-deck mb-4">
-	{{#each (limit articles 3)}}
-		<div class="card">
-			<a href="/articles/{{slug title}}/" class="card-link">
-				{{#if image}}
-					{{> picture src=image config=../config class="img-fluid img-rounded" crop=true alt=title title=title }}
-				{{else}}
-					<img src="/img/content/1200/feed_ship.jpg" alt="{{title}}" class="card-img-top">
-				{{/if}}
-			</a>
-			<div class="card-body">
-				<p class="card-title h5" title="{{title}}">{{crop title limit="60"}}</p>
-				<p class="card-text">{{{crop teaser limit="140"}}}</p>
-				<a href="/articles/{{slug title}}/" class="card-link">{{__ "Read more"}} …</a>
-				<p class="card-text">
-					<time datetime="{{datetime createdAt}}">
-						<small class="text-muted">{{formatRelative createdAt}}</small>
-					</time>
-				</p>
+<div class="section">
+	<div class="columns">
+		{{#each (limit articles 3)}}
+			<div class="column">
+				<div class="card card-equal-height">
+					<a href="/articles/{{slug title}}/" class="card-image">
+						<figure class="image is-16by9">
+							{{#if image}}
+								{{> picture src=image config=../config crop=true alt=title title=title cdn=true}}
+							{{else}}
+								<img src="/img/content/1200/feed_ship.jpg" alt="{{title}}">
+							{{/if}}
+						</figure>
+					</a>
+					<div class="card-content">
+						<p class="title is-5" title="{{title}}">{{crop title limit="20"}}</p>
+						<p class="content">
+							{{{crop teaser limit="140"}}} <a>@vergissberlin</a>.
+							<br>
+							<time datetime="{{datetime createdAt}}">
+								<small>{{formatRelative createdAt}}</small>
+							</time>
+						</p>
+					</div>
+					<footer class="card-footer">
+						{{#if profile}}
+							<a href="#" class="card-footer-item">{{__ "Save" }}</a>
+							<a href="#" class="card-footer-item">{{__ "Edit" }}</a>
+							<a href="#" class="card-footer-item">{{__ "Delete" }}</a>
+						{{/if}}
+						<a href="/articles/{{slug title}}/" class="card-footer-item">{{__ "Read more"}} …</a>
+					</footer>
+				</div>
 			</div>
-		</div>
-	{{/each}}
+		{{/each}}
+	</div>
 </div>

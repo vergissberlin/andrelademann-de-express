@@ -143,17 +143,18 @@ router.post(
 	passportUtil.ensureAuthenicated,
 	function (req, res) {
 		new Article({
-			title:  req.body.title,
-			slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
-			state:  req.body.state,
-			meta:   {
+			title:    req.body.title,
+			subtitle: req.body.subtitle,
+			slug:     getSlug(req.body.title, {lang: 'de', truncate: 80}),
+			state:    req.body.state,
+			meta:     {
 				index:       req.body.index,
 				description: req.body.description,
 				keywords:    req.body.keywords
 			},
-			image:  req.body.image,
-			teaser: req.body.teaser,
-			text:   req.body.text
+			image:    req.body.image,
+			teaser:   req.body.teaser,
+			text:     req.body.text
 		}).save();
 
 		res.redirect('/articles/state/published');
@@ -175,17 +176,18 @@ router.post(
 
 		Article.findOneAndUpdate({'_id': req.params.id},
 			{
-				title:  req.body.title,
-				slug:   getSlug(req.body.title, {lang: 'de', truncate: 80}),
-				state:  req.body.state,
-				meta:   {
+				title:    req.body.title,
+				subtitle: req.body.subtitle,
+				slug:     getSlug(req.body.title, {lang: 'de', truncate: 80}),
+				state:    req.body.state,
+				meta:     {
 					index:       req.body.index,
 					description: req.body.description,
 					keywords:    req.body.keywords
 				},
-				image:  fileName,
-				teaser: req.body.teaser,
-				text:   req.body.text
+				image:    fileName,
+				teaser:   req.body.teaser,
+				text:     req.body.text
 			}, function (err) {
 				if (err) {
 					bugsnag.notify(err);

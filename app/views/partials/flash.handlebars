@@ -1,11 +1,38 @@
 {{#if expressFlash}}
-	<div class="alert alert-info" role="alert">
-		<p><strong class="text-uppercase">{{expressFlash.type}}</strong> {{ expressFlash }}</p>
+	<div class="message is-{{expressFlash.type}}" role="alert">
+		<div class="message-header">
+			<p>{{expressFlash.type}}</p>
+			<button class="delete" aria-label="delete"
+							onclick="this.parentNode.parentNode.className += ' is-hidden'"></button>
+		</div>
+		<div class="message-body">
+			{{ expressFlash }}
+		</div>
 	</div>
 {{/if}}
 
-{{#if flash}}
-	<div class="alert alert-{{flash.type}}" role="alert">
-		<strong class="text-uppercase">{{flash.type}}</strong> {{flash.message}}
-	</div>
+{{#if flash.error}}
+	{{# if flash.type}}
+		<div class="message is-{{flash.type}}" role="alert">
+			<div class="message-header">
+				<span class="is-capitalized">{{flash.type}}</span>
+				<button class="delete" aria-label="delete"
+								onclick="this.parentNode.parentNode.className += ' is-hidden'"></button>
+			</div>
+			<div class="message-body">
+				{{ flash.error }}
+			</div>
+		</div>
+	{{else}}
+		<div class="message is-warning" role="alert">
+			<div class="message-header">
+				<span class="is-capitalized">{{ __ "Warning" }}</span>
+				<button class="delete" aria-label="delete"
+								onclick="this.parentNode.parentNode.className += ' is-hidden'"></button>
+			</div>
+			<div class="message-body">
+				{{ flash.error }}
+			</div>
+		</div>
+	{{/if}}
 {{/if}}

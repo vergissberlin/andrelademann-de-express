@@ -15,6 +15,7 @@ require('./compare');
 require('./capitalize');
 require('./datetime');
 // require('./debug');
+// require('./log');
 require('./html2text');
 require('./pagination');
 require('./slug');

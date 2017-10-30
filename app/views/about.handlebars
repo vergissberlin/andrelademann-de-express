@@ -1,90 +1,212 @@
-{{> header tagType="h1"}}
+{{> hero tag=true brand="warning"}}
 
-<div id="hcard-André-Lademann" class="vcard">
-	<div class="jumbotron row">
-		<div class="col-xs-12 col-sm-2">
-			<figure>
-				<img src="http://www.gravatar.com/avatar/fb4aa793fc841faebe60042772c865ee?s=512&d=identicon"
-						 alt="photo of André Lademann" class="img-fluid"/>
-				<figcaption class="nickname text-xs-center">
-					vergissberlin
-				</figcaption>
-			</figure>
-			<a class="btn btn-outline-info btn-block hidden-sm-up" rel="me" href="tel:00491707353067">
-				<i class="fa fa-phone" aria-hidden="true">&nbsp;</i>
-				<span class="tel">+491707353067</span>
-			</a>
-			<a class="btn btn-outline-info btn-block hidden-sm-up" rel="me" href="mailto:info@andrelademann.de">
-				<i class="fa fa-envelope-o" aria-hidden="true">&nbsp;</i>
-				<span class="tel">Email</span>
-			</a>
-
-		</div>
-		<section class="col-xs-12 col-sm-10">
-			<h2>{{__ "Get in contact"}}</h2>
-			<p>
-				<a class="url fn clearfix" href="http://andrelademann.de">André Lademann</a>
-				<span class="org clearfix">NULLzueEINS Inh. André Lademann</span>
-				<a class="email hidden-sm-down" href="mailto:info@andrelademann.de">info@andrelademann.de</a>
-			</p>
-			<address class="adr">
-				<div class="street-address">Hardenbergstraße 48</div>
-				<div>
-					<span class="postal-code">04275</span> <span class="locality">Leipzig</span>,
+<section class="section">
+	<div class="container">
+		<div class="section">
+			<div class="columns">
+				<div class="column is-one-quarter-desktop is-block-mobile">
+					<div id="hcard-André-Lademann" class="content vcard">
+						<figure class="image">
+							<img src="https://www.gravatar.com/avatar/fb4aa793fc841faebe60042772c865ee?s=512&d=identicon"
+									 alt="{{ __ "photo of André Lademann" }}">
+							<figcaption class="nickname">@vergissberlin</figcaption>
+						</figure>
+						<p class="field">
+							<a class="button is-block is-primary is-small is-outlined" rel="me" href="tel:00491707353067">
+								<i class="fa fa-phone" aria-hidden="true"></i>
+								<span class="tel">+491707353067</span>
+							</a>
+						</p>
+						<p class="field">
+							<a class="button is-block is-primary is-small is-outlined" rel="me" href="mailto:info@andrelademann.de">
+								<i class="fa fa-envelope-o" aria-hidden="true">&nbsp;</i>
+								<span class="tel">{{ __ "Email" }}</span>
+							</a>
+						</p>
+					</div>
 				</div>
-				<div>
-					<span class="region">Saxony</span>, <span class="country-name">Germany</span>
+				<div class="column">
+					<section>
+						<h2>{{__ "Get in contact"}}</h2>
+						<p>
+							André Lademann<br>
+							<span class="org clearfix">NULLzueEINS Inh. André Lademann</span>
+							<a class="email is-hidden-tablet" href="mailto:info@andrelademann.de">info@andrelademann.de</a>
+						</p>
+						<address class="adr">
+							<div class="street-address">Hardenbergstraße 48</div>
+							<div>
+								<span class="postal-code">04275</span> <span class="locality">Leipzig</span>,
+							</div>
+							<div>
+								<span class="region">{{ __ "Saxony" }}</span>, <span class="country-name">{{ __ "Germany" }}</span>
+							</div>
+						</address>
+						<div class="bday invisible">1980-08-27T11:11:00</div>
+						<div class="category invisible">development</div>
+					</section>
 				</div>
-			</address>
-			<div class="bday invisible">1980-08-27T11:11:00</div>
-			<div class="category invisible">development</div>
-		</section>
-	</div>
-
-	<div class="row">
-		<section class="col-sm-12 col-md-6">
-			<h2>{{__ "Links"}}</h2>
-			<ul class="list-group">
-				<li class="list-group-item">
-					<a class="url" rel="me" href="xmpp:vergissberlin">Jabber</a>
-				</li>
-				<li class="list-group-item">
-					<a class="url" rel="me" href="skype:vergissberlin">Skype</a>
-				</li>
-				<li class="list-group-item">
-					<a class="url" rel="me" href="https://github.com/vergissberlin">GitHub</a>
-				</li>
-			</ul>
-		</section>
-
-		<section class="col-sm-12 col-md-6">
-			<h3>{{__ "Projects"}}</h3>
-			<div class="list-group">
-				<a class="url list-group-item list-group-item-action" rel="me"
-					 href="https://github.com/vergissberlin/andrelademann-de">
-					<p class="h4 list-group-item-heading">andrelademann.de</p>
-					<p class="list-group-item-text">
-						{{__ "ExpressJS Website mit Handlebars als Template-Engine und MongoDB als Datenbank."}}
-					</p>
-				</a>
-				<a class="url list-group-item list-group-item-action" rel="me"
-					 href="https://github.com/vergissberlin/piball">
-					<p class="h4 list-group-item-heading">Piball</p>
-					<p class="list-group-item-text">
-						{{__ "Digitaler Tischerkicker Torezähler mit JavaScript auf einem RaspberryPi."}}
-					</p>
-				</a>
-				<a class="url list-group-item list-group-item-action" rel="me"
-					 href="https://github.com/vergissberlin/piball-clients">
-					<p class="h4 list-group-item-heading">Piball Clients</p>
-					<p class="list-group-item-text">
-						{{__ "Clients für den Tischkicker-Counter für Chrome, Web und Smartphone Apps."}}
-					</p>
-				</a>
 			</div>
-		</section>
+		</div>
 	</div>
-</div>
+</section>
+<section class="section">
+	<div class="container">
+
+		<div class="columns">
+			<section class="column">
+				<h2>{{__ "Links"}}</h2>
+
+				<div class="field is-grouped">
+					<p class="control">
+						<a class="button is-block" rel="me" href="xmpp:vergissberlin">
+							<i class="fa fa-comment-o" aria-hidden="true"></i>
+							Jabber
+						</a>
+					</p>
+					<p class="control">
+						<a class="button is-block" rel="me" href="skype:vergissberlin">
+							<i class="fa fa-skype" aria-hidden="true"></i>
+							Skype
+						</a>
+					</p>
+					<p class="control">
+						<a class="button is-block" rel="me" href="https://github.com/vergissberlin">
+							<i class="fa fa-github" aria-hidden="true"></i>
+							GitHub
+						</a>
+					</p>
+				</div>
+			</section>
+
+			<section class="column">
+				<div class="content">
+					<p class="is-size-4">{{__ "Projects"}}</p>
+				</div>
+
+				<div class="content">
+					<div class="box">
+						<article class="media">
+							<div class="media-left">
+								<figure class="image is-96x96">
+									<img src="https://bulma.io/images/placeholders/256x256.png" alt="Image">
+								</figure>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p>
+										<strong>andrelademann.de</strong>
+										<small>@vergissberlin</small>
+										<br>
+										{{__ "ExpressJS website with handlebars as template engine and MongoDB as database."}}
+									</p>
+								</div>
+								<nav class="level is-mobile">
+									<div class="level-left">
+										<a class="level-item" rel="me"
+											 href="https://github.com/vergissberlin/andrelademann-de">
+											<span class="icon is-small"><i class="fa fa-home"></i></span>
+										</a>
+										<a class="level-item" rel="me"
+											 href="https://github.com/vergissberlin/andrelademann-de">
+											<span class="icon is-small"><i class="fa fa-github"></i></span>
+										</a>
+										<a class="level-item">
+											<span class="icon is-small"><i class="fa fa-reply"></i></span>
+										</a>
+										<a class="level-item">
+											<span class="icon is-small"><i class="fa fa-retweet"></i></span>
+										</a>
+										<a class="level-item">
+											<span class="icon is-small"><i class="fa fa-heart"></i></span>
+										</a>
+									</div>
+								</nav>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<div class="content">
+					<div class="box">
+						<article class="media">
+							<div class="media-left">
+								<figure class="image is-96x96">
+									<img src="https://bulma.io/images/placeholders/256x256.png" alt="Image">
+								</figure>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p>
+										<strong>Piball</strong>
+										<small>@vergissberlin</small>
+										<br>
+										{{__ "Digital table kicker score with JavaScript on a RaspberryPi."}}
+									</p>
+								</div>
+								<nav class="level is-mobile">
+									<div class="level-left">
+										<a class="level-item" rel="me"
+											 href="https://github.com/vergissberlin/piball">
+											<span class="icon is-small"><i class="fa fa-github"></i></span>
+										</a>
+										<a class="level-item">
+											<span class="icon is-small"><i class="fa fa-reply"></i></span>
+										</a>
+										<a class="level-item">
+											<span class="icon is-small"><i class="fa fa-retweet"></i></span>
+										</a>
+										<a class="level-item">
+											<span class="icon is-small"><i class="fa fa-heart"></i></span>
+										</a>
+									</div>
+								</nav>
+							</div>
+						</article>
+					</div>
+				</div>
+				<div class="content">
+					<div class="box">
+						<article class="media">
+							<div class="media-left">
+								<figure class="image is-96x96">
+									<img src="https://bulma.io/images/placeholders/256x256.png" alt="Image">
+								</figure>
+							</div>
+							<div class="media-content">
+								<div class="content">
+									<p>
+										<strong>Piball Clients</strong>
+										<small>@vergissberlin</small>
+										<br>
+										{{__ "Clients für den Tischkicker-Counter für Chrome, Web und Smartphone Apps."}}
+									</p>
+								</div>
+								<nav class="level is-mobile">
+									<div class="level-left">
+										<a class="level-item" rel="me"
+											 href="https://github.com/vergissberlin/piball-clients">
+											<span class="icon is-small"><i class="fa fa-github"></i></span>
+										</a>
+										<a class="level-item">
+											<span class="icon is-small"><i class="fa fa-reply"></i></span>
+										</a>
+										<a class="level-item">
+											<span class="icon is-small"><i class="fa fa-retweet"></i></span>
+										</a>
+										<a class="level-item">
+											<span class="icon is-small"><i class="fa fa-heart"></i></span>
+										</a>
+									</div>
+								</nav>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</section>
 
 <script type="application/ld+json">
 {
@@ -120,8 +242,15 @@
   "jobTitle": "Software developer",
   "name": "André Lademann",
   "telephone": "0049 170 7353067",
-  "url": "http://www.andrelademann.de"
+  "button": "http://www.andrelademann.de"
 }
+
+
+
+
+
+
+
 
 
 

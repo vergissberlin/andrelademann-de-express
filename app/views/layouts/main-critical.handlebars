@@ -14,164 +14,8 @@
 		font-family: "Helvetica Neue", open-sans, Arial, sans-serif;
 		font-weight: 100
 	}</style>
-	<style>.nav-link, nav {
-		display: block
-	}
-
-	*, ::after, ::before {
-		box-sizing: border-box
-	}
-
-	html {
-		font-family: sans-serif;
-		line-height: 1.15;
-		-webkit-text-size-adjust: 100%;
-		-ms-text-size-adjust: 100%;
-		-ms-overflow-style: scrollbar
-	}
-
-	@-ms-viewport {
-		width: device-width
-	}
-
-	body {
-		margin: 0;
-		font-size: 1rem;
-		font-weight: 400;
-		line-height: 1.5;
-		text-align: left;
+	<style>.navbar, html {
 		background-color: #fff
-	}
-
-	ul {
-		margin-top: 0;
-		margin-bottom: 1rem
-	}
-
-	a {
-		color: #007bff;
-		text-decoration: none;
-		background-color: transparent;
-		-webkit-text-decoration-skip: objects
-	}
-
-	a, button {
-		touch-action: manipulation
-	}
-
-	button {
-		margin: 0;
-		font-family: inherit;
-		font-size: inherit;
-		line-height: inherit;
-		overflow: visible;
-		text-transform: none
-	}
-
-	button, html [type=button] {
-		-webkit-appearance: button
-	}
-
-	[type=button]::-moz-focus-inner, button::-moz-focus-inner {
-		padding: 0;
-		border-style: none
-	}
-
-	::-webkit-file-upload-button {
-		font: inherit;
-		-webkit-appearance: button
-	}
-
-	.container {
-		margin-right: auto;
-		margin-left: auto;
-		padding-right: 15px;
-		padding-left: 15px;
-		width: 100%
-	}
-
-	.nav-link, .navbar {
-		padding: .5rem 1rem
-	}
-
-	.navbar {
-		position: relative;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between
-	}
-
-	.navbar-brand {
-		display: inline-block;
-		padding-top: .3125rem;
-		padding-bottom: .3125rem;
-		margin-right: 1rem;
-		font-size: 1.25rem;
-		line-height: inherit;
-		white-space: nowrap
-	}
-
-	.navbar-nav {
-		display: flex;
-		flex-direction: column;
-		padding-left: 0;
-		margin-bottom: 0;
-		list-style: none
-	}
-
-	.navbar-nav .nav-link {
-		padding-right: 0;
-		padding-left: 0
-	}
-
-	.navbar-collapse {
-		flex-basis: 100%;
-		align-items: center
-	}
-
-	.navbar-toggler {
-		padding: .25rem .75rem;
-		font-size: 1.25rem;
-		line-height: 1;
-		background: 0 0;
-		border: 1px solid transparent;
-		border-radius: .25rem
-	}
-
-	.navbar-toggler-icon {
-		display: inline-block;
-		width: 1.5em;
-		height: 1.5em;
-		vertical-align: middle;
-		content: "";
-		background: center center no-repeat;
-		background-size: 100% 100%
-	}
-
-	.navbar-light .navbar-brand {
-		color: rgba(0, 0, 0, .9)
-	}
-
-	.navbar-light .navbar-nav .nav-link {
-		color: rgba(0, 0, 0, .5)
-	}
-
-	.navbar-light .navbar-toggler {
-		color: rgba(0, 0, 0, .5);
-		border-color: rgba(0, 0, 0, .1)
-	}
-
-	.navbar-light .navbar-toggler-icon {
-		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
-	}
-
-	.bg-light {
-		background-color: #f8f9fa !important
-	}
-
-	.rounded {
-		border-radius: .25rem !important
 	}
 
 	.sr-only {
@@ -186,17 +30,67 @@
 		border: 0
 	}
 
-	.mr-auto {
-		margin-right: auto !important
+	body, html {
+		margin: 0;
+		padding: 0
+	}
+
+	button {
+		margin: 0
 	}
 
 	html {
-		overflow-y: scroll
+		box-sizing: border-box;
+		font-size: 16px;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		min-width: 300px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		text-rendering: optimizeLegibility;
+		text-size-adjust: 100%
+	}
+
+	*, :after, :before {
+		box-sizing: inherit
+	}
+
+	body, button {
+		font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
 	}
 
 	body {
-		font-family: "Helvetica Neue", open-sans, Arial, sans-serif;
-		color: #343a40
+		color: #4a4a4a;
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.5
+	}
+
+	a {
+		color: #3273dc;
+		text-decoration: none
+	}
+
+	span {
+		font-style: inherit;
+		font-weight: inherit
+	}
+
+	.container {
+		margin: 0 auto;
+		position: relative
+	}
+
+	.navbar {
+		min-height: 3.25rem;
+		position: relative
+	}
+
+	.navbar-brand {
+		align-items: stretch;
+		display: flex;
+		flex-shrink: 0;
+		min-height: 3.25rem
 	}</style>
 
 	{{#if profile}}
@@ -218,12 +112,23 @@
 	<link rel="manifest" href="/manifest.json">
 
 	<noscript>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="screen">
 		<link rel="stylesheet" href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="print">
 	</noscript>
-	<link rel="preload" href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="print" as="style"
+	<link rel="preload"
+				href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+				as="style"
 				onload="this.rel='stylesheet'">
-	<link rel="preload" href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="screen" as="style"
+	<link rel="preload"
+				href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css"
+				media="print"
+				as="style"
+				onload="this.rel='stylesheet'">
+	<link rel="preload"
+				href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css"
+				media="screen"
+				as="style"
 				onload="this.rel='stylesheet'">
 	{{#if admin}}
 		<meta name="robots" content="noindex">
@@ -269,195 +174,244 @@
 {{/unless}}
 <a class="sr-only sr-only-focusable"
 	 href="#content">{{__ "Skip to main content"}}</a>
-<div class="container">
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light rounded d-print-none">
-		<a class="navbar-brand" href="/">
-			{{#if profile}}
-				{{profile.firstname}}&nbsp;{{profile.lastname}}
-			{{else}}
-				André Lademann
-			{{/if}}
-		</a>
-
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-						aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navigation">
-			<ul class="navbar-nav mr-auto">
-
+<div class="container is-hidden-print">
+	<nav class="navbar">
+		<div class="navbar-brand">
+			<a class="navbar-item has-text-weight-bold" href="/">
 				{{#if profile}}
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle"
-							 href="/articles/state/published/"
-							 id="navigation-article"
-							 data-toggle="dropdown"
-							 aria-haspopup="true"
-							 aria-expanded="false">{{__ 'Articles'}}
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navigation-article">
-							<a class="dropdown-item"
-								 href="/articles/state/published">
-								{{{__ 'Published'}}}
-								<span
-									class="badge badge-pill badge-success pull-right"
-									data-ajax="/articles/count/published">{{articleCounter.draft}}</span>
-							</a>
-							<a class="dropdown-item"
-								 href="/articles/state/draft">
-								{{{__ 'Draft'}}}
-								<span
-									class="badge badge-pill badge-warning pull-right"
-									data-ajax="/articles/count/draft">99</span>
-							</a>
-							<a class="dropdown-item"
-								 href="/articles/state/deleted">
-								{{{__ 'Deleted'}}}
-								<span
-									class="badge badge-pill badge-danger pull-right"
-									data-ajax="/articles/count/deleted">99</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="/articles/add">
-								{{__ 'Articles'}} {{{__ 'Add'}}}
-								<i class="fa fa-plus"></i>
-							</a>
-						</div>
-					</li>
+					{{profile.firstname}}&nbsp;{{profile.lastname}}
 				{{else}}
-					<li class="nav-item">
-						<a class="nav-link"
-							 href="/articles/">
-							{{__ "Articles"}}</a>
-					</li>
+					André Lademann
 				{{/if}}
+			</a>
+			<a class="navbar-item is-hidden" href="https://github.com/vergissberlin" target="_blank">
+				<span class="icon" style="color: #333;">
+					<i class="fa fa-lg fa-github"></i>
+				</span>
+			</a>
+			<a class="navbar-item is-hidden" href="https://plus.google.com/+AndréL" target="_blank">
+				<span class="icon" style="color: #d34836;">
+					<i class="fa fa-lg fa-google-plus"></i>
+				</span>
+			</a>
+			<a class="navbar-item is-hidden" href="https://plus.google.com/+AndréL" target="_blank">
+				<span class="icon has-text-grey-light">
+					<i class="fa fa-lg fa-sign-in"></i>
+				</span>
+			</a>
 
-				<li class="nav-item">
-					<a class="nav-link" href="/about/">{{__ 'About'}}</a>
-				</li>
+			<div class="navbar-burger burger" data-target="navMenu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 
-			</ul>
-
-			<div class="form-inline my-2 my-md-0">
+		<div class="navbar-menu" id="navMenu">
+			<div class="navbar-start">
 				{{#if profile}}
-					<a class="btn btn-outline-primary btn-block" href="/user/logout/">
-						<i class="fa fa-sign-out"
-							 aria-hidden="true"></i> <span
-						class="hidden-sm-down">&nbsp;{{__ 'Sign out'}}</span></a>
+				<div class="navbar-item has-dropdown is-hoverable">
+					<a class="navbar-link  is-active" href="/articles/">{{__ 'Articles'}}</a>
+					<div class="navbar-dropdown ">
+						<a class="navbar-item  is-active" href="/articles/state/published">
+							{{{__ 'Published'}}}&nbsp;
+							<span
+								class="tag is-rounded"
+								data-ajax="/articles/count/published">0</span>
+						</a>
+						<a class="navbar-item" href="/articles/state/draft">
+							{{{__ 'Draft'}}}&nbsp;
+							<span
+								class="tag is-rounded"
+								data-ajax="/articles/count/draft">0</span>
+						</a>
+						<a class="navbar-item" href="/articles/state/deleted">
+							{{{__ 'Deleted'}}}&nbsp;
+							<span
+								class="tag is-rounded"
+								data-ajax="/articles/count/deleted">0</span>
+						</a>
+						<hr class="navbar-divider">
+						<a class="navbar-item" href="/articles/state/published">
+							{{__ 'Articles'}}&nbsp;{{{__ 'Add'}}}&nbsp;
+							<i class="fa fa-plus"></i>
+						</a>
+					</div>
 				{{else}}
-					<a class="btn btn-outline-primary btn-block" href="/user/login/">
-						<i class="fa fa-sign-in"
-							 aria-hidden="true"></i> <span
-						class="hidden-sm-down">&nbsp;{{__ 'Sign in'}}</span>
+					<a class="navbar-item" href="/articles/">{{__ "Articles"}}</a>
+				{{/if}}
+				<a class="navbar-item" href="/about/">{{__ 'About'}}</a>
+			</div>
+			</div>
+
+			<div class="navbar-end">
+				<a class="navbar-item is-hidden-desktop" href="/articles/">{{__ "Articles"}}</a>
+				<a class="navbar-item is-hidden-desktop" href="/about/">{{__ 'About'}}</a>
+				<a class="navbar-item is-warning" href="https://github.com/vergissberlin/andrelademann-de"
+					 target="_blank">
+					<span class="icon" style="color: #333;">
+						<i class="fa fa-lg fa-github"></i>
+					</span>
+					<span class="is-hidden-desktop">GitHub</span>
+				</a>
+				<a class="navbar-item" href="https://plus.google.com/+AndréL" target="_blank">
+					<span class="icon" style="color: #d34836;">
+						<i class="fa fa-lg fa-google-plus"></i>
+					</span>
+					<span class="is-hidden-desktop">Google+</span>
+				</a>
+				{{#if profile}}
+					<a class="navbar-item title="{{__ 'Sign out'}}" href="/user/logout/">
+					<span class="icon has-text-grey">
+							<i class="fa fa-lg fa-sign-out" aria-hidden="true"></i>
+						</span>
+					<span class="is-hidden-desktop">{{__ 'Sign out'}}</span>
+					</a>
+				{{else}}
+					<a class="navbar-item" title="{{__ 'Sign in'}}" href="/user/login/">
+						<span class="icon has-text-grey-light">
+							<i class="fa fa-lg fa-sign-in" aria-hidden="true"></i>
+						</span>
+						<span class="is-hidden-desktop">{{__ 'Sign in'}}</span>
+
 					</a>
 				{{/if}}
 			</div>
 		</div>
 	</nav>
-
-	<main id="content">
-		{{{body}}}
-	</main>
-
 </div>
 
-<footer class="bg-light text-muted d-print-none">
-	<div class="container pt-3 pt-md-5 pb-3 pb-md-5">
-		<p class="float-right">
-			<a href="http://validator.w3.org/check?uri=referer"
-				 class="btn btn-md btn-default">
-				<i class="fa fa-html5" aria-hidden="true"></i>
-				<span class="sr-only sr-only-focusable">Validate HTML</span>
-			</a>
+<main id="content">
+	{{{body}}}
+</main>
 
-			<a href="https://jigsaw.w3.org/css-validator/check/referer"
-				 class="btn btn-md btn-default">
-				<i class="fa fa-css3" aria-hidden="true"></i>
-				<span class="sr-only sr-only-focusable">Validate CSS</span>
-			</a>
-		</p>
-		&copy; André Lademann
+<footer class="footer">
+	<div class="container">
+		<nav class="level">
+			<div class="level-left">
+				<p class="level-item">
+					&copy; André Lademann
+				</p>
+			</div>
+
+			<div class="level-right">
+				<p class="level-item">
+					<a href="http://validator.w3.org/check?uri=referer"
+						 class="button is-white">
+						<i class="fa fa-html5" aria-hidden="true"></i>
+						<span class="sr-only sr-only-focusable">Validate HTML</span>
+					</a>
+				</p>
+				<p class="level-item">
+					<a href="https://jigsaw.w3.org/css-validator/check/referer"
+						 class="button is-white">
+						<i class="fa fa-css3" aria-hidden="true"></i>
+						<span class="sr-only sr-only-focusable">Validate CSS</span>
+					</a>
+				</p>
+			</div>
+		</nav>
 	</div>
 </footer>
-<noscript class="lazyload">
-	<link rel="alternate stylesheet"
-				title="Dark Bootstrap"
-				href="https://bootswatch.com/darkly/bootstrap.css">
-</noscript>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-				integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-				crossorigin="anonymous"></script>
+
 {{#if profile}}
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+					integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+					crossorigin="anonymous"></script>
 	<script src="/js/profile{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.js" async></script>
 {{/if}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-				integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-				crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
-				integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-				crossorigin="anonymous"
-				async></script>
-<script>!function (e) {
-	"use strict";
-	var t = function (t, n, r) {
-		function o(e) {
-			if (i.body) return e();
-			setTimeout(function () {
-				o(e)
-			})
+<script src="/js/main{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.js" async></script>
+<script>(function e(t, n, r) {
+	function o(a, l) {
+		if (!n[a]) {
+			if (!t[a]) {
+				var f = typeof require == "function" && require;
+				if (!l && f) return f(a, !0);
+				if (i) return i(a, !0);
+				var d = new Error("Cannot find module '" + a + "'");
+				throw d.code = "MODULE_NOT_FOUND", d
+			}
+			var u = n[a] = {exports: {}};
+			t[a][0].call(u.exports, function (e) {
+				var n = t[a][1][e];
+				return o(n ? n : e)
+			}, u, u.exports, e, t, n, r)
 		}
-
-		function a() {
-			d.addEventListener && d.removeEventListener("load", a), d.media = r || "all"
-		}
-
-		var l, i = e.document, d = i.createElement("link");
-		if (n) l = n; else {
-			var s = (i.body || i.getElementsByTagName("head")[0]
-			).childNodes;
-			l = s[s.length - 1]
-		}
-		var u = i.styleSheets;
-		d.rel = "stylesheet", d.href = t, d.media = "only x", o(function () {
-			l.parentNode.insertBefore(d, n ? l : l.nextSibling)
-		});
-		var f = function (e) {
-			for (var t = d.href, n = u.length; n--;) if (u[n].href === t) return e();
-			setTimeout(function () {
-				f(e)
-			})
-		};
-		return d.addEventListener && d.addEventListener("load", a), d.onloadcssdefined = f, f(a), d
-	};
-	"undefined" != typeof exports ? exports.loadCSS = t : e.loadCSS = t
-}("undefined" != typeof global ? global : this), function (e) {
-	if (e.loadCSS) {
-		var t = loadCSS.relpreload = {};
-		if (t.support = function () {
-				try {
-					return e.document.createElement("link").relList.supports("preload")
-				} catch (e) {
-					return !1
-				}
-			}, t.poly = function () {
-				for (var t = e.document.getElementsByTagName("link"), n = 0; n < t.length; n++) {
-					var r = t[n];
-					"preload" === r.rel && "style" === r.getAttribute("as") &&
-					(e.loadCSS(r.href, r, r.getAttribute("media")), r.rel = null
-					)
-				}
-			}, !t.support()) {
-			t.poly();
-			var n = e.setInterval(t.poly, 300);
-			e.addEventListener && e.addEventListener("load", function () {
-				t.poly(), e.clearInterval(n)
-			}), e.attachEvent && e.attachEvent("onload", function () {
-				e.clearInterval(n)
-			})
-		}
+		return n[a].exports
 	}
-}(this);</script>
+
+	var i = typeof require == "function" && require;
+	for (var a = 0; a < r.length; a++) o(r[a]);
+	return o
+}
+)({
+	1: [function (e, t, n) {
+		(function (e) {
+			!function (e) {
+				"use strict";
+				var t = function (t, n, r) {
+					function o(e) {
+						if (l.body) return e();
+						setTimeout(function () {
+							o(e)
+						})
+					}
+
+					function i() {
+						f.addEventListener && f.removeEventListener("load", i), f.media = r || "all"
+					}
+
+					var a, l = e.document, f = l.createElement("link");
+					if (n) a = n; else {
+						var d = (l.body || l.getElementsByTagName("head")[0]
+						).childNodes;
+						a = d[d.length - 1]
+					}
+					var u = l.styleSheets;
+					f.rel = "stylesheet", f.href = t, f.media = "only x", o(function () {
+						a.parentNode.insertBefore(f, n ? a : a.nextSibling)
+					});
+					var s = function (e) {
+						for (var t = f.href, n = u.length; n--;) if (u[n].href === t) return e();
+						setTimeout(function () {
+							s(e)
+						})
+					};
+					return f.addEventListener && f.addEventListener("load", i), f.onloadcssdefined = s, s(i), f
+				};
+				"undefined" != typeof n ? n.loadCSS = t : e.loadCSS = t
+			}("undefined" != typeof e ? e : this), function (e) {
+				if (e.loadCSS) {
+					var t = loadCSS.relpreload = {};
+					if (t.support = function () {
+							try {
+								return e.document.createElement("link").relList.supports("preload")
+							} catch (e) {
+								return !1
+							}
+						}, t.poly = function () {
+							for (var t = e.document.getElementsByTagName("link"), n = 0; n < t.length; n++) {
+								var r = t[n];
+								"preload" === r.rel && "style" === r.getAttribute("as") &&
+								(e.loadCSS(r.href, r, r.getAttribute("media")), r.rel = null
+								)
+							}
+						}, !t.support()) {
+						t.poly();
+						var n = e.setInterval(t.poly, 300);
+						e.addEventListener && e.addEventListener("load", function () {
+							t.poly(), e.clearInterval(n)
+						}), e.attachEvent && e.attachEvent("onload", function () {
+							e.clearInterval(n)
+						})
+					}
+				}
+			}(this)
+		}
+		).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !==
+		"undefined" ? window : {})
+	}, {}]
+}, {}, [1]);</script>
 </body>
 </html>
