@@ -14,8 +14,7 @@
 'use strict';
 
 var lozad = require('lozad');
-
-const observer = lozad();
+var observer = lozad();
 observer.observe();
 
 // Burger

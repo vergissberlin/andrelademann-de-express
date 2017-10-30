@@ -5,94 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>{{title}}</title>
-	<style>.img-fluid {
-		max-width: 100%;
-		height: auto
-	}
-
-	body {
-		font-family: "Helvetica Neue", open-sans, Arial, sans-serif;
-		font-weight: 100
-	}</style>
-	<style>.navbar, html {
-		background-color: #fff
-	}
-
-	.sr-only {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		overflow: hidden;
-		clip: rect(0, 0, 0, 0);
-		white-space: nowrap;
-		clip-path: inset(50%);
-		border: 0
-	}
-
-	body, html {
-		margin: 0;
-		padding: 0
-	}
-
-	button {
-		margin: 0
-	}
-
-	html {
-		box-sizing: border-box;
-		font-size: 16px;
-		-moz-osx-font-smoothing: grayscale;
-		-webkit-font-smoothing: antialiased;
-		min-width: 300px;
-		overflow-x: hidden;
-		overflow-y: scroll;
-		text-rendering: optimizeLegibility;
-		text-size-adjust: 100%
-	}
-
-	*, :after, :before {
-		box-sizing: inherit
-	}
-
-	body, button {
-		font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
-	}
-
-	body {
-		color: #4a4a4a;
-		font-size: 1rem;
-		font-weight: 400;
-		line-height: 1.5
-	}
-
-	a {
-		color: #3273dc;
-		text-decoration: none
-	}
-
-	span {
-		font-style: inherit;
-		font-weight: inherit
-	}
-
-	.container {
-		margin: 0 auto;
-		position: relative
-	}
-
-	.navbar {
-		min-height: 3.25rem;
-		position: relative
-	}
-
-	.navbar-brand {
-		align-items: stretch;
-		display: flex;
-		flex-shrink: 0;
-		min-height: 3.25rem
-	}</style>
-
+	<style>.img-fluid{max-width:100%;height:auto}body{font-family:"Helvetica Neue",open-sans,Arial,sans-serif;font-weight:100}</style>
+	<style>.navbar,html{background-color:#fff}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;clip-path:inset(50%);border:0}body,html{margin:0;padding:0}button{margin:0}html{box-sizing:border-box;font-size:16px;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;min-width:300px;overflow-x:hidden;overflow-y:scroll;text-rendering:optimizeLegibility;text-size-adjust:100%}*,:after,:before{box-sizing:inherit}body,button{font-family:BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif}body{color:#4a4a4a;font-size:1rem;font-weight:400;line-height:1.5}a{color:#3273dc;text-decoration:none}span{font-style:inherit;font-weight:inherit}.container{margin:0 auto;position:relative}.navbar{min-height:3.25rem;position:relative}.navbar-brand{align-items:stretch;display:flex;flex-shrink:0;min-height:3.25rem}</style>
+	<style type="text/css">{{{config.styles.inlineStyles}}}</style>
 	{{#if profile}}
 		<link rel="stylesheet" href="/css/admin{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css">
 	{{/if}}
@@ -110,6 +25,7 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.json">
+	{{> async-css}}
 	{{#if admin}}
 		<meta name="robots" content="noindex">
 	{{else}}
@@ -302,99 +218,5 @@
 	<script src="/js/profile{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.js" async></script>
 {{/if}}
 <script src="/js/main{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.js" async></script>
-<script>(function e(t, n, r) {
-	function o(a, l) {
-		if (!n[a]) {
-			if (!t[a]) {
-				var f = typeof require == "function" && require;
-				if (!l && f) return f(a, !0);
-				if (i) return i(a, !0);
-				var d = new Error("Cannot find module '" + a + "'");
-				throw d.code = "MODULE_NOT_FOUND", d
-			}
-			var u = n[a] = {exports: {}};
-			t[a][0].call(u.exports, function (e) {
-				var n = t[a][1][e];
-				return o(n ? n : e)
-			}, u, u.exports, e, t, n, r)
-		}
-		return n[a].exports
-	}
-
-	var i = typeof require == "function" && require;
-	for (var a = 0; a < r.length; a++) o(r[a]);
-	return o
-}
-)({
-	1: [function (e, t, n) {
-		(function (e) {
-			!function (e) {
-				"use strict";
-				var t = function (t, n, r) {
-					function o(e) {
-						if (l.body) return e();
-						setTimeout(function () {
-							o(e)
-						})
-					}
-
-					function i() {
-						f.addEventListener && f.removeEventListener("load", i), f.media = r || "all"
-					}
-
-					var a, l = e.document, f = l.createElement("link");
-					if (n) a = n; else {
-						var d = (l.body || l.getElementsByTagName("head")[0]
-						).childNodes;
-						a = d[d.length - 1]
-					}
-					var u = l.styleSheets;
-					f.rel = "stylesheet", f.href = t, f.media = "only x", o(function () {
-						a.parentNode.insertBefore(f, n ? a : a.nextSibling)
-					});
-					var s = function (e) {
-						for (var t = f.href, n = u.length; n--;) if (u[n].href === t) return e();
-						setTimeout(function () {
-							s(e)
-						})
-					};
-					return f.addEventListener && f.addEventListener("load", i), f.onloadcssdefined = s, s(i), f
-				};
-				"undefined" != typeof n ? n.loadCSS = t : e.loadCSS = t
-			}("undefined" != typeof e ? e : this), function (e) {
-				if (e.loadCSS) {
-					var t = loadCSS.relpreload = {};
-					if (t.support = function () {
-							try {
-								return e.document.createElement("link").relList.supports("preload")
-							} catch (e) {
-								return !1
-							}
-						}, t.poly = function () {
-							for (var t = e.document.getElementsByTagName("link"), n = 0; n < t.length; n++) {
-								var r = t[n];
-								"preload" === r.rel && "style" === r.getAttribute("as") &&
-								(e.loadCSS(r.href, r, r.getAttribute("media")), r.rel = null
-								)
-							}
-						}, !t.support()) {
-						t.poly();
-						var n = e.setInterval(t.poly, 300);
-						e.addEventListener && e.addEventListener("load", function () {
-							t.poly(), e.clearInterval(n)
-						}), e.attachEvent && e.attachEvent("onload", function () {
-							e.clearInterval(n)
-						})
-					}
-				}
-			}(this)
-		}
-		).call(this, typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !==
-		"undefined" ? window : {})
-	}, {}]
-}, {}, [1]);</script>
 </body>
 </html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="screen">
-<link rel="stylesheet" href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="print">

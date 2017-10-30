@@ -29,10 +29,6 @@ module.exports = {
 				{
 					pattern:     '<style data-replace="critical"></style>',
 					replacement: "<style><%= grunt.file.read('public/css/critical.min.css') %></style>"
-				},
-				{
-					pattern:     '<script data-replace="critical"></script>',
-					replacement: "<script><%= grunt.file.read('public/js/critical.min.js') %></script>"
 				}
 			]
 		}

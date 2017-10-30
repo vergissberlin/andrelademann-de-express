@@ -28,17 +28,5 @@ module.exports = {
 				'<%= package.directories.public.js %>/profile.js'
 			]
 		}
-	},
-
-	critical: {
-		options: {
-			compress: false
-		},
-		files:   {
-			'<%= package.directories.public.js %>/critical.min.js': [
-				'<%= package.directories.public.js %>/critical.js'
-			]
-		}
 	}
-
 };

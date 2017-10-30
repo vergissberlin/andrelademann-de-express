@@ -1,4 +1,4 @@
-# andrelademannde *0.0.4*
+# andrelademannde *0.0.5*
 
 > Personal homepage
 
@@ -299,6 +299,33 @@ Debug view helper
 
 ```javascript
  {{debug}} or {{debug someValue}}
+```
+
+
+##### Returns
+
+
+- `Void`
+
+
+
+
+### app/views/helpers/log.js
+
+
+#### Handlebars() 
+
+Debug logger view helper
+
+
+
+
+
+
+##### Examples
+
+```javascript
+ {{log}} or {{log someValue}}
 ```
 
 

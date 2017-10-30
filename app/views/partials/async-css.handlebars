@@ -1,0 +1,31 @@
+{{! @link https://github.com/GoogleChromeLabs/application-shell/blob/b959b1d2a68f60e2e9a050aabeafff72bbb7b827/server/views/partials/async-css.handlebars }}
+
+{{#if config.styles.remoteStyles}}
+	<script>
+		var remoteStyles = [
+			{{#each data.remoteStyles}}
+				'{{this}}',
+			{{~/each}}
+		];
+
+		window.requestAnimationFrame(function () {
+			var elementToInsertLinkBefore =
+						document.getElementsByTagName('script')[0];
+			for (var i = 0; i < remoteStyles.length; i++) {
+				var linkElement = document.createElement('link');
+				linkElement.rel = 'stylesheet';
+				linkElement.media = 'all';
+				linkElement.href = remoteStyles[i];
+
+				elementToInsertLinkBefore.parentNode.insertBefore(linkElement,
+					elementToInsertLinkBefore);
+			}
+		});
+	</script>
+
+	<noscript>
+		{{#each config.styles.remoteStyles}}
+			<link href="{{this}}" rel="stylesheet" property="stylesheet" media="all">
+		{{~/each}}
+	</noscript>
+{{~/if}}

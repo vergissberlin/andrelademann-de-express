@@ -5,14 +5,42 @@
     <bookmark url="file://$PROJECT_DIR$/public/critical-test.html" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2673426-47a4-4a0d-b4a4-41f3cc710847" name="Default" comment="Try to be lazy like google.">
+    <list default="true" id="f2673426-47a4-4a0d-b4a4-41f3cc710847" name="Default" comment="Remove critical javascript">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/private/js/critical.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/critical.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/js/critical.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" afterPath="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/main.handlebars" afterPath="$PROJECT_DIR$/app/views/layouts/main.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/grunt/string-replace.js" afterPath="$PROJECT_DIR$/config/grunt/string-replace.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/grunt/uglify.js" afterPath="$PROJECT_DIR$/config/grunt/uglify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_about.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_about.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_articles.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_articles.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_form.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_form.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_home.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_home.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_upload.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_upload.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_user.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_user.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_video.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_video.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/controllers_weather.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/controllers_weather.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/global.html" afterPath="$PROJECT_DIR$/doc/JavaScript/global.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/index.html" afterPath="$PROJECT_DIR$/doc/JavaScript/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/models_article.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/models_article.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/models_user.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/models_user.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/module-controller_article.html" afterPath="$PROJECT_DIR$/doc/JavaScript/module-controller_article.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/module-controller_home.html" afterPath="$PROJECT_DIR$/doc/JavaScript/module-controller_home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/module-controller_weather.html" afterPath="$PROJECT_DIR$/doc/JavaScript/module-controller_weather.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/styles/jsdoc-default.css" afterPath="$PROJECT_DIR$/doc/JavaScript/styles/jsdoc-default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/styles/prettify-tomorrow.css" afterPath="$PROJECT_DIR$/doc/JavaScript/styles/prettify-tomorrow.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/JavaScript/views_helpers_debug.js.html" afterPath="$PROJECT_DIR$/doc/JavaScript/views_helpers_debug.js.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/Sass/assets/js/vendor/jquery.min.js" afterPath="$PROJECT_DIR$/doc/Sass/assets/js/vendor/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/Sass/index.html" afterPath="$PROJECT_DIR$/doc/Sass/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index.html" afterPath="$PROJECT_DIR$/doc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/index.md" afterPath="$PROJECT_DIR$/doc/index.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/js/main.js" afterPath="$PROJECT_DIR$/private/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/admin.css" afterPath="$PROJECT_DIR$/public/css/admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/admin.min.css" afterPath="$PROJECT_DIR$/public/css/admin.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/critical.css" afterPath="$PROJECT_DIR$/public/css/critical.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/screen.css" afterPath="$PROJECT_DIR$/public/css/screen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.js" afterPath="$PROJECT_DIR$/public/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/main.min.js" afterPath="$PROJECT_DIR$/public/js/main.min.js" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +55,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.handlebars" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/main.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="37" column="54" lean-forward="true" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+            <state relative-caret-position="578">
+              <caret line="219" column="83" lean-forward="false" selection-start-line="219" selection-start-column="83" selection-end-line="219" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uglify.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/grunt/uglify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="3" lean-forward="false" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="async-css.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/async-css.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="118" column="3" lean-forward="false" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
+              <folding>
+                <marker date="1509360989000" expanded="true" signature="443:4594" ph="{...}" />
+                <marker date="1509360989000" expanded="true" signature="3363:4593" ph="[...]" />
+                <marker date="1509360989000" expanded="true" signature="3396:4580" ph="{...}" />
+                <marker date="1509360989000" expanded="true" signature="3911:4575" ph="{...}" />
+                <marker date="1509360989000" expanded="true" signature="4124:4572" ph="{...}" />
+                <marker date="1509360989000" expanded="true" signature="4206:4567" ph="{...}" />
+                <marker date="1509360989000" expanded="true" signature="4253:4561" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="76" column="6" lean-forward="false" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -40,8 +126,8 @@
       <file leaf-file-name="main-critical.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/main-critical.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="220" column="7" lean-forward="true" selection-start-line="220" selection-start-column="7" selection-end-line="220" selection-end-column="7" />
+            <state relative-caret-position="3315">
+              <caret line="221" column="7" lean-forward="false" selection-start-line="221" selection-start-column="7" selection-end-line="221" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -50,18 +136,18 @@
       <file leaf-file-name="critical-test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/critical-test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
+            <state relative-caret-position="960">
               <caret line="235" column="5" lean-forward="false" selection-start-line="235" selection-start-column="5" selection-end-line="235" selection-end-column="5" />
               <folding>
                 <element signature="n#a#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#3401#3407#0" expanded="true" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#9809#9815#0" expanded="true" />
-                <marker date="1509357692000" expanded="false" signature="9282:9847" ph="..." />
-                <marker date="1509357692000" expanded="false" signature="10063:10168" ph="..." />
-                <marker date="1509357692000" expanded="false" signature="10257:10382" ph="..." />
-                <marker date="1509357692000" expanded="false" signature="10470:10605" ph="..." />
-                <marker date="1509357692000" expanded="false" signature="11603:12341" ph="{...}" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#11603#12341#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -71,17 +157,17 @@
         <entry file="file://$PROJECT_DIR$/config/grunt/critical.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+              <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="string-replace.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="string-replace.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/grunt/string-replace.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="420">
+              <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -98,14 +184,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>d-print-none</find>
-      <find>meta.</find>
-      <find>glo</find>
-      <find>confi</find>
-      <find>128</find>
-      <find>meta</find>
-      <find>img</find>
-      <find>is-link</find>
       <find>imag</find>
       <find>null</find>
       <find>message</find>
@@ -128,6 +206,14 @@
       <find>99</find>
       <find>img-fluid</find>
       <find>.img-fluid</find>
+      <find>font</find>
+      <find>getFileContents</find>
+      <find>fs.readFileSync('/css/screen.css')</find>
+      <find>loadCSS</find>
+      <find>critical.js</find>
+      <find>critical</find>
+      <find>public/js/critical.min.j</find>
+      <find>cri</find>
     </findStrings>
     <replaceStrings>
       <replace>badge</replace>
@@ -142,6 +228,7 @@
       <replace>is-hidden-tablet</replace>
       <replace>is-</replace>
       <replace>0</replace>
+      <replace>fs.readFileSync(rootPath +'/public/css/screen.css')</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/views</dir>
@@ -160,7 +247,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/private/server/ssl/localhost-key.pem" />
         <option value="$PROJECT_DIR$/private/server/ssl/localhost-cert.pem" />
         <option value="$PROJECT_DIR$/private/scss/_fonts.scss" />
         <option value="$PROJECT_DIR$/private/scss/basic/_fonts-fontawsome.scss" />
@@ -168,10 +254,7 @@
         <option value="$PROJECT_DIR$/config/grunt/sass.js" />
         <option value="$PROJECT_DIR$/private/scss/fonts.scss" />
         <option value="$PROJECT_DIR$/private/js/critical.js" />
-        <option value="$PROJECT_DIR$/config/grunt/uglify.js" />
-        <option value="$PROJECT_DIR$/config/config.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/config/grunt/string-replace.js" />
         <option value="$PROJECT_DIR$/node_modules/bulma/bulma.sass" />
         <option value="$PROJECT_DIR$/config/grunt/watch.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/main-critical.handlebars" />
@@ -203,14 +286,18 @@
         <option value="$PROJECT_DIR$/app/views/sections/article/list.handlebars" />
         <option value="$PROJECT_DIR$/app/views/partials/disqus.handlebars" />
         <option value="$PROJECT_DIR$/app/views/sections/article/detail.handlebars" />
-        <option value="$PROJECT_DIR$/private/js/main.js" />
         <option value="$PROJECT_DIR$/app/views/helpers/index.js" />
         <option value="$PROJECT_DIR$/app/views/partials/flash.handlebars" />
         <option value="$PROJECT_DIR$/app/views/partials/article-card.handlebars" />
         <option value="$PROJECT_DIR$/public/js/main.js" />
         <option value="$PROJECT_DIR$/config/grunt/critical.js" />
         <option value="$PROJECT_DIR$/public/critical-test.html" />
+        <option value="$PROJECT_DIR$/config/config.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/async-css.handlebars" />
         <option value="$PROJECT_DIR$/app/views/layouts/main.handlebars" />
+        <option value="$PROJECT_DIR$/config/grunt/uglify.js" />
+        <option value="$PROJECT_DIR$/private/js/main.js" />
+        <option value="$PROJECT_DIR$/config/grunt/string-replace.js" />
       </list>
     </option>
   </component>
@@ -236,7 +323,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -257,6 +344,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -361,7 +449,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -548,7 +635,21 @@
       <option name="project" value="LOCAL" />
       <updated>1509351993365</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Try to be lazy like google.">
+      <created>1509358595897</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1509358595897</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Try to be lazy like google v2.">
+      <created>1509360357481</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1509360357481</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -559,13 +660,12 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20193471" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2956441" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5060606" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2956441" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22831506" sideWeight="0.4873035" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23030907" sideWeight="0.4873035" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -574,6 +674,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22031474" sideWeight="0.5126965" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -648,7 +749,9 @@
     <MESSAGE value="Added fonts as base64 encoded. refs #57" />
     <MESSAGE value="Remove external fonts. refs #57" />
     <MESSAGE value="Switch from big bootstrap to bulma. refs #61" />
-    <option name="LAST_COMMIT_MESSAGE" value="Switch from big bootstrap to bulma. refs #61" />
+    <MESSAGE value="Try to be lazy like google." />
+    <MESSAGE value="Try to be lazy like google v2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to be lazy like google v2." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -657,7 +760,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/config/config.js</url>
-          <line>13</line>
+          <line>14</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -666,42 +769,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/bulma/sass/components/_all.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/screen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/log.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/helpers/debug.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="3" lean-forward="true" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/scss/print.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/scss/utilities/_display.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
@@ -878,6 +945,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="264" column="0" lean-forward="true" selection-start-line="264" selection-start-column="0" selection-end-line="264" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -964,7 +1032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,52 +1051,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/helpers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/main-critical.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="220" column="7" lean-forward="true" selection-start-line="220" selection-start-column="7" selection-end-line="220" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/critical-test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="960">
           <caret line="235" column="5" lean-forward="false" selection-start-line="235" selection-start-column="5" selection-end-line="235" selection-end-column="5" />
           <folding>
             <element signature="n#a#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#3401#3407#0" expanded="true" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#9809#9815#0" expanded="true" />
-            <marker date="1509357692000" expanded="false" signature="9282:9847" ph="..." />
-            <marker date="1509357692000" expanded="false" signature="10063:10168" ph="..." />
-            <marker date="1509357692000" expanded="false" signature="10257:10382" ph="..." />
-            <marker date="1509357692000" expanded="false" signature="10470:10605" ph="..." />
-            <marker date="1509357692000" expanded="false" signature="11603:12341" ph="{...}" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#11603#12341#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1037,23 +1079,95 @@
     <entry file="file://$PROJECT_DIR$/config/grunt/critical.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="38" lean-forward="true" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/grunt/string-replace.js">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/main-critical.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="3315">
+          <caret line="221" column="7" lean-forward="false" selection-start-line="221" selection-start-column="7" selection-end-line="221" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/async-css.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/critical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="68" lean-forward="false" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/main.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="37" column="54" lean-forward="true" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="54" />
+        <state relative-caret-position="578">
+          <caret line="219" column="83" lean-forward="false" selection-start-line="219" selection-start-column="83" selection-end-line="219" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/grunt/uglify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="3" lean-forward="false" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/js/critical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="118" column="3" lean-forward="false" selection-start-line="118" selection-start-column="3" selection-end-line="118" selection-end-column="3" />
+          <folding>
+            <marker date="1509360989000" expanded="true" signature="443:4594" ph="{...}" />
+            <marker date="1509360989000" expanded="true" signature="3363:4593" ph="[...]" />
+            <marker date="1509360989000" expanded="true" signature="3396:4580" ph="{...}" />
+            <marker date="1509360989000" expanded="true" signature="3911:4575" ph="{...}" />
+            <marker date="1509360989000" expanded="true" signature="4124:4572" ph="{...}" />
+            <marker date="1509360989000" expanded="true" signature="4206:4567" ph="{...}" />
+            <marker date="1509360989000" expanded="true" signature="4253:4561" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="3" lean-forward="false" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="76" column="6" lean-forward="false" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/grunt/string-replace.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding />
         </state>
       </provider>

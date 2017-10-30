@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: controllers/weather.js</title>
+    <title>JSDoc: Source: views/helpers/log.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: controllers/weather.js</h1>
+    <h1 class="page-title">Source: views/helpers/log.js</h1>
 
     
 
@@ -26,47 +26,35 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>/**
- * Weather controller
+            <pre class="prettyprint source linenums"><code>/*eslint no-console: "off" */
+/**
+ * Debug logger view helper
+ *
  * @project      AndreLademannDe
  * @author       André Lademann &lt;info@andrelademann.de>
  * @copyright    MIT
  * @license      https://opensource.org/licenses/MIT
+ * @see           @commondream (http://thinkvitamin.com/code/handlebars-js-part-3-tips-and-tricks/)
+ * @example
+ *  {{log}} or {{log someValue}}
  */
 var
-	bugsnag = require('bugsnag'),
-	weather = require('weather-js'),
-	express = require('express'),
-	router  = express.Router();
+	Handlebars = require('handlebars');
 
-/**
- * Weather controller
- *
- * @module controller/weather
+/*
+ * Use this to turn on logging: (in your local extensions file)
  */
-module.exports = function (app) {
-	app.use('/', router);
+Handlebars.logger.log = function (level) {
+	if (level >= Handlebars.logger.level) {
+		console.log.apply(console, [].concat(['Handlebars: '], _.toArray(arguments)));
+	}
 };
 
-/**
- * Article controller
- *
- * @function
- */
-router.get('/weather', function (req, res) {
-	weather.find({search: 'Cape town', degreeType: 'C', lang: 'en-GB'}, function (err, result) {
-		var flash = '';
-		if (err) {
-			bugsnag.notify(err);
-			flash = res.__('Couldn`t get weather information jet.');
-		}
-		res.render('weather', {
-			title:   res.__('Weather'),
-			weather: result,
-			flash:   flash
-		});
-	});
-});
+// DEBUG: 0, INFO: 1, WARN: 2, ERROR: 3,
+Handlebars.registerHelper('log', Handlebars.logger.log);
+// Std level is 3, when set to 0, handlebars will log all compilation results
+Handlebars.logger.level = 3;
+
 </code></pre>
         </article>
     </section>
