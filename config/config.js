@@ -28,8 +28,11 @@ var config = {
 			images: 'http://edge.zimage.io/?url=http://development-cdn.andrelademann.de/'
 		},
 		styles: {
-			inlineStyles: fs.readFileSync(rootPath + '/public/css/screen.css'),
-			remoteStyles: ['https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css']
+			inlineStyles: fs.readFileSync(rootPath + '/public/css/critical.css'),
+			remoteStyles: [
+				'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+				'/css/screen.css'
+			]
 		},
 		url:    process.env.URL || 'https://localhost',
 		port:   process.env.PORT || 3030,
@@ -50,8 +53,11 @@ var config = {
 			images: 'https://zimage.global.ssl.fastly.net/?url=http://development-cdn.andrelademann.de/'
 		},
 		styles: {
-			inlineStyles: fs.readFileSync(rootPath + '/public/css/screen.css'),
-			remoteStyles: ['https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css']
+			inlineStyles: fs.readFileSync(rootPath + '/public/css/critical.css'),
+			remoteStyles: [
+				'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+				'/css/screen.css'
+			]
 		},
 		url:    process.env.URL || 'https://localhost',
 		port:   process.env.PORT || 3232,
@@ -72,8 +78,11 @@ var config = {
 			images: 'https://zimage.global.ssl.fastly.net/?url=http://staging-cdn.andrelademann.de/'
 		},
 		styles: {
-			inlineStyles: fs.readFileSync(rootPath + '/public/css/screen.css'),
-			remoteStyles: ['https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css']
+			inlineStyles: fs.readFileSync(rootPath + '/public/css/critical.min.css'),
+			remoteStyles: [
+				'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+				'/css/screen.min.css'
+			]
 		},
 		url:    process.env.URL || 'https://staging.andrelademann.de',
 		port:   process.env.PORT || 443,
@@ -95,8 +104,11 @@ var config = {
 			images: 'https://zimage.global.ssl.fastly.net/?url=http://cdn.andrelademann.de/'
 		},
 		styles: {
-			inlineStyles: fs.readFileSync(rootPath + '/public/css/screen.css'),
-			remoteStyles: ['https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css']
+			inlineStyles: fs.readFileSync(rootPath + '/public/css/critical.min.css'),
+			remoteStyles: [
+				'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+				'/css/screen.min.css'
+			]
 		},
 		url:    process.env.URL || 'https://andrelademann.de',
 		port:   process.env.PORT || 443,

@@ -3,11 +3,10 @@
 {{#if config.styles.remoteStyles}}
 	<script>
 		var remoteStyles = [
-			{{#each data.remoteStyles}}
+			{{#each config.styles.remoteStyles}}
 				'{{this}}',
 			{{~/each}}
 		];
-
 		window.requestAnimationFrame(function () {
 			var elementToInsertLinkBefore =
 						document.getElementsByTagName('script')[0];
@@ -16,7 +15,6 @@
 				linkElement.rel = 'stylesheet';
 				linkElement.media = 'all';
 				linkElement.href = remoteStyles[i];
-
 				elementToInsertLinkBefore.parentNode.insertBefore(linkElement,
 					elementToInsertLinkBefore);
 			}

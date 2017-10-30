@@ -13,8 +13,7 @@
 		"sassdoc",
 		"scsslint",
 		"uglify",
-		"critical",
-		"string-replace"
+		"critical"
 	],
 	"debug": [
 		"sass",
@@ -33,7 +32,6 @@
 		"cssmin",
 		"uglify",
 		"critical",
-		"string-replace",
 		"manifest",
 		"responsive_images"
 	],
@@ -46,7 +44,6 @@
 		"browserify:prod",
 		"uglify",
 		"critical",
-		"string-replace",
 		"bump",
 		"git_changelog"
 	],
