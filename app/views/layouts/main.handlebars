@@ -25,26 +25,6 @@
 	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/manifest.json">
-
-	<noscript>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="screen">
-		<link rel="stylesheet" href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="print">
-	</noscript>
-	<link rel="preload"
-				href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-				as="style"
-				onload="this.rel='stylesheet'">
-	<link rel="preload"
-				href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css"
-				media="print"
-				as="style"
-				onload="this.rel='stylesheet'">
-	<link rel="preload"
-				href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css"
-				media="screen"
-				as="style"
-				onload="this.rel='stylesheet'">
 	{{#if admin}}
 		<meta name="robots" content="noindex">
 	{{else}}
@@ -240,3 +220,6 @@
 <script data-replace="critical"></script>
 </body>
 </html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/screen{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="screen">
+<link rel="stylesheet" href="/css/print{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.css" media="print">
