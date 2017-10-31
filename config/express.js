@@ -51,6 +51,7 @@ module.exports = function (app, config) {
 	if (app.get('env') === 'staging' || app.get('env') === 'production') {
 
 		// Minify HTML output
+		/*
 		app.use(minifyHTML({
 			override:      true,
 			exception_url: false,
@@ -73,6 +74,7 @@ module.exports = function (app, config) {
 				decodeEntities:                true
 			}
 		}));
+		*/
 
 		// Redirect to https
 		app.all('*', function (req, res, next) {
