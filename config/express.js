@@ -28,9 +28,8 @@ var
 	logger            = require('morgan'),
 	methodOverride    = require('method-override'),
 	minifyHTML        = require('express-minify-html'),
-	nodeSecret        = process.env.NODE_SECRET || 'superhero',
-	passport          = require('passport'),
-	session           = require('express-session');
+	nodeSecret        = process.env.NODE_SECRET || 'kukcNJWFQdvSRKLyCcFk9dSQ3cDPFm3hZgHJycK525MYvw',
+	passport          = require('passport');
 
 // Register additional header
 bugsnag.register(process.env.BUGSNAG_TOKEN);
@@ -85,13 +84,17 @@ module.exports = function (app, config) {
 		});
 	}
 
-	// Passport
-	app.use(expressSession({
-		secret:            'keyboard cat',
+	// Session
+	var session = {
+		secret:            nodeSecret,
 		resave:            false,
-		saveUninitialized: false,
-		cookie:            {secure: false}
-	}));
+		saveUninitialized: true,
+		cookie:            {
+			secure: false
+		}
+	};
+
+	// Passport
 	app.use(passport.initialize());
 	app.use(cookieParser());
 	app.use(passport.session({
@@ -198,6 +201,9 @@ module.exports = function (app, config) {
 
 	// Staging & Production
 	if (app.get('env') === 'staging' || app.get('env') === 'production') {
+		app.set('trust proxy', 1);
+		session.cookie.secure = true;
+		app.use(expressSession(session));
 		app.use(bugsnag.requestHandler);
 		app.use(bugsnag.errorHandler);
 		app.use(function (err, req, res) {
