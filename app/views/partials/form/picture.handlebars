@@ -1,5 +1,5 @@
 {{#if article.image}}
-	{{> picture src=article.image config=config class="img-fluid img-thumbnail" alt=article.title title=article.title }}
+	{{> picture src=article.image config=config class="image img-thumbnail" alt=article.title title=article.title }}
 {{/if}}
 
 <div class="imageupload panel panel-default">
@@ -13,7 +13,7 @@
 	</div>
 	<div class="file-tab panel-body">
 		{{#if article.image}}
-			{{> picture src=article.image config=config class="img-fluid img-thumbnail" alt=article.title title=article.title }}
+			{{> picture src=article.image config=config class="image img-thumbnail" alt=article.title title=article.title }}
 		{{/if}}
 		<label class="btn btn-outline-primary btn-file" style="margin-bottom: 0">
 			<span>{{__ 'Browse'}}</span>

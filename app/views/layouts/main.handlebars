@@ -29,8 +29,9 @@
 	{{#if admin}}
 		<meta name="robots" content="noindex">
 	{{else}}
-		<meta name="robots" content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if
-			robots.follow}}, follow{{else}}, nofollow{{/if}}">
+		<meta name="robots"
+					content="{{#if robots.current}}index{{else}}noindex{{/if}}{{#if
+						robots.follow}}, follow{{else}}, nofollow{{/if}}">
 	{{/if}}
 	<meta name="msapplication-TileColor" content="#fffff">
 	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
@@ -43,7 +44,6 @@
 	{{/if}}
 	{{> social/opengraph this}}
 	{{> social/twitter this}}
-
 	{{#unless ENV_DEVELOPMENT}}
 		<script>(function (w, d, s, l, i) {
 				w[l] = w[l] || [];
@@ -60,6 +60,12 @@
 			}
 		)(window, document, 'script', 'dataLayer', 'GTM-K5N7CS4');</script>
 	{{/unless}}
+	{{#if profile}}
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+						integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+						crossorigin="anonymous"></script>
+		<script src="/js/profile{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.js"></script>
+	{{/if}}
 </head>
 <body>
 {{#unless ENV_DEVELOPMENT}}
@@ -210,12 +216,6 @@
 	</div>
 </footer>
 
-{{#if profile}}
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-					integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-					crossorigin="anonymous"></script>
-	<script src="/js/profile{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.js" async></script>
-{{/if}}
 <script src="/js/main{{#unless ENV_DEVELOPMENT}}.min{{/unless}}.js" async></script>
 </body>
 </html>

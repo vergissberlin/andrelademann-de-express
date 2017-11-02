@@ -1,132 +1,172 @@
-<form
-	action="/articles/{{#if article}}edit/{{article._id}}{{else}}add{{/if}}"
-	method="post">
+<article>
+	<form
+		action="/articles/{{#if article}}edit/{{article._id}}{{else}}add{{/if}}"
+		method="post">
 
-	<div class="btn-group btn-group-sm" data-toggle="buttons">
-		<label class="btn btn-outline-primary{{#if article.state}}{{#compare article.state "draft"}} active{{/compare}}{{else}} active{{/if}}">
-			<input type="radio" name="state" id="draft" value="draft"
-						 autocomplete="off"{{#if article.state}}{{#compare article.state "draft"}}
-						 checked{{/compare}}{{else}} checked{{/if}}>
-			{{__ "Draft"}}
-		</label>
-		<label class="btn btn-outline-danger{{#compare article.state "deleted"}} active{{/compare}}">
-			<input type="radio" name="state" id="deleted"
-						 value="deleted"
-						 autocomplete="off"{{#compare article.state "deleted"}}
-						 checked{{/compare}}>
-			{{__ "Deleted"}}
-		</label>
-		<label class="btn btn-outline-success{{#compare article.state "published"}} active{{/compare}}">
-			<input type="radio" name="state" id="published"
-						 value="published"
-						 autocomplete="off"{{#compare article.state "published"}}
-						 checked{{/compare}}>
-			{{__ "Published"}}
-		</label>
-	</div>
-
-	<article>
-		<section>
-			<header>
-				<h1 id="title" class="wysiwyg-plain" data-toggle="tooltip" data-placement="top" title="Tooltip on top">{{{article.title}}}</h1>
-				<h2 id="subtitle" class="wysiwyg-plain" data-toggle="tooltip" data-placement="top"
-						title="Tooltip on top">{{{article.subtitle}}}</h2>
-				<p id="teaser" class="lead wysiwyg-plain">{{{article.teaser}}}</p>
-			</header>
-			<div class="wysiwyg" id="text">{{{article.text}}}</div>
+		<section class="hero is-primary">
+			<div class="hero-body">
+				<div class="container">
+					<h1 id="title"
+							class="wysiwyg-plain title">{{{article.title}}}</h1>
+					<h2 id="subtitle"
+							class="wysiwyg-plain subtitle">{{{article.subtitle}}}</h2>
+				</div>
+			</div>
 		</section>
 
-		<div class="collapse" id="meta-data">
-			<div class="card text-white bg-dark mb-3">
-				<div class="card-body">
-					<h4 class="card-title">{{__ "Meta-Data"}}</h4>
-					<div class="card-text">
-						<div class="form-group row">
-							<label class="col-sm-2">{{__ "Index"}}</label>
-							<div class="col-sm-10">
-								<div class="form-check">
-									<label class="form-check-label">
-										<input type="checkbox" class="form-check-input" id="index" name="index"
-													 {{#if article.meta.index}}checked{{/if}}>
-										{{__ "Index that"}}
-									</label>
-								</div>
-							</div>
+		<section class="hero is-dark is-hidden-mobile" id="meta-data">
+			<div class="hero-body">
+				<div class="container">
+					<p class="is-size-4">{{__ "Meta-Data"}}</p>
+
+					<div class="field">
+						<label class="col-sm-2">{{__ "Index"}}</label>
+						<div class="control">
+
 						</div>
-						<div class="form-group">
-							<label for="description" class="col-xs-2 col-form-label">{{__ "Description"}}</label>
-							<div class="col-xs-10">
-							<textarea class="form-control"
+						<label class="checkbox">
+							<input type="checkbox" id="index" name="index"
+										 {{#if article.meta.index}}checked{{/if}}>
+							{{__ "Index that"}}
+						</label>
+					</div>
+
+					<div class="field">
+						<label class="label">{{__ "Description"}}</label>
+						<div class="control">
+							<textarea class="textarea"
+												type="text"
 												rows="2"
 												placeholder="Meta description (Max 120 chars)"
 												maxlength="120"
 												id="description"
 												name="description">{{{article.meta.description}}}</textarea>
-							</div>
 						</div>
-						<div class="form-group">
-							<label for="keywords" class="col-xs-2 col-form-label">{{__ "Keywords"}}</label>
-							<div class="col-xs-10">
-								<input class="form-control"
-											 type="text"
-											 maxlength="120"
-											 placeholder="Meta keywords"
-											 value="{{{article.meta.keywords}}}"
-											 id="keywords"
-											 name="keywords">
+					</div>
+
+					<div class="field">
+						<label class="label">{{__ "Keywords"}}</label>
+						<div class="control">
+							<textarea class="textarea"
+												type="text"
+												rows="2"
+												placeholder="Meta keywords (Max 120 chars)"
+												maxlength="120"
+												id="keywords"
+												name="keywords">{{{article.meta.keywords}}}</textarea>
+						</div>
+					</div>
+
+					<div class="field">
+
+					</div>
+
+					<div class="card">
+						<div class="card-body">
+							<h4 class="card-title">{{__ "Meta-Data"}}</h4>
+							<div class="card-text">
+								<div class="form-group row">
+									<label class="col-sm-2">{{__ "Index"}}</label>
+									<div class="col-sm-10">
+										<div class="form-check">
+											<label class="form-check-label">
+												<input type="checkbox" class="form-check-input" id="index" name="index"
+															 {{#if article.meta.index}}checked{{/if}}>
+												{{__ "Index that"}}
+											</label>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<input type="hidden" name="image" value="{{article.image}}" id="image">
-	</article>
+		</section>
 
-	<nav class="navbar fixed-bottom navbar-light bg-faded">
-		<div class="container">
-			<div class="btn-group btn-group-xs pull-xs-right" role="group" aria-label="Controls">
-				<a href="javascript:if(confirm('Realy?')) history.back()" id="cancel" class="btn btn-outline-danger">
-					<i class="fa fa-ban" aria-hidden="true"></i>&nbsp;{{__ "Cancel"}}</a>
-				<a class="btn btn-outline-dark" data-toggle="collapse" href="#meta-data" aria-expanded="false"
-					 aria-controls="meta-data">
-					{{__ "Meta-Data"}}
-				</a>
-				<button type="submit"
-								id="submit"
-								class="btn btn-outline-primary"
-								role="button">
-					{{#if article}}
-						<i class="fa fa-pencil" aria-hidden="true"></i>
-						<span class="is-hidden-tablet">&nbsp;{{__ "Edit"}}</span>
-					{{else}}
-						<i class="fa fa-plus" aria-hidden="true"></i>
-						<span class="is-hidden-tablet">&nbsp;{{__ "Add"}}</span>
-					{{/if}}
-				</button>
+		<section class="section">
+			<div class="container">
+				<p id="teaser" class="content is-size-5 wysiwyg-plain">{{{article.teaser}}}</p>
+				<div class="wysiwyg content" id="text">{{{article.text}}}</div>
+
+
+				<input type="hidden" name="image" value="{{article.image}}" id="image">
+				<nav class="navbar fixed-bottom navbar-light bg-faded">
+					<div class="container">
+						<div class="is-group is-group-xs pull-xs-right" role="group" aria-label="Controls">
+							<a href="javascript:if(confirm('Realy?')) history.back()"
+								 id="cancel"
+								 class="button is-outline is-danger">
+								<i class="fa fa-ban" aria-hidden="true"></i>&nbsp;{{__ "Cancel"}}</a>
+							<a class="button is-outline is-dark"
+								 data-toggle="collapse"
+								 href="#meta-data"
+								 aria-expanded="false"
+								 aria-controls="meta-data">
+								{{__ "Meta-Data"}}
+							</a>
+							<button type="submit"
+											id="submit"
+											class="button is-outline-primary"
+											role="button">
+								{{#if article}}
+									<i class="fa fa-pencil" aria-hidden="true"></i>
+									<span class="is-hidden-tablet">&nbsp;{{__ "Edit"}}</span>
+								{{else}}
+									<i class="fa fa-plus" aria-hidden="true"></i>
+									<span class="is-hidden-tablet">&nbsp;{{__ "Add"}}</span>
+								{{/if}}
+							</button>
+						</div>
+					</div>
+				</nav>
+
+				<div class="field">
+					<div class="control has-icons-left">
+						<div class="select is-primary">
+							<select name="state" id="draft">
+								<option {{#if article.state}}{{#compare article.state "draft"}}selected{{/compare}}{{/if}}>{{__
+									"Draft"}}</option>
+								<option {{#if article.state}}{{#compare article.state "deleted"}}selected{{/compare}}{{/if}}>{{__
+									"Deleted"}}</option>
+								<option {{#if article.state}}{{#compare article.state "published"}}selected{{/compare}}{{/if}}>{{__
+									"Published"}}</option>
+							</select>
+						</div>
+						<div class="icon is-small is-left">
+							<i class="fa fa-file-text-o"></i>
+						</div>
+					</div>
+				</div>
+
 			</div>
-		</div>
-	</nav>
+		</section>
+	</form>
+</article>
 
-</form>
-
-
-<section class="card">
-	<div id="openGraph" class="card-body" aria-labelledby="Open Graph">
-		<div class="form-group row">
-			<label class="col-sm-2">{{__ "Picture"}}</label>
-			<div class="col-sm-10">
-				{{#if article.image}}
-					<figure id="fileOriginalPreview">
-						<img src="{{config.media.images}}{{article.image}}&w=200&h=200&mode=crop"
-								 lowsrc=""{{config.media.images}}{{article.image}}&w=200&h=200&mode=crop&quality=1"
-								 class="img-fluid img-rounded"
-								 alt="{{html2text title}}">
-						<figcaption class="text-muted">{{__ "Original"}}: <a href="{{config.media.cdn}}{{article.image}}" target="image">{{config.media.cdn}}{{article.image}}</a></figcaption>
-					</figure>
-				{{/if}}
-				{{> form/dropzone this file="image" name="title" }}
+<div class="section">
+	<div class="container">
+		<section class="card">
+			<div id="openGraph" class="card-body" aria-labelledby="Open Graph">
+				<div class="form-group row">
+					<label class="col-sm-2">{{__ "Picture"}}</label>
+					<div class="col-sm-10">
+						{{#if article.image}}
+							<figure id="fileOriginalPreview">
+								<img src="{{config.media.images}}{{article.image}}&w=200&h=200&mode=crop"
+										 lowsrc="{{config.media.images}}{{article.image}}&w=200&h=200&mode=crop&quality=1"
+										 class="image"
+										 alt="{{html2text title}}">
+								<figcaption class="text-muted">{{__ "Original"}}:
+									<a href="{{config.media.cdn}}{{article.image}}"
+										 target="image">{{config.media.cdn}}{{article.image}}</a>
+								</figcaption>
+							</figure>
+						{{/if}}
+						{{> form/dropzone this file="image" name="title" }}
+					</div>
+				</div>
 			</div>
-		</div>
+		</section>
 	</div>
-</section>
+</div>

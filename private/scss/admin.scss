@@ -3,11 +3,11 @@
 ///
 /// @author André Lademann <info@andrelademann.de>
 ////
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
-@import "../../node_modules/bootstrap/scss/input-group";
-@import "../../node_modules/bootstrap/scss/custom-forms";
+
+/// BulmaCSS
+.hero.is-dark .label {
+	color: $white;
+}
 
 .wysiwyg-plain {
 	outline: 1px dashed #ddd;

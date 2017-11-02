@@ -17,19 +17,20 @@ var
 	express           = require('express'),
 	expressHandlebars = require('express-handlebars'),
 	expressSession    = require('express-session'),
-	favicon           = require('serve-favicon'),
-	flash             = require('connect-flash'),
-	glob              = require('glob'),
-	handlebars        = require('handlebars'),
-	handlebarsIntl    = require('handlebars-intl'),
-	helmet            = require('helmet'),
-	helpers           = require('../app/views/helpers'),
-	i18n              = require('./i18n'),
-	logger            = require('morgan'),
-	methodOverride    = require('method-override'),
-	minifyHTML        = require('express-minify-html'),
-	nodeSecret        = process.env.NODE_SECRET || 'kukcNJWFQdvSRKLyCcFk9dSQ3cDPFm3hZgHJycK525MYvw',
-	passport          = require('passport');
+	favicon        = require('serve-favicon'),
+	flash          = require('connect-flash'),
+	glob           = require('glob'),
+	handlebars     = require('handlebars'),
+	handlebarsIntl = require('handlebars-intl'),
+	helmet         = require('helmet'),
+	helpers        = require('../app/views/helpers'),
+	i18n           = require('./i18n'),
+	logger         = require('morgan'),
+	methodOverride = require('method-override'),
+	minifyHTML     = require('express-minify-html'),
+	nodeSecret     = process.env.NODE_SECRET || 'superhero',
+	passport       = require('passport'),
+	session        = require('express-session');
 
 // Register additional header
 bugsnag.register(process.env.BUGSNAG_TOKEN);
@@ -51,7 +52,6 @@ module.exports = function (app, config) {
 	if (app.get('env') === 'staging' || app.get('env') === 'production') {
 
 		// Minify HTML output
-		/*
 		app.use(minifyHTML({
 			override:      true,
 			exception_url: false,
@@ -74,7 +74,6 @@ module.exports = function (app, config) {
 				decodeEntities:                true
 			}
 		}));
-		*/
 
 		// Redirect to https
 		app.all('*', function (req, res, next) {
@@ -86,17 +85,13 @@ module.exports = function (app, config) {
 		});
 	}
 
-	// Session
-	var session = {
-		secret:            nodeSecret,
-		resave:            false,
-		saveUninitialized: true,
-		cookie:            {
-			secure: false
-		}
-	};
-
 	// Passport
+	app.use(expressSession({
+		secret:            'keyboard cat',
+		resave:            false,
+		saveUninitialized: false,
+		cookie:            {secure: false}
+	}));
 	app.use(passport.initialize());
 	app.use(cookieParser());
 	app.use(passport.session({
@@ -203,9 +198,6 @@ module.exports = function (app, config) {
 
 	// Staging & Production
 	if (app.get('env') === 'staging' || app.get('env') === 'production') {
-		app.set('trust proxy', 1);
-		session.cookie.secure = true;
-		app.use(expressSession(session));
 		app.use(bugsnag.requestHandler);
 		app.use(bugsnag.errorHandler);
 		app.use(function (err, req, res) {

@@ -74,17 +74,7 @@ module.exports = {
 			'<%= package.directories.app.views %>/**/*.handlebars'
 		],
 		tasks: [
-			'develop',
-			'string-replace'
-		]
-	},
-
-	layout: {
-		files: [
-			'<%= package.directories.app.views %>/*layouts/main.handlebars'
-		],
-		tasks: [
-			'string-replace'
+			'develop'
 		]
 	}
 

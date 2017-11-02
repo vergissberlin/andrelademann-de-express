@@ -1,7 +1,7 @@
 {{#if articles}}
 	{{#each (limit articles 60)}}
 		<article class="media">
-			<a href="/articles/{{slug title}}/" class="media-left">
+			<a href="/articles/{{slug title}}/" class="media-left is-hidden-mobile">
 				<figure class="image is-128x128">
 					{{#if image}}
 						<img
