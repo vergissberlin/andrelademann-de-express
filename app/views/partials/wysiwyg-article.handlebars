@@ -3,7 +3,9 @@
 		action="/articles/{{#if article}}edit/{{article._id}}{{else}}add{{/if}}"
 		method="post">
 
-		<section class="hero is-primary">
+		<input type="hidden" name="image" value="{{article.image}}" id="image">
+
+		<section class="hero is-primary" id="header">
 			<div class="hero-body">
 				<div class="container">
 					<h1 id="title"
@@ -14,7 +16,7 @@
 			</div>
 		</section>
 
-		<section class="hero is-dark is-hidden-mobile" id="meta-data">
+		<section class="hero is-dark is-shadow-top" id="meta-data" style="display:none">
 			<div class="hero-body">
 				<div class="container">
 					<p class="is-size-4">{{__ "Meta-Data"}}</p>
@@ -37,7 +39,7 @@
 							<textarea class="textarea"
 												type="text"
 												rows="2"
-												placeholder="Meta description (Max 120 chars)"
+												placeholder="{{ __ "Meta description (Max 120 chars)" }}"
 												maxlength="120"
 												id="description"
 												name="description">{{{article.meta.description}}}</textarea>
@@ -50,34 +52,10 @@
 							<textarea class="textarea"
 												type="text"
 												rows="2"
-												placeholder="Meta keywords (Max 120 chars)"
+												placeholder="{{ __ "Meta keywords (Max 120 chars)" }}"
 												maxlength="120"
 												id="keywords"
 												name="keywords">{{{article.meta.keywords}}}</textarea>
-						</div>
-					</div>
-
-					<div class="field">
-
-					</div>
-
-					<div class="card">
-						<div class="card-body">
-							<h4 class="card-title">{{__ "Meta-Data"}}</h4>
-							<div class="card-text">
-								<div class="form-group row">
-									<label class="col-sm-2">{{__ "Index"}}</label>
-									<div class="col-sm-10">
-										<div class="form-check">
-											<label class="form-check-label">
-												<input type="checkbox" class="form-check-input" id="index" name="index"
-															 {{#if article.meta.index}}checked{{/if}}>
-												{{__ "Index that"}}
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -88,85 +66,44 @@
 			<div class="container">
 				<p id="teaser" class="content is-size-5 wysiwyg-plain">{{{article.teaser}}}</p>
 				<div class="wysiwyg content" id="text">{{{article.text}}}</div>
-
-
-				<input type="hidden" name="image" value="{{article.image}}" id="image">
-				<nav class="navbar fixed-bottom navbar-light bg-faded">
-					<div class="container">
-						<div class="is-group is-group-xs pull-xs-right" role="group" aria-label="Controls">
-							<a href="javascript:if(confirm('Realy?')) history.back()"
-								 id="cancel"
-								 class="button is-outline is-danger">
-								<i class="fa fa-ban" aria-hidden="true"></i>&nbsp;{{__ "Cancel"}}</a>
-							<a class="button is-outline is-dark"
-								 data-toggle="collapse"
-								 href="#meta-data"
-								 aria-expanded="false"
-								 aria-controls="meta-data">
-								{{__ "Meta-Data"}}
-							</a>
-							<button type="submit"
-											id="submit"
-											class="button is-outline-primary"
-											role="button">
-								{{#if article}}
-									<i class="fa fa-pencil" aria-hidden="true"></i>
-									<span class="is-hidden-tablet">&nbsp;{{__ "Edit"}}</span>
-								{{else}}
-									<i class="fa fa-plus" aria-hidden="true"></i>
-									<span class="is-hidden-tablet">&nbsp;{{__ "Add"}}</span>
-								{{/if}}
-							</button>
-						</div>
-					</div>
-				</nav>
-
-				<div class="field">
-					<div class="control has-icons-left">
-						<div class="select is-primary">
-							<select name="state" id="draft">
-								<option {{#if article.state}}{{#compare article.state "draft"}}selected{{/compare}}{{/if}}>{{__
-									"Draft"}}</option>
-								<option {{#if article.state}}{{#compare article.state "deleted"}}selected{{/compare}}{{/if}}>{{__
-									"Deleted"}}</option>
-								<option {{#if article.state}}{{#compare article.state "published"}}selected{{/compare}}{{/if}}>{{__
-									"Published"}}</option>
-							</select>
-						</div>
-						<div class="icon is-small is-left">
-							<i class="fa fa-file-text-o"></i>
-						</div>
-					</div>
-				</div>
-
 			</div>
 		</section>
+		{{> toolbar-edit }}
 	</form>
-</article>
 
-<div class="section">
-	<div class="container">
-		<section class="card">
-			<div id="openGraph" class="card-body" aria-labelledby="Open Graph">
-				<div class="form-group row">
-					<label class="col-sm-2">{{__ "Picture"}}</label>
-					<div class="col-sm-10">
-						{{#if article.image}}
-							<figure id="fileOriginalPreview">
-								<img src="{{config.media.images}}{{article.image}}&w=200&h=200&mode=crop"
-										 lowsrc="{{config.media.images}}{{article.image}}&w=200&h=200&mode=crop&quality=1"
-										 class="image"
-										 alt="{{html2text title}}">
-								<figcaption class="text-muted">{{__ "Original"}}:
-									<a href="{{config.media.cdn}}{{article.image}}"
-										 target="image">{{config.media.cdn}}{{article.image}}</a>
-								</figcaption>
-							</figure>
-						{{/if}}
-						{{> form/dropzone this file="image" name="title" }}
+	<div class="section">
+		<div class="container">
+			<div class="box">
+				<div class="media">
+					{{#if article.image}}
+						{{> image-background image=article.image config=config}}
+						<div class="media-left">
+							<img src="{{config.media.images}}{{article.image}}&w=128&h=128&mode=crop"
+									 lowsrc="{{config.media.images}}{{article.image}}&w=128&h=128&mode=crop&quality=1"
+									 class="image is-64x64" id="fileOriginalPreview"
+									 alt="{{html2text title}}">
+						</div>
+					{{/if}}
+
+					<div class="media-content">
+						<div class="content" id="openGraph">
+							<p>
+								<strong>{{__ "Picture"}}</strong>
+								<small class="is-info">{{config.media.cdn}}{{article.image}}</small>
+							</p>
+							{{> form/dropzone this file="image" name="title" }}
+						</div>
+						<nav class="level is-mobile">
+							<div class="level-left">
+								<a class="level-item is-large" id="dropzone-trash">
+									<span class="icon is-large"><i class="fa fa-trash"></i></span>
+								</a>
+							</div>
+						</nav>
 					</div>
+
 				</div>
 			</div>
-		</section>
+		</div>
 	</div>
-</div>
+</article>

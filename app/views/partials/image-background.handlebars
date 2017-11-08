@@ -1,0 +1,36 @@
+<style>
+	.hero-image {
+		background-image: url({{{config.media.images}}}{{{image}}}&w=768&h=198&mode=crop&quality=40&blur=12);
+	}
+	@media screen and (max-width: 768px) {
+		.hero-image {
+			background-image: url({{{config.media.images}}}{{{image}}}&w=768&h=198&mode=crop);
+		}
+	}
+	@media screen and (max-width: 1023px) {
+		.hero-image {
+			background-image: url({{{config.media.images}}}{{{image}}}&w=1023&h=263&mode=crop);
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		.hero-image {
+			background-image: url({{{config.media.images}}}{{{image}}}&w=1260&h=325&mode=crop);
+		}
+	}
+	@media screen and (min-width: 1216px) {
+		.hero-image {
+			background-image: url({{{config.media.images}}}{{{image}}}&w=1408&h=365&mode=crop);
+		}
+	}
+	@media screen and (min-width: 1408px) {
+		.hero-image {
+			background-image: url({{{config.media.images}}}{{{image}}}&w=2000&h=515&mode=crop);
+		}
+	}
+</style>
+
+<script>
+	window.onload = function () {
+		document.getElementById('header').className = document.getElementById('header').className + ' hero-image';
+	};
+</script>

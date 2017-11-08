@@ -20,28 +20,29 @@
 <script>
 	Dropzone.options.uploadWidget = {
 		acceptedFiles:      'image/*',
-		dictDefaultMessage: 'Drag an image here to upload, or click to select one',
+		dictDefaultMessage: '{{ __ "Drag an image here to upload, or click to select one." }}',
 		maxFilesize:        5, // MB
 		maxFiles:           1,
 		parallelUploads:    2,
 		paramName:          'file',
 		init:               function () {
-			this.on('success', function (file, resp) {
-				$('#{{file}}').val(resp.filename);
-			});
+			// Setup the observer for the button.
+			$('#dropzone-trash').on('click', $.proxy(function () {
+				this.removeAllFiles();
+				$('#{{file}}').val('');
+			}, this));
 		},
 		sending:            function (file, xhr, formData) {
-			$('#cancel').addClass('disabled');
-			$('#submit').addClass('disabled');
+			console.log(file, xhr, formData);
+			$('#submit, #dropzone-trash').attr('disabled','disabled').addClass('is-loading');
 			formData.append('name', $('#{{name}}').text());
 		},
-		success:            function () {
-			$('#cancel').removeClass('disabled');
-			$('#submit').removeClass('disabled');
+		success:            function (file, resp) {
+			$('#{{file}}').val(resp.filename);
+			$('#submit, #dropzone-trash').removeAttr('disabled').removeClass('is-loading');
 		},
 		error:              function () {
-			$('#cancel').removeClass('disabled');
-			$('#submit').removeClass('disabled');
+			$('#submit, #dropzone-trash').removeAttr('disabled').removeClass('is-loading');
 		}
 	}
 	;

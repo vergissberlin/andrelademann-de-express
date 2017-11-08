@@ -1,10 +1,13 @@
-<header class="container">
-{{#if tagType}}
-		<{{tagType}} class="title is-hidden-print">{{title}}</{{tagType}}>
-{{else}}
-	<p class="title is-hidden-print">{{title}}</p>
-{{/if}}
-{{#if subtitle}}
-	<p class="subtitle">{{capitalize subtitle}}</p>
-{{/if}}
-</header>
+<div class="section">
+	<header class="container">
+	{{#if tagType}}
+			<{{tagType}} class="title is-hidden-print">{{title}}</{{tagType}}>
+		</div>
+	{{else}}
+		<p class="title is-hidden-print">{{title}}</p>
+	{{/if}}
+	{{#if subtitle}}
+		<p class="subtitle">{{capitalize subtitle}}</p>
+	{{/if}}
+	</header>
+</div>

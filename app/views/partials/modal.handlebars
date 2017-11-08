@@ -1,0 +1,28 @@
+<div class="modal" id="modal-{{id}}">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">{{ __ title}}</p>
+			<button class="delete js-modal-delete" aria-label="close"></button>
+		</header>
+		<section class="modal-card-body">
+			{{{content}}}
+		</section>
+		<footer class="modal-card-foot">
+			<div class="buttons has-addons is-right">
+				<button class="button js-modal-cancel">{{ __ "Cancel" }}</button>
+				<button class="button is-success">{{ __ "Save" }}</button>
+			</div>
+		</footer>
+	</div>
+
+	<button class="modal-close is-large js-modal-close" aria-label="close"></button>
+</div>
+
+<script>
+	$(function () {
+		$('#button-{{id}}').click(function () {
+			$('#modal-{{id}}').addClass('is-active');
+		});
+	});
+</script>

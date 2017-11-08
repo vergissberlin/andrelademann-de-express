@@ -1,12 +1,36 @@
+@charset "utf-8";
 ////
 /// Backend styling
 ///
 /// @author André Lademann <info@andrelademann.de>
 ////
-
 /// BulmaCSS
-.hero.is-dark .label {
-	color: $white;
+
+
+/*! bulma.io v0.6.0 | MIT License | github.com/jgthms/bulma */
+@import "../../node_modules/bulma/sass/utilities/_all";
+@import "../../node_modules/bulma/sass/base/_all";
+@import "../../node_modules/bulma/sass/elements/_all";
+@import "../../node_modules/bulma/sass/components/_all";
+@import "../../node_modules/bulma/sass/grid/_all";
+@import "../../node_modules/bulma/sass/layout/_all";
+
+
+// Custom
+@import "variables";
+
+.is-shadow-top {
+	box-shadow: inset 0 15px 15px -20px $black;
+}
+/// BulmaCSS
+.hero.is-dark {
+	.checkbox:hover {
+		color: $gray-300;
+	}
+
+	.label {
+		color: $white;
+	}
 }
 
 .wysiwyg-plain {
@@ -18,7 +42,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 70000;
 }
 
 .navbar-admin {

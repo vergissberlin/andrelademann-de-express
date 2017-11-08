@@ -7,15 +7,17 @@
 						<img
 							data-src="{{../config.media.images}}{{image}}&w=256&h=256&mode=crop"
 							lowsrc="{{../config.media.images}}{{image}}&w=12&h=12&mode=crop&quality=1"
-							alt="{{html2text alt}}"
-							title="{{html2text title}}"
+							alt="{{html2text title}}{{#if subtitle}} - {{html2text subtitle}}{{/if}}"
+							title="{{html2text title}}{{#if subtitle}} - {{html2text subtitle}}{{/if}}"
 							class="lozad">
 					{{/if}}
 				</figure>
 			</a>
 			<div class="media-content">
 				<div class="content">
-					<p class="title is-5" title="{{title}}">{{crop title limit="120"}}</p>
+					<p>
+						<a href="/articles/{{slug title}}/" class="title is-5" title="{{title}}">{{crop title limit="120"}}</a>
+					</p>
 					<p>
 						<strong>André Lademann</strong>
 						<small>@vergissberlin</small>

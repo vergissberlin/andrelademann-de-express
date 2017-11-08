@@ -1,44 +1,64 @@
-<div class="collapse" id="exCollapsingNavbar">
-	<div class="p-a-1">
-		<nav class="navbar">
-			<ul class="nav navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Features</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Pricing</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
-</div>
+<nav class="navbar navbar-admin is-white is-fixed is-fixed-bottom is-hidden-print" role="navigation">
+	<div class="container">
+		<div class="navbar-menu">
+			<div class="navbar-start">
+				<div class="navbar-item">
+					<div class="field">
+						<div class="control has-icons-left">
+							<div class="select is-primary">
+								<select name="state" id="state">
+									<option {{#if article.state}}{{#compare article.state "draft"}}selected{{/compare}}{{/if}} value="draft">
+										{{__ "Draft"}}
+									</option>
+									<option {{#if article.state}}{{#compare article.state "deleted"}}selected{{/compare}}{{/if}} value="deleted">
+										{{__ "Deleted"}}
+									</option>
+									<option {{#if article.state}}{{#compare article.state "published"}}selected{{/compare}}{{/if}} value="published">
+										{{__ "Published"}}
+									</option>
+								</select>
+							</div>
+							<div class="icon is-small is-left">
+								<i class="fa fa-file-text-o"></i>
+							</div>
+						</div>
+					</div>
+				</div>
 
-<nav class="navbar navbar-light bg-faded">
-	<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2"
-					aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
-		&#9776;
-	</button>
-	<div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-		<a class="navbar-brand" href="#">Responsive navbar</a>
-		<ul class="nav navbar-nav">
-			<li class="nav-item active">
-				<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Features</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Pricing</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">About</a>
-			</li>
-		</ul>
+				<div class="navbar-item">
+					<a class="button is-outline is-dark"
+						 href="#meta-data"
+						 onclick="$('#meta-data').slideToggle()"
+						 aria-expanded="false"
+						 aria-controls="meta-data">
+						{{__ "Meta-Data"}}
+					</a>
+				</div>
+			</div>
+
+			<div class="navbar-end">
+				<div class="navbar-item">
+					<div class="buttons has-addons">
+						<a href="javascript:if(confirm('{{ __ "Really?" }}')) history.back()"
+							 id="cancel"
+							 class="button is-outline is-danger">
+							<i class="fa fa-ban" aria-hidden="true"></i>&nbsp;
+							<span class="is-hidden-mobile">{{__ "Cancel"}}</span></a>
+						<button type="submit"
+										id="submit"
+										class="button is-primary"
+										role="button">
+							{{#if article}}
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+								<span class="is-hidden-mobile">&nbsp;{{__ "Save"}}</span>
+							{{else}}
+								<i class="fa fa-plus" aria-hidden="true"></i>
+								<span class="is-hidden-mobile">&nbsp;{{__ "Add"}}</span>
+							{{/if}}
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </nav>
