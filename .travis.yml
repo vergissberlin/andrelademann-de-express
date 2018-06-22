@@ -23,4 +23,4 @@ cache:
 
 env:
   - NODE_ENV=development
-  - S3_BUCKET=andrelademann-testing
+  - NODE_ENV=production
