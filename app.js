@@ -18,7 +18,7 @@ var
 'use strict';
 
 mongoose.Promise = global.Promise;
-mongoose.connect(config.db, {useMongoClient: true});
+mongoose.connect(config.db);
 
 var sslOptions = {
 	key:                fs.readFileSync('./private/server/ssl/localhost.key'),
@@ -51,4 +51,3 @@ if (process.env.NODE_ENV === 'development') {
 		console.info('Express server listening on ' + config.url + ':' + config.port);
 	});
 }
-
