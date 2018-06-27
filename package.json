@@ -99,7 +99,7 @@
         "grunt-jsdoc": "^2.1.1",
         "grunt-manifest": "^0.4.4",
         "grunt-responsive-images": "^1.10.1",
-        "grunt-sass": "^2.0.0",
+        "grunt-sass": "^3.0.0",
         "grunt-sassdoc": "^2.0.2",
         "grunt-scss-lint": "^0.5.0",
         "jit-grunt": "^0.10.0",
