@@ -1,7 +1,7 @@
 version: '3.5'
 services:
     app:
-        image: vergissberlin/andrelademann
+        image: vergissberlin/andrelademann-de
         build: .
         environment:
           - AUTH_SECRET=moo
