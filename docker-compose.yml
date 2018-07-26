@@ -1,5 +1,10 @@
 version: '3'
 services:
+    app:
+      image: vergissberlin/andrelademann-de
+      volumes:
+        - ./:/var/deploy
+      command: cp -r /var/app /var/deploy
     nodejs:
         image: node:alpine
         environment:
@@ -37,9 +42,3 @@ services:
         ports:
             - 27017:27017
         command: mongod --smallfiles --logpath=/dev/null
-
-    mongo-express:
-        image: mongo-express
-        environment:
-            ME_CONFIG_MONGODB_ADMINUSERNAME: ala
-            ME_CONFIG_MONGODB_ADMINPASSWORD: ala

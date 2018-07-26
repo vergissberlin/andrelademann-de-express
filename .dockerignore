@@ -1,2 +1,15 @@
-node_modules
+.bowerrc
+.editorconfig
+.env.sample
+.eshintignore
+.idea
+.locales
+.scrunititizer.yml
+.travis.yml
+bower.json
+CHANGELOG.md
 doc
+Gruntfile.js
+HISTORY.md
+tests
+README.md
