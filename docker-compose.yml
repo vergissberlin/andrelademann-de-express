@@ -1,12 +1,8 @@
-version: '3'
+version: '3.5'
 services:
     app:
-      image: vergissberlin/andrelademann-de
-      volumes:
-        - ./:/var/deploy
-      command: cp -r /var/app /var/deploy
-    nodejs:
-        image: node:alpine
+        image: vergissberlin:andrelademann
+        build: .
         environment:
           - AUTH_SECRET=moo
           - AWS_ACCESS_KEY_ID
