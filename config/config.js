@@ -110,8 +110,8 @@ var config = {
 				'/css/screen.min.css'
 			]
 		},
-		url:    process.env.URL || 'https://andrelademann.de',
-		port:   process.env.PORT || 443,
+		url:    process.env.URL || 'http://localhost',
+		port:   process.env.PORT || 80,
 		db:     process.env.MONGODB_URI
 	}
 };
