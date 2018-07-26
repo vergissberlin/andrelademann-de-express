@@ -1,9 +1,9 @@
 FROM node:8
 
+WORKDIR /var/app
+
 COPY . /var/app
 
 RUN npm install
-
-WORKDIR /var/app
 
 CMD [ "npm", "start" ]
