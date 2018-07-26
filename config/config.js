@@ -86,7 +86,7 @@ var config = {
 		},
 		url:    process.env.URL || 'https://staging.andrelademann.de',
 		port:   process.env.PORT || 443,
-		db:     process.env.MONGOLAB_YELLOW_URI || 'mongodb://localhost/andrelademannde-staging'
+		db:     process.env.MONGODB_URI || 'mongodb://localhost/andrelademannde-staging'
 	},
 
 	production: {
@@ -112,7 +112,7 @@ var config = {
 		},
 		url:    process.env.URL || 'https://andrelademann.de',
 		port:   process.env.PORT || 443,
-		db:     process.env.MONGOLAB_YELLOW_URI
+		db:     process.env.MONGODB_URI
 	}
 };
 

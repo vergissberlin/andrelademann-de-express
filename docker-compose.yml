@@ -4,10 +4,10 @@ services:
         image: node:alpine
         environment:
           - MONGO_DATA_DIR=/data/db
-          - NODE_ENV=production
-          - AWS_ACCESS_KEY_ID=foo
-          - AWS_SECRET_ACCESS_KEY=foo
-          - S3_BUCKET=foo
+          - NODE_ENV
+          - AWS_ACCESS_KEY_ID
+          - AWS_SECRET_ACCESS_KEY
+          - S3_BUCKET
         volumes:
           - ./:/usr/src/app
         ports:
@@ -17,11 +17,20 @@ services:
     mongodb:
         image: mongo:latest
         environment:
-          - MONGO_DATA_DIR=/data/db
-          - MONGO_LOG_DIR=/dev/null
+          MONGO_DATA_DIR: /data/db
+          MONGO_LOG_DIR: /dev/null
+          MONGO_INITDB_ROOT_USERNAME: ala
+          MONGO_INITDB_ROOT_PASSWORD: ala
+          MONGO_INITDB_DATABASE: ala
         volumes:
             - ./data/db:/data/db
             - ./data/backup:/data/backup
         ports:
             - 27017:27017
-        command: mongod --smallfiles --logpath=/dev/null # --quiet
+        command: mongod --smallfiles --logpath=/dev/null
+
+    mongo-express:
+        image: mongo-express
+        environment:
+            ME_CONFIG_MONGODB_ADMINUSERNAME: ala
+            ME_CONFIG_MONGODB_ADMINPASSWORD: ala
