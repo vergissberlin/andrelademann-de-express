@@ -3,17 +3,26 @@ services:
     nodejs:
         image: node:alpine
         environment:
-          - MONGO_DATA_DIR=/data/db
-          - NODE_ENV
+          - AUTH_SECRET=moo
           - AWS_ACCESS_KEY_ID
           - AWS_SECRET_ACCESS_KEY
+          - AWS_REGION
+          - BASE_USER
+          - BASE_SECRET
+          - BUGSNAG_TOKEN
+          - MONGO_DATA_DIR=/data/db
+          - MONGODB_URI=mongodb://ala:ala@mongodb:27017/admin
+          - NODE_ENV
+          - NODE_SECRET
           - S3_BUCKET
         volumes:
-          - ./:/usr/src/app
+          - ./:/var/app
         ports:
-          - 3000:3000
+          - 3232:3232
         links:
           - mongodb:mongodb
+        working_dir: /var/app
+        command: npm start
     mongodb:
         image: mongo:latest
         environment:
