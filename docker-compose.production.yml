@@ -1,11 +1,7 @@
 version: '3.5'
 services:
     app:
-<<<<<<< HEAD
         image: vergissberlin/andrelademann-de
-=======
-        image: vergissberlin/andrelademann
->>>>>>> Added docker-compose file for production environment
         environment:
           - AUTH_SECRET
           - AWS_ACCESS_KEY_ID
@@ -19,19 +15,10 @@ services:
           - NODE_ENV
           - NODE_SECRET
           - S3_BUCKET
-<<<<<<< HEAD
           - VIRTUAL_HOST=${DOMAINS}
           - VIRTUAL_NETWORK=${NETWORK}
           - LETSENCRYPT_HOST=${DOMAINS}
           - LETSENCRYPT_EMAIL=info@andrelademann.de
-=======
-        environment:
-          VIRTUAL_HOST: ${DOMAINS}
-          VIRTUAL_NETWORK: ${NETWORK}
-          VIRTUAL_PORT: 3232
-          LETSENCRYPT_HOST: ${DOMAINS}
-          LETSENCRYPT_EMAIL: info@andrelademann.de
->>>>>>> Added docker-compose file for production environment
         links:
           - mongodb:mongodb
         working_dir: /var/app
@@ -39,7 +26,6 @@ services:
     mongodb:
         image: mongo:latest
         environment:
-<<<<<<< HEAD
           - MONGO_DATA_DIR=/data/db
           - MONGO_LOG_DIR=/dev/null
           - MONGO_INITDB_ROOT_USERNAME
@@ -50,16 +36,6 @@ services:
             - ./data/backup:/data/backup
         ports:
           - 2727:27017
-=======
-          MONGO_DATA_DIR: /data/db
-          MONGO_LOG_DIR: /dev/null
-          MONGO_INITDB_ROOT_USERNAME: ${MONGODB_ROOT_USERNAME}
-          MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_ROOT_PASSWORD}
-          MONGO_INITDB_DATABASE:  ${MONGODB_DB}
-        volumes:
-            - ./data/db:/data/db
-            - ./data/backup:/data/backup
->>>>>>> Added docker-compose file for production environment
         command: mongod --smallfiles --logpath=/dev/null
 networks:
   default:
