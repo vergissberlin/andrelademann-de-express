@@ -4,6 +4,7 @@ WORKDIR /var/app
 
 COPY . /var/app
 
-RUN npm install
+RUN npm i -g npm &&\
+		npm i
 
 CMD [ "npm", "start" ]
