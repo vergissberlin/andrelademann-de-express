@@ -18,6 +18,8 @@ services:
         links:
           - mongodb:mongodb
         working_dir: /var/app
+        depends_on:
+          - mongodb
         command: npm start
     mongodb:
         image: mongo:latest

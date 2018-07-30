@@ -21,8 +21,10 @@ services:
           - LETSENCRYPT_EMAIL=info@andrelademann.de
         links:
           - mongodb:mongodb
+        depends_on:
+          - mongodb
         working_dir: /var/app
-        restart: always
+        restart: on-failure
         command: npm start
     mongodb:
         image: mongo:latest
@@ -35,7 +37,7 @@ services:
         volumes:
             - ./data/db:/data/db
             - ./data/backup:/data/backup
-        restart: always
+        restart: on-failure
         command: mongod --smallfiles --logpath=/dev/null
 
 networks:

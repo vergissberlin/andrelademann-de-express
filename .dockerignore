@@ -9,6 +9,10 @@
 bower.json
 CHANGELOG.md
 doc
+docker-compose.yml
+docker-compose.build.yml
+docker-compose.development.yml
+docker-compose.production.yml
 Gruntfile.js
 HISTORY.md
 tests
