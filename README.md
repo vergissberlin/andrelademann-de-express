@@ -76,7 +76,7 @@ To see the current status, take a look in the milestones overview page or the on
 1.  Clone the repository
 2.  Type ``npm install`` to install the dependencies
 3.  Start a mongodb database an configure the credentials in ``config/database.js``
-    - ``docker-compose up -d``
+    - ``docker-compose -f docker-compose.yml -f docker-compose.development.yml up -d``
 4.  Set the Environment variables
     -   ``NODE_ENV=development``
     -   ``AWS_ACCESS_KEY_ID=foo``

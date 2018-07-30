@@ -24,8 +24,8 @@ var config = {
 			bucket: process.env.S3_BUCKET
 		},
 		media:  {
-			cdn:    'http://development-cdn.andrelademann.de/',
-			images: 'http://edge.zimage.io/?url=http://development-cdn.andrelademann.de/'
+			cdn:    'https://development-cdn.andrelademann.de/',
+			images: 'https://edge.zimage.io/?url=http://development-cdn.andrelademann.de/'
 		},
 		styles: {
 			inlineStyles: fs.readFileSync(rootPath + '/public/css/critical.css'),
@@ -34,7 +34,7 @@ var config = {
 				'/css/screen.css'
 			]
 		},
-		url:    process.env.URL || 'https://127.0.0.1',
+		url:    process.env.URL || 'https://0.0.0.0',
 		port:   process.env.PORT || 3030,
 		db:     process.env.MONGODB_URI || 'mongodb://localhost:27017/andrelademannde-home'
 	},
@@ -59,9 +59,9 @@ var config = {
 				'/css/screen.css'
 			]
 		},
-		url:    process.env.URL || 'https://127.0.0.1',
+		url:    process.env.URL || 'https://0.0.0.0',
 		port:   process.env.PORT || 3030,
-		db:     process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/andrelademannde-development'
+		db:     process.env.MONGODB_URI || 'mongodb://mongodb:27017/andrelademannde-development'
 	},
 	staging:     {
 		root:   rootPath,
@@ -110,7 +110,7 @@ var config = {
 				'/css/screen.min.css'
 			]
 		},
-		url:    process.env.URL || 'http://127.0.0.1',
+		url:    process.env.URL || 'https://0.0.0.0',
 		port:   process.env.PORT || 80,
 		db:     process.env.MONGODB_URI
 	}

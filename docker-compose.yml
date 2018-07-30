@@ -2,9 +2,8 @@ version: '3.5'
 services:
     app:
         image: vergissberlin/andrelademann-de
-        build: .
         environment:
-          - AUTH_SECRET=moo
+          - AUTH_SECRET
           - AWS_ACCESS_KEY_ID
           - AWS_SECRET_ACCESS_KEY
           - AWS_REGION
@@ -12,14 +11,10 @@ services:
           - BASE_SECRET
           - BUGSNAG_TOKEN
           - MONGO_DATA_DIR=/data/db
-          - MONGODB_URI=mongodb://ala:ala@mongodb:27017/admin
+          - MONGODB_URI
           - NODE_ENV
           - NODE_SECRET
           - S3_BUCKET
-        volumes:
-          - ./:/var/app
-        ports:
-          - 3030:3030
         links:
           - mongodb:mongodb
         working_dir: /var/app
@@ -27,14 +22,12 @@ services:
     mongodb:
         image: mongo:latest
         environment:
-          MONGO_DATA_DIR: /data/db
-          MONGO_LOG_DIR: /dev/null
-          MONGO_INITDB_ROOT_USERNAME: ala
-          MONGO_INITDB_ROOT_PASSWORD: ala
-          MONGO_INITDB_DATABASE: ala
+          - MONGO_DATA_DIR=/data/db
+          - MONGO_LOG_DIR=/dev/null
+          - MONGO_INITDB_ROOT_USERNAME
+          - MONGO_INITDB_ROOT_PASSWORD
+          - MONGO_INITDB_DATABASE
         volumes:
             - ./data/db:/data/db
             - ./data/backup:/data/backup
-        ports:
-            - 27017:27017
         command: mongod --smallfiles --logpath=/dev/null

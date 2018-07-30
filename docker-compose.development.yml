@@ -1,0 +1,28 @@
+version: '3.5'
+services:
+    app:
+        image: node:8
+        environment:
+          - AUTH_SECRET=moo
+          - AWS_ACCESS_KEY_ID
+          - AWS_SECRET_ACCESS_KEY
+          - AWS_REGION
+          - BASE_USER
+          - BASE_SECRET
+          - BUGSNAG_TOKEN
+          - MONGO_DATA_DIR=/data/db
+          - MONGODB_URI=mongodb://foo:bar@mongodb:27017/admin
+          - NODE_ENV=development
+          - NODE_SECRET=secret
+        working_dir: /var/app
+        volumes:
+          - ./:/var/app
+        ports:
+          - 3030:3030
+    mongodb:
+        environment:
+          - MONGO_INITDB_ROOT_USERNAME=foo
+          - MONGO_INITDB_ROOT_PASSWORD=bar
+          - MONGO_INITDB_DATABASE=moo
+        ports:
+          - 27017:27017
