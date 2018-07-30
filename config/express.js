@@ -16,7 +16,7 @@ var
 	cookieParser      = require('cookie-parser'),
 	express           = require('express'),
 	expressHandlebars = require('express-handlebars'),
-	expressSession    = require('express-session'),
+	session           = require('express-session'),
 	favicon           = require('serve-favicon'),
 	flash             = require('connect-flash'),
 	glob              = require('glob'),
@@ -26,6 +26,7 @@ var
 	helpers           = require('../app/views/helpers'),
 	i18n              = require('./i18n'),
 	logger            = require('morgan'),
+	MemoryStore       = require('memorystore')(session),
 	methodOverride    = require('method-override'),
 	minifyHTML        = require('express-minify-html'),
 	nodeSecret        = process.env.NODE_SECRET || 'superhero',
@@ -86,12 +87,28 @@ module.exports = function (app, config) {
 	}
 
 	// Passport
-	app.use(expressSession({
-		secret:            nodeSecret,
-		resave:            false,
-		saveUninitialized: false,
-		cookie:            {secure: false}
-	}));
+	if (app.get('env') === 'staging' || app.get('env') === 'production') {
+		app.use(session({
+			secret:            nodeSecret,
+			store: new MemoryStore({
+					checkPeriod:   86400000 // prune expired entries every 24h
+	    }),
+			resave:            false,
+			saveUninitialized: false,
+			cookie:            {
+				secure: false
+			}
+		}));
+  } else {
+		app.use(session({
+			secret:            nodeSecret,
+			resave:            false,
+			saveUninitialized: false,
+			cookie:            {
+				secure: false
+			}
+		}));
+	}
 	app.use(passport.initialize());
 	app.use(cookieParser());
 	app.use(passport.session({
