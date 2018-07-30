@@ -9,6 +9,17 @@ up:
 down:
 	docker-compose -f docker-compose.yml -f docker-compose.development.yml down -v
 
+build:
+	docker-compose -f docker-compose.yml -f docker-compose.build.yml build
+
+push:
+	docker-compose -f docker-compose.yml -f docker-compose.build.yml push
+
+pull:
+	git pull
+	git fetch
+	docker-compose pull
+
 log:
 	docker-compose -f docker-compose.yml -f docker-compose.development.yml logs -f
 
