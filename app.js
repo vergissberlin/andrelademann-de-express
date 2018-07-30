@@ -41,6 +41,7 @@ var app = express();
 require('./config/express')(app, config);
 require('./config/passport')();
 
+console.info('NODE_ENV:  ' + process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === 'development') {
 	https.createServer(sslOptions, app).listen(config.port, function () {
