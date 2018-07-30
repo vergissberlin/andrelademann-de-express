@@ -25,7 +25,6 @@ module.exports = {
 			width:  320,
 			height: 70
 		},
-		// src:     'https://localhost:3232',
 		src:     'public/critical-test.html',
 		dest:    'public/css/critical.css'
 	}

@@ -19,7 +19,7 @@ services:
         volumes:
           - ./:/var/app
         ports:
-          - 3232:3232
+          - 3030:3030
         links:
           - mongodb:mongodb
         working_dir: /var/app
