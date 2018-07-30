@@ -17,20 +17,20 @@ var
 	express           = require('express'),
 	expressHandlebars = require('express-handlebars'),
 	expressSession    = require('express-session'),
-	favicon        = require('serve-favicon'),
-	flash          = require('connect-flash'),
-	glob           = require('glob'),
-	handlebars     = require('handlebars'),
-	handlebarsIntl = require('handlebars-intl'),
-	helmet         = require('helmet'),
-	helpers        = require('../app/views/helpers'),
-	i18n           = require('./i18n'),
-	logger         = require('morgan'),
-	methodOverride = require('method-override'),
-	minifyHTML     = require('express-minify-html'),
-	nodeSecret     = process.env.NODE_SECRET || 'superhero',
-	passport       = require('passport'),
-	session        = require('express-session');
+	favicon           = require('serve-favicon'),
+	flash             = require('connect-flash'),
+	glob              = require('glob'),
+	handlebars        = require('handlebars'),
+	handlebarsIntl    = require('handlebars-intl'),
+	helmet            = require('helmet'),
+	helpers           = require('../app/views/helpers'),
+	i18n              = require('./i18n'),
+	logger            = require('morgan'),
+	methodOverride    = require('method-override'),
+	minifyHTML        = require('express-minify-html'),
+	nodeSecret        = process.env.NODE_SECRET || 'superhero',
+	passport          = require('passport'),
+	session           = require('express-session');
 
 // Register additional header
 bugsnag.register(process.env.BUGSNAG_TOKEN);
@@ -87,7 +87,7 @@ module.exports = function (app, config) {
 
 	// Passport
 	app.use(expressSession({
-		secret:            'keyboard cat',
+		secret:            nodeSecret,
 		resave:            false,
 		saveUninitialized: false,
 		cookie:            {secure: false}
