@@ -76,8 +76,8 @@ module.exports = function (app, config) {
 		}));
 	}
 
+	// Redirect to https
 	if(process.env.PROTOCOL === 'https') {
-		// Redirect to https
 		app.all('*', function (req, res, next) {
 			if (req.headers['x-forwarded-proto'] === 'https') {
 				return next();
