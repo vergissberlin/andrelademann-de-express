@@ -34,7 +34,7 @@ var config = {
 				'/css/screen.css'
 			]
 		},
-		url:    process.env.URL || 'https://0.0.0.0',
+		url:    process.env.URL || process.env.PROTOCOL + '://0.0.0.0',
 		port:   process.env.PORT || 3030,
 		db:     process.env.MONGODB_URI || 'mongodb://localhost:27017/andrelademannde-home'
 	},
@@ -59,7 +59,7 @@ var config = {
 				'/css/screen.css'
 			]
 		},
-		url:    process.env.URL || 'https://0.0.0.0',
+		url:    process.env.URL || process.env.PROTOCOL + '://0.0.0.0',
 		port:   process.env.PORT || 3030,
 		db:     process.env.MONGODB_URI || 'mongodb://mongodb:27017/andrelademannde-development'
 	},
@@ -84,7 +84,7 @@ var config = {
 				'/css/screen.min.css'
 			]
 		},
-		url:    process.env.URL || 'https://staging.andrelademann.de',
+		url:    process.env.URL || process.env.PROTOCOL + '://staging.andrelademann.de',
 		port:   process.env.PORT || 80,
 		db:     process.env.MONGODB_URI || 'mongodb://mongodb/andrelademannde-staging'
 	},
@@ -110,7 +110,7 @@ var config = {
 				'/css/screen.min.css'
 			]
 		},
-		url:    process.env.URL || 'https://0.0.0.0',
+		url:    process.env.URL || process.env.PROTOCOL + '://0.0.0.0',
 		port:   process.env.VIRTUAL_PORT,
 		db:     process.env.MONGODB_URI
 	}
