@@ -111,7 +111,7 @@ var config = {
 			]
 		},
 		url:    process.env.URL || 'https://0.0.0.0',
-		port:   process.env.PORT || 80,
+		port:   process.env.VIRTUAL_PORT,
 		db:     process.env.MONGODB_URI
 	}
 };

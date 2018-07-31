@@ -1,7 +1,7 @@
 version: '3.5'
+
 services:
     app:
-        image: node:8
         environment:
           - AUTH_SECRET=moo
           - AWS_ACCESS_KEY_ID
@@ -14,9 +14,9 @@ services:
           - MONGODB_URI=mongodb://foo:bar@mongodb:27017/admin
           - NODE_ENV=development
           - NODE_SECRET=secret
-        working_dir: /var/app
+        working_dir: /var/dev
         volumes:
-          - ./:/var/app
+          - ./:/var/dev
         ports:
           - 3030:3030
     mongodb:

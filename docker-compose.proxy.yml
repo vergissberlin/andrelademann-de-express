@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  ssl-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./certs:/etc/nginx/certs:ro
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    environment:
+      - DEFAULT_HOST=andrelademann.local
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: "bridge"
+    attachable: true
+    name: ${NETWORK}

@@ -1,46 +1,14 @@
 version: '3.5'
+
 services:
     app:
-        image: vergissberlin/andrelademann-de
         environment:
-          - AUTH_SECRET
-          - AWS_ACCESS_KEY_ID
-          - AWS_SECRET_ACCESS_KEY
-          - AWS_REGION
-          - BASE_USER
-          - BASE_SECRET
-          - BUGSNAG_TOKEN
-          - MONGO_DATA_DIR=/data/db
-          - MONGODB_URI
-          - NODE_ENV=production
-          - NODE_SECRET
-          - S3_BUCKET
-          - VIRTUAL_HOST=${DOMAINS}
-          - VIRTUAL_NETWORK=${NETWORK}
           - LETSENCRYPT_HOST=${DOMAINS}
           - LETSENCRYPT_EMAIL=info@andrelademann.de
-        links:
-          - mongodb:mongodb
-        depends_on:
-          - mongodb
-        working_dir: /var/app
+          - NODE_ENV=production
+          - VIRTUAL_HOST=${DOMAINS}
+          - VIRTUAL_NETWORK=${NETWORK}
+          - VIRTUAL_PORT=${PORT}
         restart: on-failure
-        command: npm start
     mongodb:
-        image: mongo:latest
-        environment:
-          - MONGO_DATA_DIR=/data/db
-          - MONGO_LOG_DIR=/dev/null
-          - MONGO_INITDB_ROOT_USERNAME
-          - MONGO_INITDB_ROOT_PASSWORD
-          - MONGO_INITDB_DATABASE
-        volumes:
-            - ./data/db:/data/db
-            - ./data/backup:/data/backup
         restart: on-failure
-        command: mongod --smallfiles --logpath=/dev/null
-
-networks:
-  default:
-    external:
-      name: ${NETWORK}
