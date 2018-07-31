@@ -20,12 +20,6 @@ var
 mongoose.Promise = global.Promise;
 mongoose.connect(config.db);
 
-var sslOptions = {
-	key:                fs.readFileSync('./private/server/ssl/localhost.key'),
-	cert:               fs.readFileSync('./private/server/ssl/localhost.crt'),
-	requestCert:        false,
-	rejectUnauthorized: false
-};
 
 var db = mongoose.connection;
 db.on('error', function () {
@@ -41,9 +35,16 @@ var app = express();
 require('./config/express')(app, config);
 require('./config/passport')();
 
-console.info('NODE_ENV: ' + process.env.NODE_ENV + '\n');
+console.info('NODE_ENV: ' + process.env.NODE_ENV);
+console.info('PROTOCOL: ' + process.env.PROTOCOL + '\n');
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.PROTOCOL === 'https') {
+	var sslOptions = {
+		key:                fs.readFileSync('./private/server/ssl/localhost.key'),
+		cert:               fs.readFileSync('./private/server/ssl/localhost.crt'),
+		requestCert:        false,
+		rejectUnauthorized: false
+	};
 	https.createServer(sslOptions, app).listen(config.port, function () {
 		console.log('Express server with ssl listen on  ' + config.url + ':' + config.port);
 	});

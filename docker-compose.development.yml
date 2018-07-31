@@ -14,6 +14,7 @@ services:
           - MONGODB_URI=mongodb://foo:bar@mongodb:27017/admin
           - NODE_ENV=development
           - NODE_SECRET=secret
+          - PROTOCOL=http
         working_dir: /var/dev
         volumes:
           - ./:/var/dev

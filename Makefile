@@ -8,7 +8,7 @@ up:
 
 up-prod:
 	docker-compose -f docker-compose.yml -f docker-compose.production.yml up -d
-	@echo "Open the application at https://0.0.0.0:$(PORT) in production mode"
+	@echo "Open the application at https://andrelademann.local in production mode"
 
 up-proxy:
 	docker-compose -f docker-compose.proxy.yml up -d --remove-orphans

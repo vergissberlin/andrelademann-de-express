@@ -15,6 +15,7 @@ services:
           - MONGODB_URI
           - NODE_ENV
           - NODE_SECRET
+          - PROTOCOL=http
           - S3_BUCKET
         links:
           - mongodb:mongodb
