@@ -19,13 +19,9 @@ up-proxy:
 	@echo "\033[1;92m The proxy is up and runing.\033[0m\n"
 
 down:
-	docker-compose -f docker-compose.yml -f docker-compose.development.yml  -f docker-compose.production.yml  down -v
+	docker-compose -f docker-compose.yml -f docker-compose.development.yml -f docker-compose.production.yml -f docker-compose.proxy.yml down -v
 	@echo "\033[1;92m Shut down all applications.\033[0m\n"
 	docker-compose ps
-
-down-proxy:
-	docker-compose -f docker-compose.proxy.yml down -v
-	@echo "\033[1;92m The proxy is down.\033[0m\n"
 
 build:
 	docker-compose -f docker-compose.yml -f docker-compose.build.yml build
