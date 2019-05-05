@@ -97,7 +97,7 @@
         "grunt-develop": "^0.4.0",
         "grunt-doxdox": "^2.0.1",
         "grunt-git-changelog": "^0.1.0",
-        "grunt-jsdoc": "^2.1.1",
+        "grunt-jsdoc": "^2.4.0",
         "grunt-manifest": "^0.4.4",
         "grunt-responsive-images": "^1.10.1",
         "grunt-sass": "^2.0.0",
