@@ -64,7 +64,7 @@
         "handlebars-paginate": "^0.1.0",
         "helmet": "^3.12.1",
         "i18n": "^0.8.3",
-        "image-size": "^0.6.3",
+        "image-size": "^0.8.2",
         "lozad": "^1.0.9",
         "memorystore": "^1.6.0",
         "method-override": "^2.3.0",
