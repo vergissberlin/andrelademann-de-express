@@ -67,7 +67,7 @@
         "image-size": "^0.6.3",
         "lozad": "^1.0.9",
         "memorystore": "^1.6.0",
-        "method-override": "^2.3.0",
+        "method-override": "^3.0.0",
         "mime": "^2.3.1",
         "mongoose": "^5.12.3",
         "mongoose-query-paginate": "^1.0.3",
