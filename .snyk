@@ -1,0 +1,15 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:stringstream:20180511':
+    - bugsnag > request > stringstream:
+        patched: '2023-04-28T15:20:01.965Z'
+    - weather-js > request > stringstream:
+        patched: '2023-04-28T15:20:01.965Z'
+  'npm:tough-cookie:20170905':
+    - bugsnag > request > tough-cookie:
+        patched: '2023-04-28T15:20:01.965Z'
+    - weather-js > request > tough-cookie:
+        patched: '2023-04-28T15:20:01.965Z'
