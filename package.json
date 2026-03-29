@@ -58,7 +58,7 @@
         "express-handlebars": "^3.0.0",
         "express-minify-html": "^0.12.0",
         "express-session": "^1.15.6",
-        "glob": "^7.1.2",
+        "glob": "^9.0.0",
         "handlebars": "^4.0.5",
         "handlebars-intl": "^1.1.2",
         "handlebars-paginate": "^0.1.0",
